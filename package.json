@@ -1,0 +1,22 @@
+{
+  "name": "sematext_cloud_api",
+  "version": "v3",
+  "description": "API_Explorer_provides_access_and_documentation_for_Sematext_REST_API__The_REST_API_requires_the_API_Key_to_be_sent_as_part_of_Authorization_header__E_g__Authorization__apiKey_e5f18450_205a_48eb_8589_7d49edaea813_",
+  "license": "Unlicense",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "3.7.0",
+    "querystring": "0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}
