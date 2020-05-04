@@ -1,4 +1,4 @@
-# SematextCloudApi.AlertsApi
+# SematextApiClientJavascript.AlertsApi
 
 All URIs are relative to *https://localhost*
 
@@ -19,28 +19,25 @@ Create alert rule
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.AlertsApi();
+let apiInstance = new SematextApiClientJavascript.AlertsApi();
 
-var dto = new SematextCloudApi.AlertRule(); // AlertRule | dto
+let dto = new SematextApiClientJavascript.AlertRule(); // AlertRule | dto
 
+apiInstance.createAlertUsingPOST(dto).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createAlertUsingPOST(dto, callback);
 ```
 
 ### Parameters
@@ -70,28 +67,25 @@ Delete alert rule
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.AlertsApi();
+let apiInstance = new SematextApiClientJavascript.AlertsApi();
 
-var updateableAlertId = 789; // Number | updateableAlertId
+let updateableAlertId = 789; // Number | updateableAlertId
 
+apiInstance.deleteAlertRuleUsingDELETE(updateableAlertId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.deleteAlertRuleUsingDELETE(updateableAlertId, callback);
 ```
 
 ### Parameters
@@ -121,28 +115,25 @@ Disable alert rule
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.AlertsApi();
+let apiInstance = new SematextApiClientJavascript.AlertsApi();
 
-var updateableAlertId = 789; // Number | updateableAlertId
+let updateableAlertId = 789; // Number | updateableAlertId
 
+apiInstance.disableAlertRuleUsingPUT(updateableAlertId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.disableAlertRuleUsingPUT(updateableAlertId, callback);
 ```
 
 ### Parameters
@@ -172,28 +163,25 @@ Enable alert rule
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.AlertsApi();
+let apiInstance = new SematextApiClientJavascript.AlertsApi();
 
-var updateableAlertId = 789; // Number | updateableAlertId
+let updateableAlertId = 789; // Number | updateableAlertId
 
+apiInstance.enableAlertRuleUsingPUT(updateableAlertId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.enableAlertRuleUsingPUT(updateableAlertId, callback);
 ```
 
 ### Parameters
@@ -223,28 +211,25 @@ Get alert rules for an app
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.AlertsApi();
+let apiInstance = new SematextApiClientJavascript.AlertsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
+apiInstance.getAlertRulesForAppUsingGET(appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getAlertRulesForAppUsingGET(appId, callback);
 ```
 
 ### Parameters

@@ -1,4 +1,4 @@
-# SematextCloudApi.SavedQuery
+# SematextApiClientJavascript.SavedQuery
 
 ## Properties
 Name | Type | Description | Notes

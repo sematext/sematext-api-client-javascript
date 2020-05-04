@@ -1,4 +1,4 @@
-# SematextCloudApi.SubscriptionsApi
+# SematextApiClientJavascript.SubscriptionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -16,28 +16,25 @@ Get subscriptions for an app
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.SubscriptionsApi();
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
+apiInstance.listUsingGET1(appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listUsingGET1(appId, callback);
 ```
 
 ### Parameters
@@ -67,30 +64,27 @@ Trigger emailing of report for an app
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.SubscriptionsApi();
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
-var emailDto = new SematextCloudApi.ReportInfo(); // ReportInfo | emailDto
+let emailDto = new SematextApiClientJavascript.ReportInfo(); // ReportInfo | emailDto
 
+apiInstance.sendReportUsingPOST(appId, emailDto).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.sendReportUsingPOST(appId, emailDto, callback);
 ```
 
 ### Parameters

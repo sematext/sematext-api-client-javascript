@@ -16,21 +16,21 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    factory(require('expect.js'), require('../../stcloud/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextCloudApi);
+    factory(root.expect, root.SematextApiClientJavascript);
   }
-}(this, function(expect, SematextCloudApi) {
+}(this, function(expect, SematextApiClientJavascript) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SematextCloudApi.SavedQueriesApi();
+    instance = new SematextApiClientJavascript.SavedQueriesApi();
   });
 
   describe('(package)', function() {
@@ -41,34 +41,32 @@
           /*
           var updateableQueryId = 789;
 
-          instance.deleteSavedQueryUsingDELETE(updateableQueryId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.deleteSavedQueryUsingDELETE(updateableQueryId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -81,34 +79,32 @@
           /*
           var appId = 789;
 
-          instance.getSavedQueriesForAppUsingGET(appId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.getSavedQueriesForAppUsingGET(appId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -119,8 +115,8 @@
         it('should call saveQueryUsingPOST successfully', function(done) {
           // TODO: uncomment, update parameter values for saveQueryUsingPOST call and complete the assertions
           /*
-          var savedQueryDto = new SematextCloudApi.SavedQuery();
-          savedQueryDto.alertRule = new SematextCloudApi.AlertRule();
+          var savedQueryDto = new SematextApiClientJavascript.SavedQuery();
+          savedQueryDto.alertRule = new SematextApiClientJavascript.AlertRule();
           savedQueryDto.alertRule.allowedAppTypes = ["0"];
           savedQueryDto.alertRule.analyzingTime = "";
           savedQueryDto.alertRule.appId = "0";
@@ -133,7 +129,7 @@
           savedQueryDto.alertRule.estimateOperation = "LESS";
           savedQueryDto.alertRule.estimateValue = 0.0;
           savedQueryDto.alertRule.filterValues = "";
-          savedQueryDto.alertRule.filterValuesObj = [new SematextCloudApi.FilterValue()];
+          savedQueryDto.alertRule.filterValuesObj = [new SematextApiClientJavascript.FilterValue()];
           savedQueryDto.alertRule.filterValuesObj[0].aggType = "";
           savedQueryDto.alertRule.filterValuesObj[0].filterName = "";
           savedQueryDto.alertRule.filterValuesObj[0].key = "";
@@ -146,7 +142,7 @@
           savedQueryDto.alertRule.minDelayBetweenNotificationsInMinutes = "";
           savedQueryDto.alertRule.name = "";
           savedQueryDto.alertRule.notificationEmails = [""];
-          savedQueryDto.alertRule.notificationIntegrations = [new SematextCloudApi.NotificationIntegration()];
+          savedQueryDto.alertRule.notificationIntegrations = [new SematextApiClientJavascript.NotificationIntegration()];
           savedQueryDto.alertRule.notificationIntegrations[0].applicability = "NONE";
           savedQueryDto.alertRule.notificationIntegrations[0].createDate = new Date();
           savedQueryDto.alertRule.notificationIntegrations[0].createdByOwner = false;
@@ -162,10 +158,10 @@
           savedQueryDto.alertRule.reportName = "";
           savedQueryDto.alertRule.ruleType = "";
           savedQueryDto.alertRule.runbook = "";
-          savedQueryDto.alertRule.schedule = [new SematextCloudApi.AlertRuleScheduleWeekdayDto()];
+          savedQueryDto.alertRule.schedule = [new SematextApiClientJavascript.AlertRuleScheduleWeekdayDto()];
           savedQueryDto.alertRule.schedule[0].day = "";
           savedQueryDto.alertRule.schedule[0].index = 0;
-          savedQueryDto.alertRule.schedule[0].intervals = [new SematextCloudApi.AlertRuleScheduleTimeRangeDto()];
+          savedQueryDto.alertRule.schedule[0].intervals = [new SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto()];
           savedQueryDto.alertRule.schedule[0].intervals[0].end = "";
           savedQueryDto.alertRule.schedule[0].intervals[0].start = "";
           savedQueryDto.alertRule.schedule[0].label = "";
@@ -173,7 +169,7 @@
           savedQueryDto.alertRule.sendToEmail = "";
           savedQueryDto.alertRule.timezone = "";
           savedQueryDto.alertRule.useOnlyAlertRuleIntegrations = false;
-          savedQueryDto.alertRule.userPermissions = new SematextCloudApi.UserPermissions();
+          savedQueryDto.alertRule.userPermissions = new SematextApiClientJavascript.UserPermissions();
           savedQueryDto.alertRule.userPermissions.canDelete = false;
           savedQueryDto.alertRule.userPermissions.canEdit = false;
           savedQueryDto.alertRule.userPermissions.canView = false;
@@ -182,39 +178,37 @@
           savedQueryDto.logseneAlertType = ;
           savedQueryDto.queryName = "";
           savedQueryDto.queryString = "";
-          savedQueryDto.userPermissions = new SematextCloudApi.UserPermissions();
+          savedQueryDto.userPermissions = new SematextApiClientJavascript.UserPermissions();
           savedQueryDto.userPermissions.canDelete = false;
           savedQueryDto.userPermissions.canEdit = false;
           savedQueryDto.userPermissions.canView = false;
 
-          instance.saveQueryUsingPOST(savedQueryDto, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.saveQueryUsingPOST(savedQueryDto).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -225,8 +219,8 @@
         it('should call saveQueryUsingPUT successfully', function(done) {
           // TODO: uncomment, update parameter values for saveQueryUsingPUT call and complete the assertions
           /*
-          var savedQueryDto = new SematextCloudApi.SavedQuery();
-          savedQueryDto.alertRule = new SematextCloudApi.AlertRule();
+          var savedQueryDto = new SematextApiClientJavascript.SavedQuery();
+          savedQueryDto.alertRule = new SematextApiClientJavascript.AlertRule();
           savedQueryDto.alertRule.allowedAppTypes = ["0"];
           savedQueryDto.alertRule.analyzingTime = "";
           savedQueryDto.alertRule.appId = "0";
@@ -239,7 +233,7 @@
           savedQueryDto.alertRule.estimateOperation = "LESS";
           savedQueryDto.alertRule.estimateValue = 0.0;
           savedQueryDto.alertRule.filterValues = "";
-          savedQueryDto.alertRule.filterValuesObj = [new SematextCloudApi.FilterValue()];
+          savedQueryDto.alertRule.filterValuesObj = [new SematextApiClientJavascript.FilterValue()];
           savedQueryDto.alertRule.filterValuesObj[0].aggType = "";
           savedQueryDto.alertRule.filterValuesObj[0].filterName = "";
           savedQueryDto.alertRule.filterValuesObj[0].key = "";
@@ -252,7 +246,7 @@
           savedQueryDto.alertRule.minDelayBetweenNotificationsInMinutes = "";
           savedQueryDto.alertRule.name = "";
           savedQueryDto.alertRule.notificationEmails = [""];
-          savedQueryDto.alertRule.notificationIntegrations = [new SematextCloudApi.NotificationIntegration()];
+          savedQueryDto.alertRule.notificationIntegrations = [new SematextApiClientJavascript.NotificationIntegration()];
           savedQueryDto.alertRule.notificationIntegrations[0].applicability = "NONE";
           savedQueryDto.alertRule.notificationIntegrations[0].createDate = new Date();
           savedQueryDto.alertRule.notificationIntegrations[0].createdByOwner = false;
@@ -268,10 +262,10 @@
           savedQueryDto.alertRule.reportName = "";
           savedQueryDto.alertRule.ruleType = "";
           savedQueryDto.alertRule.runbook = "";
-          savedQueryDto.alertRule.schedule = [new SematextCloudApi.AlertRuleScheduleWeekdayDto()];
+          savedQueryDto.alertRule.schedule = [new SematextApiClientJavascript.AlertRuleScheduleWeekdayDto()];
           savedQueryDto.alertRule.schedule[0].day = "";
           savedQueryDto.alertRule.schedule[0].index = 0;
-          savedQueryDto.alertRule.schedule[0].intervals = [new SematextCloudApi.AlertRuleScheduleTimeRangeDto()];
+          savedQueryDto.alertRule.schedule[0].intervals = [new SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto()];
           savedQueryDto.alertRule.schedule[0].intervals[0].end = "";
           savedQueryDto.alertRule.schedule[0].intervals[0].start = "";
           savedQueryDto.alertRule.schedule[0].label = "";
@@ -279,7 +273,7 @@
           savedQueryDto.alertRule.sendToEmail = "";
           savedQueryDto.alertRule.timezone = "";
           savedQueryDto.alertRule.useOnlyAlertRuleIntegrations = false;
-          savedQueryDto.alertRule.userPermissions = new SematextCloudApi.UserPermissions();
+          savedQueryDto.alertRule.userPermissions = new SematextApiClientJavascript.UserPermissions();
           savedQueryDto.alertRule.userPermissions.canDelete = false;
           savedQueryDto.alertRule.userPermissions.canEdit = false;
           savedQueryDto.alertRule.userPermissions.canView = false;
@@ -288,40 +282,38 @@
           savedQueryDto.logseneAlertType = ;
           savedQueryDto.queryName = "";
           savedQueryDto.queryString = "";
-          savedQueryDto.userPermissions = new SematextCloudApi.UserPermissions();
+          savedQueryDto.userPermissions = new SematextApiClientJavascript.UserPermissions();
           savedQueryDto.userPermissions.canDelete = false;
           savedQueryDto.userPermissions.canEdit = false;
           savedQueryDto.userPermissions.canView = false;
           var updateableQueryId = 789;
 
-          instance.saveQueryUsingPUT(savedQueryDto, updateableQueryId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.saveQueryUsingPUT(savedQueryDto, updateableQueryId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:

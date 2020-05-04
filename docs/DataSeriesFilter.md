@@ -1,4 +1,4 @@
-# SematextCloudApi.DataSeriesFilter
+# SematextApiClientJavascript.DataSeriesFilter
 
 ## Properties
 Name | Type | Description | Notes

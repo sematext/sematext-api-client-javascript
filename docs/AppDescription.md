@@ -1,4 +1,4 @@
-# SematextCloudApi.AppDescription
+# SematextApiClientJavascript.AppDescription
 
 ## Properties
 Name | Type | Description | Notes

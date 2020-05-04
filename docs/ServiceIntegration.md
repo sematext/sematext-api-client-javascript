@@ -1,4 +1,4 @@
-# SematextCloudApi.ServiceIntegration
+# SematextApiClientJavascript.ServiceIntegration
 
 ## Properties
 Name | Type | Description | Notes

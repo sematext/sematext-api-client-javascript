@@ -1,4 +1,4 @@
-# SematextCloudApi.BasicOrganizationDto
+# SematextApiClientJavascript.BasicOrganizationDto
 
 ## Properties
 Name | Type | Description | Notes

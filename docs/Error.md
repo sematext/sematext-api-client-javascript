@@ -1,4 +1,4 @@
-# SematextCloudApi.Error
+# SematextApiClientJavascript.Error
 
 ## Properties
 Name | Type | Description | Notes

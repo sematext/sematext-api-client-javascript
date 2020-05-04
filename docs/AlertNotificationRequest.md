@@ -1,4 +1,4 @@
-# SematextCloudApi.AlertNotificationRequest
+# SematextApiClientJavascript.AlertNotificationRequest
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SematextCloudApi.MetricsApi
+# SematextApiClientJavascript.MetricsApi
 
 All URIs are relative to *https://localhost*
 
@@ -20,30 +20,27 @@ Default value of interval is 5m
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.MetricsApi();
+let apiInstance = new SematextApiClientJavascript.MetricsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
-var requestBody = new SematextCloudApi.DataSeriesRequest(); // DataSeriesRequest | Metric data points request
+let requestBody = new SematextApiClientJavascript.DataSeriesRequest(); // DataSeriesRequest | Metric data points request
 
+apiInstance.listDataSeriesUsingPOST1(appId, requestBody).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listDataSeriesUsingPOST1(appId, requestBody, callback);
 ```
 
 ### Parameters
@@ -76,30 +73,27 @@ Default value of interval is 5m
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.MetricsApi();
+let apiInstance = new SematextApiClientJavascript.MetricsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
-var requestBody = new SematextCloudApi.DataSeriesRequest(); // DataSeriesRequest | Metric filters request
+let requestBody = new SematextApiClientJavascript.DataSeriesRequest(); // DataSeriesRequest | Metric filters request
 
+apiInstance.listFiltersUsingPOST(appId, requestBody).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listFiltersUsingPOST(appId, requestBody, callback);
 ```
 
 ### Parameters
@@ -130,28 +124,25 @@ Get metrics keys for an app
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.MetricsApi();
+let apiInstance = new SematextApiClientJavascript.MetricsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
+apiInstance.listMetricsKeysUsingGET1(appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listMetricsKeysUsingGET1(appId, callback);
 ```
 
 ### Parameters
@@ -181,28 +172,25 @@ Get metrics info for an app
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.MetricsApi();
+let apiInstance = new SematextApiClientJavascript.MetricsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
+apiInstance.listMetricsUsingGET1(appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listMetricsUsingGET1(appId, callback);
 ```
 
 ### Parameters

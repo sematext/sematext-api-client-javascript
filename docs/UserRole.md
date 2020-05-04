@@ -1,4 +1,4 @@
-# SematextCloudApi.UserRole
+# SematextApiClientJavascript.UserRole
 
 ## Properties
 Name | Type | Description | Notes

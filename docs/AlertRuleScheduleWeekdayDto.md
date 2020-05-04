@@ -1,4 +1,4 @@
-# SematextCloudApi.AlertRuleScheduleWeekdayDto
+# SematextApiClientJavascript.AlertRuleScheduleWeekdayDto
 
 ## Properties
 Name | Type | Description | Notes

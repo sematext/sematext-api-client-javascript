@@ -1,4 +1,4 @@
-# SematextCloudApi.BillingInfo
+# SematextApiClientJavascript.BillingInfo
 
 ## Properties
 Name | Type | Description | Notes

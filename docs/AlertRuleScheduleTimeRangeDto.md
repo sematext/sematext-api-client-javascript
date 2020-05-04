@@ -1,4 +1,4 @@
-# SematextCloudApi.AlertRuleScheduleTimeRangeDto
+# SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto
 
 ## Properties
 Name | Type | Description | Notes

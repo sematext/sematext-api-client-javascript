@@ -1,4 +1,4 @@
-# SematextCloudApi.ReportInfo
+# SematextApiClientJavascript.ReportInfo
 
 ## Properties
 Name | Type | Description | Notes

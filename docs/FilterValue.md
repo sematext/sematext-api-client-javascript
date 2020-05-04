@@ -1,4 +1,4 @@
-# SematextCloudApi.FilterValue
+# SematextApiClientJavascript.FilterValue
 
 ## Properties
 Name | Type | Description | Notes

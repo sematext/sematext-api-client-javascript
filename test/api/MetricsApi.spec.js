@@ -16,21 +16,21 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    factory(require('expect.js'), require('../../stcloud/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextCloudApi);
+    factory(root.expect, root.SematextApiClientJavascript);
   }
-}(this, function(expect, SematextCloudApi) {
+}(this, function(expect, SematextApiClientJavascript) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SematextCloudApi.MetricsApi();
+    instance = new SematextApiClientJavascript.MetricsApi();
   });
 
   describe('(package)', function() {
@@ -40,10 +40,10 @@
           // TODO: uncomment, update parameter values for listDataSeriesUsingPOST1 call and complete the assertions
           /*
           var appId = 789;
-          var requestBody = new SematextCloudApi.DataSeriesRequest();
+          var requestBody = new SematextApiClientJavascript.DataSeriesRequest();
           requestBody.defaultInterval = "0";
           requestBody.end = "";
-          requestBody.filters = {key: new SematextCloudApi.DataSeriesFilter()}new SematextCloudApi.DataSeriesFilter();
+          requestBody.filters = {key: new SematextApiClientJavascript.DataSeriesFilter()}new SematextApiClientJavascript.DataSeriesFilter();
           requestBody.filters.key.aggregation = "NONE";
           requestBody.filters.key.multiValue = false;
           requestBody.filters.key.values = [""];
@@ -52,34 +52,32 @@
           requestBody.metric = "";
           requestBody.start = "";
 
-          instance.listDataSeriesUsingPOST1(appId, requestBody, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.listDataSeriesUsingPOST1(appId, requestBody).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -91,10 +89,10 @@
           // TODO: uncomment, update parameter values for listFiltersUsingPOST call and complete the assertions
           /*
           var appId = 789;
-          var requestBody = new SematextCloudApi.DataSeriesRequest();
+          var requestBody = new SematextApiClientJavascript.DataSeriesRequest();
           requestBody.defaultInterval = "0";
           requestBody.end = "";
-          requestBody.filters = {key: new SematextCloudApi.DataSeriesFilter()}new SematextCloudApi.DataSeriesFilter();
+          requestBody.filters = {key: new SematextApiClientJavascript.DataSeriesFilter()}new SematextApiClientJavascript.DataSeriesFilter();
           requestBody.filters.key.aggregation = "NONE";
           requestBody.filters.key.multiValue = false;
           requestBody.filters.key.values = [""];
@@ -103,34 +101,32 @@
           requestBody.metric = "";
           requestBody.start = "";
 
-          instance.listFiltersUsingPOST(appId, requestBody, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.listFiltersUsingPOST(appId, requestBody).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -143,34 +139,32 @@
           /*
           var appId = 789;
 
-          instance.listMetricsKeysUsingGET1(appId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.listMetricsKeysUsingGET1(appId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -183,34 +177,32 @@
           /*
           var appId = 789;
 
-          instance.listMetricsUsingGET1(appId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.listMetricsUsingGET1(appId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:

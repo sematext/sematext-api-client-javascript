@@ -1,4 +1,4 @@
-# SematextCloudApi.TagApiControllerApi
+# SematextApiClientJavascript.TagApiControllerApi
 
 All URIs are relative to *https://localhost*
 
@@ -17,20 +17,20 @@ Gets tag names for the given application identifiers appearing in the given time
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.TagApiControllerApi();
+let apiInstance = new SematextApiClientJavascript.TagApiControllerApi();
 
-var appIds = "appIds_example"; // String | appIds
+let appIds = "appIds_example"; // String | appIds
 
-var opts = { 
+let opts = { 
   'from': 789, // Number | from
   'to': 789, // Number | to
   'metrics': true, // Boolean | metrics
@@ -38,15 +38,12 @@ var opts = {
   'events': false, // Boolean | events
   'rum': true // Boolean | rum
 };
+apiInstance.getTagNamesUsingGET(appIds, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getTagNamesUsingGET(appIds, opts, callback);
 ```
 
 ### Parameters
@@ -82,22 +79,22 @@ Gets values for specified tags for the given application identifiers appearing i
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.TagApiControllerApi();
+let apiInstance = new SematextApiClientJavascript.TagApiControllerApi();
 
-var appIds = "appIds_example"; // String | appIds
+let appIds = "appIds_example"; // String | appIds
 
-var tag = ["tag_example"]; // [String] | tag
+let tag = ["tag_example"]; // [String] | tag
 
-var opts = { 
+let opts = { 
   'from': 789, // Number | from
   'to': 789, // Number | to
   'metrics': true, // Boolean | metrics
@@ -105,15 +102,12 @@ var opts = {
   'events': false, // Boolean | events
   'rum': true // Boolean | rum
 };
+apiInstance.getUsingGET2(appIds, tag, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getUsingGET2(appIds, tag, opts, callback);
 ```
 
 ### Parameters
@@ -150,22 +144,22 @@ Gets values for specified tags for the given application identifiers appearing i
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.TagApiControllerApi();
+let apiInstance = new SematextApiClientJavascript.TagApiControllerApi();
 
-var appIds = "appIds_example"; // String | appIds
+let appIds = "appIds_example"; // String | appIds
 
-var tag = ["tag_example"]; // [String] | tag
+let tag = ["tag_example"]; // [String] | tag
 
-var opts = { 
+let opts = { 
   'from': 789, // Number | from
   'to': 789, // Number | to
   'metrics': true, // Boolean | metrics
@@ -173,15 +167,12 @@ var opts = {
   'events': false, // Boolean | events
   'rum': true // Boolean | rum
 };
+apiInstance.getUsingGET3(appIds, tag, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getUsingGET3(appIds, tag, opts, callback);
 ```
 
 ### Parameters

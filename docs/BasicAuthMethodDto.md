@@ -1,4 +1,4 @@
-# SematextCloudApi.BasicAuthMethodDto
+# SematextApiClientJavascript.BasicAuthMethodDto
 
 ## Properties
 Name | Type | Description | Notes

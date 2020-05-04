@@ -1,4 +1,4 @@
-# SematextCloudApi.AppMetadata
+# SematextApiClientJavascript.AppMetadata
 
 ## Properties
 Name | Type | Description | Notes

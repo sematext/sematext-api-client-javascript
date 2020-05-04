@@ -16,21 +16,21 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    factory(require('expect.js'), require('../../stcloud/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextCloudApi);
+    factory(root.expect, root.SematextApiClientJavascript);
   }
-}(this, function(expect, SematextCloudApi) {
+}(this, function(expect, SematextApiClientJavascript) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SematextCloudApi.AppsApi();
+    instance = new SematextApiClientJavascript.AppsApi();
   });
 
   describe('(package)', function() {
@@ -40,34 +40,32 @@
           // TODO: uncomment getAppTypesUsingGET call and complete the assertions
           /*
 
-          instance.getAppTypesUsingGET(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.getAppTypesUsingGET().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -80,34 +78,32 @@
           /*
           var anyStateAppId = 789;
 
-          instance.getUsingGET(anyStateAppId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.getUsingGET(anyStateAppId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -118,8 +114,8 @@
         it('should call inviteAppGuestsUsingPOST successfully', function(done) {
           // TODO: uncomment, update parameter values for inviteAppGuestsUsingPOST call and complete the assertions
           /*
-          var invitation = new SematextCloudApi.Invitation();
-          invitation.app = new SematextCloudApi.App();
+          var invitation = new SematextApiClientJavascript.Invitation();
+          invitation.app = new SematextApiClientJavascript.App();
           invitation.app.ajaxThreshold = "0";
           invitation.app.appType = "";
           invitation.app.appTypeId = "0";
@@ -130,7 +126,7 @@
           invitation.app.displayStatus = "";
           invitation.app.firstDataSavedDate = "0";
           invitation.app.id = "0";
-          invitation.app.integration = new SematextCloudApi.ServiceIntegration();
+          invitation.app.integration = new SematextApiClientJavascript.ServiceIntegration();
           invitation.app.integration.appTypeId = "0";
           invitation.app.integration.appTypeName = "";
           invitation.app.integration.displayName = "";
@@ -149,8 +145,8 @@
           invitation.app.monthlyInvoiceAccount = false;
           invitation.app.name = "";
           invitation.app.ownerEmail = "";
-          invitation.app.owningOrganization = new SematextCloudApi.BasicOrganizationDto();
-          invitation.app.owningOrganization.authMethods = [new SematextCloudApi.BasicAuthMethodDto()];
+          invitation.app.owningOrganization = new SematextApiClientJavascript.BasicOrganizationDto();
+          invitation.app.owningOrganization.authMethods = [new SematextApiClientJavascript.BasicAuthMethodDto()];
           invitation.app.owningOrganization.authMethods[0].authType = "SEMATEXT_ACCOUNT";
           invitation.app.owningOrganization.authMethods[0].uuid = "";
           invitation.app.owningOrganization.name = "";
@@ -158,7 +154,7 @@
           invitation.app.owningOrganization.uuid = "";
           invitation.app.pageLoadThreshold = "0";
           invitation.app.paymentMethodId = "0";
-          invitation.app.plan = new SematextCloudApi.Plan();
+          invitation.app.plan = new SematextApiClientJavascript.Plan();
           invitation.app.plan.appType = "";
           invitation.app.plan.custom = false;
           invitation.app.plan.dataRetentionHours = ;
@@ -177,11 +173,11 @@
           invitation.app.token = "";
           invitation.app.trialEndDate = "0";
           invitation.app.urlGroupLimit = 0;
-          invitation.app.userRoles = [new SematextCloudApi.UserRole()];
+          invitation.app.userRoles = [new SematextApiClientJavascript.UserRole()];
           invitation.app.userRoles[0].role = "SUPER_USER";
           invitation.app.userRoles[0].roleStatus = "INACTIVE";
           invitation.app.userRoles[0].userEmail = "";
-          invitation.apps = [new SematextCloudApi.App()];
+          invitation.apps = [new SematextApiClientJavascript.App()];
           invitation.apps[0].ajaxThreshold = "0";
           invitation.apps[0].appType = "";
           invitation.apps[0].appTypeId = "0";
@@ -192,7 +188,7 @@
           invitation.apps[0].displayStatus = "";
           invitation.apps[0].firstDataSavedDate = "0";
           invitation.apps[0].id = "0";
-          invitation.apps[0].integration = new SematextCloudApi.ServiceIntegration();
+          invitation.apps[0].integration = new SematextApiClientJavascript.ServiceIntegration();
           invitation.apps[0].integration.appTypeId = "0";
           invitation.apps[0].integration.appTypeName = "";
           invitation.apps[0].integration.displayName = "";
@@ -211,8 +207,8 @@
           invitation.apps[0].monthlyInvoiceAccount = false;
           invitation.apps[0].name = "";
           invitation.apps[0].ownerEmail = "";
-          invitation.apps[0].owningOrganization = new SematextCloudApi.BasicOrganizationDto();
-          invitation.apps[0].owningOrganization.authMethods = [new SematextCloudApi.BasicAuthMethodDto()];
+          invitation.apps[0].owningOrganization = new SematextApiClientJavascript.BasicOrganizationDto();
+          invitation.apps[0].owningOrganization.authMethods = [new SematextApiClientJavascript.BasicAuthMethodDto()];
           invitation.apps[0].owningOrganization.authMethods[0].authType = "SEMATEXT_ACCOUNT";
           invitation.apps[0].owningOrganization.authMethods[0].uuid = "";
           invitation.apps[0].owningOrganization.name = "";
@@ -220,7 +216,7 @@
           invitation.apps[0].owningOrganization.uuid = "";
           invitation.apps[0].pageLoadThreshold = "0";
           invitation.apps[0].paymentMethodId = "0";
-          invitation.apps[0].plan = new SematextCloudApi.Plan();
+          invitation.apps[0].plan = new SematextApiClientJavascript.Plan();
           invitation.apps[0].plan.appType = "";
           invitation.apps[0].plan.custom = false;
           invitation.apps[0].plan.dataRetentionHours = ;
@@ -239,41 +235,39 @@
           invitation.apps[0].token = "";
           invitation.apps[0].trialEndDate = "0";
           invitation.apps[0].urlGroupLimit = 0;
-          invitation.apps[0].userRoles = [new SematextCloudApi.UserRole()];
+          invitation.apps[0].userRoles = [new SematextApiClientJavascript.UserRole()];
           invitation.apps[0].userRoles[0].role = "SUPER_USER";
           invitation.apps[0].userRoles[0].roleStatus = "INACTIVE";
           invitation.apps[0].userRoles[0].userEmail = "";
           invitation.inviteeEmail = "guest@sematext.com";
           invitation.inviteeRole = "DEMO";
 
-          instance.inviteAppGuestsUsingPOST(invitation, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.inviteAppGuestsUsingPOST(invitation).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -285,34 +279,32 @@
           // TODO: uncomment listAppsUsersUsingGET call and complete the assertions
           /*
 
-          instance.listAppsUsersUsingGET(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.listAppsUsersUsingGET().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -324,34 +316,32 @@
           // TODO: uncomment listUsingGET call and complete the assertions
           /*
 
-          instance.listUsingGET(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.listUsingGET().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -364,37 +354,35 @@
           /*
           var anyStateAppId = 789;
           var opts = {};
-          opts.updateDetails = new SematextCloudApi.AppDescription();
+          opts.updateDetails = new SematextApiClientJavascript.AppDescription();
           opts.updateDetails.description = "";
 
-          instance.updateDescriptionUsingPUT(anyStateAppId, opts, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.updateDescriptionUsingPUT(anyStateAppId, opts).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -405,7 +393,7 @@
         it('should call updateUsingPUT1 successfully', function(done) {
           // TODO: uncomment, update parameter values for updateUsingPUT1 call and complete the assertions
           /*
-          var dto = new SematextCloudApi.UpdateAppInfo();
+          var dto = new SematextApiClientJavascript.UpdateAppInfo();
           dto.description = "New Description of App";
           dto.ignorePercentage = 1;
           dto.maxEvents = 1000;
@@ -417,34 +405,32 @@
           dto.status = "ACTIVE";
           var anyStateAppId = 789;
 
-          instance.updateUsingPUT1(dto, anyStateAppId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.updateUsingPUT1(dto, anyStateAppId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:

@@ -16,21 +16,21 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    factory(require('expect.js'), require('../../stcloud/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextCloudApi);
+    factory(root.expect, root.SematextApiClientJavascript);
   }
-}(this, function(expect, SematextCloudApi) {
+}(this, function(expect, SematextApiClientJavascript) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SematextCloudApi.AlertsApi();
+    instance = new SematextApiClientJavascript.AlertsApi();
   });
 
   describe('(package)', function() {
@@ -39,7 +39,7 @@
         it('should call createAlertUsingPOST successfully', function(done) {
           // TODO: uncomment, update parameter values for createAlertUsingPOST call and complete the assertions
           /*
-          var dto = new SematextCloudApi.AlertRule();
+          var dto = new SematextApiClientJavascript.AlertRule();
           dto.allowedAppTypes = ["0"];
           dto.analyzingTime = "";
           dto.appId = "0";
@@ -52,7 +52,7 @@
           dto.estimateOperation = "LESS";
           dto.estimateValue = 0.0;
           dto.filterValues = "";
-          dto.filterValuesObj = [new SematextCloudApi.FilterValue()];
+          dto.filterValuesObj = [new SematextApiClientJavascript.FilterValue()];
           dto.filterValuesObj[0].aggType = "";
           dto.filterValuesObj[0].filterName = "";
           dto.filterValuesObj[0].key = "";
@@ -65,7 +65,7 @@
           dto.minDelayBetweenNotificationsInMinutes = "";
           dto.name = "";
           dto.notificationEmails = [""];
-          dto.notificationIntegrations = [new SematextCloudApi.NotificationIntegration()];
+          dto.notificationIntegrations = [new SematextApiClientJavascript.NotificationIntegration()];
           dto.notificationIntegrations[0].applicability = "NONE";
           dto.notificationIntegrations[0].createDate = new Date();
           dto.notificationIntegrations[0].createdByOwner = false;
@@ -81,10 +81,10 @@
           dto.reportName = "";
           dto.ruleType = "";
           dto.runbook = "";
-          dto.schedule = [new SematextCloudApi.AlertRuleScheduleWeekdayDto()];
+          dto.schedule = [new SematextApiClientJavascript.AlertRuleScheduleWeekdayDto()];
           dto.schedule[0].day = "";
           dto.schedule[0].index = 0;
-          dto.schedule[0].intervals = [new SematextCloudApi.AlertRuleScheduleTimeRangeDto()];
+          dto.schedule[0].intervals = [new SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto()];
           dto.schedule[0].intervals[0].end = "";
           dto.schedule[0].intervals[0].start = "";
           dto.schedule[0].label = "";
@@ -92,39 +92,37 @@
           dto.sendToEmail = "";
           dto.timezone = "";
           dto.useOnlyAlertRuleIntegrations = false;
-          dto.userPermissions = new SematextCloudApi.UserPermissions();
+          dto.userPermissions = new SematextApiClientJavascript.UserPermissions();
           dto.userPermissions.canDelete = false;
           dto.userPermissions.canEdit = false;
           dto.userPermissions.canView = false;
 
-          instance.createAlertUsingPOST(dto, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.createAlertUsingPOST(dto).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -137,34 +135,32 @@
           /*
           var updateableAlertId = 789;
 
-          instance.deleteAlertRuleUsingDELETE(updateableAlertId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.deleteAlertRuleUsingDELETE(updateableAlertId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -177,34 +173,32 @@
           /*
           var updateableAlertId = 789;
 
-          instance.disableAlertRuleUsingPUT(updateableAlertId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.disableAlertRuleUsingPUT(updateableAlertId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -217,34 +211,32 @@
           /*
           var updateableAlertId = 789;
 
-          instance.enableAlertRuleUsingPUT(updateableAlertId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.enableAlertRuleUsingPUT(updateableAlertId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
@@ -257,34 +249,32 @@
           /*
           var appId = 789;
 
-          instance.getAlertRulesForAppUsingGET(appId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
+          instance.getAlertRulesForAppUsingGET(appId).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SematextCloudApi.GenericApiResponse);
+            expect(data).to.be.a(SematextApiClientJavascript.GenericApiResponse);
             expect(data.data).to.be.a(Object);
-            expect(data.data).to.be();
+            // expect(data.data).to.be();
             {
               let dataCtr = data.errors;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(SematextCloudApi.Error);
+                expect(data).to.be.a(SematextApiClientJavascript.Error);
                 expect(data.code).to.be.a('string');
-                expect(data.code).to.be("");
+                // expect(data.code).to.be("");
                 expect(data.message).to.be.a('string');
-                expect(data.message).to.be("");
+                // expect(data.message).to.be("");
               }
             }
             expect(data.message).to.be.a('string');
-            expect(data.message).to.be("");
+            // expect(data.message).to.be("");
             expect(data.success).to.be.a('boolean');
-            expect(data.success).to.be(false);
+            // expect(data.success).to.be(false);
 
             done();
+          }, function(error) {
+            done(error);
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:

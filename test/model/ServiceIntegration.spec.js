@@ -16,15 +16,15 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    factory(require('expect.js'), require('../../stcloud/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextCloudApi);
+    factory(root.expect, root.SematextApiClientJavascript);
   }
-}(this, function(expect, SematextCloudApi) {
+}(this, function(expect, SematextApiClientJavascript) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ServiceIntegration', function() {
       beforeEach(function() {
-        instance = new SematextCloudApi.ServiceIntegration();
+        instance = new SematextApiClientJavascript.ServiceIntegration();
       });
 
       it('should create an instance of ServiceIntegration', function() {
         // TODO: update the code to test ServiceIntegration
-        expect(instance).to.be.a(SematextCloudApi.ServiceIntegration);
+        expect(instance).to.be.a(SematextApiClientJavascript.ServiceIntegration);
       });
 
       it('should have the property appTypeId (base name: "appTypeId")', function() {

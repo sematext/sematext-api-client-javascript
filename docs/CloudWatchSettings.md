@@ -1,4 +1,4 @@
-# SematextCloudApi.CloudWatchSettings
+# SematextApiClientJavascript.CloudWatchSettings
 
 ## Properties
 Name | Type | Description | Notes

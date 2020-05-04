@@ -1,4 +1,4 @@
-# SematextCloudApi.BillingApi
+# SematextApiClientJavascript.BillingApi
 
 All URIs are relative to *https://localhost*
 
@@ -17,32 +17,29 @@ Get invoice details
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.BillingApi();
+let apiInstance = new SematextApiClientJavascript.BillingApi();
 
-var service = "service_example"; // String | service
+let service = "service_example"; // String | service
 
-var year = 56; // Number | year
+let year = 56; // Number | year
 
-var month = 56; // Number | month
+let month = 56; // Number | month
 
+apiInstance.getDetailedInvoiceUsingGET(service, year, month).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getDetailedInvoiceUsingGET(service, year, month, callback);
 ```
 
 ### Parameters
@@ -74,30 +71,27 @@ Get available plans
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.BillingApi();
+let apiInstance = new SematextApiClientJavascript.BillingApi();
 
-var opts = { 
+let opts = { 
   'integrationId': 789, // Number | integrationId
   'appType': "appType_example" // String | appType
 };
+apiInstance.listAvailablePlansUsingGET(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.listAvailablePlansUsingGET(opts, callback);
 ```
 
 ### Parameters
@@ -128,30 +122,27 @@ Update plan for an app
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.BillingApi();
+let apiInstance = new SematextApiClientJavascript.BillingApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
-var dto = new SematextCloudApi.BillingInfo(); // BillingInfo | dto
+let dto = new SematextApiClientJavascript.BillingInfo(); // BillingInfo | dto
 
+apiInstance.updatePlanUsingPUT(appId, dto).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.updatePlanUsingPUT(appId, dto, callback);
 ```
 
 ### Parameters

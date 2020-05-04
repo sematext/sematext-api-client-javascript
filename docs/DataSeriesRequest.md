@@ -1,4 +1,4 @@
-# SematextCloudApi.DataSeriesRequest
+# SematextApiClientJavascript.DataSeriesRequest
 
 ## Properties
 Name | Type | Description | Notes

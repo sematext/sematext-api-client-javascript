@@ -1,4 +1,4 @@
-# SematextCloudApi.GenericApiResponse
+# SematextApiClientJavascript.GenericApiResponse
 
 ## Properties
 Name | Type | Description | Notes

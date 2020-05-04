@@ -1,4 +1,4 @@
-# SematextCloudApi.SavedQueriesApi
+# SematextApiClientJavascript.SavedQueriesApi
 
 All URIs are relative to *https://localhost*
 
@@ -18,28 +18,25 @@ Delete saved query
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.SavedQueriesApi();
+let apiInstance = new SematextApiClientJavascript.SavedQueriesApi();
 
-var updateableQueryId = 789; // Number | updateableQueryId
+let updateableQueryId = 789; // Number | updateableQueryId
 
+apiInstance.deleteSavedQueryUsingDELETE(updateableQueryId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.deleteSavedQueryUsingDELETE(updateableQueryId, callback);
 ```
 
 ### Parameters
@@ -69,28 +66,25 @@ Get saved queries for an app
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.SavedQueriesApi();
+let apiInstance = new SematextApiClientJavascript.SavedQueriesApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
+apiInstance.getSavedQueriesForAppUsingGET(appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getSavedQueriesForAppUsingGET(appId, callback);
 ```
 
 ### Parameters
@@ -120,28 +114,25 @@ Create saved query
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.SavedQueriesApi();
+let apiInstance = new SematextApiClientJavascript.SavedQueriesApi();
 
-var savedQueryDto = new SematextCloudApi.SavedQuery(); // SavedQuery | savedQueryDto
+let savedQueryDto = new SematextApiClientJavascript.SavedQuery(); // SavedQuery | savedQueryDto
 
+apiInstance.saveQueryUsingPOST(savedQueryDto).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.saveQueryUsingPOST(savedQueryDto, callback);
 ```
 
 ### Parameters
@@ -171,30 +162,27 @@ Update saved query
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.SavedQueriesApi();
+let apiInstance = new SematextApiClientJavascript.SavedQueriesApi();
 
-var savedQueryDto = new SematextCloudApi.SavedQuery(); // SavedQuery | savedQueryDto
+let savedQueryDto = new SematextApiClientJavascript.SavedQuery(); // SavedQuery | savedQueryDto
 
-var updateableQueryId = 789; // Number | updateableQueryId
+let updateableQueryId = 789; // Number | updateableQueryId
 
+apiInstance.saveQueryUsingPUT(savedQueryDto, updateableQueryId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.saveQueryUsingPUT(savedQueryDto, updateableQueryId, callback);
 ```
 
 ### Parameters

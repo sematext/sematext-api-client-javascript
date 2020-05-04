@@ -1,4 +1,4 @@
-# SematextCloudApi.NotificationIntegration
+# SematextApiClientJavascript.NotificationIntegration
 
 ## Properties
 Name | Type | Description | Notes

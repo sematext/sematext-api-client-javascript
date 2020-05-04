@@ -16,15 +16,15 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    factory(require('expect.js'), require('../../stcloud/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextCloudApi);
+    factory(root.expect, root.SematextApiClientJavascript);
   }
-}(this, function(expect, SematextCloudApi) {
+}(this, function(expect, SematextApiClientJavascript) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('AlertRuleScheduleWeekdayDto', function() {
       beforeEach(function() {
-        instance = new SematextCloudApi.AlertRuleScheduleWeekdayDto();
+        instance = new SematextApiClientJavascript.AlertRuleScheduleWeekdayDto();
       });
 
       it('should create an instance of AlertRuleScheduleWeekdayDto', function() {
         // TODO: update the code to test AlertRuleScheduleWeekdayDto
-        expect(instance).to.be.a(SematextCloudApi.AlertRuleScheduleWeekdayDto);
+        expect(instance).to.be.a(SematextApiClientJavascript.AlertRuleScheduleWeekdayDto);
       });
 
       it('should have the property day (base name: "day")', function() {

@@ -1,4 +1,4 @@
-# SematextCloudApi.AlertNotificationsApi
+# SematextApiClientJavascript.AlertNotificationsApi
 
 All URIs are relative to *https://localhost*
 
@@ -18,30 +18,27 @@ Default value of interval is 1d
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.AlertNotificationsApi();
+let apiInstance = new SematextApiClientJavascript.AlertNotificationsApi();
 
-var appId = 789; // Number | appId
+let appId = 789; // Number | appId
 
-var timeInterval = new SematextCloudApi.AlertNotificationRequest(); // AlertNotificationRequest | Time Interval
+let timeInterval = new SematextApiClientJavascript.AlertNotificationRequest(); // AlertNotificationRequest | Time Interval
 
+apiInstance.getAlertNotificationsForAppUsingPOST(appId, timeInterval).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getAlertNotificationsForAppUsingPOST(appId, timeInterval, callback);
 ```
 
 ### Parameters
@@ -74,28 +71,25 @@ Default value of interval is 1d
 
 ### Example
 ```javascript
-var SematextCloudApi = require('sematext_cloud_api');
-var defaultClient = SematextCloudApi.ApiClient.instance;
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
+let api_key = defaultClient.authentications['api_key'];
 api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-var apiInstance = new SematextCloudApi.AlertNotificationsApi();
+let apiInstance = new SematextApiClientJavascript.AlertNotificationsApi();
 
-var timeInterval = new SematextCloudApi.AlertNotificationRequest(); // AlertNotificationRequest | Time Interval
+let timeInterval = new SematextApiClientJavascript.AlertNotificationRequest(); // AlertNotificationRequest | Time Interval
 
+apiInstance.getAlertNotificationsForUserUsingPOST(timeInterval).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getAlertNotificationsForUserUsingPOST(timeInterval, callback);
 ```
 
 ### Parameters

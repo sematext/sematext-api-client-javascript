@@ -1,4 +1,4 @@
-# SematextCloudApi.UserPermissions
+# SematextApiClientJavascript.UserPermissions
 
 ## Properties
 Name | Type | Description | Notes
