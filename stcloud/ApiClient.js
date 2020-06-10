@@ -13,8 +13,8 @@
  *
  */
 
-import superagent from "superagent";
-import querystring from "querystring";
+import superagent from 'superagent'
+import querystring from 'querystring'
 
 /**
 * @module ApiClient
@@ -29,110 +29,110 @@ import querystring from "querystring";
 * @class
 */
 export class ApiClient {
-    constructor() {
-        /**
+  constructor() {
+    /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
          * @default https://localhost
          */
-        this.basePath = 'https://localhost'.replace(/\/+$/, '');
+    this.basePath = 'https://localhost'.replace(/\/+$/, '')
 
-        /**
+    /**
          * The authentication methods to be included for all API calls.
          * @type {Array.<String>}
          */
-        this.authentications = {
-            'api_key': {type: 'apiKey', 'in': 'header', name: 'Authorization'}
-        }
+    this.authentications = {
+      'api_key': {type: 'apiKey', 'in': 'header', name: 'Authorization'}
+    }
 
-        /**
+    /**
          * The default HTTP headers to be included for all API calls.
          * @type {Array.<String>}
          * @default {}
          */
-        this.defaultHeaders = {};
+    this.defaultHeaders = {}
 
-        /**
+    /**
          * The default HTTP timeout for all API calls.
          * @type {Number}
          * @default 60000
          */
-        this.timeout = 60000;
+    this.timeout = 60000
 
-        /**
+    /**
          * If set to false an additional timestamp parameter is added to all API GET calls to
          * prevent browser caching
          * @type {Boolean}
          * @default true
          */
-        this.cache = true;
+    this.cache = true
 
-        /**
+    /**
          * If set to true, the client will save the cookies from each server
          * response, and return them in the next request.
          * @default false
          */
-        this.enableCookies = false;
+    this.enableCookies = false
 
-        /*
+    /*
          * Used to save and return cookies in a node.js (non-browser) setting,
          * if this.enableCookies is set to true.
          */
-        if (typeof window === 'undefined') {
-          this.agent = new superagent.agent();
-        }
-
-        /*
-         * Allow user to override superagent agent
-         */
-         this.requestAgent = null;
-
+    if (typeof window === 'undefined') {
+      this.agent = new superagent.agent()
     }
 
-    /**
+    /*
+         * Allow user to override superagent agent
+         */
+    this.requestAgent = null
+
+  }
+
+  /**
     * Returns a string representation for an actual parameter.
     * @param param The actual parameter.
     * @returns {String} The string representation of <code>param</code>.
     */
-    paramToString(param) {
-        if (param == undefined || param == null) {
-            return '';
-        }
-        if (param instanceof Date) {
-            return param.toJSON();
-        }
-
-        return param.toString();
+  paramToString(param) {
+    if (param == undefined || param == null) {
+      return ''
+    }
+    if (param instanceof Date) {
+      return param.toJSON()
     }
 
-    /**
+    return param.toString()
+  }
+
+  /**
     * Builds full URL by appending the given path to the base URL and replacing path parameter place-holders with parameter values.
     * NOTE: query parameters are not handled here.
     * @param {String} path The path to append to the base URL.
     * @param {Object} pathParams The parameter values to append.
     * @returns {String} The encoded path with parameter values substituted.
     */
-    buildUrl(path, pathParams) {
-        if (!path.match(/^\//)) {
-            path = '/' + path;
-        }
-
-        var url = this.basePath + path;
-        url = url.replace(/\{([\w-]+)\}/g, (fullMatch, key) => {
-            var value;
-            if (pathParams.hasOwnProperty(key)) {
-                value = this.paramToString(pathParams[key]);
-            } else {
-                value = fullMatch;
-            }
-
-            return encodeURIComponent(value);
-        });
-
-        return url;
+  buildUrl(path, pathParams) {
+    if (!path.match(/^\//)) {
+      path = '/' + path
     }
 
-    /**
+    var url = this.basePath + path
+    url = url.replace(/\{([\w-]+)\}/g, (fullMatch, key) => {
+      var value
+      if (pathParams.hasOwnProperty(key)) {  // eslint-disable-line no-prototype-builtins
+        value = this.paramToString(pathParams[key])
+      } else {
+        value = fullMatch
+      }
+
+      return encodeURIComponent(value)
+    })
+
+    return url
+  }
+
+  /**
     * Checks whether the given content type represents JSON.<br>
     * JSON content type examples:<br>
     * <ul>
@@ -143,61 +143,61 @@ export class ApiClient {
     * @param {String} contentType The MIME content type to check.
     * @returns {Boolean} <code>true</code> if <code>contentType</code> represents JSON, otherwise <code>false</code>.
     */
-    isJsonMime(contentType) {
-        return Boolean(contentType != null && contentType.match(/^application\/json(;.*)?$/i));
-    }
+  isJsonMime(contentType) {
+    return Boolean(contentType != null && contentType.match(/^application\/json(;.*)?$/i))
+  }
 
-    /**
+  /**
     * Chooses a content type from the given array, with JSON preferred; i.e. return JSON if included, otherwise return the first.
     * @param {Array.<String>} contentTypes
     * @returns {String} The chosen content type, preferring JSON.
     */
-    jsonPreferredMime(contentTypes) {
-        for (var i = 0; i < contentTypes.length; i++) {
-            if (this.isJsonMime(contentTypes[i])) {
-                return contentTypes[i];
-            }
-        }
-
-        return contentTypes[0];
+  jsonPreferredMime(contentTypes) {
+    for (var i = 0; i < contentTypes.length; i++) {
+      if (this.isJsonMime(contentTypes[i])) {
+        return contentTypes[i]
+      }
     }
 
-    /**
+    return contentTypes[0]
+  }
+
+  /**
     * Checks whether the given parameter value represents file-like content.
     * @param param The parameter to check.
     * @returns {Boolean} <code>true</code> if <code>param</code> represents a file.
     */
-    isFileParam(param) {
-        // fs.ReadStream in Node.js and Electron (but not in runtime like browserify)
-        if (typeof require === 'function') {
-            let fs;
-            try {
-                fs = require('fs');
-            } catch (err) {}
-            if (fs && fs.ReadStream && param instanceof fs.ReadStream) {
-                return true;
-            }
-        }
-
-        // Buffer in Node.js
-        if (typeof Buffer === 'function' && param instanceof Buffer) {
-            return true;
-        }
-
-        // Blob in browser
-        if (typeof Blob === 'function' && param instanceof Blob) {
-            return true;
-        }
-
-        // File in browser (it seems File object is also instance of Blob, but keep this for safe)
-        if (typeof File === 'function' && param instanceof File) {
-            return true;
-        }
-
-        return false;
+  isFileParam(param) {
+    // fs.ReadStream in Node.js and Electron (but not in runtime like browserify)
+    if (typeof require === 'function') {
+      let fs
+      try {
+        fs = require('fs')
+      } catch (err) {}  // eslint-disable-line no-empty
+      if (fs && fs.ReadStream && param instanceof fs.ReadStream) {
+        return true
+      }
     }
 
-    /**
+    // Buffer in Node.js
+    if (typeof Buffer === 'function' && param instanceof Buffer) {
+      return true
+    }
+
+    // Blob in browser
+    if (typeof Blob === 'function' && param instanceof Blob) {  // eslint-disable-line no-undef
+      return true
+    }
+
+    // File in browser (it seems File object is also instance of Blob, but keep this for safe)
+    if (typeof File === 'function' && param instanceof File) {  // eslint-disable-line no-undef
+      return true
+    }
+
+    return false
+  }
+
+  /**
     * Normalizes parameter values:
     * <ul>
     * <li>remove nils</li>
@@ -207,27 +207,28 @@ export class ApiClient {
     * @param {Object.<String, Object>} params The parameters as object properties.
     * @returns {Object.<String, Object>} normalized parameters.
     */
-    normalizeParams(params) {
-        var newParams = {};
-        for (var key in params) {
-            if (params.hasOwnProperty(key) && params[key] != undefined && params[key] != null) {
-                var value = params[key];
-                if (this.isFileParam(value) || Array.isArray(value)) {
-                    newParams[key] = value;
-                } else {
-                    newParams[key] = this.paramToString(value);
-                }
-            }
+  normalizeParams(params) {
+    var newParams = {}
+    for (var key in params) {
+      if (params.hasOwnProperty(key) && params[key] != undefined && params[key] != null) {  // eslint-disable-line no-prototype-builtins
+        var value = params[key]
+        if (this.isFileParam(value) || Array.isArray(value)) {
+          newParams[key] = value
+        } else {
+          newParams[key] = this.paramToString(value)
         }
-
-        return newParams;
+      }
     }
+
+    return newParams
+  }
 
     /**
     * Enumeration of collection format separator strategies.
     * @enum {String}
     * @readonly
     */
+    /* eslint-disable */
     static CollectionFormatEnum = {
         /**
          * Comma-separated values. Value: <code>csv</code>
@@ -259,6 +260,7 @@ export class ApiClient {
          */
         MULTI: 'multi'
     };
+
 
     /**
     * Builds a string representation of an array-type actual parameter, according to the given collection format.

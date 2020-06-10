@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "globals": {
     "describe": true,
     "it": true
@@ -8,12 +9,12 @@
     "node": true
   },
   "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "extends": "eslint:recommended",
   "rules": {
     "indent": [
