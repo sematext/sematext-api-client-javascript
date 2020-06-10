@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The ReportInfo model module.
@@ -38,25 +38,25 @@ export class ReportInfo {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new ReportInfo();
-      if (data.hasOwnProperty('addresses'))
-        obj.addresses = ApiClient.convertToType(data['addresses'], 'String');
-      if (data.hasOwnProperty('appId'))
-        obj.appId = ApiClient.convertToType(data['appId'], 'Number');
-      if (data.hasOwnProperty('endDate'))
-        obj.endDate = ApiClient.convertToType(data['endDate'], 'Date');
-      if (data.hasOwnProperty('filters'))
-        obj.filters = ApiClient.convertToType(data['filters'], 'String');
-      if (data.hasOwnProperty('reportName'))
-        obj.reportName = ApiClient.convertToType(data['reportName'], 'String');
-      if (data.hasOwnProperty('startDate'))
-        obj.startDate = ApiClient.convertToType(data['startDate'], 'Date');
-      if (data.hasOwnProperty('subject'))
-        obj.subject = ApiClient.convertToType(data['subject'], 'String');
-      if (data.hasOwnProperty('text'))
-        obj.text = ApiClient.convertToType(data['text'], 'String');
+      obj = obj || new ReportInfo()
+      if (data.hasOwnProperty('addresses')) // eslint-disable-line no-prototype-builtins
+        obj.addresses = ApiClient.convertToType(data['addresses'], 'String')
+      if (data.hasOwnProperty('appId')) // eslint-disable-line no-prototype-builtins
+        obj.appId = ApiClient.convertToType(data['appId'], 'Number')
+      if (data.hasOwnProperty('endDate')) // eslint-disable-line no-prototype-builtins
+        obj.endDate = ApiClient.convertToType(data['endDate'], 'Date')
+      if (data.hasOwnProperty('filters')) // eslint-disable-line no-prototype-builtins
+        obj.filters = ApiClient.convertToType(data['filters'], 'String')
+      if (data.hasOwnProperty('reportName')) // eslint-disable-line no-prototype-builtins
+        obj.reportName = ApiClient.convertToType(data['reportName'], 'String')
+      if (data.hasOwnProperty('startDate')) // eslint-disable-line no-prototype-builtins
+        obj.startDate = ApiClient.convertToType(data['startDate'], 'Date')
+      if (data.hasOwnProperty('subject')) // eslint-disable-line no-prototype-builtins
+        obj.subject = ApiClient.convertToType(data['subject'], 'String')
+      if (data.hasOwnProperty('text')) // eslint-disable-line no-prototype-builtins
+        obj.text = ApiClient.convertToType(data['text'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
@@ -64,41 +64,39 @@ export class ReportInfo {
  * Comma separated list of email addresses
  * @member {String} addresses
  */
-ReportInfo.prototype.addresses = undefined;
+ReportInfo.prototype.addresses = undefined
 
 /**
  * @member {Number} appId
  */
-ReportInfo.prototype.appId = undefined;
+ReportInfo.prototype.appId = undefined
 
 /**
  * @member {Date} endDate
  */
-ReportInfo.prototype.endDate = undefined;
+ReportInfo.prototype.endDate = undefined
 
 /**
  * @member {String} filters
  */
-ReportInfo.prototype.filters = undefined;
+ReportInfo.prototype.filters = undefined
 
 /**
  * @member {String} reportName
  */
-ReportInfo.prototype.reportName = undefined;
+ReportInfo.prototype.reportName = undefined
 
 /**
  * @member {Date} startDate
  */
-ReportInfo.prototype.startDate = undefined;
+ReportInfo.prototype.startDate = undefined
 
 /**
  * @member {String} subject
  */
-ReportInfo.prototype.subject = undefined;
+ReportInfo.prototype.subject = undefined
 
 /**
  * @member {String} text
  */
-ReportInfo.prototype.text = undefined;
-
-
+ReportInfo.prototype.text = undefined

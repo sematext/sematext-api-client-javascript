@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {DataSeriesFilter} from './DataSeriesFilter';
+import {ApiClient} from '../ApiClient'
+import {DataSeriesFilter} from './DataSeriesFilter'
 
 /**
  * The DataSeriesRequest model module.
@@ -29,7 +29,7 @@ export class DataSeriesRequest {
    * @param metric {String} Metric name or metric group prefix
    */
   constructor(metric) {
-    this.metric = metric;
+    this.metric = metric
   }
 
   /**
@@ -41,42 +41,42 @@ export class DataSeriesRequest {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new DataSeriesRequest();
-      if (data.hasOwnProperty('defaultInterval'))
-        obj.defaultInterval = ApiClient.convertToType(data['defaultInterval'], 'Number');
-      if (data.hasOwnProperty('end'))
-        obj.end = ApiClient.convertToType(data['end'], 'String');
-      if (data.hasOwnProperty('filters'))
-        obj.filters = ApiClient.convertToType(data['filters'], {'String': DataSeriesFilter});
-      if (data.hasOwnProperty('granularity'))
-        obj.granularity = ApiClient.convertToType(data['granularity'], 'String');
-      if (data.hasOwnProperty('interval'))
-        obj.interval = ApiClient.convertToType(data['interval'], 'String');
-      if (data.hasOwnProperty('metric'))
-        obj.metric = ApiClient.convertToType(data['metric'], 'String');
-      if (data.hasOwnProperty('start'))
-        obj.start = ApiClient.convertToType(data['start'], 'String');
+      obj = obj || new DataSeriesRequest()
+      if (data.hasOwnProperty('defaultInterval')) // eslint-disable-line no-prototype-builtins
+        obj.defaultInterval = ApiClient.convertToType(data['defaultInterval'], 'Number')
+      if (data.hasOwnProperty('end')) // eslint-disable-line no-prototype-builtins
+        obj.end = ApiClient.convertToType(data['end'], 'String')
+      if (data.hasOwnProperty('filters')) // eslint-disable-line no-prototype-builtins
+        obj.filters = ApiClient.convertToType(data['filters'], {'String': DataSeriesFilter})
+      if (data.hasOwnProperty('granularity')) // eslint-disable-line no-prototype-builtins
+        obj.granularity = ApiClient.convertToType(data['granularity'], 'String')
+      if (data.hasOwnProperty('interval')) // eslint-disable-line no-prototype-builtins
+        obj.interval = ApiClient.convertToType(data['interval'], 'String')
+      if (data.hasOwnProperty('metric')) // eslint-disable-line no-prototype-builtins
+        obj.metric = ApiClient.convertToType(data['metric'], 'String')
+      if (data.hasOwnProperty('start')) // eslint-disable-line no-prototype-builtins
+        obj.start = ApiClient.convertToType(data['start'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {Number} defaultInterval
  */
-DataSeriesRequest.prototype.defaultInterval = undefined;
+DataSeriesRequest.prototype.defaultInterval = undefined
 
 /**
  * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
  * @member {String} end
  */
-DataSeriesRequest.prototype.end = undefined;
+DataSeriesRequest.prototype.end = undefined
 
 /**
  * Map of allowed filter values and aggregation strategy. List of available filter values can be fetched using metric filters endpoint and default aggregation strategy depends on metric
  * @member {Object.<String, module:model/DataSeriesFilter>} filters
  */
-DataSeriesRequest.prototype.filters = undefined;
+DataSeriesRequest.prototype.filters = undefined
 
 /**
  * Allowed values for the <code>granularity</code> property.
@@ -88,66 +88,64 @@ DataSeriesRequest.GranularityEnum = {
    * value: "AUTO"
    * @const
    */
-  AUTO: "AUTO",
+  AUTO: 'AUTO',
 
   /**
    * value: "ONE_MINUTE"
    * @const
    */
-  ONE_MINUTE: "ONE_MINUTE",
+  ONE_MINUTE: 'ONE_MINUTE',
 
   /**
    * value: "FIVE_MINUTES"
    * @const
    */
-  FIVE_MINUTES: "FIVE_MINUTES",
+  FIVE_MINUTES: 'FIVE_MINUTES',
 
   /**
    * value: "HOUR"
    * @const
    */
-  HOUR: "HOUR",
+  HOUR: 'HOUR',
 
   /**
    * value: "DAY"
    * @const
    */
-  DAY: "DAY",
+  DAY: 'DAY',
 
   /**
    * value: "WEEK"
    * @const
    */
-  WEEK: "WEEK",
+  WEEK: 'WEEK',
 
   /**
    * value: "MONTH"
    * @const
    */
-  MONTH: "MONTH"
-};
+  MONTH: 'MONTH'
+}
 
 /**
  * Data points interval granularity between two data points.Default value is \"AUTO\" - calculated based on selected time span. Not required while getting filters.
  * @member {module:model/DataSeriesRequest.GranularityEnum} granularity
  */
-DataSeriesRequest.prototype.granularity = undefined;
+DataSeriesRequest.prototype.granularity = undefined
 
 /**
  * @member {String} interval
  */
-DataSeriesRequest.prototype.interval = undefined;
+DataSeriesRequest.prototype.interval = undefined
 
 /**
  * Metric name or metric group prefix
  * @member {String} metric
  */
-DataSeriesRequest.prototype.metric = undefined;
+DataSeriesRequest.prototype.metric = undefined
 
 /**
  * Start time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
  * @member {String} start
  */
-DataSeriesRequest.prototype.start = undefined;
-
-
+DataSeriesRequest.prototype.start = undefined

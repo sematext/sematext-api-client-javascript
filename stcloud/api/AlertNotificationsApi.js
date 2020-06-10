@@ -13,9 +13,10 @@
  *
  */
 
-import {ApiClient} from "../ApiClient";
-import {AlertNotificationRequest} from '../model/AlertNotificationRequest';
-import {GenericApiResponse} from '../model/GenericApiResponse';
+
+import {ApiClient} from '../ApiClient'
+import {AlertNotificationRequest} from '../model/AlertNotificationRequest' // eslint-disable-line no-unused-vars
+import {GenericApiResponse} from '../model/GenericApiResponse'
 
 /**
 * AlertNotifications service.
@@ -24,125 +25,125 @@ import {GenericApiResponse} from '../model/GenericApiResponse';
 */
 export class AlertNotificationsApi {
 
-    /**
-    * Constructs a new AlertNotificationsApi. 
+  /**
+    * Constructs a new AlertNotificationsApi.
     * @alias module:api/AlertNotificationsApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
-    }
+  constructor(apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
 
 
-    /**
+  /**
      * Get alert notifications for an app
      * Default value of interval is 1d
      * @param {Number} appId appId
      * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
      */
-    getAlertNotificationsForAppUsingPOSTWithHttpInfo(appId, timeInterval) {
-      let postBody = timeInterval;
+  getAlertNotificationsForAppUsingPOSTWithHttpInfo(appId, timeInterval) {
+    let postBody = timeInterval
 
-      // verify the required parameter 'appId' is set
-      if (appId === undefined || appId === null) {
-        throw new Error("Missing the required parameter 'appId' when calling getAlertNotificationsForAppUsingPOST");
-      }
-
-      // verify the required parameter 'timeInterval' is set
-      if (timeInterval === undefined || timeInterval === null) {
-        throw new Error("Missing the required parameter 'timeInterval' when calling getAlertNotificationsForAppUsingPOST");
-      }
-
-
-      let pathParams = {
-        'appId': appId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/apps/{appId}/notifications/alerts', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'appId' is set
+    if (appId === undefined || appId === null) {
+      throw new Error('Missing the required parameter \'appId\' when calling getAlertNotificationsForAppUsingPOST')
     }
 
-    /**
+    // verify the required parameter 'timeInterval' is set
+    if (timeInterval === undefined || timeInterval === null) {
+      throw new Error('Missing the required parameter \'timeInterval\' when calling getAlertNotificationsForAppUsingPOST')
+    }
+
+
+    let pathParams = {
+      'appId': appId
+    }
+    let queryParams = {
+    }
+    let headerParams = {
+    }
+    let formParams = {
+    }
+
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
+
+    return this.apiClient.callApi(
+      '/users-web/api/v3/apps/{appId}/notifications/alerts', 'POST',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType
+    )
+  }
+
+  /**
      * Get alert notifications for an app
      * Default value of interval is 1d
      * @param {Number} appId appId
      * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
      */
-    getAlertNotificationsForAppUsingPOST(appId, timeInterval) {
-      return this.getAlertNotificationsForAppUsingPOSTWithHttpInfo(appId, timeInterval)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getAlertNotificationsForAppUsingPOST(appId, timeInterval) {
+    return this.getAlertNotificationsForAppUsingPOSTWithHttpInfo(appId, timeInterval)
+      .then(function(response_and_data) {
+        return response_and_data.data
+      })
+  }
 
 
-    /**
+  /**
      * Get alert notifications for a user
      * Default value of interval is 1d
      * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
      */
-    getAlertNotificationsForUserUsingPOSTWithHttpInfo(timeInterval) {
-      let postBody = timeInterval;
+  getAlertNotificationsForUserUsingPOSTWithHttpInfo(timeInterval) {
+    let postBody = timeInterval
 
-      // verify the required parameter 'timeInterval' is set
-      if (timeInterval === undefined || timeInterval === null) {
-        throw new Error("Missing the required parameter 'timeInterval' when calling getAlertNotificationsForUserUsingPOST");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/notifications/alerts', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'timeInterval' is set
+    if (timeInterval === undefined || timeInterval === null) {
+      throw new Error('Missing the required parameter \'timeInterval\' when calling getAlertNotificationsForUserUsingPOST')
     }
 
-    /**
+
+    let pathParams = {
+    }
+    let queryParams = {
+    }
+    let headerParams = {
+    }
+    let formParams = {
+    }
+
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
+
+    return this.apiClient.callApi(
+      '/users-web/api/v3/notifications/alerts', 'POST',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType
+    )
+  }
+
+  /**
      * Get alert notifications for a user
      * Default value of interval is 1d
      * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
      */
-    getAlertNotificationsForUserUsingPOST(timeInterval) {
-      return this.getAlertNotificationsForUserUsingPOSTWithHttpInfo(timeInterval)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getAlertNotificationsForUserUsingPOST(timeInterval) {
+    return this.getAlertNotificationsForUserUsingPOSTWithHttpInfo(timeInterval)
+      .then(function(response_and_data) {
+        return response_and_data.data
+      })
+  }
 
 
 }

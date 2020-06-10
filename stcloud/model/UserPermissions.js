@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The UserPermissions model module.
@@ -38,31 +38,29 @@ export class UserPermissions {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new UserPermissions();
-      if (data.hasOwnProperty('canDelete'))
-        obj.canDelete = ApiClient.convertToType(data['canDelete'], 'Boolean');
-      if (data.hasOwnProperty('canEdit'))
-        obj.canEdit = ApiClient.convertToType(data['canEdit'], 'Boolean');
-      if (data.hasOwnProperty('canView'))
-        obj.canView = ApiClient.convertToType(data['canView'], 'Boolean');
+      obj = obj || new UserPermissions()
+      if (data.hasOwnProperty('canDelete')) // eslint-disable-line no-prototype-builtins
+        obj.canDelete = ApiClient.convertToType(data['canDelete'], 'Boolean')
+      if (data.hasOwnProperty('canEdit')) // eslint-disable-line no-prototype-builtins
+        obj.canEdit = ApiClient.convertToType(data['canEdit'], 'Boolean')
+      if (data.hasOwnProperty('canView')) // eslint-disable-line no-prototype-builtins
+        obj.canView = ApiClient.convertToType(data['canView'], 'Boolean')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {Boolean} canDelete
  */
-UserPermissions.prototype.canDelete = undefined;
+UserPermissions.prototype.canDelete = undefined
 
 /**
  * @member {Boolean} canEdit
  */
-UserPermissions.prototype.canEdit = undefined;
+UserPermissions.prototype.canEdit = undefined
 
 /**
  * @member {Boolean} canView
  */
-UserPermissions.prototype.canView = undefined;
-
-
+UserPermissions.prototype.canView = undefined

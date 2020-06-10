@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The AlertNotificationRequest model module.
@@ -38,40 +38,38 @@ export class AlertNotificationRequest {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new AlertNotificationRequest();
-      if (data.hasOwnProperty('defaultInterval'))
-        obj.defaultInterval = ApiClient.convertToType(data['defaultInterval'], 'Number');
-      if (data.hasOwnProperty('end'))
-        obj.end = ApiClient.convertToType(data['end'], 'String');
-      if (data.hasOwnProperty('interval'))
-        obj.interval = ApiClient.convertToType(data['interval'], 'String');
-      if (data.hasOwnProperty('start'))
-        obj.start = ApiClient.convertToType(data['start'], 'String');
+      obj = obj || new AlertNotificationRequest()
+      if (data.hasOwnProperty('defaultInterval')) // eslint-disable-line no-prototype-builtins
+        obj.defaultInterval = ApiClient.convertToType(data['defaultInterval'], 'Number')
+      if (data.hasOwnProperty('end')) // eslint-disable-line no-prototype-builtins
+        obj.end = ApiClient.convertToType(data['end'], 'String')
+      if (data.hasOwnProperty('interval')) // eslint-disable-line no-prototype-builtins
+        obj.interval = ApiClient.convertToType(data['interval'], 'String')
+      if (data.hasOwnProperty('start')) // eslint-disable-line no-prototype-builtins
+        obj.start = ApiClient.convertToType(data['start'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {Number} defaultInterval
  */
-AlertNotificationRequest.prototype.defaultInterval = undefined;
+AlertNotificationRequest.prototype.defaultInterval = undefined
 
 /**
  * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
  * @member {String} end
  */
-AlertNotificationRequest.prototype.end = undefined;
+AlertNotificationRequest.prototype.end = undefined
 
 /**
  * @member {String} interval
  */
-AlertNotificationRequest.prototype.interval = undefined;
+AlertNotificationRequest.prototype.interval = undefined
 
 /**
  * Start time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
  * @member {String} start
  */
-AlertNotificationRequest.prototype.start = undefined;
-
-
+AlertNotificationRequest.prototype.start = undefined

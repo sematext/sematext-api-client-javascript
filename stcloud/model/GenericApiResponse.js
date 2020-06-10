@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {Error} from './Error';
+import {ApiClient} from '../ApiClient'
+import {Error} from './Error'
 
 /**
  * The GenericApiResponse model module.
@@ -40,17 +40,17 @@ export class GenericApiResponse {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new GenericApiResponse();
-      if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], Object);
-      if (data.hasOwnProperty('errors'))
-        obj.errors = ApiClient.convertToType(data['errors'], [Error]);
-      if (data.hasOwnProperty('message'))
-        obj.message = ApiClient.convertToType(data['message'], 'String');
-      if (data.hasOwnProperty('success'))
-        obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      obj = obj || new GenericApiResponse()
+      if (data.hasOwnProperty('data')) // eslint-disable-line no-prototype-builtins
+        obj.data = ApiClient.convertToType(data['data'], Object)
+      if (data.hasOwnProperty('errors')) // eslint-disable-line no-prototype-builtins
+        obj.errors = ApiClient.convertToType(data['errors'], [Error])
+      if (data.hasOwnProperty('message')) // eslint-disable-line no-prototype-builtins
+        obj.message = ApiClient.convertToType(data['message'], 'String')
+      if (data.hasOwnProperty('success')) // eslint-disable-line no-prototype-builtins
+        obj.success = ApiClient.convertToType(data['success'], 'Boolean')
     }
-    return obj;
+    return obj
   }
 }
 
@@ -58,21 +58,19 @@ export class GenericApiResponse {
  * Contains actual data when response is successful. Key and Value is specific to each endpoint
  * @member {Object} data
  */
-GenericApiResponse.prototype.data = undefined;
+GenericApiResponse.prototype.data = undefined
 
 /**
  * @member {Array.<module:model/Error>} errors
  */
-GenericApiResponse.prototype.errors = undefined;
+GenericApiResponse.prototype.errors = undefined
 
 /**
  * @member {String} message
  */
-GenericApiResponse.prototype.message = undefined;
+GenericApiResponse.prototype.message = undefined
 
 /**
  * @member {Boolean} success
  */
-GenericApiResponse.prototype.success = undefined;
-
-
+GenericApiResponse.prototype.success = undefined

@@ -357,7 +357,7 @@ export class ApiClient {
         return ApiClient.convertToType(data, returnType);
     }
 
-    
+
 
     /**
     * Invokes the REST service using the supplied settings and parameters.
@@ -471,7 +471,7 @@ export class ApiClient {
             });
         });
 
-        
+
     }
 
     /**

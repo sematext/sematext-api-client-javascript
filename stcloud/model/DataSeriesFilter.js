@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The DataSeriesFilter model module.
@@ -38,15 +38,15 @@ export class DataSeriesFilter {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new DataSeriesFilter();
-      if (data.hasOwnProperty('aggregation'))
-        obj.aggregation = ApiClient.convertToType(data['aggregation'], 'String');
-      if (data.hasOwnProperty('multiValue'))
-        obj.multiValue = ApiClient.convertToType(data['multiValue'], 'Boolean');
-      if (data.hasOwnProperty('values'))
-        obj.values = ApiClient.convertToType(data['values'], ['String']);
+      obj = obj || new DataSeriesFilter()
+      if (data.hasOwnProperty('aggregation')) // eslint-disable-line no-prototype-builtins
+        obj.aggregation = ApiClient.convertToType(data['aggregation'], 'String')
+      if (data.hasOwnProperty('multiValue')) // eslint-disable-line no-prototype-builtins
+        obj.multiValue = ApiClient.convertToType(data['multiValue'], 'Boolean')
+      if (data.hasOwnProperty('values')) // eslint-disable-line no-prototype-builtins
+        obj.values = ApiClient.convertToType(data['values'], ['String'])
     }
-    return obj;
+    return obj
   }
 }
 
@@ -60,46 +60,44 @@ DataSeriesFilter.AggregationEnum = {
    * value: "NONE"
    * @const
    */
-  NONE: "NONE",
+  NONE: 'NONE',
 
   /**
    * value: "SUM"
    * @const
    */
-  SUM: "SUM",
+  SUM: 'SUM',
 
   /**
    * value: "AVG"
    * @const
    */
-  AVG: "AVG",
+  AVG: 'AVG',
 
   /**
    * value: "MIN"
    * @const
    */
-  MIN: "MIN",
+  MIN: 'MIN',
 
   /**
    * value: "MAX"
    * @const
    */
-  MAX: "MAX"
-};
+  MAX: 'MAX'
+}
 
 /**
  * @member {module:model/DataSeriesFilter.AggregationEnum} aggregation
  */
-DataSeriesFilter.prototype.aggregation = undefined;
+DataSeriesFilter.prototype.aggregation = undefined
 
 /**
  * @member {Boolean} multiValue
  */
-DataSeriesFilter.prototype.multiValue = undefined;
+DataSeriesFilter.prototype.multiValue = undefined
 
 /**
  * @member {Array.<String>} values
  */
-DataSeriesFilter.prototype.values = undefined;
-
-
+DataSeriesFilter.prototype.values = undefined

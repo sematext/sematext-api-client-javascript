@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The AppDescription model module.
@@ -38,17 +38,15 @@ export class AppDescription {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new AppDescription();
-      if (data.hasOwnProperty('description'))
-        obj.description = ApiClient.convertToType(data['description'], 'String');
+      obj = obj || new AppDescription()
+      if (data.hasOwnProperty('description'))  // eslint-disable-line no-prototype-builtins
+        obj.description = ApiClient.convertToType(data['description'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} description
  */
-AppDescription.prototype.description = undefined;
-
-
+AppDescription.prototype.description = undefined

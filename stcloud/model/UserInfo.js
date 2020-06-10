@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The UserInfo model module.
@@ -38,17 +38,15 @@ export class UserInfo {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new UserInfo();
-      if (data.hasOwnProperty('loginName'))
-        obj.loginName = ApiClient.convertToType(data['loginName'], 'String');
+      obj = obj || new UserInfo()
+      if (data.hasOwnProperty('loginName')) // eslint-disable-line no-prototype-builtins
+        obj.loginName = ApiClient.convertToType(data['loginName'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} loginName
  */
-UserInfo.prototype.loginName = undefined;
-
-
+UserInfo.prototype.loginName = undefined

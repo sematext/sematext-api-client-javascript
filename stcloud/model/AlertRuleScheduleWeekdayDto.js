@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {AlertRuleScheduleTimeRangeDto} from './AlertRuleScheduleTimeRangeDto';
+import {ApiClient} from '../ApiClient'
+import {AlertRuleScheduleTimeRangeDto} from './AlertRuleScheduleTimeRangeDto'
 
 /**
  * The AlertRuleScheduleWeekdayDto model module.
@@ -39,45 +39,43 @@ export class AlertRuleScheduleWeekdayDto {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new AlertRuleScheduleWeekdayDto();
-      if (data.hasOwnProperty('day'))
-        obj.day = ApiClient.convertToType(data['day'], 'String');
-      if (data.hasOwnProperty('index'))
-        obj.index = ApiClient.convertToType(data['index'], 'Number');
-      if (data.hasOwnProperty('intervals'))
-        obj.intervals = ApiClient.convertToType(data['intervals'], [AlertRuleScheduleTimeRangeDto]);
-      if (data.hasOwnProperty('label'))
-        obj.label = ApiClient.convertToType(data['label'], 'String');
-      if (data.hasOwnProperty('type'))
-        obj.type = ApiClient.convertToType(data['type'], 'String');
+      obj = obj || new AlertRuleScheduleWeekdayDto()
+      if (data.hasOwnProperty('day'))  // eslint-disable-line no-prototype-builtins
+        obj.day = ApiClient.convertToType(data['day'], 'String')
+      if (data.hasOwnProperty('index')) // eslint-disable-line no-prototype-builtins
+        obj.index = ApiClient.convertToType(data['index'], 'Number')
+      if (data.hasOwnProperty('intervals')) // eslint-disable-line no-prototype-builtins
+        obj.intervals = ApiClient.convertToType(data['intervals'], [AlertRuleScheduleTimeRangeDto])
+      if (data.hasOwnProperty('label')) // eslint-disable-line no-prototype-builtins
+        obj.label = ApiClient.convertToType(data['label'], 'String')
+      if (data.hasOwnProperty('type')) // eslint-disable-line no-prototype-builtins
+        obj.type = ApiClient.convertToType(data['type'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} day
  */
-AlertRuleScheduleWeekdayDto.prototype.day = undefined;
+AlertRuleScheduleWeekdayDto.prototype.day = undefined
 
 /**
  * @member {Number} index
  */
-AlertRuleScheduleWeekdayDto.prototype.index = undefined;
+AlertRuleScheduleWeekdayDto.prototype.index = undefined
 
 /**
  * @member {Array.<module:model/AlertRuleScheduleTimeRangeDto>} intervals
  */
-AlertRuleScheduleWeekdayDto.prototype.intervals = undefined;
+AlertRuleScheduleWeekdayDto.prototype.intervals = undefined
 
 /**
  * @member {String} label
  */
-AlertRuleScheduleWeekdayDto.prototype.label = undefined;
+AlertRuleScheduleWeekdayDto.prototype.label = undefined
 
 /**
  * @member {String} type
  */
-AlertRuleScheduleWeekdayDto.prototype.type = undefined;
-
-
+AlertRuleScheduleWeekdayDto.prototype.type = undefined

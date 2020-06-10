@@ -13,46 +13,46 @@
  *
  */
 
-import {ApiClient} from './ApiClient';
-import {AlertNotificationRequest} from './model/AlertNotificationRequest';
-import {AlertRule} from './model/AlertRule';
-import {AlertRuleScheduleTimeRangeDto} from './model/AlertRuleScheduleTimeRangeDto';
-import {AlertRuleScheduleWeekdayDto} from './model/AlertRuleScheduleWeekdayDto';
-import {App} from './model/App';
-import {AppDescription} from './model/AppDescription';
-import {AppMetadata} from './model/AppMetadata';
-import {BasicAuthMethodDto} from './model/BasicAuthMethodDto';
-import {BasicOrganizationDto} from './model/BasicOrganizationDto';
-import {BillingInfo} from './model/BillingInfo';
-import {CloudWatchSettings} from './model/CloudWatchSettings';
-import {CreateAppInfo} from './model/CreateAppInfo';
-import {DataSeriesFilter} from './model/DataSeriesFilter';
-import {DataSeriesRequest} from './model/DataSeriesRequest';
-import {Error} from './model/Error';
-import {FilterValue} from './model/FilterValue';
-import {GenericApiResponse} from './model/GenericApiResponse';
-import {Invitation} from './model/Invitation';
-import {NotificationIntegration} from './model/NotificationIntegration';
-import {Plan} from './model/Plan';
-import {ReportInfo} from './model/ReportInfo';
-import {SavedQuery} from './model/SavedQuery';
-import {ServiceIntegration} from './model/ServiceIntegration';
-import {UpdateAppInfo} from './model/UpdateAppInfo';
-import {UserInfo} from './model/UserInfo';
-import {UserPermissions} from './model/UserPermissions';
-import {UserRole} from './model/UserRole';
-import {AlertNotificationsApi} from './api/AlertNotificationsApi';
-import {AlertsApi} from './api/AlertsApi';
-import {AppsApi} from './api/AppsApi';
-import {AwsSettingsControllerApi} from './api/AwsSettingsControllerApi';
-import {BillingApi} from './api/BillingApi';
-import {LogsAppApi} from './api/LogsAppApi';
-import {MetricsApi} from './api/MetricsApi';
-import {MonitoringAppApi} from './api/MonitoringAppApi';
-import {ResetPasswordApi} from './api/ResetPasswordApi';
-import {SavedQueriesApi} from './api/SavedQueriesApi';
-import {SubscriptionsApi} from './api/SubscriptionsApi';
-import {TagApiControllerApi} from './api/TagApiControllerApi';
+import {ApiClient} from './ApiClient'
+import {AlertNotificationRequest} from './model/AlertNotificationRequest'
+import {AlertRule} from './model/AlertRule'
+import {AlertRuleScheduleTimeRangeDto} from './model/AlertRuleScheduleTimeRangeDto'
+import {AlertRuleScheduleWeekdayDto} from './model/AlertRuleScheduleWeekdayDto'
+import {App} from './model/App'
+import {AppDescription} from './model/AppDescription'
+import {AppMetadata} from './model/AppMetadata'
+import {BasicAuthMethodDto} from './model/BasicAuthMethodDto'
+import {BasicOrganizationDto} from './model/BasicOrganizationDto'
+import {BillingInfo} from './model/BillingInfo'
+import {CloudWatchSettings} from './model/CloudWatchSettings'
+import {CreateAppInfo} from './model/CreateAppInfo'
+import {DataSeriesFilter} from './model/DataSeriesFilter'
+import {DataSeriesRequest} from './model/DataSeriesRequest'
+import {Error} from './model/Error'
+import {FilterValue} from './model/FilterValue'
+import {GenericApiResponse} from './model/GenericApiResponse'
+import {Invitation} from './model/Invitation'
+import {NotificationIntegration} from './model/NotificationIntegration'
+import {Plan} from './model/Plan'
+import {ReportInfo} from './model/ReportInfo'
+import {SavedQuery} from './model/SavedQuery'
+import {ServiceIntegration} from './model/ServiceIntegration'
+import {UpdateAppInfo} from './model/UpdateAppInfo'
+import {UserInfo} from './model/UserInfo'
+import {UserPermissions} from './model/UserPermissions'
+import {UserRole} from './model/UserRole'
+import {AlertNotificationsApi} from './api/AlertNotificationsApi'
+import {AlertsApi} from './api/AlertsApi'
+import {AppsApi} from './api/AppsApi'
+import {AwsSettingsControllerApi} from './api/AwsSettingsControllerApi'
+import {BillingApi} from './api/BillingApi'
+import {LogsAppApi} from './api/LogsAppApi'
+import {MetricsApi} from './api/MetricsApi'
+import {MonitoringAppApi} from './api/MonitoringAppApi'
+import {ResetPasswordApi} from './api/ResetPasswordApi'
+import {SavedQueriesApi} from './api/SavedQueriesApi'
+import {SubscriptionsApi} from './api/SubscriptionsApi'
+import {TagApiControllerApi} from './api/TagApiControllerApi'
 
 
 /**
@@ -87,243 +87,243 @@ import {TagApiControllerApi} from './api/TagApiControllerApi';
 * @version 0.1.0
 */
 export {
-    /**
+  /**
      * The ApiClient constructor.
      * @property {module:ApiClient}
      */
-    ApiClient,
+  ApiClient,
 
-    /**
+  /**
      * The AlertNotificationRequest model constructor.
      * @property {module:model/AlertNotificationRequest}
      */
-    AlertNotificationRequest,
+  AlertNotificationRequest,
 
-    /**
+  /**
      * The AlertRule model constructor.
      * @property {module:model/AlertRule}
      */
-    AlertRule,
+  AlertRule,
 
-    /**
+  /**
      * The AlertRuleScheduleTimeRangeDto model constructor.
      * @property {module:model/AlertRuleScheduleTimeRangeDto}
      */
-    AlertRuleScheduleTimeRangeDto,
+  AlertRuleScheduleTimeRangeDto,
 
-    /**
+  /**
      * The AlertRuleScheduleWeekdayDto model constructor.
      * @property {module:model/AlertRuleScheduleWeekdayDto}
      */
-    AlertRuleScheduleWeekdayDto,
+  AlertRuleScheduleWeekdayDto,
 
-    /**
+  /**
      * The App model constructor.
      * @property {module:model/App}
      */
-    App,
+  App,
 
-    /**
+  /**
      * The AppDescription model constructor.
      * @property {module:model/AppDescription}
      */
-    AppDescription,
+  AppDescription,
 
-    /**
+  /**
      * The AppMetadata model constructor.
      * @property {module:model/AppMetadata}
      */
-    AppMetadata,
+  AppMetadata,
 
-    /**
+  /**
      * The BasicAuthMethodDto model constructor.
      * @property {module:model/BasicAuthMethodDto}
      */
-    BasicAuthMethodDto,
+  BasicAuthMethodDto,
 
-    /**
+  /**
      * The BasicOrganizationDto model constructor.
      * @property {module:model/BasicOrganizationDto}
      */
-    BasicOrganizationDto,
+  BasicOrganizationDto,
 
-    /**
+  /**
      * The BillingInfo model constructor.
      * @property {module:model/BillingInfo}
      */
-    BillingInfo,
+  BillingInfo,
 
-    /**
+  /**
      * The CloudWatchSettings model constructor.
      * @property {module:model/CloudWatchSettings}
      */
-    CloudWatchSettings,
+  CloudWatchSettings,
 
-    /**
+  /**
      * The CreateAppInfo model constructor.
      * @property {module:model/CreateAppInfo}
      */
-    CreateAppInfo,
+  CreateAppInfo,
 
-    /**
+  /**
      * The DataSeriesFilter model constructor.
      * @property {module:model/DataSeriesFilter}
      */
-    DataSeriesFilter,
+  DataSeriesFilter,
 
-    /**
+  /**
      * The DataSeriesRequest model constructor.
      * @property {module:model/DataSeriesRequest}
      */
-    DataSeriesRequest,
+  DataSeriesRequest,
 
-    /**
+  /**
      * The Error model constructor.
      * @property {module:model/Error}
      */
-    Error,
+  Error,
 
-    /**
+  /**
      * The FilterValue model constructor.
      * @property {module:model/FilterValue}
      */
-    FilterValue,
+  FilterValue,
 
-    /**
+  /**
      * The GenericApiResponse model constructor.
      * @property {module:model/GenericApiResponse}
      */
-    GenericApiResponse,
+  GenericApiResponse,
 
-    /**
+  /**
      * The Invitation model constructor.
      * @property {module:model/Invitation}
      */
-    Invitation,
+  Invitation,
 
-    /**
+  /**
      * The NotificationIntegration model constructor.
      * @property {module:model/NotificationIntegration}
      */
-    NotificationIntegration,
+  NotificationIntegration,
 
-    /**
+  /**
      * The Plan model constructor.
      * @property {module:model/Plan}
      */
-    Plan,
+  Plan,
 
-    /**
+  /**
      * The ReportInfo model constructor.
      * @property {module:model/ReportInfo}
      */
-    ReportInfo,
+  ReportInfo,
 
-    /**
+  /**
      * The SavedQuery model constructor.
      * @property {module:model/SavedQuery}
      */
-    SavedQuery,
+  SavedQuery,
 
-    /**
+  /**
      * The ServiceIntegration model constructor.
      * @property {module:model/ServiceIntegration}
      */
-    ServiceIntegration,
+  ServiceIntegration,
 
-    /**
+  /**
      * The UpdateAppInfo model constructor.
      * @property {module:model/UpdateAppInfo}
      */
-    UpdateAppInfo,
+  UpdateAppInfo,
 
-    /**
+  /**
      * The UserInfo model constructor.
      * @property {module:model/UserInfo}
      */
-    UserInfo,
+  UserInfo,
 
-    /**
+  /**
      * The UserPermissions model constructor.
      * @property {module:model/UserPermissions}
      */
-    UserPermissions,
+  UserPermissions,
 
-    /**
+  /**
      * The UserRole model constructor.
      * @property {module:model/UserRole}
      */
-    UserRole,
+  UserRole,
 
-    /**
+  /**
     * The AlertNotificationsApi service constructor.
     * @property {module:api/AlertNotificationsApi}
     */
-    AlertNotificationsApi,
+  AlertNotificationsApi,
 
-    /**
+  /**
     * The AlertsApi service constructor.
     * @property {module:api/AlertsApi}
     */
-    AlertsApi,
+  AlertsApi,
 
-    /**
+  /**
     * The AppsApi service constructor.
     * @property {module:api/AppsApi}
     */
-    AppsApi,
+  AppsApi,
 
-    /**
+  /**
     * The AwsSettingsControllerApi service constructor.
     * @property {module:api/AwsSettingsControllerApi}
     */
-    AwsSettingsControllerApi,
+  AwsSettingsControllerApi,
 
-    /**
+  /**
     * The BillingApi service constructor.
     * @property {module:api/BillingApi}
     */
-    BillingApi,
+  BillingApi,
 
-    /**
+  /**
     * The LogsAppApi service constructor.
     * @property {module:api/LogsAppApi}
     */
-    LogsAppApi,
+  LogsAppApi,
 
-    /**
+  /**
     * The MetricsApi service constructor.
     * @property {module:api/MetricsApi}
     */
-    MetricsApi,
+  MetricsApi,
 
-    /**
+  /**
     * The MonitoringAppApi service constructor.
     * @property {module:api/MonitoringAppApi}
     */
-    MonitoringAppApi,
+  MonitoringAppApi,
 
-    /**
+  /**
     * The ResetPasswordApi service constructor.
     * @property {module:api/ResetPasswordApi}
     */
-    ResetPasswordApi,
+  ResetPasswordApi,
 
-    /**
+  /**
     * The SavedQueriesApi service constructor.
     * @property {module:api/SavedQueriesApi}
     */
-    SavedQueriesApi,
+  SavedQueriesApi,
 
-    /**
+  /**
     * The SubscriptionsApi service constructor.
     * @property {module:api/SubscriptionsApi}
     */
-    SubscriptionsApi,
+  SubscriptionsApi,
 
-    /**
+  /**
     * The TagApiControllerApi service constructor.
     * @property {module:api/TagApiControllerApi}
     */
-    TagApiControllerApi
-};
+  TagApiControllerApi
+}

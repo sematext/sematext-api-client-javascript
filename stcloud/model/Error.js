@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The Error model module.
@@ -38,24 +38,22 @@ export class Error {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new Error();
-      if (data.hasOwnProperty('code'))
-        obj.code = ApiClient.convertToType(data['code'], 'String');
-      if (data.hasOwnProperty('message'))
-        obj.message = ApiClient.convertToType(data['message'], 'String');
+      obj = obj || new Error()
+      if (data.hasOwnProperty('code')) // eslint-disable-line no-prototype-builtins
+        obj.code = ApiClient.convertToType(data['code'], 'String')
+      if (data.hasOwnProperty('message')) // eslint-disable-line no-prototype-builtins
+        obj.message = ApiClient.convertToType(data['message'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} code
  */
-Error.prototype.code = undefined;
+Error.prototype.code = undefined
 
 /**
  * @member {String} message
  */
-Error.prototype.message = undefined;
-
-
+Error.prototype.message = undefined

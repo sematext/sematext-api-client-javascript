@@ -13,9 +13,9 @@
  *
  */
 
-import {ApiClient} from "../ApiClient";
-import {CreateAppInfo} from '../model/CreateAppInfo';
-import {GenericApiResponse} from '../model/GenericApiResponse';
+import {ApiClient} from '../ApiClient'
+import {CreateAppInfo} from '../model/CreateAppInfo' // eslint-disable-line no-unused-vars
+import {GenericApiResponse} from '../model/GenericApiResponse'
 
 /**
 * MonitoringApp service.
@@ -24,65 +24,65 @@ import {GenericApiResponse} from '../model/GenericApiResponse';
 */
 export class MonitoringAppApi {
 
-    /**
-    * Constructs a new MonitoringAppApi. 
+  /**
+    * Constructs a new MonitoringAppApi.
     * @alias module:api/MonitoringAppApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
-    }
+  constructor(apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
 
 
-    /**
+  /**
      * Create Monitoring App
      * @param {module:model/CreateAppInfo} applicationDetails Details of the application to be created
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
      */
-    createSpmApplicationWithHttpInfo(applicationDetails) {
-      let postBody = applicationDetails;
+  createSpmApplicationWithHttpInfo(applicationDetails) {
+    let postBody = applicationDetails
 
-      // verify the required parameter 'applicationDetails' is set
-      if (applicationDetails === undefined || applicationDetails === null) {
-        throw new Error("Missing the required parameter 'applicationDetails' when calling createSpmApplication");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/spm-reports/api/v3/apps', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'applicationDetails' is set
+    if (applicationDetails === undefined || applicationDetails === null) {
+      throw new Error('Missing the required parameter \'applicationDetails\' when calling createSpmApplication')
     }
 
-    /**
+
+    let pathParams = {
+    }
+    let queryParams = {
+    }
+    let headerParams = {
+    }
+    let formParams = {
+    }
+
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
+
+    return this.apiClient.callApi(
+      '/spm-reports/api/v3/apps', 'POST',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType
+    )
+  }
+
+  /**
      * Create Monitoring App
      * @param {module:model/CreateAppInfo} applicationDetails Details of the application to be created
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
      */
-    createSpmApplication(applicationDetails) {
-      return this.createSpmApplicationWithHttpInfo(applicationDetails)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  createSpmApplication(applicationDetails) {
+    return this.createSpmApplicationWithHttpInfo(applicationDetails)
+      .then(function(response_and_data) {
+        return response_and_data.data
+      })
+  }
 
 
 }

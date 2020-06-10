@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The UserRole model module.
@@ -38,15 +38,15 @@ export class UserRole {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new UserRole();
-      if (data.hasOwnProperty('role'))
-        obj.role = ApiClient.convertToType(data['role'], 'String');
-      if (data.hasOwnProperty('roleStatus'))
-        obj.roleStatus = ApiClient.convertToType(data['roleStatus'], 'String');
-      if (data.hasOwnProperty('userEmail'))
-        obj.userEmail = ApiClient.convertToType(data['userEmail'], 'String');
+      obj = obj || new UserRole()
+      if (data.hasOwnProperty('role')) // eslint-disable-line no-prototype-builtins
+        obj.role = ApiClient.convertToType(data['role'], 'String')
+      if (data.hasOwnProperty('roleStatus')) // eslint-disable-line no-prototype-builtins
+        obj.roleStatus = ApiClient.convertToType(data['roleStatus'], 'String')
+      if (data.hasOwnProperty('userEmail')) // eslint-disable-line no-prototype-builtins
+        obj.userEmail = ApiClient.convertToType(data['userEmail'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
@@ -60,43 +60,43 @@ UserRole.RoleEnum = {
    * value: "SUPER_USER"
    * @const
    */
-  SUPER_USER: "SUPER_USER",
+  SUPER_USER: 'SUPER_USER',
 
   /**
    * value: "OWNER"
    * @const
    */
-  OWNER: "OWNER",
+  OWNER: 'OWNER',
 
   /**
    * value: "ADMIN"
    * @const
    */
-  ADMIN: "ADMIN",
+  ADMIN: 'ADMIN',
 
   /**
    * value: "USER"
    * @const
    */
-  USER: "USER",
+  USER: 'USER',
 
   /**
    * value: "DEMO"
    * @const
    */
-  DEMO: "DEMO",
+  DEMO: 'DEMO',
 
   /**
    * value: "ANONYMOUS"
    * @const
    */
-  ANONYMOUS: "ANONYMOUS"
-};
+  ANONYMOUS: 'ANONYMOUS'
+}
 
 /**
  * @member {module:model/UserRole.RoleEnum} role
  */
-UserRole.prototype.role = undefined;
+UserRole.prototype.role = undefined
 
 /**
  * Allowed values for the <code>roleStatus</code> property.
@@ -108,23 +108,21 @@ UserRole.RoleStatusEnum = {
    * value: "INACTIVE"
    * @const
    */
-  INACTIVE: "INACTIVE",
+  INACTIVE: 'INACTIVE',
 
   /**
    * value: "ACTIVE"
    * @const
    */
-  ACTIVE: "ACTIVE"
-};
+  ACTIVE: 'ACTIVE'
+}
 
 /**
  * @member {module:model/UserRole.RoleStatusEnum} roleStatus
  */
-UserRole.prototype.roleStatus = undefined;
+UserRole.prototype.roleStatus = undefined
 
 /**
  * @member {String} userEmail
  */
-UserRole.prototype.userEmail = undefined;
-
-
+UserRole.prototype.userEmail = undefined

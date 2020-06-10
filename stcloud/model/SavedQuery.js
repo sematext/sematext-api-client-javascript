@@ -13,9 +13,9 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {AlertRule} from './AlertRule';
-import {UserPermissions} from './UserPermissions';
+import {ApiClient} from '../ApiClient'
+import {AlertRule} from './AlertRule'
+import {UserPermissions} from './UserPermissions'
 
 /**
  * The SavedQuery model module.
@@ -40,101 +40,99 @@ export class SavedQuery {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new SavedQuery();
-      if (data.hasOwnProperty('alertRule'))
-        obj.alertRule = AlertRule.constructFromObject(data['alertRule']);
-      if (data.hasOwnProperty('allowModification'))
-        obj.allowModification = ApiClient.convertToType(data['allowModification'], 'Boolean');
-      if (data.hasOwnProperty('applicationId'))
-        obj.applicationId = ApiClient.convertToType(data['applicationId'], 'String');
-      if (data.hasOwnProperty('applicationName'))
-        obj.applicationName = ApiClient.convertToType(data['applicationName'], 'String');
-      if (data.hasOwnProperty('applicationToken'))
-        obj.applicationToken = ApiClient.convertToType(data['applicationToken'], 'String');
-      if (data.hasOwnProperty('creatorEmail'))
-        obj.creatorEmail = ApiClient.convertToType(data['creatorEmail'], 'String');
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'String');
-      if (data.hasOwnProperty('labelColor'))
-        obj.labelColor = ApiClient.convertToType(data['labelColor'], 'String');
-      if (data.hasOwnProperty('logseneAlertType'))
-        obj.logseneAlertType = ApiClient.convertToType(data['logseneAlertType'], Object);
-      if (data.hasOwnProperty('ownerEmail'))
-        obj.ownerEmail = ApiClient.convertToType(data['ownerEmail'], 'String');
-      if (data.hasOwnProperty('queryName'))
-        obj.queryName = ApiClient.convertToType(data['queryName'], 'String');
-      if (data.hasOwnProperty('queryString'))
-        obj.queryString = ApiClient.convertToType(data['queryString'], 'String');
-      if (data.hasOwnProperty('userPermissions'))
-        obj.userPermissions = UserPermissions.constructFromObject(data['userPermissions']);
+      obj = obj || new SavedQuery()
+      if (data.hasOwnProperty('alertRule')) // eslint-disable-line no-prototype-builtins
+        obj.alertRule = AlertRule.constructFromObject(data['alertRule'])
+      if (data.hasOwnProperty('allowModification')) // eslint-disable-line no-prototype-builtins
+        obj.allowModification = ApiClient.convertToType(data['allowModification'], 'Boolean')
+      if (data.hasOwnProperty('applicationId')) // eslint-disable-line no-prototype-builtins
+        obj.applicationId = ApiClient.convertToType(data['applicationId'], 'String')
+      if (data.hasOwnProperty('applicationName')) // eslint-disable-line no-prototype-builtins
+        obj.applicationName = ApiClient.convertToType(data['applicationName'], 'String')
+      if (data.hasOwnProperty('applicationToken')) // eslint-disable-line no-prototype-builtins
+        obj.applicationToken = ApiClient.convertToType(data['applicationToken'], 'String')
+      if (data.hasOwnProperty('creatorEmail')) // eslint-disable-line no-prototype-builtins
+        obj.creatorEmail = ApiClient.convertToType(data['creatorEmail'], 'String')
+      if (data.hasOwnProperty('id')) // eslint-disable-line no-prototype-builtins
+        obj.id = ApiClient.convertToType(data['id'], 'String')
+      if (data.hasOwnProperty('labelColor')) // eslint-disable-line no-prototype-builtins
+        obj.labelColor = ApiClient.convertToType(data['labelColor'], 'String')
+      if (data.hasOwnProperty('logseneAlertType')) // eslint-disable-line no-prototype-builtins
+        obj.logseneAlertType = ApiClient.convertToType(data['logseneAlertType'], Object)
+      if (data.hasOwnProperty('ownerEmail')) // eslint-disable-line no-prototype-builtins
+        obj.ownerEmail = ApiClient.convertToType(data['ownerEmail'], 'String')
+      if (data.hasOwnProperty('queryName')) // eslint-disable-line no-prototype-builtins
+        obj.queryName = ApiClient.convertToType(data['queryName'], 'String')
+      if (data.hasOwnProperty('queryString')) // eslint-disable-line no-prototype-builtins
+        obj.queryString = ApiClient.convertToType(data['queryString'], 'String')
+      if (data.hasOwnProperty('userPermissions')) // eslint-disable-line no-prototype-builtins
+        obj.userPermissions = UserPermissions.constructFromObject(data['userPermissions'])
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {module:model/AlertRule} alertRule
  */
-SavedQuery.prototype.alertRule = undefined;
+SavedQuery.prototype.alertRule = undefined
 
 /**
  * @member {Boolean} allowModification
  */
-SavedQuery.prototype.allowModification = undefined;
+SavedQuery.prototype.allowModification = undefined
 
 /**
  * @member {String} applicationId
  */
-SavedQuery.prototype.applicationId = undefined;
+SavedQuery.prototype.applicationId = undefined
 
 /**
  * @member {String} applicationName
  */
-SavedQuery.prototype.applicationName = undefined;
+SavedQuery.prototype.applicationName = undefined
 
 /**
  * @member {String} applicationToken
  */
-SavedQuery.prototype.applicationToken = undefined;
+SavedQuery.prototype.applicationToken = undefined
 
 /**
  * @member {String} creatorEmail
  */
-SavedQuery.prototype.creatorEmail = undefined;
+SavedQuery.prototype.creatorEmail = undefined
 
 /**
  * @member {String} id
  */
-SavedQuery.prototype.id = undefined;
+SavedQuery.prototype.id = undefined
 
 /**
  * @member {String} labelColor
  */
-SavedQuery.prototype.labelColor = undefined;
+SavedQuery.prototype.labelColor = undefined
 
 /**
  * @member {Object} logseneAlertType
  */
-SavedQuery.prototype.logseneAlertType = undefined;
+SavedQuery.prototype.logseneAlertType = undefined
 
 /**
  * @member {String} ownerEmail
  */
-SavedQuery.prototype.ownerEmail = undefined;
+SavedQuery.prototype.ownerEmail = undefined
 
 /**
  * @member {String} queryName
  */
-SavedQuery.prototype.queryName = undefined;
+SavedQuery.prototype.queryName = undefined
 
 /**
  * @member {String} queryString
  */
-SavedQuery.prototype.queryString = undefined;
+SavedQuery.prototype.queryString = undefined
 
 /**
  * @member {module:model/UserPermissions} userPermissions
  */
-SavedQuery.prototype.userPermissions = undefined;
-
-
+SavedQuery.prototype.userPermissions = undefined

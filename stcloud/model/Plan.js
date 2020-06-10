@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient'
 
 /**
  * The Plan model module.
@@ -38,87 +38,87 @@ export class Plan {
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new Plan();
-      if (data.hasOwnProperty('appType'))
-        obj.appType = ApiClient.convertToType(data['appType'], 'String');
-      if (data.hasOwnProperty('custom'))
-        obj.custom = ApiClient.convertToType(data['custom'], 'Boolean');
-      if (data.hasOwnProperty('dataRetentionHours'))
-        obj.dataRetentionHours = ApiClient.convertToType(data['dataRetentionHours'], 'Number');
-      if (data.hasOwnProperty('defaultTrialPlan'))
-        obj.defaultTrialPlan = ApiClient.convertToType(data['defaultTrialPlan'], 'Boolean');
-      if (data.hasOwnProperty('free'))
-        obj.free = ApiClient.convertToType(data['free'], 'Boolean');
-      if (data.hasOwnProperty('freeTrialDays'))
-        obj.freeTrialDays = ApiClient.convertToType(data['freeTrialDays'], 'Number');
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
-      if (data.hasOwnProperty('maxAlerts'))
-        obj.maxAlerts = ApiClient.convertToType(data['maxAlerts'], 'Number');
-      if (data.hasOwnProperty('maxDailyEvents'))
-        obj.maxDailyEvents = ApiClient.convertToType(data['maxDailyEvents'], 'Number');
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('planScheme'))
-        obj.planScheme = ApiClient.convertToType(data['planScheme'], 'String');
-      if (data.hasOwnProperty('sematextService'))
-        obj.sematextService = ApiClient.convertToType(data['sematextService'], 'String');
-      if (data.hasOwnProperty('trialPlan'))
-        obj.trialPlan = ApiClient.convertToType(data['trialPlan'], 'Boolean');
+      obj = obj || new Plan()
+      if (data.hasOwnProperty('appType')) // eslint-disable-line no-prototype-builtins
+        obj.appType = ApiClient.convertToType(data['appType'], 'String')
+      if (data.hasOwnProperty('custom')) // eslint-disable-line no-prototype-builtins
+        obj.custom = ApiClient.convertToType(data['custom'], 'Boolean')
+      if (data.hasOwnProperty('dataRetentionHours')) // eslint-disable-line no-prototype-builtins
+        obj.dataRetentionHours = ApiClient.convertToType(data['dataRetentionHours'], 'Number')
+      if (data.hasOwnProperty('defaultTrialPlan')) // eslint-disable-line no-prototype-builtins
+        obj.defaultTrialPlan = ApiClient.convertToType(data['defaultTrialPlan'], 'Boolean')
+      if (data.hasOwnProperty('free')) // eslint-disable-line no-prototype-builtins
+        obj.free = ApiClient.convertToType(data['free'], 'Boolean')
+      if (data.hasOwnProperty('freeTrialDays')) // eslint-disable-line no-prototype-builtins
+        obj.freeTrialDays = ApiClient.convertToType(data['freeTrialDays'], 'Number')
+      if (data.hasOwnProperty('id')) // eslint-disable-line no-prototype-builtins
+        obj.id = ApiClient.convertToType(data['id'], 'Number')
+      if (data.hasOwnProperty('maxAlerts')) // eslint-disable-line no-prototype-builtins
+        obj.maxAlerts = ApiClient.convertToType(data['maxAlerts'], 'Number')
+      if (data.hasOwnProperty('maxDailyEvents')) // eslint-disable-line no-prototype-builtins
+        obj.maxDailyEvents = ApiClient.convertToType(data['maxDailyEvents'], 'Number')
+      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+        obj.name = ApiClient.convertToType(data['name'], 'String')
+      if (data.hasOwnProperty('planScheme')) // eslint-disable-line no-prototype-builtins
+        obj.planScheme = ApiClient.convertToType(data['planScheme'], 'String')
+      if (data.hasOwnProperty('sematextService')) // eslint-disable-line no-prototype-builtins
+        obj.sematextService = ApiClient.convertToType(data['sematextService'], 'String')
+      if (data.hasOwnProperty('trialPlan')) // eslint-disable-line no-prototype-builtins
+        obj.trialPlan = ApiClient.convertToType(data['trialPlan'], 'Boolean')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} appType
  */
-Plan.prototype.appType = undefined;
+Plan.prototype.appType = undefined
 
 /**
  * @member {Boolean} custom
  */
-Plan.prototype.custom = undefined;
+Plan.prototype.custom = undefined
 
 /**
  * @member {Number} dataRetentionHours
  */
-Plan.prototype.dataRetentionHours = undefined;
+Plan.prototype.dataRetentionHours = undefined
 
 /**
  * @member {Boolean} defaultTrialPlan
  */
-Plan.prototype.defaultTrialPlan = undefined;
+Plan.prototype.defaultTrialPlan = undefined
 
 /**
  * @member {Boolean} free
  */
-Plan.prototype.free = undefined;
+Plan.prototype.free = undefined
 
 /**
  * @member {Number} freeTrialDays
  */
-Plan.prototype.freeTrialDays = undefined;
+Plan.prototype.freeTrialDays = undefined
 
 /**
  * @member {Number} id
  */
-Plan.prototype.id = undefined;
+Plan.prototype.id = undefined
 
 /**
  * @member {Number} maxAlerts
  */
-Plan.prototype.maxAlerts = undefined;
+Plan.prototype.maxAlerts = undefined
 
 /**
  * @member {Number} maxDailyEvents
  */
-Plan.prototype.maxDailyEvents = undefined;
+Plan.prototype.maxDailyEvents = undefined
 
 /**
  * @member {String} name
  */
-Plan.prototype.name = undefined;
+Plan.prototype.name = undefined
 
 /**
  * Allowed values for the <code>planScheme</code> property.
@@ -130,61 +130,61 @@ Plan.PlanSchemeEnum = {
    * value: "SPM_1_0"
    * @const
    */
-  sPM10: "SPM_1_0",
+  sPM10: 'SPM_1_0',
 
   /**
    * value: "SPM_2_0"
    * @const
    */
-  sPM20: "SPM_2_0",
+  sPM20: 'SPM_2_0',
 
   /**
    * value: "SA_1_0"
    * @const
    */
-  sA10: "SA_1_0",
+  sA10: 'SA_1_0',
 
   /**
    * value: "SEARCHENE_1_0"
    * @const
    */
-  sEARCHENE10: "SEARCHENE_1_0",
+  sEARCHENE10: 'SEARCHENE_1_0',
 
   /**
    * value: "LOGSENE_1_0"
    * @const
    */
-  lOGSENE10: "LOGSENE_1_0",
+  lOGSENE10: 'LOGSENE_1_0',
 
   /**
    * value: "LOGSENE_2_0"
    * @const
    */
-  lOGSENE20: "LOGSENE_2_0",
+  lOGSENE20: 'LOGSENE_2_0',
 
   /**
    * value: "RUM_1_0"
    * @const
    */
-  rUM10: "RUM_1_0",
+  rUM10: 'RUM_1_0',
 
   /**
    * value: "RUM_EA"
    * @const
    */
-  RUM_EA: "RUM_EA",
+  RUM_EA: 'RUM_EA',
 
   /**
    * value: "SYNTHETICS_1_0"
    * @const
    */
-  sYNTHETICS10: "SYNTHETICS_1_0"
-};
+  sYNTHETICS10: 'SYNTHETICS_1_0'
+}
 
 /**
  * @member {module:model/Plan.PlanSchemeEnum} planScheme
  */
-Plan.prototype.planScheme = undefined;
+Plan.prototype.planScheme = undefined
 
 /**
  * Allowed values for the <code>sematextService</code> property.
@@ -196,35 +196,33 @@ Plan.SematextServiceEnum = {
    * value: "LOGSENE"
    * @const
    */
-  LOGSENE: "LOGSENE",
+  LOGSENE: 'LOGSENE',
 
   /**
    * value: "SPM"
    * @const
    */
-  SPM: "SPM",
+  SPM: 'SPM',
 
   /**
    * value: "RUM"
    * @const
    */
-  RUM: "RUM",
+  RUM: 'RUM',
 
   /**
    * value: "SYNTHETICS"
    * @const
    */
-  SYNTHETICS: "SYNTHETICS"
-};
+  SYNTHETICS: 'SYNTHETICS'
+}
 
 /**
  * @member {module:model/Plan.SematextServiceEnum} sematextService
  */
-Plan.prototype.sematextService = undefined;
+Plan.prototype.sematextService = undefined
 
 /**
  * @member {Boolean} trialPlan
  */
-Plan.prototype.trialPlan = undefined;
-
-
+Plan.prototype.trialPlan = undefined
