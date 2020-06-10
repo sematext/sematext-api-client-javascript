@@ -52,7 +52,7 @@ module: {
 }
 ```
 
-## Getting Started
+
 
 ### Authentication
 
@@ -83,9 +83,14 @@ api.getAlertNotificationsForAppUsingPOST(appId, timeInterval).then(function(data
 }, function(error) {
   console.error(error);
 });
-
-
 ```
+
+### Testing
+
+Note: Tests are currently inhibited by a Mocha dependancy on Yargs.
+This client is generated code so this should have litle impact.
+Marking as a pre-release until this can be resolved. 
+
 
 ## Documentation for API Endpoints
 
