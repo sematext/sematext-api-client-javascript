@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The UserRole model module.
@@ -26,8 +26,7 @@ export class UserRole {
    * @alias module:model/UserRole
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>UserRole</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,14 +35,17 @@ export class UserRole {
    * @param {module:model/UserRole} obj Optional instance to populate.
    * @return {module:model/UserRole} The populated <code>UserRole</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new UserRole()
-      if (data.hasOwnProperty('role')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('role'))
+        // eslint-disable-line no-prototype-builtins
         obj.role = ApiClient.convertToType(data['role'], 'String')
-      if (data.hasOwnProperty('roleStatus')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('roleStatus'))
+        // eslint-disable-line no-prototype-builtins
         obj.roleStatus = ApiClient.convertToType(data['roleStatus'], 'String')
-      if (data.hasOwnProperty('userEmail')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('userEmail'))
+        // eslint-disable-line no-prototype-builtins
         obj.userEmail = ApiClient.convertToType(data['userEmail'], 'String')
     }
     return obj

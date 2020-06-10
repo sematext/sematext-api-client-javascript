@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The UserPermissions model module.
@@ -26,8 +26,7 @@ export class UserPermissions {
    * @alias module:model/UserPermissions
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>UserPermissions</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,14 +35,17 @@ export class UserPermissions {
    * @param {module:model/UserPermissions} obj Optional instance to populate.
    * @return {module:model/UserPermissions} The populated <code>UserPermissions</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new UserPermissions()
-      if (data.hasOwnProperty('canDelete')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('canDelete'))
+        // eslint-disable-line no-prototype-builtins
         obj.canDelete = ApiClient.convertToType(data['canDelete'], 'Boolean')
-      if (data.hasOwnProperty('canEdit')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('canEdit'))
+        // eslint-disable-line no-prototype-builtins
         obj.canEdit = ApiClient.convertToType(data['canEdit'], 'Boolean')
-      if (data.hasOwnProperty('canView')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('canView'))
+        // eslint-disable-line no-prototype-builtins
         obj.canView = ApiClient.convertToType(data['canView'], 'Boolean')
     }
     return obj

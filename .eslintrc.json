@@ -24,21 +24,10 @@
         "SwitchCase": 1
       }
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "never"
-    ],
-    "no-console": [
-      0
-    ],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-console": [0],
     "no-unused-vars": [
       2,
       {
@@ -47,7 +36,5 @@
       }
     ]
   },
-  "plugins": [
-    "class-property"
-  ]
+  "plugins": ["class-property"]
 }

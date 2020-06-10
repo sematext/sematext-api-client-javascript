@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {AlertRuleScheduleTimeRangeDto} from './AlertRuleScheduleTimeRangeDto'
+import { ApiClient } from '../ApiClient'
+import { AlertRuleScheduleTimeRangeDto } from './AlertRuleScheduleTimeRangeDto'
 
 /**
  * The AlertRuleScheduleWeekdayDto model module.
@@ -27,8 +27,7 @@ export class AlertRuleScheduleWeekdayDto {
    * @alias module:model/AlertRuleScheduleWeekdayDto
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>AlertRuleScheduleWeekdayDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,18 +36,25 @@ export class AlertRuleScheduleWeekdayDto {
    * @param {module:model/AlertRuleScheduleWeekdayDto} obj Optional instance to populate.
    * @return {module:model/AlertRuleScheduleWeekdayDto} The populated <code>AlertRuleScheduleWeekdayDto</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new AlertRuleScheduleWeekdayDto()
-      if (data.hasOwnProperty('day'))  // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('day'))
+        // eslint-disable-line no-prototype-builtins
         obj.day = ApiClient.convertToType(data['day'], 'String')
-      if (data.hasOwnProperty('index')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('index'))
+        // eslint-disable-line no-prototype-builtins
         obj.index = ApiClient.convertToType(data['index'], 'Number')
-      if (data.hasOwnProperty('intervals')) // eslint-disable-line no-prototype-builtins
-        obj.intervals = ApiClient.convertToType(data['intervals'], [AlertRuleScheduleTimeRangeDto])
-      if (data.hasOwnProperty('label')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('intervals'))
+        // eslint-disable-line no-prototype-builtins
+        obj.intervals = ApiClient.convertToType(data['intervals'], [
+          AlertRuleScheduleTimeRangeDto
+        ])
+      if (data.hasOwnProperty('label'))
+        // eslint-disable-line no-prototype-builtins
         obj.label = ApiClient.convertToType(data['label'], 'String')
-      if (data.hasOwnProperty('type')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('type'))
+        // eslint-disable-line no-prototype-builtins
         obj.type = ApiClient.convertToType(data['type'], 'String')
     }
     return obj

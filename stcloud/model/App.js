@@ -13,11 +13,11 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {BasicOrganizationDto} from './BasicOrganizationDto'
-import {Plan} from './Plan'
-import {ServiceIntegration} from './ServiceIntegration'
-import {UserRole} from './UserRole'
+import { ApiClient } from '../ApiClient'
+import { BasicOrganizationDto } from './BasicOrganizationDto'
+import { Plan } from './Plan'
+import { ServiceIntegration } from './ServiceIntegration'
+import { UserRole } from './UserRole'
 
 /**
  * The App model module.
@@ -30,8 +30,7 @@ export class App {
    * @alias module:model/App
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>App</code> from a plain JavaScript object, optionally creating a new instance.
@@ -40,62 +39,138 @@ export class App {
    * @param {module:model/App} obj Optional instance to populate.
    * @return {module:model/App} The populated <code>App</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new App()
-      if (data.hasOwnProperty('ajaxThreshold')) // eslint-disable-line no-prototype-builtins
-        obj.ajaxThreshold = ApiClient.convertToType(data['ajaxThreshold'], 'Number')
-      if (data.hasOwnProperty('appType')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('ajaxThreshold'))
+        // eslint-disable-line no-prototype-builtins
+        obj.ajaxThreshold = ApiClient.convertToType(
+          data['ajaxThreshold'],
+          'Number'
+        )
+      if (data.hasOwnProperty('appType'))
+        // eslint-disable-line no-prototype-builtins
         obj.appType = ApiClient.convertToType(data['appType'], 'String')
-      if (data.hasOwnProperty('appTypeId')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('appTypeId'))
+        // eslint-disable-line no-prototype-builtins
         obj.appTypeId = ApiClient.convertToType(data['appTypeId'], 'Number')
-      if (data.hasOwnProperty('creatorEmail')) // eslint-disable-line no-prototype-builtins
-        obj.creatorEmail = ApiClient.convertToType(data['creatorEmail'], 'String')
-      if (data.hasOwnProperty('creditCardExpiry')) // eslint-disable-line no-prototype-builtins
-        obj.creditCardExpiry = ApiClient.convertToType(data['creditCardExpiry'], 'String')
-      if (data.hasOwnProperty('creditCardNumber')) // eslint-disable-line no-prototype-builtins
-        obj.creditCardNumber = ApiClient.convertToType(data['creditCardNumber'], 'String')
-      if (data.hasOwnProperty('description')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('creatorEmail'))
+        // eslint-disable-line no-prototype-builtins
+        obj.creatorEmail = ApiClient.convertToType(
+          data['creatorEmail'],
+          'String'
+        )
+      if (data.hasOwnProperty('creditCardExpiry'))
+        // eslint-disable-line no-prototype-builtins
+        obj.creditCardExpiry = ApiClient.convertToType(
+          data['creditCardExpiry'],
+          'String'
+        )
+      if (data.hasOwnProperty('creditCardNumber'))
+        // eslint-disable-line no-prototype-builtins
+        obj.creditCardNumber = ApiClient.convertToType(
+          data['creditCardNumber'],
+          'String'
+        )
+      if (data.hasOwnProperty('description'))
+        // eslint-disable-line no-prototype-builtins
         obj.description = ApiClient.convertToType(data['description'], 'String')
-      if (data.hasOwnProperty('displayStatus')) // eslint-disable-line no-prototype-builtins
-        obj.displayStatus = ApiClient.convertToType(data['displayStatus'], 'String')
-      if (data.hasOwnProperty('firstDataSavedDate')) // eslint-disable-line no-prototype-builtins
-        obj.firstDataSavedDate = ApiClient.convertToType(data['firstDataSavedDate'], 'Number')
-      if (data.hasOwnProperty('id')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('displayStatus'))
+        // eslint-disable-line no-prototype-builtins
+        obj.displayStatus = ApiClient.convertToType(
+          data['displayStatus'],
+          'String'
+        )
+      if (data.hasOwnProperty('firstDataSavedDate'))
+        // eslint-disable-line no-prototype-builtins
+        obj.firstDataSavedDate = ApiClient.convertToType(
+          data['firstDataSavedDate'],
+          'Number'
+        )
+      if (data.hasOwnProperty('id'))
+        // eslint-disable-line no-prototype-builtins
         obj.id = ApiClient.convertToType(data['id'], 'Number')
-      if (data.hasOwnProperty('integration')) // eslint-disable-line no-prototype-builtins
-        obj.integration = ServiceIntegration.constructFromObject(data['integration'])
-      if (data.hasOwnProperty('lastDataReceivedDate')) // eslint-disable-line no-prototype-builtins
-        obj.lastDataReceivedDate = ApiClient.convertToType(data['lastDataReceivedDate'], 'Number')
-      if (data.hasOwnProperty('lastDataSavedDate')) // eslint-disable-line no-prototype-builtins
-        obj.lastDataSavedDate = ApiClient.convertToType(data['lastDataSavedDate'], 'Number')
-      if (data.hasOwnProperty('loggedInUserAppRole')) // eslint-disable-line no-prototype-builtins
-        obj.loggedInUserAppRole = ApiClient.convertToType(data['loggedInUserAppRole'], 'String')
-      if (data.hasOwnProperty('monthlyInvoiceAccount')) // eslint-disable-line no-prototype-builtins
-        obj.monthlyInvoiceAccount = ApiClient.convertToType(data['monthlyInvoiceAccount'], 'Boolean')
-      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('integration'))
+        // eslint-disable-line no-prototype-builtins
+        obj.integration = ServiceIntegration.constructFromObject(
+          data['integration']
+        )
+      if (data.hasOwnProperty('lastDataReceivedDate'))
+        // eslint-disable-line no-prototype-builtins
+        obj.lastDataReceivedDate = ApiClient.convertToType(
+          data['lastDataReceivedDate'],
+          'Number'
+        )
+      if (data.hasOwnProperty('lastDataSavedDate'))
+        // eslint-disable-line no-prototype-builtins
+        obj.lastDataSavedDate = ApiClient.convertToType(
+          data['lastDataSavedDate'],
+          'Number'
+        )
+      if (data.hasOwnProperty('loggedInUserAppRole'))
+        // eslint-disable-line no-prototype-builtins
+        obj.loggedInUserAppRole = ApiClient.convertToType(
+          data['loggedInUserAppRole'],
+          'String'
+        )
+      if (data.hasOwnProperty('monthlyInvoiceAccount'))
+        // eslint-disable-line no-prototype-builtins
+        obj.monthlyInvoiceAccount = ApiClient.convertToType(
+          data['monthlyInvoiceAccount'],
+          'Boolean'
+        )
+      if (data.hasOwnProperty('name'))
+        // eslint-disable-line no-prototype-builtins
         obj.name = ApiClient.convertToType(data['name'], 'String')
-      if (data.hasOwnProperty('ownerEmail')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('ownerEmail'))
+        // eslint-disable-line no-prototype-builtins
         obj.ownerEmail = ApiClient.convertToType(data['ownerEmail'], 'String')
-      if (data.hasOwnProperty('owningOrganization')) // eslint-disable-line no-prototype-builtins
-        obj.owningOrganization = BasicOrganizationDto.constructFromObject(data['owningOrganization'])
-      if (data.hasOwnProperty('pageLoadThreshold')) // eslint-disable-line no-prototype-builtins
-        obj.pageLoadThreshold = ApiClient.convertToType(data['pageLoadThreshold'], 'Number')
-      if (data.hasOwnProperty('paymentMethodId')) // eslint-disable-line no-prototype-builtins
-        obj.paymentMethodId = ApiClient.convertToType(data['paymentMethodId'], 'Number')
-      if (data.hasOwnProperty('plan')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('owningOrganization'))
+        // eslint-disable-line no-prototype-builtins
+        obj.owningOrganization = BasicOrganizationDto.constructFromObject(
+          data['owningOrganization']
+        )
+      if (data.hasOwnProperty('pageLoadThreshold'))
+        // eslint-disable-line no-prototype-builtins
+        obj.pageLoadThreshold = ApiClient.convertToType(
+          data['pageLoadThreshold'],
+          'Number'
+        )
+      if (data.hasOwnProperty('paymentMethodId'))
+        // eslint-disable-line no-prototype-builtins
+        obj.paymentMethodId = ApiClient.convertToType(
+          data['paymentMethodId'],
+          'Number'
+        )
+      if (data.hasOwnProperty('plan'))
+        // eslint-disable-line no-prototype-builtins
         obj.plan = Plan.constructFromObject(data['plan'])
-      if (data.hasOwnProperty('prepaidAccount')) // eslint-disable-line no-prototype-builtins
-        obj.prepaidAccount = ApiClient.convertToType(data['prepaidAccount'], 'Boolean')
-      if (data.hasOwnProperty('status')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('prepaidAccount'))
+        // eslint-disable-line no-prototype-builtins
+        obj.prepaidAccount = ApiClient.convertToType(
+          data['prepaidAccount'],
+          'Boolean'
+        )
+      if (data.hasOwnProperty('status'))
+        // eslint-disable-line no-prototype-builtins
         obj.status = ApiClient.convertToType(data['status'], 'String')
-      if (data.hasOwnProperty('token')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('token'))
+        // eslint-disable-line no-prototype-builtins
         obj.token = ApiClient.convertToType(data['token'], 'String')
-      if (data.hasOwnProperty('trialEndDate')) // eslint-disable-line no-prototype-builtins
-        obj.trialEndDate = ApiClient.convertToType(data['trialEndDate'], 'Number')
-      if (data.hasOwnProperty('urlGroupLimit')) // eslint-disable-line no-prototype-builtins
-        obj.urlGroupLimit = ApiClient.convertToType(data['urlGroupLimit'], 'Number')
-      if (data.hasOwnProperty('userRoles')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('trialEndDate'))
+        // eslint-disable-line no-prototype-builtins
+        obj.trialEndDate = ApiClient.convertToType(
+          data['trialEndDate'],
+          'Number'
+        )
+      if (data.hasOwnProperty('urlGroupLimit'))
+        // eslint-disable-line no-prototype-builtins
+        obj.urlGroupLimit = ApiClient.convertToType(
+          data['urlGroupLimit'],
+          'Number'
+        )
+      if (data.hasOwnProperty('userRoles'))
+        // eslint-disable-line no-prototype-builtins
         obj.userRoles = ApiClient.convertToType(data['userRoles'], [UserRole])
     }
     return obj

@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The NotificationIntegration model module.
@@ -26,8 +26,7 @@ export class NotificationIntegration {
    * @alias module:model/NotificationIntegration
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>NotificationIntegration</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,28 +35,49 @@ export class NotificationIntegration {
    * @param {module:model/NotificationIntegration} obj Optional instance to populate.
    * @return {module:model/NotificationIntegration} The populated <code>NotificationIntegration</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new NotificationIntegration()
-      if (data.hasOwnProperty('applicability')) // eslint-disable-line no-prototype-builtins
-        obj.applicability = ApiClient.convertToType(data['applicability'], 'String')
-      if (data.hasOwnProperty('createDate')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('applicability'))
+        // eslint-disable-line no-prototype-builtins
+        obj.applicability = ApiClient.convertToType(
+          data['applicability'],
+          'String'
+        )
+      if (data.hasOwnProperty('createDate'))
+        // eslint-disable-line no-prototype-builtins
         obj.createDate = ApiClient.convertToType(data['createDate'], 'Date')
-      if (data.hasOwnProperty('createdByOwner')) // eslint-disable-line no-prototype-builtins
-        obj.createdByOwner = ApiClient.convertToType(data['createdByOwner'], 'Boolean')
-      if (data.hasOwnProperty('creatorId')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('createdByOwner'))
+        // eslint-disable-line no-prototype-builtins
+        obj.createdByOwner = ApiClient.convertToType(
+          data['createdByOwner'],
+          'Boolean'
+        )
+      if (data.hasOwnProperty('creatorId'))
+        // eslint-disable-line no-prototype-builtins
         obj.creatorId = ApiClient.convertToType(data['creatorId'], 'Number')
-      if (data.hasOwnProperty('id')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('id'))
+        // eslint-disable-line no-prototype-builtins
         obj.id = ApiClient.convertToType(data['id'], 'Number')
-      if (data.hasOwnProperty('integrationType')) // eslint-disable-line no-prototype-builtins
-        obj.integrationType = ApiClient.convertToType(data['integrationType'], 'String')
-      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('integrationType'))
+        // eslint-disable-line no-prototype-builtins
+        obj.integrationType = ApiClient.convertToType(
+          data['integrationType'],
+          'String'
+        )
+      if (data.hasOwnProperty('name'))
+        // eslint-disable-line no-prototype-builtins
         obj.name = ApiClient.convertToType(data['name'], 'String')
-      if (data.hasOwnProperty('params')) // eslint-disable-line no-prototype-builtins
-        obj.params = ApiClient.convertToType(data['params'], {'String': 'String'})
-      if (data.hasOwnProperty('state')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('params'))
+        // eslint-disable-line no-prototype-builtins
+        obj.params = ApiClient.convertToType(data['params'], {
+          String: 'String'
+        })
+      if (data.hasOwnProperty('state'))
+        // eslint-disable-line no-prototype-builtins
         obj.state = ApiClient.convertToType(data['state'], 'String')
-      if (data.hasOwnProperty('userId')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('userId'))
+        // eslint-disable-line no-prototype-builtins
         obj.userId = ApiClient.convertToType(data['userId'], 'Number')
     }
     return obj

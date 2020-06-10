@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The AppDescription model module.
@@ -26,8 +26,7 @@ export class AppDescription {
    * @alias module:model/AppDescription
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>AppDescription</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,10 +35,11 @@ export class AppDescription {
    * @param {module:model/AppDescription} obj Optional instance to populate.
    * @return {module:model/AppDescription} The populated <code>AppDescription</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new AppDescription()
-      if (data.hasOwnProperty('description'))  // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('description'))
+        // eslint-disable-line no-prototype-builtins
         obj.description = ApiClient.convertToType(data['description'], 'String')
     }
     return obj

@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {DataSeriesFilter} from './DataSeriesFilter'
+import { ApiClient } from '../ApiClient'
+import { DataSeriesFilter } from './DataSeriesFilter'
 
 /**
  * The DataSeriesRequest model module.
@@ -28,7 +28,7 @@ export class DataSeriesRequest {
    * @class
    * @param metric {String} Metric name or metric group prefix
    */
-  constructor(metric) {
+  constructor (metric) {
     this.metric = metric
   }
 
@@ -39,22 +39,34 @@ export class DataSeriesRequest {
    * @param {module:model/DataSeriesRequest} obj Optional instance to populate.
    * @return {module:model/DataSeriesRequest} The populated <code>DataSeriesRequest</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new DataSeriesRequest()
-      if (data.hasOwnProperty('defaultInterval')) // eslint-disable-line no-prototype-builtins
-        obj.defaultInterval = ApiClient.convertToType(data['defaultInterval'], 'Number')
-      if (data.hasOwnProperty('end')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('defaultInterval'))
+        // eslint-disable-line no-prototype-builtins
+        obj.defaultInterval = ApiClient.convertToType(
+          data['defaultInterval'],
+          'Number'
+        )
+      if (data.hasOwnProperty('end'))
+        // eslint-disable-line no-prototype-builtins
         obj.end = ApiClient.convertToType(data['end'], 'String')
-      if (data.hasOwnProperty('filters')) // eslint-disable-line no-prototype-builtins
-        obj.filters = ApiClient.convertToType(data['filters'], {'String': DataSeriesFilter})
-      if (data.hasOwnProperty('granularity')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('filters'))
+        // eslint-disable-line no-prototype-builtins
+        obj.filters = ApiClient.convertToType(data['filters'], {
+          String: DataSeriesFilter
+        })
+      if (data.hasOwnProperty('granularity'))
+        // eslint-disable-line no-prototype-builtins
         obj.granularity = ApiClient.convertToType(data['granularity'], 'String')
-      if (data.hasOwnProperty('interval')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('interval'))
+        // eslint-disable-line no-prototype-builtins
         obj.interval = ApiClient.convertToType(data['interval'], 'String')
-      if (data.hasOwnProperty('metric')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('metric'))
+        // eslint-disable-line no-prototype-builtins
         obj.metric = ApiClient.convertToType(data['metric'], 'String')
-      if (data.hasOwnProperty('start')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('start'))
+        // eslint-disable-line no-prototype-builtins
         obj.start = ApiClient.convertToType(data['start'], 'String')
     }
     return obj

@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The AppMetadata model module.
@@ -26,8 +26,7 @@ export class AppMetadata {
    * @alias module:model/AppMetadata
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>AppMetadata</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,18 +35,32 @@ export class AppMetadata {
    * @param {module:model/AppMetadata} obj Optional instance to populate.
    * @return {module:model/AppMetadata} The populated <code>AppMetadata</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new AppMetadata()
-      if (data.hasOwnProperty('awsCloudWatchAccessKey'))  // eslint-disable-line no-prototype-builtins
-        obj.awsCloudWatchAccessKey = ApiClient.convertToType(data['awsCloudWatchAccessKey'], 'String')
-      if (data.hasOwnProperty('awsCloudWatchSecretKey')) // eslint-disable-line no-prototype-builtins
-        obj.awsCloudWatchSecretKey = ApiClient.convertToType(data['awsCloudWatchSecretKey'], 'String')
-      if (data.hasOwnProperty('awsFetchFrequency')) // eslint-disable-line no-prototype-builtins
-        obj.awsFetchFrequency = ApiClient.convertToType(data['awsFetchFrequency'], 'String')
-      if (data.hasOwnProperty('awsRegion')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('awsCloudWatchAccessKey'))
+        // eslint-disable-line no-prototype-builtins
+        obj.awsCloudWatchAccessKey = ApiClient.convertToType(
+          data['awsCloudWatchAccessKey'],
+          'String'
+        )
+      if (data.hasOwnProperty('awsCloudWatchSecretKey'))
+        // eslint-disable-line no-prototype-builtins
+        obj.awsCloudWatchSecretKey = ApiClient.convertToType(
+          data['awsCloudWatchSecretKey'],
+          'String'
+        )
+      if (data.hasOwnProperty('awsFetchFrequency'))
+        // eslint-disable-line no-prototype-builtins
+        obj.awsFetchFrequency = ApiClient.convertToType(
+          data['awsFetchFrequency'],
+          'String'
+        )
+      if (data.hasOwnProperty('awsRegion'))
+        // eslint-disable-line no-prototype-builtins
         obj.awsRegion = ApiClient.convertToType(data['awsRegion'], 'String')
-      if (data.hasOwnProperty('subTypes')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('subTypes'))
+        // eslint-disable-line no-prototype-builtins
         obj.subTypes = ApiClient.convertToType(data['subTypes'], ['String'])
     }
     return obj

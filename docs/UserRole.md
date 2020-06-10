@@ -1,40 +1,33 @@
 # SematextApiClientJavascript.UserRole
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**role** | **String** |  | [optional] 
-**roleStatus** | **String** |  | [optional] 
-**userEmail** | **String** |  | [optional] 
 
+| Name           | Type       | Description | Notes      |
+| -------------- | ---------- | ----------- | ---------- |
+| **role**       | **String** |             | [optional] |
+| **roleStatus** | **String** |             | [optional] |
+| **userEmail**  | **String** |             | [optional] |
 
 <a name="RoleEnum"></a>
+
 ## Enum: RoleEnum
 
+- `SUPER_USER` (value: `"SUPER_USER"`)
 
-* `SUPER_USER` (value: `"SUPER_USER"`)
+- `OWNER` (value: `"OWNER"`)
 
-* `OWNER` (value: `"OWNER"`)
+- `ADMIN` (value: `"ADMIN"`)
 
-* `ADMIN` (value: `"ADMIN"`)
+- `USER` (value: `"USER"`)
 
-* `USER` (value: `"USER"`)
+- `DEMO` (value: `"DEMO"`)
 
-* `DEMO` (value: `"DEMO"`)
-
-* `ANONYMOUS` (value: `"ANONYMOUS"`)
-
-
-
+- `ANONYMOUS` (value: `"ANONYMOUS"`)
 
 <a name="RoleStatusEnum"></a>
+
 ## Enum: RoleStatusEnum
 
+- `INACTIVE` (value: `"INACTIVE"`)
 
-* `INACTIVE` (value: `"INACTIVE"`)
-
-* `ACTIVE` (value: `"ACTIVE"`)
-
-
-
-
+- `ACTIVE` (value: `"ACTIVE"`)

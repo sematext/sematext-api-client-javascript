@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The AlertNotificationRequest model module.
@@ -26,8 +26,7 @@ export class AlertNotificationRequest {
    * @alias module:model/AlertNotificationRequest
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>AlertNotificationRequest</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,16 +35,23 @@ export class AlertNotificationRequest {
    * @param {module:model/AlertNotificationRequest} obj Optional instance to populate.
    * @return {module:model/AlertNotificationRequest} The populated <code>AlertNotificationRequest</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new AlertNotificationRequest()
-      if (data.hasOwnProperty('defaultInterval')) // eslint-disable-line no-prototype-builtins
-        obj.defaultInterval = ApiClient.convertToType(data['defaultInterval'], 'Number')
-      if (data.hasOwnProperty('end')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('defaultInterval'))
+        // eslint-disable-line no-prototype-builtins
+        obj.defaultInterval = ApiClient.convertToType(
+          data['defaultInterval'],
+          'Number'
+        )
+      if (data.hasOwnProperty('end'))
+        // eslint-disable-line no-prototype-builtins
         obj.end = ApiClient.convertToType(data['end'], 'String')
-      if (data.hasOwnProperty('interval')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('interval'))
+        // eslint-disable-line no-prototype-builtins
         obj.interval = ApiClient.convertToType(data['interval'], 'String')
-      if (data.hasOwnProperty('start')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('start'))
+        // eslint-disable-line no-prototype-builtins
         obj.start = ApiClient.convertToType(data['start'], 'String')
     }
     return obj

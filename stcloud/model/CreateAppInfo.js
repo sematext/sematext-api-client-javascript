@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {AppMetadata} from './AppMetadata'
+import { ApiClient } from '../ApiClient'
+import { AppMetadata } from './AppMetadata'
 
 /**
  * The CreateAppInfo model module.
@@ -27,8 +27,7 @@ export class CreateAppInfo {
    * @alias module:model/CreateAppInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>CreateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,18 +36,29 @@ export class CreateAppInfo {
    * @param {module:model/CreateAppInfo} obj Optional instance to populate.
    * @return {module:model/CreateAppInfo} The populated <code>CreateAppInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new CreateAppInfo()
-      if (data.hasOwnProperty('appType')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('appType'))
+        // eslint-disable-line no-prototype-builtins
         obj.appType = ApiClient.convertToType(data['appType'], 'String')
-      if (data.hasOwnProperty('discountCode')) // eslint-disable-line no-prototype-builtins
-        obj.discountCode = ApiClient.convertToType(data['discountCode'], 'String')
-      if (data.hasOwnProperty('initialPlanId')) // eslint-disable-line no-prototype-builtins
-        obj.initialPlanId = ApiClient.convertToType(data['initialPlanId'], 'Number')
-      if (data.hasOwnProperty('metaData')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('discountCode'))
+        // eslint-disable-line no-prototype-builtins
+        obj.discountCode = ApiClient.convertToType(
+          data['discountCode'],
+          'String'
+        )
+      if (data.hasOwnProperty('initialPlanId'))
+        // eslint-disable-line no-prototype-builtins
+        obj.initialPlanId = ApiClient.convertToType(
+          data['initialPlanId'],
+          'Number'
+        )
+      if (data.hasOwnProperty('metaData'))
+        // eslint-disable-line no-prototype-builtins
         obj.metaData = AppMetadata.constructFromObject(data['metaData'])
-      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('name'))
+        // eslint-disable-line no-prototype-builtins
         obj.name = ApiClient.convertToType(data['name'], 'String')
     }
     return obj

@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The BillingInfo model module.
@@ -26,8 +26,7 @@ export class BillingInfo {
    * @alias module:model/BillingInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>BillingInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,14 +35,23 @@ export class BillingInfo {
    * @param {module:model/BillingInfo} obj Optional instance to populate.
    * @return {module:model/BillingInfo} The populated <code>BillingInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new BillingInfo()
-      if (data.hasOwnProperty('creditCardId')) // eslint-disable-line no-prototype-builtins
-        obj.creditCardId = ApiClient.convertToType(data['creditCardId'], 'Number')
-      if (data.hasOwnProperty('paymentMethod')) // eslint-disable-line no-prototype-builtins
-        obj.paymentMethod = ApiClient.convertToType(data['paymentMethod'], 'String')
-      if (data.hasOwnProperty('planId')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('creditCardId'))
+        // eslint-disable-line no-prototype-builtins
+        obj.creditCardId = ApiClient.convertToType(
+          data['creditCardId'],
+          'Number'
+        )
+      if (data.hasOwnProperty('paymentMethod'))
+        // eslint-disable-line no-prototype-builtins
+        obj.paymentMethod = ApiClient.convertToType(
+          data['paymentMethod'],
+          'String'
+        )
+      if (data.hasOwnProperty('planId'))
+        // eslint-disable-line no-prototype-builtins
         obj.planId = ApiClient.convertToType(data['planId'], 'Number')
     }
     return obj

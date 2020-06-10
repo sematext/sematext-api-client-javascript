@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {Error} from './Error'
+import { ApiClient } from '../ApiClient'
+import { Error } from './Error'
 
 /**
  * The GenericApiResponse model module.
@@ -28,8 +28,7 @@ export class GenericApiResponse {
    * @alias module:model/GenericApiResponse
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>GenericApiResponse</code> from a plain JavaScript object, optionally creating a new instance.
@@ -38,16 +37,20 @@ export class GenericApiResponse {
    * @param {module:model/GenericApiResponse} obj Optional instance to populate.
    * @return {module:model/GenericApiResponse} The populated <code>GenericApiResponse</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new GenericApiResponse()
-      if (data.hasOwnProperty('data')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('data'))
+        // eslint-disable-line no-prototype-builtins
         obj.data = ApiClient.convertToType(data['data'], Object)
-      if (data.hasOwnProperty('errors')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('errors'))
+        // eslint-disable-line no-prototype-builtins
         obj.errors = ApiClient.convertToType(data['errors'], [Error])
-      if (data.hasOwnProperty('message')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('message'))
+        // eslint-disable-line no-prototype-builtins
         obj.message = ApiClient.convertToType(data['message'], 'String')
-      if (data.hasOwnProperty('success')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('success'))
+        // eslint-disable-line no-prototype-builtins
         obj.success = ApiClient.convertToType(data['success'], 'Boolean')
     }
     return obj

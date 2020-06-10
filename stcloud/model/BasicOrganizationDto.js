@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {BasicAuthMethodDto} from './BasicAuthMethodDto'
+import { ApiClient } from '../ApiClient'
+import { BasicAuthMethodDto } from './BasicAuthMethodDto'
 
 /**
  * The BasicOrganizationDto model module.
@@ -27,8 +27,7 @@ export class BasicOrganizationDto {
    * @alias module:model/BasicOrganizationDto
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>BasicOrganizationDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,16 +36,22 @@ export class BasicOrganizationDto {
    * @param {module:model/BasicOrganizationDto} obj Optional instance to populate.
    * @return {module:model/BasicOrganizationDto} The populated <code>BasicOrganizationDto</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new BasicOrganizationDto()
-      if (data.hasOwnProperty('authMethods')) // eslint-disable-line no-prototype-builtins
-        obj.authMethods = ApiClient.convertToType(data['authMethods'], [BasicAuthMethodDto])
-      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('authMethods'))
+        // eslint-disable-line no-prototype-builtins
+        obj.authMethods = ApiClient.convertToType(data['authMethods'], [
+          BasicAuthMethodDto
+        ])
+      if (data.hasOwnProperty('name'))
+        // eslint-disable-line no-prototype-builtins
         obj.name = ApiClient.convertToType(data['name'], 'String')
-      if (data.hasOwnProperty('status')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('status'))
+        // eslint-disable-line no-prototype-builtins
         obj.status = ApiClient.convertToType(data['status'], 'String')
-      if (data.hasOwnProperty('uuid')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('uuid'))
+        // eslint-disable-line no-prototype-builtins
         obj.uuid = ApiClient.convertToType(data['uuid'], 'String')
     }
     return obj

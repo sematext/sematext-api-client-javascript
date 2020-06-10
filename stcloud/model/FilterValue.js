@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The FilterValue model module.
@@ -26,8 +26,7 @@ export class FilterValue {
    * @alias module:model/FilterValue
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>FilterValue</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,20 +35,26 @@ export class FilterValue {
    * @param {module:model/FilterValue} obj Optional instance to populate.
    * @return {module:model/FilterValue} The populated <code>FilterValue</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new FilterValue()
-      if (data.hasOwnProperty('aggType')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('aggType'))
+        // eslint-disable-line no-prototype-builtins
         obj.aggType = ApiClient.convertToType(data['aggType'], 'String')
-      if (data.hasOwnProperty('filterName')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('filterName'))
+        // eslint-disable-line no-prototype-builtins
         obj.filterName = ApiClient.convertToType(data['filterName'], 'String')
-      if (data.hasOwnProperty('key')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('key'))
+        // eslint-disable-line no-prototype-builtins
         obj.key = ApiClient.convertToType(data['key'], 'String')
-      if (data.hasOwnProperty('label')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('label'))
+        // eslint-disable-line no-prototype-builtins
         obj.label = ApiClient.convertToType(data['label'], 'String')
-      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('name'))
+        // eslint-disable-line no-prototype-builtins
         obj.name = ApiClient.convertToType(data['name'], 'String')
-      if (data.hasOwnProperty('values')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('values'))
+        // eslint-disable-line no-prototype-builtins
         obj.values = ApiClient.convertToType(data['values'], ['String'])
     }
     return obj

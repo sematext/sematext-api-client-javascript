@@ -13,60 +13,57 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {DataSeriesRequest} from '../model/DataSeriesRequest' // eslint-disable-line no-unused-vars
-import {GenericApiResponse} from '../model/GenericApiResponse'
+import { ApiClient } from '../ApiClient'
+import { DataSeriesRequest } from '../model/DataSeriesRequest' // eslint-disable-line no-unused-vars
+import { GenericApiResponse } from '../model/GenericApiResponse'
 
 /**
-* Metrics service.
-* @module api/MetricsApi
-* @version 0.1.0
-*/
+ * Metrics service.
+ * @module api/MetricsApi
+ * @version 0.1.0
+ */
 export class MetricsApi {
-
   /**
-    * Constructs a new MetricsApi.
-    * @alias module:api/MetricsApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instance} if unspecified.
-    */
-  constructor(apiClient) {
+   * Constructs a new MetricsApi.
+   * @alias module:api/MetricsApi
+   * @class
+   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:ApiClient#instance} if unspecified.
+   */
+  constructor (apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
-
-
   /**
-     * Get metrics data points for an app
-     * Default value of interval is 5m
-     * @param {Number} appId appId
-     * @param {module:model/DataSeriesRequest} requestBody Metric data points request
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-  listDataSeriesUsingPOST1WithHttpInfo(appId, requestBody) {
+   * Get metrics data points for an app
+   * Default value of interval is 5m
+   * @param {Number} appId appId
+   * @param {module:model/DataSeriesRequest} requestBody Metric data points request
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  listDataSeriesUsingPOST1WithHttpInfo (appId, requestBody) {
     let postBody = requestBody
 
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
-      throw new Error('Missing the required parameter \'appId\' when calling listDataSeriesUsingPOST1')
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling listDataSeriesUsingPOST1'
+      )
     }
 
     // verify the required parameter 'requestBody' is set
     if (requestBody === undefined || requestBody === null) {
-      throw new Error('Missing the required parameter \'requestBody\' when calling listDataSeriesUsingPOST1')
+      throw new Error(
+        'Missing the required parameter \'requestBody\' when calling listDataSeriesUsingPOST1'
+      )
     }
-
 
     let pathParams = {
-      'appId': appId
+      appId: appId
     }
-    let queryParams = {
-    }
-    let headerParams = {
-    }
-    let formParams = {
-    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
     let authNames = ['api_key']
     let contentTypes = ['application/json']
@@ -74,57 +71,65 @@ export class MetricsApi {
     let returnType = GenericApiResponse
 
     return this.apiClient.callApi(
-      '/spm-reports/api/v3/apps/{appId}/metrics/data', 'POST',
-      pathParams, queryParams, headerParams, formParams, postBody,
-      authNames, contentTypes, accepts, returnType
+      '/spm-reports/api/v3/apps/{appId}/metrics/data',
+      'POST',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
     )
   }
 
   /**
-     * Get metrics data points for an app
-     * Default value of interval is 5m
-     * @param {Number} appId appId
-     * @param {module:model/DataSeriesRequest} requestBody Metric data points request
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-  listDataSeriesUsingPOST1(appId, requestBody) {
-    return this.listDataSeriesUsingPOST1WithHttpInfo(appId, requestBody)
-      .then(function(response_and_data) {
+   * Get metrics data points for an app
+   * Default value of interval is 5m
+   * @param {Number} appId appId
+   * @param {module:model/DataSeriesRequest} requestBody Metric data points request
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  listDataSeriesUsingPOST1 (appId, requestBody) {
+    return this.listDataSeriesUsingPOST1WithHttpInfo(appId, requestBody).then(
+      function (response_and_data) {
         return response_and_data.data
-      })
+      }
+    )
   }
 
-
   /**
-     * Get metrics filters and their values for an app
-     * Default value of interval is 5m
-     * @param {Number} appId appId
-     * @param {module:model/DataSeriesRequest} requestBody Metric filters request
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-  listFiltersUsingPOSTWithHttpInfo(appId, requestBody) {
+   * Get metrics filters and their values for an app
+   * Default value of interval is 5m
+   * @param {Number} appId appId
+   * @param {module:model/DataSeriesRequest} requestBody Metric filters request
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  listFiltersUsingPOSTWithHttpInfo (appId, requestBody) {
     let postBody = requestBody
 
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
-      throw new Error('Missing the required parameter \'appId\' when calling listFiltersUsingPOST')
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling listFiltersUsingPOST'
+      )
     }
 
     // verify the required parameter 'requestBody' is set
     if (requestBody === undefined || requestBody === null) {
-      throw new Error('Missing the required parameter \'requestBody\' when calling listFiltersUsingPOST')
+      throw new Error(
+        'Missing the required parameter \'requestBody\' when calling listFiltersUsingPOST'
+      )
     }
-
 
     let pathParams = {
-      'appId': appId
+      appId: appId
     }
-    let queryParams = {
-    }
-    let headerParams = {
-    }
-    let formParams = {
-    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
     let authNames = ['api_key']
     let contentTypes = ['application/json']
@@ -132,50 +137,56 @@ export class MetricsApi {
     let returnType = GenericApiResponse
 
     return this.apiClient.callApi(
-      '/spm-reports/api/v3/apps/{appId}/metrics/filters', 'POST',
-      pathParams, queryParams, headerParams, formParams, postBody,
-      authNames, contentTypes, accepts, returnType
+      '/spm-reports/api/v3/apps/{appId}/metrics/filters',
+      'POST',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
     )
   }
 
   /**
-     * Get metrics filters and their values for an app
-     * Default value of interval is 5m
-     * @param {Number} appId appId
-     * @param {module:model/DataSeriesRequest} requestBody Metric filters request
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-  listFiltersUsingPOST(appId, requestBody) {
-    return this.listFiltersUsingPOSTWithHttpInfo(appId, requestBody)
-      .then(function(response_and_data) {
+   * Get metrics filters and their values for an app
+   * Default value of interval is 5m
+   * @param {Number} appId appId
+   * @param {module:model/DataSeriesRequest} requestBody Metric filters request
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  listFiltersUsingPOST (appId, requestBody) {
+    return this.listFiltersUsingPOSTWithHttpInfo(appId, requestBody).then(
+      function (response_and_data) {
         return response_and_data.data
-      })
+      }
+    )
   }
 
-
   /**
-     * Get metrics keys for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-  listMetricsKeysUsingGET1WithHttpInfo(appId) {
+   * Get metrics keys for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  listMetricsKeysUsingGET1WithHttpInfo (appId) {
     let postBody = null
 
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
-      throw new Error('Missing the required parameter \'appId\' when calling listMetricsKeysUsingGET1')
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling listMetricsKeysUsingGET1'
+      )
     }
-
 
     let pathParams = {
-      'appId': appId
+      appId: appId
     }
-    let queryParams = {
-    }
-    let headerParams = {
-    }
-    let formParams = {
-    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
     let authNames = ['api_key']
     let contentTypes = ['application/json']
@@ -183,48 +194,54 @@ export class MetricsApi {
     let returnType = GenericApiResponse
 
     return this.apiClient.callApi(
-      '/spm-reports/api/v3/apps/{appId}/metrics/keys', 'GET',
-      pathParams, queryParams, headerParams, formParams, postBody,
-      authNames, contentTypes, accepts, returnType
+      '/spm-reports/api/v3/apps/{appId}/metrics/keys',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
     )
   }
 
   /**
-     * Get metrics keys for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-  listMetricsKeysUsingGET1(appId) {
-    return this.listMetricsKeysUsingGET1WithHttpInfo(appId)
-      .then(function(response_and_data) {
-        return response_and_data.data
-      })
+   * Get metrics keys for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  listMetricsKeysUsingGET1 (appId) {
+    return this.listMetricsKeysUsingGET1WithHttpInfo(appId).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
   }
 
-
   /**
-     * Get metrics info for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-  listMetricsUsingGET1WithHttpInfo(appId) {
+   * Get metrics info for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  listMetricsUsingGET1WithHttpInfo (appId) {
     let postBody = null
 
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
-      throw new Error('Missing the required parameter \'appId\' when calling listMetricsUsingGET1')
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling listMetricsUsingGET1'
+      )
     }
-
 
     let pathParams = {
-      'appId': appId
+      appId: appId
     }
-    let queryParams = {
-    }
-    let headerParams = {
-    }
-    let formParams = {
-    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
     let authNames = ['api_key']
     let contentTypes = ['application/json']
@@ -232,23 +249,30 @@ export class MetricsApi {
     let returnType = GenericApiResponse
 
     return this.apiClient.callApi(
-      '/spm-reports/api/v3/apps/{appId}/metrics', 'GET',
-      pathParams, queryParams, headerParams, formParams, postBody,
-      authNames, contentTypes, accepts, returnType
+      '/spm-reports/api/v3/apps/{appId}/metrics',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
     )
   }
 
   /**
-     * Get metrics info for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-  listMetricsUsingGET1(appId) {
-    return this.listMetricsUsingGET1WithHttpInfo(appId)
-      .then(function(response_and_data) {
-        return response_and_data.data
-      })
+   * Get metrics info for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  listMetricsUsingGET1 (appId) {
+    return this.listMetricsUsingGET1WithHttpInfo(appId).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
   }
-
-
 }

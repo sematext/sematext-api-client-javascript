@@ -13,30 +13,30 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../stcloud/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'));
+    factory(require('expect.js'), require('../../stcloud/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript);
+    factory(root.expect, root.SematextApiClientJavascript)
   }
-}(this, function(expect, SematextApiClientJavascript) {
-  'use strict';
+})(this, function (expect, SematextApiClientJavascript) {
+  'use strict'
 
-  var instance;
+  var instance
 
-  beforeEach(function() {
-    instance = new SematextApiClientJavascript.AlertsApi();
-  });
+  beforeEach(function () {
+    instance = new SematextApiClientJavascript.AlertsApi()
+  })
 
-  describe('(package)', function() {
-    describe('AlertsApi', function() {
-      describe('createAlertUsingPOST', function() {
-        it('should call createAlertUsingPOST successfully', function(done) {
+  describe('(package)', function () {
+    describe('AlertsApi', function () {
+      describe('createAlertUsingPOST', function () {
+        it('should call createAlertUsingPOST successfully', function (done) {
           // TODO: uncomment, update parameter values for createAlertUsingPOST call and complete the assertions
           /*
           var dto = new SematextApiClientJavascript.AlertRule();
@@ -126,11 +126,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('deleteAlertRuleUsingDELETE', function() {
-        it('should call deleteAlertRuleUsingDELETE successfully', function(done) {
+          done()
+        })
+      })
+      describe('deleteAlertRuleUsingDELETE', function () {
+        it('should call deleteAlertRuleUsingDELETE successfully', function (done) {
           // TODO: uncomment, update parameter values for deleteAlertRuleUsingDELETE call and complete the assertions
           /*
           var updateableAlertId = 789;
@@ -164,11 +164,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('disableAlertRuleUsingPUT', function() {
-        it('should call disableAlertRuleUsingPUT successfully', function(done) {
+          done()
+        })
+      })
+      describe('disableAlertRuleUsingPUT', function () {
+        it('should call disableAlertRuleUsingPUT successfully', function (done) {
           // TODO: uncomment, update parameter values for disableAlertRuleUsingPUT call and complete the assertions
           /*
           var updateableAlertId = 789;
@@ -202,11 +202,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('enableAlertRuleUsingPUT', function() {
-        it('should call enableAlertRuleUsingPUT successfully', function(done) {
+          done()
+        })
+      })
+      describe('enableAlertRuleUsingPUT', function () {
+        it('should call enableAlertRuleUsingPUT successfully', function (done) {
           // TODO: uncomment, update parameter values for enableAlertRuleUsingPUT call and complete the assertions
           /*
           var updateableAlertId = 789;
@@ -240,11 +240,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getAlertRulesForAppUsingGET', function() {
-        it('should call getAlertRulesForAppUsingGET successfully', function(done) {
+          done()
+        })
+      })
+      describe('getAlertRulesForAppUsingGET', function () {
+        it('should call getAlertRulesForAppUsingGET successfully', function (done) {
           // TODO: uncomment, update parameter values for getAlertRulesForAppUsingGET call and complete the assertions
           /*
           var appId = 789;
@@ -278,10 +278,9 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-    });
-  });
-
-}));
+          done()
+        })
+      })
+    })
+  })
+})

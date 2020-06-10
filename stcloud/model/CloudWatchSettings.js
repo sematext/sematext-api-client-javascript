@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The CloudWatchSettings model module.
@@ -26,8 +26,7 @@ export class CloudWatchSettings {
    * @alias module:model/CloudWatchSettings
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>CloudWatchSettings</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,16 +35,23 @@ export class CloudWatchSettings {
    * @param {module:model/CloudWatchSettings} obj Optional instance to populate.
    * @return {module:model/CloudWatchSettings} The populated <code>CloudWatchSettings</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new CloudWatchSettings()
-      if (data.hasOwnProperty('accessKey')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('accessKey'))
+        // eslint-disable-line no-prototype-builtins
         obj.accessKey = ApiClient.convertToType(data['accessKey'], 'String')
-      if (data.hasOwnProperty('fetchFrequency')) // eslint-disable-line no-prototype-builtins
-        obj.fetchFrequency = ApiClient.convertToType(data['fetchFrequency'], 'String')
-      if (data.hasOwnProperty('region')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('fetchFrequency'))
+        // eslint-disable-line no-prototype-builtins
+        obj.fetchFrequency = ApiClient.convertToType(
+          data['fetchFrequency'],
+          'String'
+        )
+      if (data.hasOwnProperty('region'))
+        // eslint-disable-line no-prototype-builtins
         obj.region = ApiClient.convertToType(data['region'], 'String')
-      if (data.hasOwnProperty('secretKey')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('secretKey'))
+        // eslint-disable-line no-prototype-builtins
         obj.secretKey = ApiClient.convertToType(data['secretKey'], 'String')
     }
     return obj

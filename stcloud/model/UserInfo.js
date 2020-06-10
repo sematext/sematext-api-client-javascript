@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The UserInfo model module.
@@ -26,8 +26,7 @@ export class UserInfo {
    * @alias module:model/UserInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>UserInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,10 +35,11 @@ export class UserInfo {
    * @param {module:model/UserInfo} obj Optional instance to populate.
    * @return {module:model/UserInfo} The populated <code>UserInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new UserInfo()
-      if (data.hasOwnProperty('loginName')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('loginName'))
+        // eslint-disable-line no-prototype-builtins
         obj.loginName = ApiClient.convertToType(data['loginName'], 'String')
     }
     return obj

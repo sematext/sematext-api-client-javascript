@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The UpdateAppInfo model module.
@@ -26,8 +26,7 @@ export class UpdateAppInfo {
    * @alias module:model/UpdateAppInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>UpdateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,26 +35,41 @@ export class UpdateAppInfo {
    * @param {module:model/UpdateAppInfo} obj Optional instance to populate.
    * @return {module:model/UpdateAppInfo} The populated <code>UpdateAppInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new UpdateAppInfo()
-      if (data.hasOwnProperty('description')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('description'))
+        // eslint-disable-line no-prototype-builtins
         obj.description = ApiClient.convertToType(data['description'], 'String')
-      if (data.hasOwnProperty('ignorePercentage')) // eslint-disable-line no-prototype-builtins
-        obj.ignorePercentage = ApiClient.convertToType(data['ignorePercentage'], 'Number')
-      if (data.hasOwnProperty('maxEvents')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('ignorePercentage'))
+        // eslint-disable-line no-prototype-builtins
+        obj.ignorePercentage = ApiClient.convertToType(
+          data['ignorePercentage'],
+          'Number'
+        )
+      if (data.hasOwnProperty('maxEvents'))
+        // eslint-disable-line no-prototype-builtins
         obj.maxEvents = ApiClient.convertToType(data['maxEvents'], 'Number')
-      if (data.hasOwnProperty('maxLimitMB')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('maxLimitMB'))
+        // eslint-disable-line no-prototype-builtins
         obj.maxLimitMB = ApiClient.convertToType(data['maxLimitMB'], 'Number')
-      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('name'))
+        // eslint-disable-line no-prototype-builtins
         obj.name = ApiClient.convertToType(data['name'], 'String')
-      if (data.hasOwnProperty('sampling')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('sampling'))
+        // eslint-disable-line no-prototype-builtins
         obj.sampling = ApiClient.convertToType(data['sampling'], 'Boolean')
-      if (data.hasOwnProperty('samplingPercentage')) // eslint-disable-line no-prototype-builtins
-        obj.samplingPercentage = ApiClient.convertToType(data['samplingPercentage'], 'Number')
-      if (data.hasOwnProperty('staggering')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('samplingPercentage'))
+        // eslint-disable-line no-prototype-builtins
+        obj.samplingPercentage = ApiClient.convertToType(
+          data['samplingPercentage'],
+          'Number'
+        )
+      if (data.hasOwnProperty('staggering'))
+        // eslint-disable-line no-prototype-builtins
         obj.staggering = ApiClient.convertToType(data['staggering'], 'Boolean')
-      if (data.hasOwnProperty('status')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('status'))
+        // eslint-disable-line no-prototype-builtins
         obj.status = ApiClient.convertToType(data['status'], 'String')
     }
     return obj

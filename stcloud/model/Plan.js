@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The Plan model module.
@@ -26,8 +26,7 @@ export class Plan {
    * @alias module:model/Plan
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>Plan</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,34 +35,62 @@ export class Plan {
    * @param {module:model/Plan} obj Optional instance to populate.
    * @return {module:model/Plan} The populated <code>Plan</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new Plan()
-      if (data.hasOwnProperty('appType')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('appType'))
+        // eslint-disable-line no-prototype-builtins
         obj.appType = ApiClient.convertToType(data['appType'], 'String')
-      if (data.hasOwnProperty('custom')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('custom'))
+        // eslint-disable-line no-prototype-builtins
         obj.custom = ApiClient.convertToType(data['custom'], 'Boolean')
-      if (data.hasOwnProperty('dataRetentionHours')) // eslint-disable-line no-prototype-builtins
-        obj.dataRetentionHours = ApiClient.convertToType(data['dataRetentionHours'], 'Number')
-      if (data.hasOwnProperty('defaultTrialPlan')) // eslint-disable-line no-prototype-builtins
-        obj.defaultTrialPlan = ApiClient.convertToType(data['defaultTrialPlan'], 'Boolean')
-      if (data.hasOwnProperty('free')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('dataRetentionHours'))
+        // eslint-disable-line no-prototype-builtins
+        obj.dataRetentionHours = ApiClient.convertToType(
+          data['dataRetentionHours'],
+          'Number'
+        )
+      if (data.hasOwnProperty('defaultTrialPlan'))
+        // eslint-disable-line no-prototype-builtins
+        obj.defaultTrialPlan = ApiClient.convertToType(
+          data['defaultTrialPlan'],
+          'Boolean'
+        )
+      if (data.hasOwnProperty('free'))
+        // eslint-disable-line no-prototype-builtins
         obj.free = ApiClient.convertToType(data['free'], 'Boolean')
-      if (data.hasOwnProperty('freeTrialDays')) // eslint-disable-line no-prototype-builtins
-        obj.freeTrialDays = ApiClient.convertToType(data['freeTrialDays'], 'Number')
-      if (data.hasOwnProperty('id')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('freeTrialDays'))
+        // eslint-disable-line no-prototype-builtins
+        obj.freeTrialDays = ApiClient.convertToType(
+          data['freeTrialDays'],
+          'Number'
+        )
+      if (data.hasOwnProperty('id'))
+        // eslint-disable-line no-prototype-builtins
         obj.id = ApiClient.convertToType(data['id'], 'Number')
-      if (data.hasOwnProperty('maxAlerts')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('maxAlerts'))
+        // eslint-disable-line no-prototype-builtins
         obj.maxAlerts = ApiClient.convertToType(data['maxAlerts'], 'Number')
-      if (data.hasOwnProperty('maxDailyEvents')) // eslint-disable-line no-prototype-builtins
-        obj.maxDailyEvents = ApiClient.convertToType(data['maxDailyEvents'], 'Number')
-      if (data.hasOwnProperty('name')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('maxDailyEvents'))
+        // eslint-disable-line no-prototype-builtins
+        obj.maxDailyEvents = ApiClient.convertToType(
+          data['maxDailyEvents'],
+          'Number'
+        )
+      if (data.hasOwnProperty('name'))
+        // eslint-disable-line no-prototype-builtins
         obj.name = ApiClient.convertToType(data['name'], 'String')
-      if (data.hasOwnProperty('planScheme')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('planScheme'))
+        // eslint-disable-line no-prototype-builtins
         obj.planScheme = ApiClient.convertToType(data['planScheme'], 'String')
-      if (data.hasOwnProperty('sematextService')) // eslint-disable-line no-prototype-builtins
-        obj.sematextService = ApiClient.convertToType(data['sematextService'], 'String')
-      if (data.hasOwnProperty('trialPlan')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('sematextService'))
+        // eslint-disable-line no-prototype-builtins
+        obj.sematextService = ApiClient.convertToType(
+          data['sematextService'],
+          'String'
+        )
+      if (data.hasOwnProperty('trialPlan'))
+        // eslint-disable-line no-prototype-builtins
         obj.trialPlan = ApiClient.convertToType(data['trialPlan'], 'Boolean')
     }
     return obj

@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
-import {App} from './App'
+import { ApiClient } from '../ApiClient'
+import { App } from './App'
 
 /**
  * The Invitation model module.
@@ -27,8 +27,7 @@ export class Invitation {
    * @alias module:model/Invitation
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>Invitation</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,28 +36,50 @@ export class Invitation {
    * @param {module:model/Invitation} obj Optional instance to populate.
    * @return {module:model/Invitation} The populated <code>Invitation</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new Invitation()
-      if (data.hasOwnProperty('app')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('app'))
+        // eslint-disable-line no-prototype-builtins
         obj.app = App.constructFromObject(data['app'])
-      if (data.hasOwnProperty('apps')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('apps'))
+        // eslint-disable-line no-prototype-builtins
         obj.apps = ApiClient.convertToType(data['apps'], [App])
-      if (data.hasOwnProperty('id')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('id'))
+        // eslint-disable-line no-prototype-builtins
         obj.id = ApiClient.convertToType(data['id'], 'Number')
-      if (data.hasOwnProperty('inviteDate')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('inviteDate'))
+        // eslint-disable-line no-prototype-builtins
         obj.inviteDate = ApiClient.convertToType(data['inviteDate'], 'Date')
-      if (data.hasOwnProperty('inviteStatus')) // eslint-disable-line no-prototype-builtins
-        obj.inviteStatus = ApiClient.convertToType(data['inviteStatus'], 'String')
-      if (data.hasOwnProperty('inviteeEmail')) // eslint-disable-line no-prototype-builtins
-        obj.inviteeEmail = ApiClient.convertToType(data['inviteeEmail'], 'String')
-      if (data.hasOwnProperty('inviteeRole')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('inviteStatus'))
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteStatus = ApiClient.convertToType(
+          data['inviteStatus'],
+          'String'
+        )
+      if (data.hasOwnProperty('inviteeEmail'))
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteeEmail = ApiClient.convertToType(
+          data['inviteeEmail'],
+          'String'
+        )
+      if (data.hasOwnProperty('inviteeRole'))
+        // eslint-disable-line no-prototype-builtins
         obj.inviteeRole = ApiClient.convertToType(data['inviteeRole'], 'String')
-      if (data.hasOwnProperty('inviteeStatus')) // eslint-disable-line no-prototype-builtins
-        obj.inviteeStatus = ApiClient.convertToType(data['inviteeStatus'], 'String')
-      if (data.hasOwnProperty('inviterEmail')) // eslint-disable-line no-prototype-builtins
-        obj.inviterEmail = ApiClient.convertToType(data['inviterEmail'], 'String')
-      if (data.hasOwnProperty('uuid')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('inviteeStatus'))
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteeStatus = ApiClient.convertToType(
+          data['inviteeStatus'],
+          'String'
+        )
+      if (data.hasOwnProperty('inviterEmail'))
+        // eslint-disable-line no-prototype-builtins
+        obj.inviterEmail = ApiClient.convertToType(
+          data['inviterEmail'],
+          'String'
+        )
+      if (data.hasOwnProperty('uuid'))
+        // eslint-disable-line no-prototype-builtins
         obj.uuid = ApiClient.convertToType(data['uuid'], 'String')
     }
     return obj

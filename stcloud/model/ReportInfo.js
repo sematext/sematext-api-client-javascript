@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The ReportInfo model module.
@@ -26,8 +26,7 @@ export class ReportInfo {
    * @alias module:model/ReportInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>ReportInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,24 +35,32 @@ export class ReportInfo {
    * @param {module:model/ReportInfo} obj Optional instance to populate.
    * @return {module:model/ReportInfo} The populated <code>ReportInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new ReportInfo()
-      if (data.hasOwnProperty('addresses')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('addresses'))
+        // eslint-disable-line no-prototype-builtins
         obj.addresses = ApiClient.convertToType(data['addresses'], 'String')
-      if (data.hasOwnProperty('appId')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('appId'))
+        // eslint-disable-line no-prototype-builtins
         obj.appId = ApiClient.convertToType(data['appId'], 'Number')
-      if (data.hasOwnProperty('endDate')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('endDate'))
+        // eslint-disable-line no-prototype-builtins
         obj.endDate = ApiClient.convertToType(data['endDate'], 'Date')
-      if (data.hasOwnProperty('filters')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('filters'))
+        // eslint-disable-line no-prototype-builtins
         obj.filters = ApiClient.convertToType(data['filters'], 'String')
-      if (data.hasOwnProperty('reportName')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('reportName'))
+        // eslint-disable-line no-prototype-builtins
         obj.reportName = ApiClient.convertToType(data['reportName'], 'String')
-      if (data.hasOwnProperty('startDate')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('startDate'))
+        // eslint-disable-line no-prototype-builtins
         obj.startDate = ApiClient.convertToType(data['startDate'], 'Date')
-      if (data.hasOwnProperty('subject')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('subject'))
+        // eslint-disable-line no-prototype-builtins
         obj.subject = ApiClient.convertToType(data['subject'], 'String')
-      if (data.hasOwnProperty('text')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('text'))
+        // eslint-disable-line no-prototype-builtins
         obj.text = ApiClient.convertToType(data['text'], 'String')
     }
     return obj

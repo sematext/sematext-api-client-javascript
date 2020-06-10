@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient'
+import { ApiClient } from '../ApiClient'
 
 /**
  * The ServiceIntegration model module.
@@ -26,8 +26,7 @@ export class ServiceIntegration {
    * @alias module:model/ServiceIntegration
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>ServiceIntegration</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,32 +35,59 @@ export class ServiceIntegration {
    * @param {module:model/ServiceIntegration} obj Optional instance to populate.
    * @return {module:model/ServiceIntegration} The populated <code>ServiceIntegration</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
       obj = obj || new ServiceIntegration()
-      if (data.hasOwnProperty('appTypeId')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('appTypeId'))
+        // eslint-disable-line no-prototype-builtins
         obj.appTypeId = ApiClient.convertToType(data['appTypeId'], 'Number')
-      if (data.hasOwnProperty('appTypeName')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('appTypeName'))
+        // eslint-disable-line no-prototype-builtins
         obj.appTypeName = ApiClient.convertToType(data['appTypeName'], 'String')
-      if (data.hasOwnProperty('displayName')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('displayName'))
+        // eslint-disable-line no-prototype-builtins
         obj.displayName = ApiClient.convertToType(data['displayName'], 'String')
-      if (data.hasOwnProperty('enabled')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('enabled'))
+        // eslint-disable-line no-prototype-builtins
         obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean')
-      if (data.hasOwnProperty('externalProductId')) // eslint-disable-line no-prototype-builtins
-        obj.externalProductId = ApiClient.convertToType(data['externalProductId'], 'Number')
-      if (data.hasOwnProperty('externalProductName')) // eslint-disable-line no-prototype-builtins
-        obj.externalProductName = ApiClient.convertToType(data['externalProductName'], 'String')
-      if (data.hasOwnProperty('id')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('externalProductId'))
+        // eslint-disable-line no-prototype-builtins
+        obj.externalProductId = ApiClient.convertToType(
+          data['externalProductId'],
+          'Number'
+        )
+      if (data.hasOwnProperty('externalProductName'))
+        // eslint-disable-line no-prototype-builtins
+        obj.externalProductName = ApiClient.convertToType(
+          data['externalProductName'],
+          'String'
+        )
+      if (data.hasOwnProperty('id'))
+        // eslint-disable-line no-prototype-builtins
         obj.id = ApiClient.convertToType(data['id'], 'Number')
-      if (data.hasOwnProperty('integrationType')) // eslint-disable-line no-prototype-builtins
-        obj.integrationType = ApiClient.convertToType(data['integrationType'], 'String')
-      if (data.hasOwnProperty('ordinal')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('integrationType'))
+        // eslint-disable-line no-prototype-builtins
+        obj.integrationType = ApiClient.convertToType(
+          data['integrationType'],
+          'String'
+        )
+      if (data.hasOwnProperty('ordinal'))
+        // eslint-disable-line no-prototype-builtins
         obj.ordinal = ApiClient.convertToType(data['ordinal'], 'Number')
-      if (data.hasOwnProperty('parentIntegrationId')) // eslint-disable-line no-prototype-builtins
-        obj.parentIntegrationId = ApiClient.convertToType(data['parentIntegrationId'], 'Number')
-      if (data.hasOwnProperty('sematextService')) // eslint-disable-line no-prototype-builtins
-        obj.sematextService = ApiClient.convertToType(data['sematextService'], 'String')
-      if (data.hasOwnProperty('visible')) // eslint-disable-line no-prototype-builtins
+      if (data.hasOwnProperty('parentIntegrationId'))
+        // eslint-disable-line no-prototype-builtins
+        obj.parentIntegrationId = ApiClient.convertToType(
+          data['parentIntegrationId'],
+          'Number'
+        )
+      if (data.hasOwnProperty('sematextService'))
+        // eslint-disable-line no-prototype-builtins
+        obj.sematextService = ApiClient.convertToType(
+          data['sematextService'],
+          'String'
+        )
+      if (data.hasOwnProperty('visible'))
+        // eslint-disable-line no-prototype-builtins
         obj.visible = ApiClient.convertToType(data['visible'], 'Boolean')
     }
     return obj
