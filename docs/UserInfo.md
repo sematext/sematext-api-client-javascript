@@ -1,8 +1,7 @@
 # SematextApiClientJavascript.UserInfo
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**loginName** | **String** |  | [optional] 
 
-
+| Name          | Type       | Description | Notes      |
+| ------------- | ---------- | ----------- | ---------- |
+| **loginName** | **String** |             | [optional] |

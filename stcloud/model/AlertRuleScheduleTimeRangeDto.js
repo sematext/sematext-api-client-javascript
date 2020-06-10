@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The AlertRuleScheduleTimeRangeDto model module.
@@ -26,8 +26,7 @@ export class AlertRuleScheduleTimeRangeDto {
    * @alias module:model/AlertRuleScheduleTimeRangeDto
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>AlertRuleScheduleTimeRangeDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,26 +35,26 @@ export class AlertRuleScheduleTimeRangeDto {
    * @param {module:model/AlertRuleScheduleTimeRangeDto} obj Optional instance to populate.
    * @return {module:model/AlertRuleScheduleTimeRangeDto} The populated <code>AlertRuleScheduleTimeRangeDto</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new AlertRuleScheduleTimeRangeDto();
+      obj = obj || new AlertRuleScheduleTimeRangeDto()
       if (data.hasOwnProperty('end'))
-        obj.end = ApiClient.convertToType(data['end'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.end = ApiClient.convertToType(data['end'], 'String')
       if (data.hasOwnProperty('start'))
-        obj.start = ApiClient.convertToType(data['start'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.start = ApiClient.convertToType(data['start'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} end
  */
-AlertRuleScheduleTimeRangeDto.prototype.end = undefined;
+AlertRuleScheduleTimeRangeDto.prototype.end = undefined
 
 /**
  * @member {String} start
  */
-AlertRuleScheduleTimeRangeDto.prototype.start = undefined;
-
-
+AlertRuleScheduleTimeRangeDto.prototype.start = undefined

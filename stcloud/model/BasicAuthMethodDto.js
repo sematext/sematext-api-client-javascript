@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The BasicAuthMethodDto model module.
@@ -26,8 +26,7 @@ export class BasicAuthMethodDto {
    * @alias module:model/BasicAuthMethodDto
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>BasicAuthMethodDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,15 +35,17 @@ export class BasicAuthMethodDto {
    * @param {module:model/BasicAuthMethodDto} obj Optional instance to populate.
    * @return {module:model/BasicAuthMethodDto} The populated <code>BasicAuthMethodDto</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new BasicAuthMethodDto();
+      obj = obj || new BasicAuthMethodDto()
       if (data.hasOwnProperty('authType'))
-        obj.authType = ApiClient.convertToType(data['authType'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.authType = ApiClient.convertToType(data['authType'], 'String')
       if (data.hasOwnProperty('uuid'))
-        obj.uuid = ApiClient.convertToType(data['uuid'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.uuid = ApiClient.convertToType(data['uuid'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
@@ -58,23 +59,21 @@ BasicAuthMethodDto.AuthTypeEnum = {
    * value: "SEMATEXT_ACCOUNT"
    * @const
    */
-  SEMATEXT_ACCOUNT: "SEMATEXT_ACCOUNT",
+  SEMATEXT_ACCOUNT: 'SEMATEXT_ACCOUNT',
 
   /**
    * value: "LDAP"
    * @const
    */
-  LDAP: "LDAP"
-};
+  LDAP: 'LDAP'
+}
 
 /**
  * @member {module:model/BasicAuthMethodDto.AuthTypeEnum} authType
  */
-BasicAuthMethodDto.prototype.authType = undefined;
+BasicAuthMethodDto.prototype.authType = undefined
 
 /**
  * @member {String} uuid
  */
-BasicAuthMethodDto.prototype.uuid = undefined;
-
-
+BasicAuthMethodDto.prototype.uuid = undefined

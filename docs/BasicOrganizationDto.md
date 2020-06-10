@@ -1,30 +1,26 @@
 # SematextApiClientJavascript.BasicOrganizationDto
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**authMethods** | [**[BasicAuthMethodDto]**](BasicAuthMethodDto.md) |  | [optional] 
-**name** | **String** |  | [optional] 
-**status** | **String** |  | [optional] 
-**uuid** | **String** |  | [optional] 
 
+| Name            | Type                                              | Description | Notes      |
+| --------------- | ------------------------------------------------- | ----------- | ---------- |
+| **authMethods** | [**[BasicAuthMethodDto]**](BasicAuthMethodDto.md) |             | [optional] |
+| **name**        | **String**                                        |             | [optional] |
+| **status**      | **String**                                        |             | [optional] |
+| **uuid**        | **String**                                        |             | [optional] |
 
 <a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
+- `ACTIVE` (value: `"ACTIVE"`)
 
-* `ACTIVE` (value: `"ACTIVE"`)
+- `IN_REGISTRATION` (value: `"IN_REGISTRATION"`)
 
-* `IN_REGISTRATION` (value: `"IN_REGISTRATION"`)
+- `DISABLED` (value: `"DISABLED"`)
 
-* `DISABLED` (value: `"DISABLED"`)
+- `EXPIRED` (value: `"EXPIRED"`)
 
-* `EXPIRED` (value: `"EXPIRED"`)
+- `INVITED` (value: `"INVITED"`)
 
-* `INVITED` (value: `"INVITED"`)
-
-* `DEMO` (value: `"DEMO"`)
-
-
-
-
+- `DEMO` (value: `"DEMO"`)

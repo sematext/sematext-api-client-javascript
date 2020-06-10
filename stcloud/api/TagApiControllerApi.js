@@ -13,252 +13,273 @@
  *
  */
 
-import {ApiClient} from "../ApiClient";
+import { ApiClient } from '../ApiClient'
 
 /**
-* TagApiController service.
-* @module api/TagApiControllerApi
-* @version 0.1.0
-*/
+ * TagApiController service.
+ * @module api/TagApiControllerApi
+ * @version 0.1.0
+ */
 export class TagApiControllerApi {
+  /**
+   * Constructs a new TagApiControllerApi.
+   * @alias module:api/TagApiControllerApi
+   * @class
+   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:ApiClient#instance} if unspecified.
+   */
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-    /**
-    * Constructs a new TagApiControllerApi. 
-    * @alias module:api/TagApiControllerApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instance} if unspecified.
-    */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
+  /**
+   * Gets tag names for the given application identifiers appearing in the given time frame.
+   * @param {String} appIds appIds
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.from from
+   * @param {Number} opts.to to
+   * @param {Boolean} opts.metrics metrics (default to true)
+   * @param {Boolean} opts.logs logs (default to true)
+   * @param {Boolean} opts.events events (default to false)
+   * @param {Boolean} opts.rum rum (default to true)
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+   */
+  getTagNamesUsingGETWithHttpInfo (appIds, opts) {
+    opts = opts || {}
+    let postBody = null
+
+    // verify the required parameter 'appIds' is set
+    if (appIds === undefined || appIds === null) {
+      throw new Error(
+        'Missing the required parameter \'appIds\' when calling getTagNamesUsingGET'
+      )
     }
 
+    let pathParams = {
+      appIds: appIds
+    }
+    let queryParams = {
+      from: opts['from'],
+      to: opts['to'],
+      metrics: opts['metrics'],
+      logs: opts['logs'],
+      events: opts['events'],
+      rum: opts['rum']
+    }
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = Object
 
-    /**
-     * Gets tag names for the given application identifiers appearing in the given time frame.
-     * @param {String} appIds appIds
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.from from
-     * @param {Number} opts.to to
-     * @param {Boolean} opts.metrics metrics (default to true)
-     * @param {Boolean} opts.logs logs (default to true)
-     * @param {Boolean} opts.events events (default to false)
-     * @param {Boolean} opts.rum rum (default to true)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    getTagNamesUsingGETWithHttpInfo(appIds, opts) {
-      opts = opts || {};
-      let postBody = null;
+    return this.apiClient.callApi(
+      '/spm-reports/api/v3/apps/{appIds}/tagNames',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'appIds' is set
-      if (appIds === undefined || appIds === null) {
-        throw new Error("Missing the required parameter 'appIds' when calling getTagNamesUsingGET");
-      }
+  /**
+   * Gets tag names for the given application identifiers appearing in the given time frame.
+   * @param {String} appIds appIds
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.from from
+   * @param {Number} opts.to to
+   * @param {Boolean} opts.metrics metrics (default to true)
+   * @param {Boolean} opts.logs logs (default to true)
+   * @param {Boolean} opts.events events (default to false)
+   * @param {Boolean} opts.rum rum (default to true)
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+   */
+  getTagNamesUsingGET (appIds, opts) {
+    return this.getTagNamesUsingGETWithHttpInfo(appIds, opts).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 
+  /**
+   * Gets values for specified tags for the given application identifiers appearing in the given time frame.
+   * @param {String} appIds appIds
+   * @param {Array.<String>} tag tag
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.from from
+   * @param {Number} opts.to to
+   * @param {Boolean} opts.metrics metrics (default to true)
+   * @param {Boolean} opts.logs logs (default to true)
+   * @param {Boolean} opts.events events (default to false)
+   * @param {Boolean} opts.rum rum (default to true)
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+   */
+  getUsingGET2WithHttpInfo (appIds, tag, opts) {
+    opts = opts || {}
+    let postBody = null
 
-      let pathParams = {
-        'appIds': appIds
-      };
-      let queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'metrics': opts['metrics'],
-        'logs': opts['logs'],
-        'events': opts['events'],
-        'rum': opts['rum']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Object;
-
-      return this.apiClient.callApi(
-        '/spm-reports/api/v3/apps/{appIds}/tagNames', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'appIds' is set
+    if (appIds === undefined || appIds === null) {
+      throw new Error(
+        'Missing the required parameter \'appIds\' when calling getUsingGET2'
+      )
     }
 
-    /**
-     * Gets tag names for the given application identifiers appearing in the given time frame.
-     * @param {String} appIds appIds
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.from from
-     * @param {Number} opts.to to
-     * @param {Boolean} opts.metrics metrics (default to true)
-     * @param {Boolean} opts.logs logs (default to true)
-     * @param {Boolean} opts.events events (default to false)
-     * @param {Boolean} opts.rum rum (default to true)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    getTagNamesUsingGET(appIds, opts) {
-      return this.getTagNamesUsingGETWithHttpInfo(appIds, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    // verify the required parameter 'tag' is set
+    if (tag === undefined || tag === null) {
+      throw new Error(
+        'Missing the required parameter \'tag\' when calling getUsingGET2'
+      )
     }
 
+    let pathParams = {
+      appIds: appIds
+    }
+    let queryParams = {
+      from: opts['from'],
+      to: opts['to'],
+      tag: this.apiClient.buildCollectionParam(tag, 'multi'),
+      metrics: opts['metrics'],
+      logs: opts['logs'],
+      events: opts['events'],
+      rum: opts['rum']
+    }
+    let headerParams = {}
+    let formParams = {}
 
-    /**
-     * Gets values for specified tags for the given application identifiers appearing in the given time frame.
-     * @param {String} appIds appIds
-     * @param {Array.<String>} tag tag
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.from from
-     * @param {Number} opts.to to
-     * @param {Boolean} opts.metrics metrics (default to true)
-     * @param {Boolean} opts.logs logs (default to true)
-     * @param {Boolean} opts.events events (default to false)
-     * @param {Boolean} opts.rum rum (default to true)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    getUsingGET2WithHttpInfo(appIds, tag, opts) {
-      opts = opts || {};
-      let postBody = null;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = Object
 
-      // verify the required parameter 'appIds' is set
-      if (appIds === undefined || appIds === null) {
-        throw new Error("Missing the required parameter 'appIds' when calling getUsingGET2");
-      }
+    return this.apiClient.callApi(
+      '/spm-reports/api/v3/apps/{appIds}/metrics/filters',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'tag' is set
-      if (tag === undefined || tag === null) {
-        throw new Error("Missing the required parameter 'tag' when calling getUsingGET2");
-      }
+  /**
+   * Gets values for specified tags for the given application identifiers appearing in the given time frame.
+   * @param {String} appIds appIds
+   * @param {Array.<String>} tag tag
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.from from
+   * @param {Number} opts.to to
+   * @param {Boolean} opts.metrics metrics (default to true)
+   * @param {Boolean} opts.logs logs (default to true)
+   * @param {Boolean} opts.events events (default to false)
+   * @param {Boolean} opts.rum rum (default to true)
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+   */
+  getUsingGET2 (appIds, tag, opts) {
+    return this.getUsingGET2WithHttpInfo(appIds, tag, opts).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 
+  /**
+   * Gets values for specified tags for the given application identifiers appearing in the given time frame.
+   * @param {String} appIds appIds
+   * @param {Array.<String>} tag tag
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.from from
+   * @param {Number} opts.to to
+   * @param {Boolean} opts.metrics metrics (default to true)
+   * @param {Boolean} opts.logs logs (default to true)
+   * @param {Boolean} opts.events events (default to false)
+   * @param {Boolean} opts.rum rum (default to true)
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+   */
+  getUsingGET3WithHttpInfo (appIds, tag, opts) {
+    opts = opts || {}
+    let postBody = null
 
-      let pathParams = {
-        'appIds': appIds
-      };
-      let queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'tag': this.apiClient.buildCollectionParam(tag, 'multi'),
-        'metrics': opts['metrics'],
-        'logs': opts['logs'],
-        'events': opts['events'],
-        'rum': opts['rum']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Object;
-
-      return this.apiClient.callApi(
-        '/spm-reports/api/v3/apps/{appIds}/metrics/filters', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'appIds' is set
+    if (appIds === undefined || appIds === null) {
+      throw new Error(
+        'Missing the required parameter \'appIds\' when calling getUsingGET3'
+      )
     }
 
-    /**
-     * Gets values for specified tags for the given application identifiers appearing in the given time frame.
-     * @param {String} appIds appIds
-     * @param {Array.<String>} tag tag
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.from from
-     * @param {Number} opts.to to
-     * @param {Boolean} opts.metrics metrics (default to true)
-     * @param {Boolean} opts.logs logs (default to true)
-     * @param {Boolean} opts.events events (default to false)
-     * @param {Boolean} opts.rum rum (default to true)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    getUsingGET2(appIds, tag, opts) {
-      return this.getUsingGET2WithHttpInfo(appIds, tag, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    // verify the required parameter 'tag' is set
+    if (tag === undefined || tag === null) {
+      throw new Error(
+        'Missing the required parameter \'tag\' when calling getUsingGET3'
+      )
     }
 
-
-    /**
-     * Gets values for specified tags for the given application identifiers appearing in the given time frame.
-     * @param {String} appIds appIds
-     * @param {Array.<String>} tag tag
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.from from
-     * @param {Number} opts.to to
-     * @param {Boolean} opts.metrics metrics (default to true)
-     * @param {Boolean} opts.logs logs (default to true)
-     * @param {Boolean} opts.events events (default to false)
-     * @param {Boolean} opts.rum rum (default to true)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    getUsingGET3WithHttpInfo(appIds, tag, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'appIds' is set
-      if (appIds === undefined || appIds === null) {
-        throw new Error("Missing the required parameter 'appIds' when calling getUsingGET3");
-      }
-
-      // verify the required parameter 'tag' is set
-      if (tag === undefined || tag === null) {
-        throw new Error("Missing the required parameter 'tag' when calling getUsingGET3");
-      }
-
-
-      let pathParams = {
-        'appIds': appIds
-      };
-      let queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'tag': this.apiClient.buildCollectionParam(tag, 'multi'),
-        'metrics': opts['metrics'],
-        'logs': opts['logs'],
-        'events': opts['events'],
-        'rum': opts['rum']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Object;
-
-      return this.apiClient.callApi(
-        '/spm-reports/api/v3/apps/{appIds}/tags', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    let pathParams = {
+      appIds: appIds
     }
-
-    /**
-     * Gets values for specified tags for the given application identifiers appearing in the given time frame.
-     * @param {String} appIds appIds
-     * @param {Array.<String>} tag tag
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.from from
-     * @param {Number} opts.to to
-     * @param {Boolean} opts.metrics metrics (default to true)
-     * @param {Boolean} opts.logs logs (default to true)
-     * @param {Boolean} opts.events events (default to false)
-     * @param {Boolean} opts.rum rum (default to true)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    getUsingGET3(appIds, tag, opts) {
-      return this.getUsingGET3WithHttpInfo(appIds, tag, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    let queryParams = {
+      from: opts['from'],
+      to: opts['to'],
+      tag: this.apiClient.buildCollectionParam(tag, 'multi'),
+      metrics: opts['metrics'],
+      logs: opts['logs'],
+      events: opts['events'],
+      rum: opts['rum']
     }
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = Object
 
+    return this.apiClient.callApi(
+      '/spm-reports/api/v3/apps/{appIds}/tags',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
+
+  /**
+   * Gets values for specified tags for the given application identifiers appearing in the given time frame.
+   * @param {String} appIds appIds
+   * @param {Array.<String>} tag tag
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.from from
+   * @param {Number} opts.to to
+   * @param {Boolean} opts.metrics metrics (default to true)
+   * @param {Boolean} opts.logs logs (default to true)
+   * @param {Boolean} opts.events events (default to false)
+   * @param {Boolean} opts.rum rum (default to true)
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+   */
+  getUsingGET3 (appIds, tag, opts) {
+    return this.getUsingGET3WithHttpInfo(appIds, tag, opts).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 }

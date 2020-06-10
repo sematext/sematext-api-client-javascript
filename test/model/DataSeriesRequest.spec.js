@@ -13,76 +13,74 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../stcloud/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'));
+    factory(require('expect.js'), require('../../stcloud/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript);
+    factory(root.expect, root.SematextApiClientJavascript)
   }
-}(this, function(expect, SematextApiClientJavascript) {
-  'use strict';
+})(this, function (expect, SematextApiClientJavascript) {
+  'use strict'
 
-  var instance;
+  var instance
 
-  describe('(package)', function() {
-    describe('DataSeriesRequest', function() {
-      beforeEach(function() {
-        instance = new SematextApiClientJavascript.DataSeriesRequest();
-      });
+  describe('(package)', function () {
+    describe('DataSeriesRequest', function () {
+      beforeEach(function () {
+        instance = new SematextApiClientJavascript.DataSeriesRequest()
+      })
 
-      it('should create an instance of DataSeriesRequest', function() {
+      it('should create an instance of DataSeriesRequest', function () {
         // TODO: update the code to test DataSeriesRequest
-        expect(instance).to.be.a(SematextApiClientJavascript.DataSeriesRequest);
-      });
+        expect(instance).to.be.a(SematextApiClientJavascript.DataSeriesRequest)
+      })
 
-      it('should have the property defaultInterval (base name: "defaultInterval")', function() {
+      it('should have the property defaultInterval (base name: "defaultInterval")', function () {
         // TODO: update the code to test the property defaultInterval
-        expect(instance).to.have.property('defaultInterval');
+        expect(instance).to.have.property('defaultInterval')
         // expect(instance.defaultInterval).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property end (base name: "end")', function() {
+      it('should have the property end (base name: "end")', function () {
         // TODO: update the code to test the property end
-        expect(instance).to.have.property('end');
+        expect(instance).to.have.property('end')
         // expect(instance.end).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property filters (base name: "filters")', function() {
+      it('should have the property filters (base name: "filters")', function () {
         // TODO: update the code to test the property filters
-        expect(instance).to.have.property('filters');
+        expect(instance).to.have.property('filters')
         // expect(instance.filters).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property granularity (base name: "granularity")', function() {
+      it('should have the property granularity (base name: "granularity")', function () {
         // TODO: update the code to test the property granularity
-        expect(instance).to.have.property('granularity');
+        expect(instance).to.have.property('granularity')
         // expect(instance.granularity).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property interval (base name: "interval")', function() {
+      it('should have the property interval (base name: "interval")', function () {
         // TODO: update the code to test the property interval
-        expect(instance).to.have.property('interval');
+        expect(instance).to.have.property('interval')
         // expect(instance.interval).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property metric (base name: "metric")', function() {
+      it('should have the property metric (base name: "metric")', function () {
         // TODO: update the code to test the property metric
-        expect(instance).to.have.property('metric');
+        expect(instance).to.have.property('metric')
         // expect(instance.metric).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property start (base name: "start")', function() {
+      it('should have the property start (base name: "start")', function () {
         // TODO: update the code to test the property start
-        expect(instance).to.have.property('start');
+        expect(instance).to.have.property('start')
         // expect(instance.start).to.be(expectedValueLiteral);
-      });
-
-    });
-  });
-
-}));
+      })
+    })
+  })
+})

@@ -13,112 +13,110 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../stcloud/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'));
+    factory(require('expect.js'), require('../../stcloud/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript);
+    factory(root.expect, root.SematextApiClientJavascript)
   }
-}(this, function(expect, SematextApiClientJavascript) {
-  'use strict';
+})(this, function (expect, SematextApiClientJavascript) {
+  'use strict'
 
-  var instance;
+  var instance
 
-  describe('(package)', function() {
-    describe('Plan', function() {
-      beforeEach(function() {
-        instance = new SematextApiClientJavascript.Plan();
-      });
+  describe('(package)', function () {
+    describe('Plan', function () {
+      beforeEach(function () {
+        instance = new SematextApiClientJavascript.Plan()
+      })
 
-      it('should create an instance of Plan', function() {
+      it('should create an instance of Plan', function () {
         // TODO: update the code to test Plan
-        expect(instance).to.be.a(SematextApiClientJavascript.Plan);
-      });
+        expect(instance).to.be.a(SematextApiClientJavascript.Plan)
+      })
 
-      it('should have the property appType (base name: "appType")', function() {
+      it('should have the property appType (base name: "appType")', function () {
         // TODO: update the code to test the property appType
-        expect(instance).to.have.property('appType');
+        expect(instance).to.have.property('appType')
         // expect(instance.appType).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property custom (base name: "custom")', function() {
+      it('should have the property custom (base name: "custom")', function () {
         // TODO: update the code to test the property custom
-        expect(instance).to.have.property('custom');
+        expect(instance).to.have.property('custom')
         // expect(instance.custom).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property dataRetentionHours (base name: "dataRetentionHours")', function() {
+      it('should have the property dataRetentionHours (base name: "dataRetentionHours")', function () {
         // TODO: update the code to test the property dataRetentionHours
-        expect(instance).to.have.property('dataRetentionHours');
+        expect(instance).to.have.property('dataRetentionHours')
         // expect(instance.dataRetentionHours).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property defaultTrialPlan (base name: "defaultTrialPlan")', function() {
+      it('should have the property defaultTrialPlan (base name: "defaultTrialPlan")', function () {
         // TODO: update the code to test the property defaultTrialPlan
-        expect(instance).to.have.property('defaultTrialPlan');
+        expect(instance).to.have.property('defaultTrialPlan')
         // expect(instance.defaultTrialPlan).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property free (base name: "free")', function() {
+      it('should have the property free (base name: "free")', function () {
         // TODO: update the code to test the property free
-        expect(instance).to.have.property('free');
+        expect(instance).to.have.property('free')
         // expect(instance.free).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property freeTrialDays (base name: "freeTrialDays")', function() {
+      it('should have the property freeTrialDays (base name: "freeTrialDays")', function () {
         // TODO: update the code to test the property freeTrialDays
-        expect(instance).to.have.property('freeTrialDays');
+        expect(instance).to.have.property('freeTrialDays')
         // expect(instance.freeTrialDays).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property id (base name: "id")', function() {
+      it('should have the property id (base name: "id")', function () {
         // TODO: update the code to test the property id
-        expect(instance).to.have.property('id');
+        expect(instance).to.have.property('id')
         // expect(instance.id).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property maxAlerts (base name: "maxAlerts")', function() {
+      it('should have the property maxAlerts (base name: "maxAlerts")', function () {
         // TODO: update the code to test the property maxAlerts
-        expect(instance).to.have.property('maxAlerts');
+        expect(instance).to.have.property('maxAlerts')
         // expect(instance.maxAlerts).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property maxDailyEvents (base name: "maxDailyEvents")', function() {
+      it('should have the property maxDailyEvents (base name: "maxDailyEvents")', function () {
         // TODO: update the code to test the property maxDailyEvents
-        expect(instance).to.have.property('maxDailyEvents');
+        expect(instance).to.have.property('maxDailyEvents')
         // expect(instance.maxDailyEvents).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property name (base name: "name")', function() {
+      it('should have the property name (base name: "name")', function () {
         // TODO: update the code to test the property name
-        expect(instance).to.have.property('name');
+        expect(instance).to.have.property('name')
         // expect(instance.name).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property planScheme (base name: "planScheme")', function() {
+      it('should have the property planScheme (base name: "planScheme")', function () {
         // TODO: update the code to test the property planScheme
-        expect(instance).to.have.property('planScheme');
+        expect(instance).to.have.property('planScheme')
         // expect(instance.planScheme).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property sematextService (base name: "sematextService")', function() {
+      it('should have the property sematextService (base name: "sematextService")', function () {
         // TODO: update the code to test the property sematextService
-        expect(instance).to.have.property('sematextService');
+        expect(instance).to.have.property('sematextService')
         // expect(instance.sematextService).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property trialPlan (base name: "trialPlan")', function() {
+      it('should have the property trialPlan (base name: "trialPlan")', function () {
         // TODO: update the code to test the property trialPlan
-        expect(instance).to.have.property('trialPlan');
+        expect(instance).to.have.property('trialPlan')
         // expect(instance.trialPlan).to.be(expectedValueLiteral);
-      });
-
-    });
-  });
-
-}));
+      })
+    })
+  })
+})

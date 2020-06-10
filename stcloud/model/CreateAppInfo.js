@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {AppMetadata} from './AppMetadata';
+import { ApiClient } from '../ApiClient'
+import { AppMetadata } from './AppMetadata'
 
 /**
  * The CreateAppInfo model module.
@@ -27,8 +27,7 @@ export class CreateAppInfo {
    * @alias module:model/CreateAppInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>CreateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,48 +36,57 @@ export class CreateAppInfo {
    * @param {module:model/CreateAppInfo} obj Optional instance to populate.
    * @return {module:model/CreateAppInfo} The populated <code>CreateAppInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new CreateAppInfo();
+      obj = obj || new CreateAppInfo()
       if (data.hasOwnProperty('appType'))
-        obj.appType = ApiClient.convertToType(data['appType'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.appType = ApiClient.convertToType(data['appType'], 'String')
       if (data.hasOwnProperty('discountCode'))
-        obj.discountCode = ApiClient.convertToType(data['discountCode'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.discountCode = ApiClient.convertToType(
+          data['discountCode'],
+          'String'
+        )
       if (data.hasOwnProperty('initialPlanId'))
-        obj.initialPlanId = ApiClient.convertToType(data['initialPlanId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.initialPlanId = ApiClient.convertToType(
+          data['initialPlanId'],
+          'Number'
+        )
       if (data.hasOwnProperty('metaData'))
-        obj.metaData = AppMetadata.constructFromObject(data['metaData']);
+        // eslint-disable-line no-prototype-builtins
+        obj.metaData = AppMetadata.constructFromObject(data['metaData'])
       if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.name = ApiClient.convertToType(data['name'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} appType
  */
-CreateAppInfo.prototype.appType = undefined;
+CreateAppInfo.prototype.appType = undefined
 
 /**
  * @member {String} discountCode
  */
-CreateAppInfo.prototype.discountCode = undefined;
+CreateAppInfo.prototype.discountCode = undefined
 
 /**
  * @member {Number} initialPlanId
  */
-CreateAppInfo.prototype.initialPlanId = undefined;
+CreateAppInfo.prototype.initialPlanId = undefined
 
 /**
  * AWS app meta data. Applicable only for `aws` appType
  * @member {module:model/AppMetadata} metaData
  */
-CreateAppInfo.prototype.metaData = undefined;
+CreateAppInfo.prototype.metaData = undefined
 
 /**
  * @member {String} name
  */
-CreateAppInfo.prototype.name = undefined;
-
-
+CreateAppInfo.prototype.name = undefined

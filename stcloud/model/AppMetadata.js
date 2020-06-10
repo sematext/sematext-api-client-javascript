@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The AppMetadata model module.
@@ -26,8 +26,7 @@ export class AppMetadata {
    * @alias module:model/AppMetadata
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>AppMetadata</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,33 +35,47 @@ export class AppMetadata {
    * @param {module:model/AppMetadata} obj Optional instance to populate.
    * @return {module:model/AppMetadata} The populated <code>AppMetadata</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new AppMetadata();
+      obj = obj || new AppMetadata()
       if (data.hasOwnProperty('awsCloudWatchAccessKey'))
-        obj.awsCloudWatchAccessKey = ApiClient.convertToType(data['awsCloudWatchAccessKey'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.awsCloudWatchAccessKey = ApiClient.convertToType(
+          data['awsCloudWatchAccessKey'],
+          'String'
+        )
       if (data.hasOwnProperty('awsCloudWatchSecretKey'))
-        obj.awsCloudWatchSecretKey = ApiClient.convertToType(data['awsCloudWatchSecretKey'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.awsCloudWatchSecretKey = ApiClient.convertToType(
+          data['awsCloudWatchSecretKey'],
+          'String'
+        )
       if (data.hasOwnProperty('awsFetchFrequency'))
-        obj.awsFetchFrequency = ApiClient.convertToType(data['awsFetchFrequency'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.awsFetchFrequency = ApiClient.convertToType(
+          data['awsFetchFrequency'],
+          'String'
+        )
       if (data.hasOwnProperty('awsRegion'))
-        obj.awsRegion = ApiClient.convertToType(data['awsRegion'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.awsRegion = ApiClient.convertToType(data['awsRegion'], 'String')
       if (data.hasOwnProperty('subTypes'))
-        obj.subTypes = ApiClient.convertToType(data['subTypes'], ['String']);
+        // eslint-disable-line no-prototype-builtins
+        obj.subTypes = ApiClient.convertToType(data['subTypes'], ['String'])
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} awsCloudWatchAccessKey
  */
-AppMetadata.prototype.awsCloudWatchAccessKey = undefined;
+AppMetadata.prototype.awsCloudWatchAccessKey = undefined
 
 /**
  * @member {String} awsCloudWatchSecretKey
  */
-AppMetadata.prototype.awsCloudWatchSecretKey = undefined;
+AppMetadata.prototype.awsCloudWatchSecretKey = undefined
 
 /**
  * Allowed values for the <code>awsFetchFrequency</code> property.
@@ -74,25 +87,25 @@ AppMetadata.AwsFetchFrequencyEnum = {
    * value: "MINUTE"
    * @const
    */
-  MINUTE: "MINUTE",
+  MINUTE: 'MINUTE',
 
   /**
    * value: "FIVE_MINUTES"
    * @const
    */
-  FIVE_MINUTES: "FIVE_MINUTES",
+  FIVE_MINUTES: 'FIVE_MINUTES',
 
   /**
    * value: "FIFTEEN_MINUTES"
    * @const
    */
-  FIFTEEN_MINUTES: "FIFTEEN_MINUTES"
-};
+  FIFTEEN_MINUTES: 'FIFTEEN_MINUTES'
+}
 
 /**
  * @member {module:model/AppMetadata.AwsFetchFrequencyEnum} awsFetchFrequency
  */
-AppMetadata.prototype.awsFetchFrequency = undefined;
+AppMetadata.prototype.awsFetchFrequency = undefined
 
 /**
  * Allowed values for the <code>awsRegion</code> property.
@@ -104,103 +117,103 @@ AppMetadata.AwsRegionEnum = {
    * value: "US_EAST_1"
    * @const
    */
-  uSEAST1: "US_EAST_1",
+  uSEAST1: 'US_EAST_1',
 
   /**
    * value: "US_WEST_1"
    * @const
    */
-  uSWEST1: "US_WEST_1",
+  uSWEST1: 'US_WEST_1',
 
   /**
    * value: "EU_WEST_1"
    * @const
    */
-  eUWEST1: "EU_WEST_1",
+  eUWEST1: 'EU_WEST_1',
 
   /**
    * value: "US_WEST_2"
    * @const
    */
-  uSWEST2: "US_WEST_2",
+  uSWEST2: 'US_WEST_2',
 
   /**
    * value: "AP_SOUTHEAST_1"
    * @const
    */
-  aPSOUTHEAST1: "AP_SOUTHEAST_1",
+  aPSOUTHEAST1: 'AP_SOUTHEAST_1',
 
   /**
    * value: "AP_SOUTHEAST_2"
    * @const
    */
-  aPSOUTHEAST2: "AP_SOUTHEAST_2",
+  aPSOUTHEAST2: 'AP_SOUTHEAST_2',
 
   /**
    * value: "AP_NORTHEAST_1"
    * @const
    */
-  aPNORTHEAST1: "AP_NORTHEAST_1",
+  aPNORTHEAST1: 'AP_NORTHEAST_1',
 
   /**
    * value: "SA_EAST_1"
    * @const
    */
-  sAEAST1: "SA_EAST_1",
+  sAEAST1: 'SA_EAST_1',
 
   /**
    * value: "GovCloud"
    * @const
    */
-  govCloud: "GovCloud",
+  govCloud: 'GovCloud',
 
   /**
    * value: "CN_NORTH_1"
    * @const
    */
-  cNNORTH1: "CN_NORTH_1",
+  cNNORTH1: 'CN_NORTH_1',
 
   /**
    * value: "US_EAST_2"
    * @const
    */
-  uSEAST2: "US_EAST_2",
+  uSEAST2: 'US_EAST_2',
 
   /**
    * value: "AP_SOUTH_1"
    * @const
    */
-  aPSOUTH1: "AP_SOUTH_1",
+  aPSOUTH1: 'AP_SOUTH_1',
 
   /**
    * value: "AP_NORTHEAST_2"
    * @const
    */
-  aPNORTHEAST2: "AP_NORTHEAST_2",
+  aPNORTHEAST2: 'AP_NORTHEAST_2',
 
   /**
    * value: "CA_CENTRAL_1"
    * @const
    */
-  cACENTRAL1: "CA_CENTRAL_1",
+  cACENTRAL1: 'CA_CENTRAL_1',
 
   /**
    * value: "EU_CENTRAL_1"
    * @const
    */
-  eUCENTRAL1: "EU_CENTRAL_1",
+  eUCENTRAL1: 'EU_CENTRAL_1',
 
   /**
    * value: "EU_WEST_2"
    * @const
    */
-  eUWEST2: "EU_WEST_2"
-};
+  eUWEST2: 'EU_WEST_2'
+}
 
 /**
  * @member {module:model/AppMetadata.AwsRegionEnum} awsRegion
  */
-AppMetadata.prototype.awsRegion = undefined;
+AppMetadata.prototype.awsRegion = undefined
 
 /**
  * Allowed values for the <code>subTypes</code> property.
@@ -212,25 +225,23 @@ AppMetadata.SubTypesEnum = {
    * value: "aws_ec2"
    * @const
    */
-  ec2: "aws_ec2",
+  ec2: 'aws_ec2',
 
   /**
    * value: "aws_elb"
    * @const
    */
-  elb: "aws_elb",
+  elb: 'aws_elb',
 
   /**
    * value: "aws_ebs"
    * @const
    */
-  ebs: "aws_ebs"
-};
+  ebs: 'aws_ebs'
+}
 
 /**
  * Comma separated list of AWS types monitored by created app
  * @member {Array.<module:model/AppMetadata.SubTypesEnum>} subTypes
  */
-AppMetadata.prototype.subTypes = undefined;
-
-
+AppMetadata.prototype.subTypes = undefined

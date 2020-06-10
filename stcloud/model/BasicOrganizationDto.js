@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {BasicAuthMethodDto} from './BasicAuthMethodDto';
+import { ApiClient } from '../ApiClient'
+import { BasicAuthMethodDto } from './BasicAuthMethodDto'
 
 /**
  * The BasicOrganizationDto model module.
@@ -27,8 +27,7 @@ export class BasicOrganizationDto {
    * @alias module:model/BasicOrganizationDto
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>BasicOrganizationDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,31 +36,37 @@ export class BasicOrganizationDto {
    * @param {module:model/BasicOrganizationDto} obj Optional instance to populate.
    * @return {module:model/BasicOrganizationDto} The populated <code>BasicOrganizationDto</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new BasicOrganizationDto();
+      obj = obj || new BasicOrganizationDto()
       if (data.hasOwnProperty('authMethods'))
-        obj.authMethods = ApiClient.convertToType(data['authMethods'], [BasicAuthMethodDto]);
+        // eslint-disable-line no-prototype-builtins
+        obj.authMethods = ApiClient.convertToType(data['authMethods'], [
+          BasicAuthMethodDto
+        ])
       if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.name = ApiClient.convertToType(data['name'], 'String')
       if (data.hasOwnProperty('status'))
-        obj.status = ApiClient.convertToType(data['status'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.status = ApiClient.convertToType(data['status'], 'String')
       if (data.hasOwnProperty('uuid'))
-        obj.uuid = ApiClient.convertToType(data['uuid'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.uuid = ApiClient.convertToType(data['uuid'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {Array.<module:model/BasicAuthMethodDto>} authMethods
  */
-BasicOrganizationDto.prototype.authMethods = undefined;
+BasicOrganizationDto.prototype.authMethods = undefined
 
 /**
  * @member {String} name
  */
-BasicOrganizationDto.prototype.name = undefined;
+BasicOrganizationDto.prototype.name = undefined
 
 /**
  * Allowed values for the <code>status</code> property.
@@ -73,47 +78,45 @@ BasicOrganizationDto.StatusEnum = {
    * value: "ACTIVE"
    * @const
    */
-  ACTIVE: "ACTIVE",
+  ACTIVE: 'ACTIVE',
 
   /**
    * value: "IN_REGISTRATION"
    * @const
    */
-  IN_REGISTRATION: "IN_REGISTRATION",
+  IN_REGISTRATION: 'IN_REGISTRATION',
 
   /**
    * value: "DISABLED"
    * @const
    */
-  DISABLED: "DISABLED",
+  DISABLED: 'DISABLED',
 
   /**
    * value: "EXPIRED"
    * @const
    */
-  EXPIRED: "EXPIRED",
+  EXPIRED: 'EXPIRED',
 
   /**
    * value: "INVITED"
    * @const
    */
-  INVITED: "INVITED",
+  INVITED: 'INVITED',
 
   /**
    * value: "DEMO"
    * @const
    */
-  DEMO: "DEMO"
-};
+  DEMO: 'DEMO'
+}
 
 /**
  * @member {module:model/BasicOrganizationDto.StatusEnum} status
  */
-BasicOrganizationDto.prototype.status = undefined;
+BasicOrganizationDto.prototype.status = undefined
 
 /**
  * @member {String} uuid
  */
-BasicOrganizationDto.prototype.uuid = undefined;
-
-
+BasicOrganizationDto.prototype.uuid = undefined

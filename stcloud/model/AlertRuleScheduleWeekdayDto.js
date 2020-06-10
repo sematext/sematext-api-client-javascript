@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {AlertRuleScheduleTimeRangeDto} from './AlertRuleScheduleTimeRangeDto';
+import { ApiClient } from '../ApiClient'
+import { AlertRuleScheduleTimeRangeDto } from './AlertRuleScheduleTimeRangeDto'
 
 /**
  * The AlertRuleScheduleWeekdayDto model module.
@@ -27,8 +27,7 @@ export class AlertRuleScheduleWeekdayDto {
    * @alias module:model/AlertRuleScheduleWeekdayDto
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>AlertRuleScheduleWeekdayDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,47 +36,52 @@ export class AlertRuleScheduleWeekdayDto {
    * @param {module:model/AlertRuleScheduleWeekdayDto} obj Optional instance to populate.
    * @return {module:model/AlertRuleScheduleWeekdayDto} The populated <code>AlertRuleScheduleWeekdayDto</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new AlertRuleScheduleWeekdayDto();
+      obj = obj || new AlertRuleScheduleWeekdayDto()
       if (data.hasOwnProperty('day'))
-        obj.day = ApiClient.convertToType(data['day'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.day = ApiClient.convertToType(data['day'], 'String')
       if (data.hasOwnProperty('index'))
-        obj.index = ApiClient.convertToType(data['index'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.index = ApiClient.convertToType(data['index'], 'Number')
       if (data.hasOwnProperty('intervals'))
-        obj.intervals = ApiClient.convertToType(data['intervals'], [AlertRuleScheduleTimeRangeDto]);
+        // eslint-disable-line no-prototype-builtins
+        obj.intervals = ApiClient.convertToType(data['intervals'], [
+          AlertRuleScheduleTimeRangeDto
+        ])
       if (data.hasOwnProperty('label'))
-        obj.label = ApiClient.convertToType(data['label'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.label = ApiClient.convertToType(data['label'], 'String')
       if (data.hasOwnProperty('type'))
-        obj.type = ApiClient.convertToType(data['type'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.type = ApiClient.convertToType(data['type'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} day
  */
-AlertRuleScheduleWeekdayDto.prototype.day = undefined;
+AlertRuleScheduleWeekdayDto.prototype.day = undefined
 
 /**
  * @member {Number} index
  */
-AlertRuleScheduleWeekdayDto.prototype.index = undefined;
+AlertRuleScheduleWeekdayDto.prototype.index = undefined
 
 /**
  * @member {Array.<module:model/AlertRuleScheduleTimeRangeDto>} intervals
  */
-AlertRuleScheduleWeekdayDto.prototype.intervals = undefined;
+AlertRuleScheduleWeekdayDto.prototype.intervals = undefined
 
 /**
  * @member {String} label
  */
-AlertRuleScheduleWeekdayDto.prototype.label = undefined;
+AlertRuleScheduleWeekdayDto.prototype.label = undefined
 
 /**
  * @member {String} type
  */
-AlertRuleScheduleWeekdayDto.prototype.type = undefined;
-
-
+AlertRuleScheduleWeekdayDto.prototype.type = undefined

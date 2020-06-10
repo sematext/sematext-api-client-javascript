@@ -13,230 +13,252 @@
  *
  */
 
-import {ApiClient} from "../ApiClient";
-import {GenericApiResponse} from '../model/GenericApiResponse';
-import {SavedQuery} from '../model/SavedQuery';
+import { ApiClient } from '../ApiClient'
+import { GenericApiResponse } from '../model/GenericApiResponse'
+import { SavedQuery } from '../model/SavedQuery' // eslint-disable-line no-unused-vars
 
 /**
-* SavedQueries service.
-* @module api/SavedQueriesApi
-* @version 0.1.0
-*/
+ * SavedQueries service.
+ * @module api/SavedQueriesApi
+ * @version 0.1.0
+ */
 export class SavedQueriesApi {
+  /**
+   * Constructs a new SavedQueriesApi.
+   * @alias module:api/SavedQueriesApi
+   * @class
+   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:ApiClient#instance} if unspecified.
+   */
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-    /**
-    * Constructs a new SavedQueriesApi. 
-    * @alias module:api/SavedQueriesApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instance} if unspecified.
-    */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
+  /**
+   * Delete saved query
+   * @param {Number} updateableQueryId updateableQueryId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  deleteSavedQueryUsingDELETEWithHttpInfo (updateableQueryId) {
+    let postBody = null
+
+    // verify the required parameter 'updateableQueryId' is set
+    if (updateableQueryId === undefined || updateableQueryId === null) {
+      throw new Error(
+        'Missing the required parameter \'updateableQueryId\' when calling deleteSavedQueryUsingDELETE'
+      )
     }
 
+    let pathParams = {
+      updateableQueryId: updateableQueryId
+    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
-    /**
-     * Delete saved query
-     * @param {Number} updateableQueryId updateableQueryId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    deleteSavedQueryUsingDELETEWithHttpInfo(updateableQueryId) {
-      let postBody = null;
+    return this.apiClient.callApi(
+      '/users-web/api/v3/savedQueries/{updateableQueryId}',
+      'DELETE',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'updateableQueryId' is set
-      if (updateableQueryId === undefined || updateableQueryId === null) {
-        throw new Error("Missing the required parameter 'updateableQueryId' when calling deleteSavedQueryUsingDELETE");
+  /**
+   * Delete saved query
+   * @param {Number} updateableQueryId updateableQueryId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  deleteSavedQueryUsingDELETE (updateableQueryId) {
+    return this.deleteSavedQueryUsingDELETEWithHttpInfo(updateableQueryId).then(
+      function (response_and_data) {
+        return response_and_data.data
       }
+    )
+  }
 
+  /**
+   * Get saved queries for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  getSavedQueriesForAppUsingGETWithHttpInfo (appId) {
+    let postBody = null
 
-      let pathParams = {
-        'updateableQueryId': updateableQueryId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/savedQueries/{updateableQueryId}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'appId' is set
+    if (appId === undefined || appId === null) {
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling getSavedQueriesForAppUsingGET'
+      )
     }
 
-    /**
-     * Delete saved query
-     * @param {Number} updateableQueryId updateableQueryId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    deleteSavedQueryUsingDELETE(updateableQueryId) {
-      return this.deleteSavedQueryUsingDELETEWithHttpInfo(updateableQueryId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    let pathParams = {
+      appId: appId
+    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
+
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
+
+    return this.apiClient.callApi(
+      '/users-web/api/v3/apps/{appId}/savedQueries',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
+
+  /**
+   * Get saved queries for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  getSavedQueriesForAppUsingGET (appId) {
+    return this.getSavedQueriesForAppUsingGETWithHttpInfo(appId).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
+
+  /**
+   * Create saved query
+   * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  saveQueryUsingPOSTWithHttpInfo (savedQueryDto) {
+    let postBody = savedQueryDto
+
+    // verify the required parameter 'savedQueryDto' is set
+    if (savedQueryDto === undefined || savedQueryDto === null) {
+      throw new Error(
+        'Missing the required parameter \'savedQueryDto\' when calling saveQueryUsingPOST'
+      )
     }
 
+    let pathParams = {}
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
-    /**
-     * Get saved queries for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    getSavedQueriesForAppUsingGETWithHttpInfo(appId) {
-      let postBody = null;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
-      // verify the required parameter 'appId' is set
-      if (appId === undefined || appId === null) {
-        throw new Error("Missing the required parameter 'appId' when calling getSavedQueriesForAppUsingGET");
-      }
+    return this.apiClient.callApi(
+      '/users-web/api/v3/savedQueries',
+      'POST',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
+  /**
+   * Create saved query
+   * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  saveQueryUsingPOST (savedQueryDto) {
+    return this.saveQueryUsingPOSTWithHttpInfo(savedQueryDto).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 
-      let pathParams = {
-        'appId': appId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
+  /**
+   * Update saved query
+   * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
+   * @param {Number} updateableQueryId updateableQueryId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  saveQueryUsingPUTWithHttpInfo (savedQueryDto, updateableQueryId) {
+    let postBody = savedQueryDto
 
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/apps/{appId}/savedQueries', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'savedQueryDto' is set
+    if (savedQueryDto === undefined || savedQueryDto === null) {
+      throw new Error(
+        'Missing the required parameter \'savedQueryDto\' when calling saveQueryUsingPUT'
+      )
     }
 
-    /**
-     * Get saved queries for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    getSavedQueriesForAppUsingGET(appId) {
-      return this.getSavedQueriesForAppUsingGETWithHttpInfo(appId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    // verify the required parameter 'updateableQueryId' is set
+    if (updateableQueryId === undefined || updateableQueryId === null) {
+      throw new Error(
+        'Missing the required parameter \'updateableQueryId\' when calling saveQueryUsingPUT'
+      )
     }
 
-
-    /**
-     * Create saved query
-     * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    saveQueryUsingPOSTWithHttpInfo(savedQueryDto) {
-      let postBody = savedQueryDto;
-
-      // verify the required parameter 'savedQueryDto' is set
-      if (savedQueryDto === undefined || savedQueryDto === null) {
-        throw new Error("Missing the required parameter 'savedQueryDto' when calling saveQueryUsingPOST");
-      }
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/savedQueries', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    let pathParams = {
+      updateableQueryId: updateableQueryId
     }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
-    /**
-     * Create saved query
-     * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    saveQueryUsingPOST(savedQueryDto) {
-      return this.saveQueryUsingPOSTWithHttpInfo(savedQueryDto)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
+    return this.apiClient.callApi(
+      '/users-web/api/v3/savedQueries/{updateableQueryId}',
+      'PUT',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-    /**
-     * Update saved query
-     * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
-     * @param {Number} updateableQueryId updateableQueryId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    saveQueryUsingPUTWithHttpInfo(savedQueryDto, updateableQueryId) {
-      let postBody = savedQueryDto;
-
-      // verify the required parameter 'savedQueryDto' is set
-      if (savedQueryDto === undefined || savedQueryDto === null) {
-        throw new Error("Missing the required parameter 'savedQueryDto' when calling saveQueryUsingPUT");
-      }
-
-      // verify the required parameter 'updateableQueryId' is set
-      if (updateableQueryId === undefined || updateableQueryId === null) {
-        throw new Error("Missing the required parameter 'updateableQueryId' when calling saveQueryUsingPUT");
-      }
-
-
-      let pathParams = {
-        'updateableQueryId': updateableQueryId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/savedQueries/{updateableQueryId}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Update saved query
-     * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
-     * @param {Number} updateableQueryId updateableQueryId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    saveQueryUsingPUT(savedQueryDto, updateableQueryId) {
-      return this.saveQueryUsingPUTWithHttpInfo(savedQueryDto, updateableQueryId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
+  /**
+   * Update saved query
+   * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
+   * @param {Number} updateableQueryId updateableQueryId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  saveQueryUsingPUT (savedQueryDto, updateableQueryId) {
+    return this.saveQueryUsingPUTWithHttpInfo(
+      savedQueryDto,
+      updateableQueryId
+    ).then(function (response_and_data) {
+      return response_and_data.data
+    })
+  }
 }
