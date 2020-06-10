@@ -13,52 +13,50 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../stcloud/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'));
+    factory(require('expect.js'), require('../../stcloud/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript);
+    factory(root.expect, root.SematextApiClientJavascript)
   }
-}(this, function(expect, SematextApiClientJavascript) {
-  'use strict';
+})(this, function (expect, SematextApiClientJavascript) {
+  'use strict'
 
-  var instance;
+  var instance
 
-  describe('(package)', function() {
-    describe('BillingInfo', function() {
-      beforeEach(function() {
-        instance = new SematextApiClientJavascript.BillingInfo();
-      });
+  describe('(package)', function () {
+    describe('BillingInfo', function () {
+      beforeEach(function () {
+        instance = new SematextApiClientJavascript.BillingInfo()
+      })
 
-      it('should create an instance of BillingInfo', function() {
+      it('should create an instance of BillingInfo', function () {
         // TODO: update the code to test BillingInfo
-        expect(instance).to.be.a(SematextApiClientJavascript.BillingInfo);
-      });
+        expect(instance).to.be.a(SematextApiClientJavascript.BillingInfo)
+      })
 
-      it('should have the property creditCardId (base name: "creditCardId")', function() {
+      it('should have the property creditCardId (base name: "creditCardId")', function () {
         // TODO: update the code to test the property creditCardId
-        expect(instance).to.have.property('creditCardId');
+        expect(instance).to.have.property('creditCardId')
         // expect(instance.creditCardId).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property paymentMethod (base name: "paymentMethod")', function() {
+      it('should have the property paymentMethod (base name: "paymentMethod")', function () {
         // TODO: update the code to test the property paymentMethod
-        expect(instance).to.have.property('paymentMethod');
+        expect(instance).to.have.property('paymentMethod')
         // expect(instance.paymentMethod).to.be(expectedValueLiteral);
-      });
+      })
 
-      it('should have the property planId (base name: "planId")', function() {
+      it('should have the property planId (base name: "planId")', function () {
         // TODO: update the code to test the property planId
-        expect(instance).to.have.property('planId');
+        expect(instance).to.have.property('planId')
         // expect(instance.planId).to.be(expectedValueLiteral);
-      });
-
-    });
-  });
-
-}));
+      })
+    })
+  })
+})

@@ -13,199 +13,219 @@
  *
  */
 
-import {ApiClient} from "../ApiClient";
-import {BillingInfo} from '../model/BillingInfo';
-import {GenericApiResponse} from '../model/GenericApiResponse';
+import { ApiClient } from '../ApiClient'
+import { BillingInfo } from '../model/BillingInfo' // eslint-disable-line no-unused-vars
+import { GenericApiResponse } from '../model/GenericApiResponse'
 
 /**
-* Billing service.
-* @module api/BillingApi
-* @version 0.1.0
-*/
+ * Billing service.
+ * @module api/BillingApi
+ * @version 0.1.0
+ */
 export class BillingApi {
+  /**
+   * Constructs a new BillingApi.
+   * @alias module:api/BillingApi
+   * @class
+   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:ApiClient#instance} if unspecified.
+   */
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-    /**
-    * Constructs a new BillingApi. 
-    * @alias module:api/BillingApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instance} if unspecified.
-    */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
+  /**
+   * Get invoice details
+   * @param {String} service service
+   * @param {Number} year year
+   * @param {Number} month month
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  getDetailedInvoiceUsingGETWithHttpInfo (service, year, month) {
+    let postBody = null
+
+    // verify the required parameter 'service' is set
+    if (service === undefined || service === null) {
+      throw new Error(
+        'Missing the required parameter \'service\' when calling getDetailedInvoiceUsingGET'
+      )
     }
 
-
-
-    /**
-     * Get invoice details
-     * @param {String} service service
-     * @param {Number} year year
-     * @param {Number} month month
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    getDetailedInvoiceUsingGETWithHttpInfo(service, year, month) {
-      let postBody = null;
-
-      // verify the required parameter 'service' is set
-      if (service === undefined || service === null) {
-        throw new Error("Missing the required parameter 'service' when calling getDetailedInvoiceUsingGET");
-      }
-
-      // verify the required parameter 'year' is set
-      if (year === undefined || year === null) {
-        throw new Error("Missing the required parameter 'year' when calling getDetailedInvoiceUsingGET");
-      }
-
-      // verify the required parameter 'month' is set
-      if (month === undefined || month === null) {
-        throw new Error("Missing the required parameter 'month' when calling getDetailedInvoiceUsingGET");
-      }
-
-
-      let pathParams = {
-        'service': service,
-        'year': year,
-        'month': month
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/billing/invoice/{service}/{year}/{month}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'year' is set
+    if (year === undefined || year === null) {
+      throw new Error(
+        'Missing the required parameter \'year\' when calling getDetailedInvoiceUsingGET'
+      )
     }
 
-    /**
-     * Get invoice details
-     * @param {String} service service
-     * @param {Number} year year
-     * @param {Number} month month
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    getDetailedInvoiceUsingGET(service, year, month) {
-      return this.getDetailedInvoiceUsingGETWithHttpInfo(service, year, month)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    // verify the required parameter 'month' is set
+    if (month === undefined || month === null) {
+      throw new Error(
+        'Missing the required parameter \'month\' when calling getDetailedInvoiceUsingGET'
+      )
     }
 
+    let pathParams = {
+      service: service,
+      year: year,
+      month: month
+    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
-    /**
-     * Get available plans
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.integrationId integrationId
-     * @param {String} opts.appType appType
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    listAvailablePlansUsingGETWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = null;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
+    return this.apiClient.callApi(
+      '/users-web/api/v3/billing/invoice/{service}/{year}/{month}',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      let pathParams = {
-      };
-      let queryParams = {
-        'integrationId': opts['integrationId'],
-        'appType': opts['appType']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
+  /**
+   * Get invoice details
+   * @param {String} service service
+   * @param {Number} year year
+   * @param {Number} month month
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  getDetailedInvoiceUsingGET (service, year, month) {
+    return this.getDetailedInvoiceUsingGETWithHttpInfo(
+      service,
+      year,
+      month
+    ).then(function (response_and_data) {
+      return response_and_data.data
+    })
+  }
 
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
+  /**
+   * Get available plans
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.integrationId integrationId
+   * @param {String} opts.appType appType
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  listAvailablePlansUsingGETWithHttpInfo (opts) {
+    opts = opts || {}
+    let postBody = null
 
-      return this.apiClient.callApi(
-        '/users-web/api/v3/billing/availablePlans', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    let pathParams = {}
+    let queryParams = {
+      integrationId: opts['integrationId'],
+      appType: opts['appType']
+    }
+    let headerParams = {}
+    let formParams = {}
+
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
+
+    return this.apiClient.callApi(
+      '/users-web/api/v3/billing/availablePlans',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
+
+  /**
+   * Get available plans
+   * @param {Object} opts Optional parameters
+   * @param {Number} opts.integrationId integrationId
+   * @param {String} opts.appType appType
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  listAvailablePlansUsingGET (opts) {
+    return this.listAvailablePlansUsingGETWithHttpInfo(opts).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
+
+  /**
+   * Update plan for an app
+   * @param {Number} appId appId
+   * @param {module:model/BillingInfo} dto dto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  updatePlanUsingPUTWithHttpInfo (appId, dto) {
+    let postBody = dto
+
+    // verify the required parameter 'appId' is set
+    if (appId === undefined || appId === null) {
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling updatePlanUsingPUT'
+      )
     }
 
-    /**
-     * Get available plans
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.integrationId integrationId
-     * @param {String} opts.appType appType
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    listAvailablePlansUsingGET(opts) {
-      return this.listAvailablePlansUsingGETWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    // verify the required parameter 'dto' is set
+    if (dto === undefined || dto === null) {
+      throw new Error(
+        'Missing the required parameter \'dto\' when calling updatePlanUsingPUT'
+      )
     }
 
-
-    /**
-     * Update plan for an app
-     * @param {Number} appId appId
-     * @param {module:model/BillingInfo} dto dto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    updatePlanUsingPUTWithHttpInfo(appId, dto) {
-      let postBody = dto;
-
-      // verify the required parameter 'appId' is set
-      if (appId === undefined || appId === null) {
-        throw new Error("Missing the required parameter 'appId' when calling updatePlanUsingPUT");
-      }
-
-      // verify the required parameter 'dto' is set
-      if (dto === undefined || dto === null) {
-        throw new Error("Missing the required parameter 'dto' when calling updatePlanUsingPUT");
-      }
-
-
-      let pathParams = {
-        'appId': appId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/billing/info/{appId}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    let pathParams = {
+      appId: appId
     }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
-    /**
-     * Update plan for an app
-     * @param {Number} appId appId
-     * @param {module:model/BillingInfo} dto dto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    updatePlanUsingPUT(appId, dto) {
-      return this.updatePlanUsingPUTWithHttpInfo(appId, dto)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
+    return this.apiClient.callApi(
+      '/users-web/api/v3/billing/info/{appId}',
+      'PUT',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
+  /**
+   * Update plan for an app
+   * @param {Number} appId appId
+   * @param {module:model/BillingInfo} dto dto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  updatePlanUsingPUT (appId, dto) {
+    return this.updatePlanUsingPUTWithHttpInfo(appId, dto).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 }

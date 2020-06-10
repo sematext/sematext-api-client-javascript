@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The CloudWatchSettings model module.
@@ -26,8 +26,7 @@ export class CloudWatchSettings {
    * @alias module:model/CloudWatchSettings
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>CloudWatchSettings</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,26 +35,33 @@ export class CloudWatchSettings {
    * @param {module:model/CloudWatchSettings} obj Optional instance to populate.
    * @return {module:model/CloudWatchSettings} The populated <code>CloudWatchSettings</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new CloudWatchSettings();
+      obj = obj || new CloudWatchSettings()
       if (data.hasOwnProperty('accessKey'))
-        obj.accessKey = ApiClient.convertToType(data['accessKey'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.accessKey = ApiClient.convertToType(data['accessKey'], 'String')
       if (data.hasOwnProperty('fetchFrequency'))
-        obj.fetchFrequency = ApiClient.convertToType(data['fetchFrequency'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.fetchFrequency = ApiClient.convertToType(
+          data['fetchFrequency'],
+          'String'
+        )
       if (data.hasOwnProperty('region'))
-        obj.region = ApiClient.convertToType(data['region'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.region = ApiClient.convertToType(data['region'], 'String')
       if (data.hasOwnProperty('secretKey'))
-        obj.secretKey = ApiClient.convertToType(data['secretKey'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.secretKey = ApiClient.convertToType(data['secretKey'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} accessKey
  */
-CloudWatchSettings.prototype.accessKey = undefined;
+CloudWatchSettings.prototype.accessKey = undefined
 
 /**
  * Allowed values for the <code>fetchFrequency</code> property.
@@ -67,25 +73,25 @@ CloudWatchSettings.FetchFrequencyEnum = {
    * value: "MINUTE"
    * @const
    */
-  MINUTE: "MINUTE",
+  MINUTE: 'MINUTE',
 
   /**
    * value: "FIVE_MINUTES"
    * @const
    */
-  FIVE_MINUTES: "FIVE_MINUTES",
+  FIVE_MINUTES: 'FIVE_MINUTES',
 
   /**
    * value: "FIFTEEN_MINUTES"
    * @const
    */
-  FIFTEEN_MINUTES: "FIFTEEN_MINUTES"
-};
+  FIFTEEN_MINUTES: 'FIFTEEN_MINUTES'
+}
 
 /**
  * @member {module:model/CloudWatchSettings.FetchFrequencyEnum} fetchFrequency
  */
-CloudWatchSettings.prototype.fetchFrequency = undefined;
+CloudWatchSettings.prototype.fetchFrequency = undefined
 
 /**
  * Allowed values for the <code>region</code> property.
@@ -97,107 +103,105 @@ CloudWatchSettings.RegionEnum = {
    * value: "US_EAST_1"
    * @const
    */
-  uSEAST1: "US_EAST_1",
+  uSEAST1: 'US_EAST_1',
 
   /**
    * value: "US_WEST_1"
    * @const
    */
-  uSWEST1: "US_WEST_1",
+  uSWEST1: 'US_WEST_1',
 
   /**
    * value: "EU_WEST_1"
    * @const
    */
-  eUWEST1: "EU_WEST_1",
+  eUWEST1: 'EU_WEST_1',
 
   /**
    * value: "US_WEST_2"
    * @const
    */
-  uSWEST2: "US_WEST_2",
+  uSWEST2: 'US_WEST_2',
 
   /**
    * value: "AP_SOUTHEAST_1"
    * @const
    */
-  aPSOUTHEAST1: "AP_SOUTHEAST_1",
+  aPSOUTHEAST1: 'AP_SOUTHEAST_1',
 
   /**
    * value: "AP_SOUTHEAST_2"
    * @const
    */
-  aPSOUTHEAST2: "AP_SOUTHEAST_2",
+  aPSOUTHEAST2: 'AP_SOUTHEAST_2',
 
   /**
    * value: "AP_NORTHEAST_1"
    * @const
    */
-  aPNORTHEAST1: "AP_NORTHEAST_1",
+  aPNORTHEAST1: 'AP_NORTHEAST_1',
 
   /**
    * value: "SA_EAST_1"
    * @const
    */
-  sAEAST1: "SA_EAST_1",
+  sAEAST1: 'SA_EAST_1',
 
   /**
    * value: "GovCloud"
    * @const
    */
-  govCloud: "GovCloud",
+  govCloud: 'GovCloud',
 
   /**
    * value: "CN_NORTH_1"
    * @const
    */
-  cNNORTH1: "CN_NORTH_1",
+  cNNORTH1: 'CN_NORTH_1',
 
   /**
    * value: "US_EAST_2"
    * @const
    */
-  uSEAST2: "US_EAST_2",
+  uSEAST2: 'US_EAST_2',
 
   /**
    * value: "AP_SOUTH_1"
    * @const
    */
-  aPSOUTH1: "AP_SOUTH_1",
+  aPSOUTH1: 'AP_SOUTH_1',
 
   /**
    * value: "AP_NORTHEAST_2"
    * @const
    */
-  aPNORTHEAST2: "AP_NORTHEAST_2",
+  aPNORTHEAST2: 'AP_NORTHEAST_2',
 
   /**
    * value: "CA_CENTRAL_1"
    * @const
    */
-  cACENTRAL1: "CA_CENTRAL_1",
+  cACENTRAL1: 'CA_CENTRAL_1',
 
   /**
    * value: "EU_CENTRAL_1"
    * @const
    */
-  eUCENTRAL1: "EU_CENTRAL_1",
+  eUCENTRAL1: 'EU_CENTRAL_1',
 
   /**
    * value: "EU_WEST_2"
    * @const
    */
-  eUWEST2: "EU_WEST_2"
-};
+  eUWEST2: 'EU_WEST_2'
+}
 
 /**
  * @member {module:model/CloudWatchSettings.RegionEnum} region
  */
-CloudWatchSettings.prototype.region = undefined;
+CloudWatchSettings.prototype.region = undefined
 
 /**
  * @member {String} secretKey
  */
-CloudWatchSettings.prototype.secretKey = undefined;
-
-
+CloudWatchSettings.prototype.secretKey = undefined

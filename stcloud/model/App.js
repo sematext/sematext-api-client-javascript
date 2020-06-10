@@ -13,11 +13,11 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {BasicOrganizationDto} from './BasicOrganizationDto';
-import {Plan} from './Plan';
-import {ServiceIntegration} from './ServiceIntegration';
-import {UserRole} from './UserRole';
+import { ApiClient } from '../ApiClient'
+import { BasicOrganizationDto } from './BasicOrganizationDto'
+import { Plan } from './Plan'
+import { ServiceIntegration } from './ServiceIntegration'
+import { UserRole } from './UserRole'
 
 /**
  * The App model module.
@@ -30,8 +30,7 @@ export class App {
    * @alias module:model/App
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>App</code> from a plain JavaScript object, optionally creating a new instance.
@@ -40,201 +39,275 @@ export class App {
    * @param {module:model/App} obj Optional instance to populate.
    * @return {module:model/App} The populated <code>App</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new App();
+      obj = obj || new App()
       if (data.hasOwnProperty('ajaxThreshold'))
-        obj.ajaxThreshold = ApiClient.convertToType(data['ajaxThreshold'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.ajaxThreshold = ApiClient.convertToType(
+          data['ajaxThreshold'],
+          'Number'
+        )
       if (data.hasOwnProperty('appType'))
-        obj.appType = ApiClient.convertToType(data['appType'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.appType = ApiClient.convertToType(data['appType'], 'String')
       if (data.hasOwnProperty('appTypeId'))
-        obj.appTypeId = ApiClient.convertToType(data['appTypeId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.appTypeId = ApiClient.convertToType(data['appTypeId'], 'Number')
       if (data.hasOwnProperty('creatorEmail'))
-        obj.creatorEmail = ApiClient.convertToType(data['creatorEmail'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.creatorEmail = ApiClient.convertToType(
+          data['creatorEmail'],
+          'String'
+        )
       if (data.hasOwnProperty('creditCardExpiry'))
-        obj.creditCardExpiry = ApiClient.convertToType(data['creditCardExpiry'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.creditCardExpiry = ApiClient.convertToType(
+          data['creditCardExpiry'],
+          'String'
+        )
       if (data.hasOwnProperty('creditCardNumber'))
-        obj.creditCardNumber = ApiClient.convertToType(data['creditCardNumber'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.creditCardNumber = ApiClient.convertToType(
+          data['creditCardNumber'],
+          'String'
+        )
       if (data.hasOwnProperty('description'))
-        obj.description = ApiClient.convertToType(data['description'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.description = ApiClient.convertToType(data['description'], 'String')
       if (data.hasOwnProperty('displayStatus'))
-        obj.displayStatus = ApiClient.convertToType(data['displayStatus'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.displayStatus = ApiClient.convertToType(
+          data['displayStatus'],
+          'String'
+        )
       if (data.hasOwnProperty('firstDataSavedDate'))
-        obj.firstDataSavedDate = ApiClient.convertToType(data['firstDataSavedDate'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.firstDataSavedDate = ApiClient.convertToType(
+          data['firstDataSavedDate'],
+          'Number'
+        )
       if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.id = ApiClient.convertToType(data['id'], 'Number')
       if (data.hasOwnProperty('integration'))
-        obj.integration = ServiceIntegration.constructFromObject(data['integration']);
+        // eslint-disable-line no-prototype-builtins
+        obj.integration = ServiceIntegration.constructFromObject(
+          data['integration']
+        )
       if (data.hasOwnProperty('lastDataReceivedDate'))
-        obj.lastDataReceivedDate = ApiClient.convertToType(data['lastDataReceivedDate'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.lastDataReceivedDate = ApiClient.convertToType(
+          data['lastDataReceivedDate'],
+          'Number'
+        )
       if (data.hasOwnProperty('lastDataSavedDate'))
-        obj.lastDataSavedDate = ApiClient.convertToType(data['lastDataSavedDate'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.lastDataSavedDate = ApiClient.convertToType(
+          data['lastDataSavedDate'],
+          'Number'
+        )
       if (data.hasOwnProperty('loggedInUserAppRole'))
-        obj.loggedInUserAppRole = ApiClient.convertToType(data['loggedInUserAppRole'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.loggedInUserAppRole = ApiClient.convertToType(
+          data['loggedInUserAppRole'],
+          'String'
+        )
       if (data.hasOwnProperty('monthlyInvoiceAccount'))
-        obj.monthlyInvoiceAccount = ApiClient.convertToType(data['monthlyInvoiceAccount'], 'Boolean');
+        // eslint-disable-line no-prototype-builtins
+        obj.monthlyInvoiceAccount = ApiClient.convertToType(
+          data['monthlyInvoiceAccount'],
+          'Boolean'
+        )
       if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.name = ApiClient.convertToType(data['name'], 'String')
       if (data.hasOwnProperty('ownerEmail'))
-        obj.ownerEmail = ApiClient.convertToType(data['ownerEmail'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.ownerEmail = ApiClient.convertToType(data['ownerEmail'], 'String')
       if (data.hasOwnProperty('owningOrganization'))
-        obj.owningOrganization = BasicOrganizationDto.constructFromObject(data['owningOrganization']);
+        // eslint-disable-line no-prototype-builtins
+        obj.owningOrganization = BasicOrganizationDto.constructFromObject(
+          data['owningOrganization']
+        )
       if (data.hasOwnProperty('pageLoadThreshold'))
-        obj.pageLoadThreshold = ApiClient.convertToType(data['pageLoadThreshold'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.pageLoadThreshold = ApiClient.convertToType(
+          data['pageLoadThreshold'],
+          'Number'
+        )
       if (data.hasOwnProperty('paymentMethodId'))
-        obj.paymentMethodId = ApiClient.convertToType(data['paymentMethodId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.paymentMethodId = ApiClient.convertToType(
+          data['paymentMethodId'],
+          'Number'
+        )
       if (data.hasOwnProperty('plan'))
-        obj.plan = Plan.constructFromObject(data['plan']);
+        // eslint-disable-line no-prototype-builtins
+        obj.plan = Plan.constructFromObject(data['plan'])
       if (data.hasOwnProperty('prepaidAccount'))
-        obj.prepaidAccount = ApiClient.convertToType(data['prepaidAccount'], 'Boolean');
+        // eslint-disable-line no-prototype-builtins
+        obj.prepaidAccount = ApiClient.convertToType(
+          data['prepaidAccount'],
+          'Boolean'
+        )
       if (data.hasOwnProperty('status'))
-        obj.status = ApiClient.convertToType(data['status'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.status = ApiClient.convertToType(data['status'], 'String')
       if (data.hasOwnProperty('token'))
-        obj.token = ApiClient.convertToType(data['token'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.token = ApiClient.convertToType(data['token'], 'String')
       if (data.hasOwnProperty('trialEndDate'))
-        obj.trialEndDate = ApiClient.convertToType(data['trialEndDate'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.trialEndDate = ApiClient.convertToType(
+          data['trialEndDate'],
+          'Number'
+        )
       if (data.hasOwnProperty('urlGroupLimit'))
-        obj.urlGroupLimit = ApiClient.convertToType(data['urlGroupLimit'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.urlGroupLimit = ApiClient.convertToType(
+          data['urlGroupLimit'],
+          'Number'
+        )
       if (data.hasOwnProperty('userRoles'))
-        obj.userRoles = ApiClient.convertToType(data['userRoles'], [UserRole]);
+        // eslint-disable-line no-prototype-builtins
+        obj.userRoles = ApiClient.convertToType(data['userRoles'], [UserRole])
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {Number} ajaxThreshold
  */
-App.prototype.ajaxThreshold = undefined;
+App.prototype.ajaxThreshold = undefined
 
 /**
  * @member {String} appType
  */
-App.prototype.appType = undefined;
+App.prototype.appType = undefined
 
 /**
  * @member {Number} appTypeId
  */
-App.prototype.appTypeId = undefined;
+App.prototype.appTypeId = undefined
 
 /**
  * @member {String} creatorEmail
  */
-App.prototype.creatorEmail = undefined;
+App.prototype.creatorEmail = undefined
 
 /**
  * @member {String} creditCardExpiry
  */
-App.prototype.creditCardExpiry = undefined;
+App.prototype.creditCardExpiry = undefined
 
 /**
  * @member {String} creditCardNumber
  */
-App.prototype.creditCardNumber = undefined;
+App.prototype.creditCardNumber = undefined
 
 /**
  * @member {String} description
  */
-App.prototype.description = undefined;
+App.prototype.description = undefined
 
 /**
  * @member {String} displayStatus
  */
-App.prototype.displayStatus = undefined;
+App.prototype.displayStatus = undefined
 
 /**
  * @member {Number} firstDataSavedDate
  */
-App.prototype.firstDataSavedDate = undefined;
+App.prototype.firstDataSavedDate = undefined
 
 /**
  * @member {Number} id
  */
-App.prototype.id = undefined;
+App.prototype.id = undefined
 
 /**
  * @member {module:model/ServiceIntegration} integration
  */
-App.prototype.integration = undefined;
+App.prototype.integration = undefined
 
 /**
  * @member {Number} lastDataReceivedDate
  */
-App.prototype.lastDataReceivedDate = undefined;
+App.prototype.lastDataReceivedDate = undefined
 
 /**
  * @member {Number} lastDataSavedDate
  */
-App.prototype.lastDataSavedDate = undefined;
+App.prototype.lastDataSavedDate = undefined
 
 /**
  * @member {String} loggedInUserAppRole
  */
-App.prototype.loggedInUserAppRole = undefined;
+App.prototype.loggedInUserAppRole = undefined
 
 /**
  * @member {Boolean} monthlyInvoiceAccount
  */
-App.prototype.monthlyInvoiceAccount = undefined;
+App.prototype.monthlyInvoiceAccount = undefined
 
 /**
  * @member {String} name
  */
-App.prototype.name = undefined;
+App.prototype.name = undefined
 
 /**
  * @member {String} ownerEmail
  */
-App.prototype.ownerEmail = undefined;
+App.prototype.ownerEmail = undefined
 
 /**
  * @member {module:model/BasicOrganizationDto} owningOrganization
  */
-App.prototype.owningOrganization = undefined;
+App.prototype.owningOrganization = undefined
 
 /**
  * @member {Number} pageLoadThreshold
  */
-App.prototype.pageLoadThreshold = undefined;
+App.prototype.pageLoadThreshold = undefined
 
 /**
  * @member {Number} paymentMethodId
  */
-App.prototype.paymentMethodId = undefined;
+App.prototype.paymentMethodId = undefined
 
 /**
  * @member {module:model/Plan} plan
  */
-App.prototype.plan = undefined;
+App.prototype.plan = undefined
 
 /**
  * @member {Boolean} prepaidAccount
  */
-App.prototype.prepaidAccount = undefined;
+App.prototype.prepaidAccount = undefined
 
 /**
  * @member {String} status
  */
-App.prototype.status = undefined;
+App.prototype.status = undefined
 
 /**
  * @member {String} token
  */
-App.prototype.token = undefined;
+App.prototype.token = undefined
 
 /**
  * @member {Number} trialEndDate
  */
-App.prototype.trialEndDate = undefined;
+App.prototype.trialEndDate = undefined
 
 /**
  * @member {Number} urlGroupLimit
  */
-App.prototype.urlGroupLimit = undefined;
+App.prototype.urlGroupLimit = undefined
 
 /**
  * @member {Array.<module:model/UserRole>} userRoles
  */
-App.prototype.userRoles = undefined;
-
-
+App.prototype.userRoles = undefined

@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The ServiceIntegration model module.
@@ -26,8 +26,7 @@ export class ServiceIntegration {
    * @alias module:model/ServiceIntegration
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>ServiceIntegration</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,96 +35,121 @@ export class ServiceIntegration {
    * @param {module:model/ServiceIntegration} obj Optional instance to populate.
    * @return {module:model/ServiceIntegration} The populated <code>ServiceIntegration</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new ServiceIntegration();
+      obj = obj || new ServiceIntegration()
       if (data.hasOwnProperty('appTypeId'))
-        obj.appTypeId = ApiClient.convertToType(data['appTypeId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.appTypeId = ApiClient.convertToType(data['appTypeId'], 'Number')
       if (data.hasOwnProperty('appTypeName'))
-        obj.appTypeName = ApiClient.convertToType(data['appTypeName'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.appTypeName = ApiClient.convertToType(data['appTypeName'], 'String')
       if (data.hasOwnProperty('displayName'))
-        obj.displayName = ApiClient.convertToType(data['displayName'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.displayName = ApiClient.convertToType(data['displayName'], 'String')
       if (data.hasOwnProperty('enabled'))
-        obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean');
+        // eslint-disable-line no-prototype-builtins
+        obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean')
       if (data.hasOwnProperty('externalProductId'))
-        obj.externalProductId = ApiClient.convertToType(data['externalProductId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.externalProductId = ApiClient.convertToType(
+          data['externalProductId'],
+          'Number'
+        )
       if (data.hasOwnProperty('externalProductName'))
-        obj.externalProductName = ApiClient.convertToType(data['externalProductName'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.externalProductName = ApiClient.convertToType(
+          data['externalProductName'],
+          'String'
+        )
       if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.id = ApiClient.convertToType(data['id'], 'Number')
       if (data.hasOwnProperty('integrationType'))
-        obj.integrationType = ApiClient.convertToType(data['integrationType'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.integrationType = ApiClient.convertToType(
+          data['integrationType'],
+          'String'
+        )
       if (data.hasOwnProperty('ordinal'))
-        obj.ordinal = ApiClient.convertToType(data['ordinal'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.ordinal = ApiClient.convertToType(data['ordinal'], 'Number')
       if (data.hasOwnProperty('parentIntegrationId'))
-        obj.parentIntegrationId = ApiClient.convertToType(data['parentIntegrationId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.parentIntegrationId = ApiClient.convertToType(
+          data['parentIntegrationId'],
+          'Number'
+        )
       if (data.hasOwnProperty('sematextService'))
-        obj.sematextService = ApiClient.convertToType(data['sematextService'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.sematextService = ApiClient.convertToType(
+          data['sematextService'],
+          'String'
+        )
       if (data.hasOwnProperty('visible'))
-        obj.visible = ApiClient.convertToType(data['visible'], 'Boolean');
+        // eslint-disable-line no-prototype-builtins
+        obj.visible = ApiClient.convertToType(data['visible'], 'Boolean')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {Number} appTypeId
  */
-ServiceIntegration.prototype.appTypeId = undefined;
+ServiceIntegration.prototype.appTypeId = undefined
 
 /**
  * @member {String} appTypeName
  */
-ServiceIntegration.prototype.appTypeName = undefined;
+ServiceIntegration.prototype.appTypeName = undefined
 
 /**
  * @member {String} displayName
  */
-ServiceIntegration.prototype.displayName = undefined;
+ServiceIntegration.prototype.displayName = undefined
 
 /**
  * @member {Boolean} enabled
  */
-ServiceIntegration.prototype.enabled = undefined;
+ServiceIntegration.prototype.enabled = undefined
 
 /**
  * @member {Number} externalProductId
  */
-ServiceIntegration.prototype.externalProductId = undefined;
+ServiceIntegration.prototype.externalProductId = undefined
 
 /**
  * @member {String} externalProductName
  */
-ServiceIntegration.prototype.externalProductName = undefined;
+ServiceIntegration.prototype.externalProductName = undefined
 
 /**
  * @member {Number} id
  */
-ServiceIntegration.prototype.id = undefined;
+ServiceIntegration.prototype.id = undefined
 
 /**
  * @member {String} integrationType
  */
-ServiceIntegration.prototype.integrationType = undefined;
+ServiceIntegration.prototype.integrationType = undefined
 
 /**
  * @member {Number} ordinal
  */
-ServiceIntegration.prototype.ordinal = undefined;
+ServiceIntegration.prototype.ordinal = undefined
 
 /**
  * @member {Number} parentIntegrationId
  */
-ServiceIntegration.prototype.parentIntegrationId = undefined;
+ServiceIntegration.prototype.parentIntegrationId = undefined
 
 /**
  * @member {String} sematextService
  */
-ServiceIntegration.prototype.sematextService = undefined;
+ServiceIntegration.prototype.sematextService = undefined
 
 /**
  * @member {Boolean} visible
  */
-ServiceIntegration.prototype.visible = undefined;
-
-
+ServiceIntegration.prototype.visible = undefined

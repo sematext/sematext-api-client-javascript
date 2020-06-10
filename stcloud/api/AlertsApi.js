@@ -13,272 +13,297 @@
  *
  */
 
-import {ApiClient} from "../ApiClient";
-import {AlertRule} from '../model/AlertRule';
-import {GenericApiResponse} from '../model/GenericApiResponse';
+import { ApiClient } from '../ApiClient'
+import { AlertRule } from '../model/AlertRule' // eslint-disable-line no-unused-vars
+import { GenericApiResponse } from '../model/GenericApiResponse'
 
 /**
-* Alerts service.
-* @module api/AlertsApi
-* @version 0.1.0
-*/
+ * Alerts service.
+ * @module api/AlertsApi
+ * @version 0.1.0
+ */
 export class AlertsApi {
+  /**
+   * Constructs a new AlertsApi.
+   * @alias module:api/AlertsApi
+   * @class
+   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:ApiClient#instance} if unspecified.
+   */
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-    /**
-    * Constructs a new AlertsApi. 
-    * @alias module:api/AlertsApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instance} if unspecified.
-    */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
+  /**
+   * Create alert rule
+   * @param {module:model/AlertRule} dto dto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  createAlertUsingPOSTWithHttpInfo (dto) {
+    let postBody = dto
+
+    // verify the required parameter 'dto' is set
+    if (dto === undefined || dto === null) {
+      throw new Error(
+        'Missing the required parameter \'dto\' when calling createAlertUsingPOST'
+      )
     }
 
+    let pathParams = {}
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
-    /**
-     * Create alert rule
-     * @param {module:model/AlertRule} dto dto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    createAlertUsingPOSTWithHttpInfo(dto) {
-      let postBody = dto;
+    return this.apiClient.callApi(
+      '/users-web/api/v3/alerts',
+      'POST',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'dto' is set
-      if (dto === undefined || dto === null) {
-        throw new Error("Missing the required parameter 'dto' when calling createAlertUsingPOST");
+  /**
+   * Create alert rule
+   * @param {module:model/AlertRule} dto dto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  createAlertUsingPOST (dto) {
+    return this.createAlertUsingPOSTWithHttpInfo(dto).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
+
+  /**
+   * Delete alert rule
+   * @param {Number} updateableAlertId updateableAlertId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  deleteAlertRuleUsingDELETEWithHttpInfo (updateableAlertId) {
+    let postBody = null
+
+    // verify the required parameter 'updateableAlertId' is set
+    if (updateableAlertId === undefined || updateableAlertId === null) {
+      throw new Error(
+        'Missing the required parameter \'updateableAlertId\' when calling deleteAlertRuleUsingDELETE'
+      )
+    }
+
+    let pathParams = {
+      updateableAlertId: updateableAlertId
+    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
+
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
+
+    return this.apiClient.callApi(
+      '/users-web/api/v3/alerts/{updateableAlertId}',
+      'DELETE',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
+
+  /**
+   * Delete alert rule
+   * @param {Number} updateableAlertId updateableAlertId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  deleteAlertRuleUsingDELETE (updateableAlertId) {
+    return this.deleteAlertRuleUsingDELETEWithHttpInfo(updateableAlertId).then(
+      function (response_and_data) {
+        return response_and_data.data
       }
+    )
+  }
 
+  /**
+   * Disable alert rule
+   * @param {Number} updateableAlertId updateableAlertId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  disableAlertRuleUsingPUTWithHttpInfo (updateableAlertId) {
+    let postBody = null
 
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/alerts', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'updateableAlertId' is set
+    if (updateableAlertId === undefined || updateableAlertId === null) {
+      throw new Error(
+        'Missing the required parameter \'updateableAlertId\' when calling disableAlertRuleUsingPUT'
+      )
     }
 
-    /**
-     * Create alert rule
-     * @param {module:model/AlertRule} dto dto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    createAlertUsingPOST(dto) {
-      return this.createAlertUsingPOSTWithHttpInfo(dto)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    let pathParams = {
+      updateableAlertId: updateableAlertId
     }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
-    /**
-     * Delete alert rule
-     * @param {Number} updateableAlertId updateableAlertId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    deleteAlertRuleUsingDELETEWithHttpInfo(updateableAlertId) {
-      let postBody = null;
+    return this.apiClient.callApi(
+      '/users-web/api/v3/alerts/{updateableAlertId}/disable',
+      'PUT',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'updateableAlertId' is set
-      if (updateableAlertId === undefined || updateableAlertId === null) {
-        throw new Error("Missing the required parameter 'updateableAlertId' when calling deleteAlertRuleUsingDELETE");
+  /**
+   * Disable alert rule
+   * @param {Number} updateableAlertId updateableAlertId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  disableAlertRuleUsingPUT (updateableAlertId) {
+    return this.disableAlertRuleUsingPUTWithHttpInfo(updateableAlertId).then(
+      function (response_and_data) {
+        return response_and_data.data
       }
+    )
+  }
 
+  /**
+   * Enable alert rule
+   * @param {Number} updateableAlertId updateableAlertId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  enableAlertRuleUsingPUTWithHttpInfo (updateableAlertId) {
+    let postBody = null
 
-      let pathParams = {
-        'updateableAlertId': updateableAlertId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/alerts/{updateableAlertId}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'updateableAlertId' is set
+    if (updateableAlertId === undefined || updateableAlertId === null) {
+      throw new Error(
+        'Missing the required parameter \'updateableAlertId\' when calling enableAlertRuleUsingPUT'
+      )
     }
 
-    /**
-     * Delete alert rule
-     * @param {Number} updateableAlertId updateableAlertId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    deleteAlertRuleUsingDELETE(updateableAlertId) {
-      return this.deleteAlertRuleUsingDELETEWithHttpInfo(updateableAlertId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    let pathParams = {
+      updateableAlertId: updateableAlertId
     }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
-    /**
-     * Disable alert rule
-     * @param {Number} updateableAlertId updateableAlertId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    disableAlertRuleUsingPUTWithHttpInfo(updateableAlertId) {
-      let postBody = null;
+    return this.apiClient.callApi(
+      '/users-web/api/v3/alerts/{updateableAlertId}/enable',
+      'PUT',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'updateableAlertId' is set
-      if (updateableAlertId === undefined || updateableAlertId === null) {
-        throw new Error("Missing the required parameter 'updateableAlertId' when calling disableAlertRuleUsingPUT");
+  /**
+   * Enable alert rule
+   * @param {Number} updateableAlertId updateableAlertId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  enableAlertRuleUsingPUT (updateableAlertId) {
+    return this.enableAlertRuleUsingPUTWithHttpInfo(updateableAlertId).then(
+      function (response_and_data) {
+        return response_and_data.data
       }
+    )
+  }
 
+  /**
+   * Get alert rules for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  getAlertRulesForAppUsingGETWithHttpInfo (appId) {
+    let postBody = null
 
-      let pathParams = {
-        'updateableAlertId': updateableAlertId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/alerts/{updateableAlertId}/disable', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'appId' is set
+    if (appId === undefined || appId === null) {
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling getAlertRulesForAppUsingGET'
+      )
     }
 
-    /**
-     * Disable alert rule
-     * @param {Number} updateableAlertId updateableAlertId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    disableAlertRuleUsingPUT(updateableAlertId) {
-      return this.disableAlertRuleUsingPUTWithHttpInfo(updateableAlertId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    let pathParams = {
+      appId: appId
     }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
-    /**
-     * Enable alert rule
-     * @param {Number} updateableAlertId updateableAlertId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    enableAlertRuleUsingPUTWithHttpInfo(updateableAlertId) {
-      let postBody = null;
+    return this.apiClient.callApi(
+      '/users-web/api/v3/apps/{appId}/alerts',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'updateableAlertId' is set
-      if (updateableAlertId === undefined || updateableAlertId === null) {
-        throw new Error("Missing the required parameter 'updateableAlertId' when calling enableAlertRuleUsingPUT");
-      }
-
-
-      let pathParams = {
-        'updateableAlertId': updateableAlertId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/alerts/{updateableAlertId}/enable', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Enable alert rule
-     * @param {Number} updateableAlertId updateableAlertId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    enableAlertRuleUsingPUT(updateableAlertId) {
-      return this.enableAlertRuleUsingPUTWithHttpInfo(updateableAlertId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get alert rules for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    getAlertRulesForAppUsingGETWithHttpInfo(appId) {
-      let postBody = null;
-
-      // verify the required parameter 'appId' is set
-      if (appId === undefined || appId === null) {
-        throw new Error("Missing the required parameter 'appId' when calling getAlertRulesForAppUsingGET");
-      }
-
-
-      let pathParams = {
-        'appId': appId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/apps/{appId}/alerts', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Get alert rules for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    getAlertRulesForAppUsingGET(appId) {
-      return this.getAlertRulesForAppUsingGETWithHttpInfo(appId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
+  /**
+   * Get alert rules for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  getAlertRulesForAppUsingGET (appId) {
+    return this.getAlertRulesForAppUsingGETWithHttpInfo(appId).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 }

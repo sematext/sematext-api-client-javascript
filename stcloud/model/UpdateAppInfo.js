@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The UpdateAppInfo model module.
@@ -26,8 +26,7 @@ export class UpdateAppInfo {
    * @alias module:model/UpdateAppInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>UpdateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,71 +35,86 @@ export class UpdateAppInfo {
    * @param {module:model/UpdateAppInfo} obj Optional instance to populate.
    * @return {module:model/UpdateAppInfo} The populated <code>UpdateAppInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new UpdateAppInfo();
+      obj = obj || new UpdateAppInfo()
       if (data.hasOwnProperty('description'))
-        obj.description = ApiClient.convertToType(data['description'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.description = ApiClient.convertToType(data['description'], 'String')
       if (data.hasOwnProperty('ignorePercentage'))
-        obj.ignorePercentage = ApiClient.convertToType(data['ignorePercentage'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.ignorePercentage = ApiClient.convertToType(
+          data['ignorePercentage'],
+          'Number'
+        )
       if (data.hasOwnProperty('maxEvents'))
-        obj.maxEvents = ApiClient.convertToType(data['maxEvents'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.maxEvents = ApiClient.convertToType(data['maxEvents'], 'Number')
       if (data.hasOwnProperty('maxLimitMB'))
-        obj.maxLimitMB = ApiClient.convertToType(data['maxLimitMB'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.maxLimitMB = ApiClient.convertToType(data['maxLimitMB'], 'Number')
       if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.name = ApiClient.convertToType(data['name'], 'String')
       if (data.hasOwnProperty('sampling'))
-        obj.sampling = ApiClient.convertToType(data['sampling'], 'Boolean');
+        // eslint-disable-line no-prototype-builtins
+        obj.sampling = ApiClient.convertToType(data['sampling'], 'Boolean')
       if (data.hasOwnProperty('samplingPercentage'))
-        obj.samplingPercentage = ApiClient.convertToType(data['samplingPercentage'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.samplingPercentage = ApiClient.convertToType(
+          data['samplingPercentage'],
+          'Number'
+        )
       if (data.hasOwnProperty('staggering'))
-        obj.staggering = ApiClient.convertToType(data['staggering'], 'Boolean');
+        // eslint-disable-line no-prototype-builtins
+        obj.staggering = ApiClient.convertToType(data['staggering'], 'Boolean')
       if (data.hasOwnProperty('status'))
-        obj.status = ApiClient.convertToType(data['status'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.status = ApiClient.convertToType(data['status'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} description
  */
-UpdateAppInfo.prototype.description = undefined;
+UpdateAppInfo.prototype.description = undefined
 
 /**
  * @member {Number} ignorePercentage
  */
-UpdateAppInfo.prototype.ignorePercentage = undefined;
+UpdateAppInfo.prototype.ignorePercentage = undefined
 
 /**
  * @member {Number} maxEvents
  */
-UpdateAppInfo.prototype.maxEvents = undefined;
+UpdateAppInfo.prototype.maxEvents = undefined
 
 /**
  * @member {Number} maxLimitMB
  */
-UpdateAppInfo.prototype.maxLimitMB = undefined;
+UpdateAppInfo.prototype.maxLimitMB = undefined
 
 /**
  * @member {String} name
  */
-UpdateAppInfo.prototype.name = undefined;
+UpdateAppInfo.prototype.name = undefined
 
 /**
  * @member {Boolean} sampling
  */
-UpdateAppInfo.prototype.sampling = undefined;
+UpdateAppInfo.prototype.sampling = undefined
 
 /**
  * @member {Number} samplingPercentage
  */
-UpdateAppInfo.prototype.samplingPercentage = undefined;
+UpdateAppInfo.prototype.samplingPercentage = undefined
 
 /**
  * @member {Boolean} staggering
  */
-UpdateAppInfo.prototype.staggering = undefined;
+UpdateAppInfo.prototype.staggering = undefined
 
 /**
  * Allowed values for the <code>status</code> property.
@@ -112,18 +126,16 @@ UpdateAppInfo.StatusEnum = {
    * value: "ACTIVE"
    * @const
    */
-  ACTIVE: "ACTIVE",
+  ACTIVE: 'ACTIVE',
 
   /**
    * value: "DISABLED"
    * @const
    */
-  DISABLED: "DISABLED"
-};
+  DISABLED: 'DISABLED'
+}
 
 /**
  * @member {module:model/UpdateAppInfo.StatusEnum} status
  */
-UpdateAppInfo.prototype.status = undefined;
-
-
+UpdateAppInfo.prototype.status = undefined

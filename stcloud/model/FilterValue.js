@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The FilterValue model module.
@@ -26,8 +26,7 @@ export class FilterValue {
    * @alias module:model/FilterValue
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>FilterValue</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,54 +35,58 @@ export class FilterValue {
    * @param {module:model/FilterValue} obj Optional instance to populate.
    * @return {module:model/FilterValue} The populated <code>FilterValue</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new FilterValue();
+      obj = obj || new FilterValue()
       if (data.hasOwnProperty('aggType'))
-        obj.aggType = ApiClient.convertToType(data['aggType'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.aggType = ApiClient.convertToType(data['aggType'], 'String')
       if (data.hasOwnProperty('filterName'))
-        obj.filterName = ApiClient.convertToType(data['filterName'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.filterName = ApiClient.convertToType(data['filterName'], 'String')
       if (data.hasOwnProperty('key'))
-        obj.key = ApiClient.convertToType(data['key'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.key = ApiClient.convertToType(data['key'], 'String')
       if (data.hasOwnProperty('label'))
-        obj.label = ApiClient.convertToType(data['label'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.label = ApiClient.convertToType(data['label'], 'String')
       if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.name = ApiClient.convertToType(data['name'], 'String')
       if (data.hasOwnProperty('values'))
-        obj.values = ApiClient.convertToType(data['values'], ['String']);
+        // eslint-disable-line no-prototype-builtins
+        obj.values = ApiClient.convertToType(data['values'], ['String'])
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} aggType
  */
-FilterValue.prototype.aggType = undefined;
+FilterValue.prototype.aggType = undefined
 
 /**
  * @member {String} filterName
  */
-FilterValue.prototype.filterName = undefined;
+FilterValue.prototype.filterName = undefined
 
 /**
  * @member {String} key
  */
-FilterValue.prototype.key = undefined;
+FilterValue.prototype.key = undefined
 
 /**
  * @member {String} label
  */
-FilterValue.prototype.label = undefined;
+FilterValue.prototype.label = undefined
 
 /**
  * @member {String} name
  */
-FilterValue.prototype.name = undefined;
+FilterValue.prototype.name = undefined
 
 /**
  * @member {Array.<String>} values
  */
-FilterValue.prototype.values = undefined;
-
-
+FilterValue.prototype.values = undefined

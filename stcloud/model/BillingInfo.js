@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The BillingInfo model module.
@@ -26,8 +26,7 @@ export class BillingInfo {
    * @alias module:model/BillingInfo
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>BillingInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,33 +35,40 @@ export class BillingInfo {
    * @param {module:model/BillingInfo} obj Optional instance to populate.
    * @return {module:model/BillingInfo} The populated <code>BillingInfo</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new BillingInfo();
+      obj = obj || new BillingInfo()
       if (data.hasOwnProperty('creditCardId'))
-        obj.creditCardId = ApiClient.convertToType(data['creditCardId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.creditCardId = ApiClient.convertToType(
+          data['creditCardId'],
+          'Number'
+        )
       if (data.hasOwnProperty('paymentMethod'))
-        obj.paymentMethod = ApiClient.convertToType(data['paymentMethod'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.paymentMethod = ApiClient.convertToType(
+          data['paymentMethod'],
+          'String'
+        )
       if (data.hasOwnProperty('planId'))
-        obj.planId = ApiClient.convertToType(data['planId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.planId = ApiClient.convertToType(data['planId'], 'Number')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {Number} creditCardId
  */
-BillingInfo.prototype.creditCardId = undefined;
+BillingInfo.prototype.creditCardId = undefined
 
 /**
  * @member {String} paymentMethod
  */
-BillingInfo.prototype.paymentMethod = undefined;
+BillingInfo.prototype.paymentMethod = undefined
 
 /**
  * @member {Number} planId
  */
-BillingInfo.prototype.planId = undefined;
-
-
+BillingInfo.prototype.planId = undefined

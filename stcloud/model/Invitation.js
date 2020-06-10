@@ -13,8 +13,8 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
-import {App} from './App';
+import { ApiClient } from '../ApiClient'
+import { App } from './App'
 
 /**
  * The Invitation model module.
@@ -27,8 +27,7 @@ export class Invitation {
    * @alias module:model/Invitation
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>Invitation</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,31 +36,53 @@ export class Invitation {
    * @param {module:model/Invitation} obj Optional instance to populate.
    * @return {module:model/Invitation} The populated <code>Invitation</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new Invitation();
+      obj = obj || new Invitation()
       if (data.hasOwnProperty('app'))
-        obj.app = App.constructFromObject(data['app']);
+        // eslint-disable-line no-prototype-builtins
+        obj.app = App.constructFromObject(data['app'])
       if (data.hasOwnProperty('apps'))
-        obj.apps = ApiClient.convertToType(data['apps'], [App]);
+        // eslint-disable-line no-prototype-builtins
+        obj.apps = ApiClient.convertToType(data['apps'], [App])
       if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.id = ApiClient.convertToType(data['id'], 'Number')
       if (data.hasOwnProperty('inviteDate'))
-        obj.inviteDate = ApiClient.convertToType(data['inviteDate'], 'Date');
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteDate = ApiClient.convertToType(data['inviteDate'], 'Date')
       if (data.hasOwnProperty('inviteStatus'))
-        obj.inviteStatus = ApiClient.convertToType(data['inviteStatus'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteStatus = ApiClient.convertToType(
+          data['inviteStatus'],
+          'String'
+        )
       if (data.hasOwnProperty('inviteeEmail'))
-        obj.inviteeEmail = ApiClient.convertToType(data['inviteeEmail'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteeEmail = ApiClient.convertToType(
+          data['inviteeEmail'],
+          'String'
+        )
       if (data.hasOwnProperty('inviteeRole'))
-        obj.inviteeRole = ApiClient.convertToType(data['inviteeRole'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteeRole = ApiClient.convertToType(data['inviteeRole'], 'String')
       if (data.hasOwnProperty('inviteeStatus'))
-        obj.inviteeStatus = ApiClient.convertToType(data['inviteeStatus'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.inviteeStatus = ApiClient.convertToType(
+          data['inviteeStatus'],
+          'String'
+        )
       if (data.hasOwnProperty('inviterEmail'))
-        obj.inviterEmail = ApiClient.convertToType(data['inviterEmail'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.inviterEmail = ApiClient.convertToType(
+          data['inviterEmail'],
+          'String'
+        )
       if (data.hasOwnProperty('uuid'))
-        obj.uuid = ApiClient.convertToType(data['uuid'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.uuid = ApiClient.convertToType(data['uuid'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
@@ -69,23 +90,23 @@ export class Invitation {
  * For invite request, only app.id needs to be set.
  * @member {module:model/App} app
  */
-Invitation.prototype.app = undefined;
+Invitation.prototype.app = undefined
 
 /**
  * For invite request, only apps.id needs to be set.
  * @member {Array.<module:model/App>} apps
  */
-Invitation.prototype.apps = undefined;
+Invitation.prototype.apps = undefined
 
 /**
  * @member {Number} id
  */
-Invitation.prototype.id = undefined;
+Invitation.prototype.id = undefined
 
 /**
  * @member {Date} inviteDate
  */
-Invitation.prototype.inviteDate = undefined;
+Invitation.prototype.inviteDate = undefined
 
 /**
  * Allowed values for the <code>inviteStatus</code> property.
@@ -97,36 +118,36 @@ Invitation.InviteStatusEnum = {
    * value: "PENDING"
    * @const
    */
-  PENDING: "PENDING",
+  PENDING: 'PENDING',
 
   /**
    * value: "ACCEPTED"
    * @const
    */
-  ACCEPTED: "ACCEPTED",
+  ACCEPTED: 'ACCEPTED',
 
   /**
    * value: "CANCELLED"
    * @const
    */
-  CANCELLED: "CANCELLED",
+  CANCELLED: 'CANCELLED',
 
   /**
    * value: "DECLINED"
    * @const
    */
-  DECLINED: "DECLINED"
-};
+  DECLINED: 'DECLINED'
+}
 
 /**
  * @member {module:model/Invitation.InviteStatusEnum} inviteStatus
  */
-Invitation.prototype.inviteStatus = undefined;
+Invitation.prototype.inviteStatus = undefined
 
 /**
  * @member {String} inviteeEmail
  */
-Invitation.prototype.inviteeEmail = undefined;
+Invitation.prototype.inviteeEmail = undefined
 
 /**
  * Allowed values for the <code>inviteeRole</code> property.
@@ -138,43 +159,43 @@ Invitation.InviteeRoleEnum = {
    * value: "SUPER_USER"
    * @const
    */
-  SUPER_USER: "SUPER_USER",
+  SUPER_USER: 'SUPER_USER',
 
   /**
    * value: "OWNER"
    * @const
    */
-  OWNER: "OWNER",
+  OWNER: 'OWNER',
 
   /**
    * value: "ADMIN"
    * @const
    */
-  ADMIN: "ADMIN",
+  ADMIN: 'ADMIN',
 
   /**
    * value: "USER"
    * @const
    */
-  USER: "USER",
+  USER: 'USER',
 
   /**
    * value: "DEMO"
    * @const
    */
-  DEMO: "DEMO",
+  DEMO: 'DEMO',
 
   /**
    * value: "ANONYMOUS"
    * @const
    */
-  ANONYMOUS: "ANONYMOUS"
-};
+  ANONYMOUS: 'ANONYMOUS'
+}
 
 /**
  * @member {module:model/Invitation.InviteeRoleEnum} inviteeRole
  */
-Invitation.prototype.inviteeRole = undefined;
+Invitation.prototype.inviteeRole = undefined
 
 /**
  * Allowed values for the <code>inviteeStatus</code> property.
@@ -186,28 +207,26 @@ Invitation.InviteeStatusEnum = {
    * value: "INACTIVE"
    * @const
    */
-  INACTIVE: "INACTIVE",
+  INACTIVE: 'INACTIVE',
 
   /**
    * value: "ACTIVE"
    * @const
    */
-  ACTIVE: "ACTIVE"
-};
+  ACTIVE: 'ACTIVE'
+}
 
 /**
  * @member {module:model/Invitation.InviteeStatusEnum} inviteeStatus
  */
-Invitation.prototype.inviteeStatus = undefined;
+Invitation.prototype.inviteeStatus = undefined
 
 /**
  * @member {String} inviterEmail
  */
-Invitation.prototype.inviterEmail = undefined;
+Invitation.prototype.inviterEmail = undefined
 
 /**
  * @member {String} uuid
  */
-Invitation.prototype.uuid = undefined;
-
-
+Invitation.prototype.uuid = undefined

@@ -13,133 +13,143 @@
  *
  */
 
-import {ApiClient} from "../ApiClient";
-import {GenericApiResponse} from '../model/GenericApiResponse';
-import {ReportInfo} from '../model/ReportInfo';
+import { ApiClient } from '../ApiClient'
+import { GenericApiResponse } from '../model/GenericApiResponse'
+import { ReportInfo } from '../model/ReportInfo' // eslint-disable-line no-unused-vars
 
 /**
-* Subscriptions service.
-* @module api/SubscriptionsApi
-* @version 0.1.0
-*/
+ * Subscriptions service.
+ * @module api/SubscriptionsApi
+ * @version 0.1.0
+ */
 export class SubscriptionsApi {
+  /**
+   * Constructs a new SubscriptionsApi.
+   * @alias module:api/SubscriptionsApi
+   * @class
+   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:ApiClient#instance} if unspecified.
+   */
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-    /**
-    * Constructs a new SubscriptionsApi. 
-    * @alias module:api/SubscriptionsApi
-    * @class
-    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:ApiClient#instance} if unspecified.
-    */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
+  /**
+   * Get subscriptions for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  listUsingGET1WithHttpInfo (appId) {
+    let postBody = null
+
+    // verify the required parameter 'appId' is set
+    if (appId === undefined || appId === null) {
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling listUsingGET1'
+      )
     }
 
+    let pathParams = {
+      appId: appId
+    }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
-    /**
-     * Get subscriptions for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    listUsingGET1WithHttpInfo(appId) {
-      let postBody = null;
+    return this.apiClient.callApi(
+      '/users-web/api/v3/apps/{appId}/subscriptions',
+      'GET',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
-      // verify the required parameter 'appId' is set
-      if (appId === undefined || appId === null) {
-        throw new Error("Missing the required parameter 'appId' when calling listUsingGET1");
-      }
+  /**
+   * Get subscriptions for an app
+   * @param {Number} appId appId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  listUsingGET1 (appId) {
+    return this.listUsingGET1WithHttpInfo(appId).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 
+  /**
+   * Trigger emailing of report for an app
+   * @param {Number} appId appId
+   * @param {module:model/ReportInfo} emailDto emailDto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  sendReportUsingPOSTWithHttpInfo (appId, emailDto) {
+    let postBody = emailDto
 
-      let pathParams = {
-        'appId': appId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/apps/{appId}/subscriptions', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    // verify the required parameter 'appId' is set
+    if (appId === undefined || appId === null) {
+      throw new Error(
+        'Missing the required parameter \'appId\' when calling sendReportUsingPOST'
+      )
     }
 
-    /**
-     * Get subscriptions for an app
-     * @param {Number} appId appId
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    listUsingGET1(appId) {
-      return this.listUsingGET1WithHttpInfo(appId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
+    // verify the required parameter 'emailDto' is set
+    if (emailDto === undefined || emailDto === null) {
+      throw new Error(
+        'Missing the required parameter \'emailDto\' when calling sendReportUsingPOST'
+      )
     }
 
-
-    /**
-     * Trigger emailing of report for an app
-     * @param {Number} appId appId
-     * @param {module:model/ReportInfo} emailDto emailDto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
-     */
-    sendReportUsingPOSTWithHttpInfo(appId, emailDto) {
-      let postBody = emailDto;
-
-      // verify the required parameter 'appId' is set
-      if (appId === undefined || appId === null) {
-        throw new Error("Missing the required parameter 'appId' when calling sendReportUsingPOST");
-      }
-
-      // verify the required parameter 'emailDto' is set
-      if (emailDto === undefined || emailDto === null) {
-        throw new Error("Missing the required parameter 'emailDto' when calling sendReportUsingPOST");
-      }
-
-
-      let pathParams = {
-        'appId': appId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['api_key'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = GenericApiResponse;
-
-      return this.apiClient.callApi(
-        '/users-web/api/v3/apps/{appId}/report/send', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
+    let pathParams = {
+      appId: appId
     }
+    let queryParams = {}
+    let headerParams = {}
+    let formParams = {}
 
-    /**
-     * Trigger emailing of report for an app
-     * @param {Number} appId appId
-     * @param {module:model/ReportInfo} emailDto emailDto
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
-     */
-    sendReportUsingPOST(appId, emailDto) {
-      return this.sendReportUsingPOSTWithHttpInfo(appId, emailDto)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericApiResponse
 
+    return this.apiClient.callApi(
+      '/users-web/api/v3/apps/{appId}/report/send',
+      'POST',
+      pathParams,
+      queryParams,
+      headerParams,
+      formParams,
+      postBody,
+      authNames,
+      contentTypes,
+      accepts,
+      returnType
+    )
+  }
 
+  /**
+   * Trigger emailing of report for an app
+   * @param {Number} appId appId
+   * @param {module:model/ReportInfo} emailDto emailDto
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  sendReportUsingPOST (appId, emailDto) {
+    return this.sendReportUsingPOSTWithHttpInfo(appId, emailDto).then(function (
+      response_and_data
+    ) {
+      return response_and_data.data
+    })
+  }
 }

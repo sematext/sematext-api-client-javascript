@@ -13,30 +13,30 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../stcloud/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'));
+    factory(require('expect.js'), require('../../stcloud/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript);
+    factory(root.expect, root.SematextApiClientJavascript)
   }
-}(this, function(expect, SematextApiClientJavascript) {
-  'use strict';
+})(this, function (expect, SematextApiClientJavascript) {
+  'use strict'
 
-  var instance;
+  var instance
 
-  beforeEach(function() {
-    instance = new SematextApiClientJavascript.SavedQueriesApi();
-  });
+  beforeEach(function () {
+    instance = new SematextApiClientJavascript.SavedQueriesApi()
+  })
 
-  describe('(package)', function() {
-    describe('SavedQueriesApi', function() {
-      describe('deleteSavedQueryUsingDELETE', function() {
-        it('should call deleteSavedQueryUsingDELETE successfully', function(done) {
+  describe('(package)', function () {
+    describe('SavedQueriesApi', function () {
+      describe('deleteSavedQueryUsingDELETE', function () {
+        it('should call deleteSavedQueryUsingDELETE successfully', function (done) {
           // TODO: uncomment, update parameter values for deleteSavedQueryUsingDELETE call and complete the assertions
           /*
           var updateableQueryId = 789;
@@ -70,11 +70,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getSavedQueriesForAppUsingGET', function() {
-        it('should call getSavedQueriesForAppUsingGET successfully', function(done) {
+          done()
+        })
+      })
+      describe('getSavedQueriesForAppUsingGET', function () {
+        it('should call getSavedQueriesForAppUsingGET successfully', function (done) {
           // TODO: uncomment, update parameter values for getSavedQueriesForAppUsingGET call and complete the assertions
           /*
           var appId = 789;
@@ -108,11 +108,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('saveQueryUsingPOST', function() {
-        it('should call saveQueryUsingPOST successfully', function(done) {
+          done()
+        })
+      })
+      describe('saveQueryUsingPOST', function () {
+        it('should call saveQueryUsingPOST successfully', function (done) {
           // TODO: uncomment, update parameter values for saveQueryUsingPOST call and complete the assertions
           /*
           var savedQueryDto = new SematextApiClientJavascript.SavedQuery();
@@ -212,11 +212,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('saveQueryUsingPUT', function() {
-        it('should call saveQueryUsingPUT successfully', function(done) {
+          done()
+        })
+      })
+      describe('saveQueryUsingPUT', function () {
+        it('should call saveQueryUsingPUT successfully', function (done) {
           // TODO: uncomment, update parameter values for saveQueryUsingPUT call and complete the assertions
           /*
           var savedQueryDto = new SematextApiClientJavascript.SavedQuery();
@@ -317,10 +317,9 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-    });
-  });
-
-}));
+          done()
+        })
+      })
+    })
+  })
+})

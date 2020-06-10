@@ -13,30 +13,30 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../stcloud/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'));
+    factory(require('expect.js'), require('../../stcloud/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript);
+    factory(root.expect, root.SematextApiClientJavascript)
   }
-}(this, function(expect, SematextApiClientJavascript) {
-  'use strict';
+})(this, function (expect, SematextApiClientJavascript) {
+  'use strict'
 
-  var instance;
+  var instance
 
-  beforeEach(function() {
-    instance = new SematextApiClientJavascript.TagApiControllerApi();
-  });
+  beforeEach(function () {
+    instance = new SematextApiClientJavascript.TagApiControllerApi()
+  })
 
-  describe('(package)', function() {
-    describe('TagApiControllerApi', function() {
-      describe('getTagNamesUsingGET', function() {
-        it('should call getTagNamesUsingGET successfully', function(done) {
+  describe('(package)', function () {
+    describe('TagApiControllerApi', function () {
+      describe('getTagNamesUsingGET', function () {
+        it('should call getTagNamesUsingGET successfully', function (done) {
           // TODO: uncomment, update parameter values for getTagNamesUsingGET call and complete the assertions
           /*
           var appIds = "appIds_example";
@@ -59,11 +59,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getUsingGET2', function() {
-        it('should call getUsingGET2 successfully', function(done) {
+          done()
+        })
+      })
+      describe('getUsingGET2', function () {
+        it('should call getUsingGET2 successfully', function (done) {
           // TODO: uncomment, update parameter values for getUsingGET2 call and complete the assertions
           /*
           var appIds = "appIds_example";
@@ -87,11 +87,11 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getUsingGET3', function() {
-        it('should call getUsingGET3 successfully', function(done) {
+          done()
+        })
+      })
+      describe('getUsingGET3', function () {
+        it('should call getUsingGET3 successfully', function (done) {
           // TODO: uncomment, update parameter values for getUsingGET3 call and complete the assertions
           /*
           var appIds = "appIds_example";
@@ -115,10 +115,9 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-    });
-  });
-
-}));
+          done()
+        })
+      })
+    })
+  })
+})

@@ -13,30 +13,30 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../stcloud/index'], factory);
+    define(['expect.js', '../../stcloud/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'));
+    factory(require('expect.js'), require('../../stcloud/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript);
+    factory(root.expect, root.SematextApiClientJavascript)
   }
-}(this, function(expect, SematextApiClientJavascript) {
-  'use strict';
+})(this, function (expect, SematextApiClientJavascript) {
+  'use strict'
 
-  var instance;
+  var instance
 
-  beforeEach(function() {
-    instance = new SematextApiClientJavascript.MonitoringAppApi();
-  });
+  beforeEach(function () {
+    instance = new SematextApiClientJavascript.MonitoringAppApi()
+  })
 
-  describe('(package)', function() {
-    describe('MonitoringAppApi', function() {
-      describe('createSpmApplication', function() {
-        it('should call createSpmApplication successfully', function(done) {
+  describe('(package)', function () {
+    describe('MonitoringAppApi', function () {
+      describe('createSpmApplication', function () {
+        it('should call createSpmApplication successfully', function (done) {
           // TODO: uncomment, update parameter values for createSpmApplication call and complete the assertions
           /*
           var applicationDetails = new SematextApiClientJavascript.CreateAppInfo();
@@ -80,10 +80,9 @@
           });
           */
           // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-    });
-  });
-
-}));
+          done()
+        })
+      })
+    })
+  })
+})

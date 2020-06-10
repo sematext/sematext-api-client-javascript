@@ -1,77 +1,67 @@
 # SematextApiClientJavascript.AppMetadata
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**awsCloudWatchAccessKey** | **String** |  | [optional] 
-**awsCloudWatchSecretKey** | **String** |  | [optional] 
-**awsFetchFrequency** | **String** |  | [optional] 
-**awsRegion** | **String** |  | [optional] 
-**subTypes** | **[String]** | Comma separated list of AWS types monitored by created app | [optional] 
 
+| Name                       | Type         | Description                                                | Notes      |
+| -------------------------- | ------------ | ---------------------------------------------------------- | ---------- |
+| **awsCloudWatchAccessKey** | **String**   |                                                            | [optional] |
+| **awsCloudWatchSecretKey** | **String**   |                                                            | [optional] |
+| **awsFetchFrequency**      | **String**   |                                                            | [optional] |
+| **awsRegion**              | **String**   |                                                            | [optional] |
+| **subTypes**               | **[String]** | Comma separated list of AWS types monitored by created app | [optional] |
 
 <a name="AwsFetchFrequencyEnum"></a>
+
 ## Enum: AwsFetchFrequencyEnum
 
+- `MINUTE` (value: `"MINUTE"`)
 
-* `MINUTE` (value: `"MINUTE"`)
+- `FIVE_MINUTES` (value: `"FIVE_MINUTES"`)
 
-* `FIVE_MINUTES` (value: `"FIVE_MINUTES"`)
-
-* `FIFTEEN_MINUTES` (value: `"FIFTEEN_MINUTES"`)
-
-
-
+- `FIFTEEN_MINUTES` (value: `"FIFTEEN_MINUTES"`)
 
 <a name="AwsRegionEnum"></a>
+
 ## Enum: AwsRegionEnum
 
+- `uSEAST1` (value: `"US_EAST_1"`)
 
-* `uSEAST1` (value: `"US_EAST_1"`)
+- `uSWEST1` (value: `"US_WEST_1"`)
 
-* `uSWEST1` (value: `"US_WEST_1"`)
+- `eUWEST1` (value: `"EU_WEST_1"`)
 
-* `eUWEST1` (value: `"EU_WEST_1"`)
+- `uSWEST2` (value: `"US_WEST_2"`)
 
-* `uSWEST2` (value: `"US_WEST_2"`)
+- `aPSOUTHEAST1` (value: `"AP_SOUTHEAST_1"`)
 
-* `aPSOUTHEAST1` (value: `"AP_SOUTHEAST_1"`)
+- `aPSOUTHEAST2` (value: `"AP_SOUTHEAST_2"`)
 
-* `aPSOUTHEAST2` (value: `"AP_SOUTHEAST_2"`)
+- `aPNORTHEAST1` (value: `"AP_NORTHEAST_1"`)
 
-* `aPNORTHEAST1` (value: `"AP_NORTHEAST_1"`)
+- `sAEAST1` (value: `"SA_EAST_1"`)
 
-* `sAEAST1` (value: `"SA_EAST_1"`)
+- `govCloud` (value: `"GovCloud"`)
 
-* `govCloud` (value: `"GovCloud"`)
+- `cNNORTH1` (value: `"CN_NORTH_1"`)
 
-* `cNNORTH1` (value: `"CN_NORTH_1"`)
+- `uSEAST2` (value: `"US_EAST_2"`)
 
-* `uSEAST2` (value: `"US_EAST_2"`)
+- `aPSOUTH1` (value: `"AP_SOUTH_1"`)
 
-* `aPSOUTH1` (value: `"AP_SOUTH_1"`)
+- `aPNORTHEAST2` (value: `"AP_NORTHEAST_2"`)
 
-* `aPNORTHEAST2` (value: `"AP_NORTHEAST_2"`)
+- `cACENTRAL1` (value: `"CA_CENTRAL_1"`)
 
-* `cACENTRAL1` (value: `"CA_CENTRAL_1"`)
+- `eUCENTRAL1` (value: `"EU_CENTRAL_1"`)
 
-* `eUCENTRAL1` (value: `"EU_CENTRAL_1"`)
-
-* `eUWEST2` (value: `"EU_WEST_2"`)
-
-
-
+- `eUWEST2` (value: `"EU_WEST_2"`)
 
 <a name="[SubTypesEnum]"></a>
+
 ## Enum: [SubTypesEnum]
 
+- `ec2` (value: `"aws_ec2"`)
 
-* `ec2` (value: `"aws_ec2"`)
+- `elb` (value: `"aws_elb"`)
 
-* `elb` (value: `"aws_elb"`)
-
-* `ebs` (value: `"aws_ebs"`)
-
-
-
-
+- `ebs` (value: `"aws_ebs"`)

@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The NotificationIntegration model module.
@@ -26,8 +26,7 @@ export class NotificationIntegration {
    * @alias module:model/NotificationIntegration
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>NotificationIntegration</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,31 +35,52 @@ export class NotificationIntegration {
    * @param {module:model/NotificationIntegration} obj Optional instance to populate.
    * @return {module:model/NotificationIntegration} The populated <code>NotificationIntegration</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new NotificationIntegration();
+      obj = obj || new NotificationIntegration()
       if (data.hasOwnProperty('applicability'))
-        obj.applicability = ApiClient.convertToType(data['applicability'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.applicability = ApiClient.convertToType(
+          data['applicability'],
+          'String'
+        )
       if (data.hasOwnProperty('createDate'))
-        obj.createDate = ApiClient.convertToType(data['createDate'], 'Date');
+        // eslint-disable-line no-prototype-builtins
+        obj.createDate = ApiClient.convertToType(data['createDate'], 'Date')
       if (data.hasOwnProperty('createdByOwner'))
-        obj.createdByOwner = ApiClient.convertToType(data['createdByOwner'], 'Boolean');
+        // eslint-disable-line no-prototype-builtins
+        obj.createdByOwner = ApiClient.convertToType(
+          data['createdByOwner'],
+          'Boolean'
+        )
       if (data.hasOwnProperty('creatorId'))
-        obj.creatorId = ApiClient.convertToType(data['creatorId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.creatorId = ApiClient.convertToType(data['creatorId'], 'Number')
       if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.id = ApiClient.convertToType(data['id'], 'Number')
       if (data.hasOwnProperty('integrationType'))
-        obj.integrationType = ApiClient.convertToType(data['integrationType'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.integrationType = ApiClient.convertToType(
+          data['integrationType'],
+          'String'
+        )
       if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.name = ApiClient.convertToType(data['name'], 'String')
       if (data.hasOwnProperty('params'))
-        obj.params = ApiClient.convertToType(data['params'], {'String': 'String'});
+        // eslint-disable-line no-prototype-builtins
+        obj.params = ApiClient.convertToType(data['params'], {
+          String: 'String'
+        })
       if (data.hasOwnProperty('state'))
-        obj.state = ApiClient.convertToType(data['state'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.state = ApiClient.convertToType(data['state'], 'String')
       if (data.hasOwnProperty('userId'))
-        obj.userId = ApiClient.convertToType(data['userId'], 'Number');
+        // eslint-disable-line no-prototype-builtins
+        obj.userId = ApiClient.convertToType(data['userId'], 'Number')
     }
-    return obj;
+    return obj
   }
 }
 
@@ -74,39 +94,39 @@ NotificationIntegration.ApplicabilityEnum = {
    * value: "NONE"
    * @const
    */
-  NONE: "NONE",
+  NONE: 'NONE',
 
   /**
    * value: "USE_ALWAYS"
    * @const
    */
-  USE_ALWAYS: "USE_ALWAYS"
-};
+  USE_ALWAYS: 'USE_ALWAYS'
+}
 
 /**
  * @member {module:model/NotificationIntegration.ApplicabilityEnum} applicability
  */
-NotificationIntegration.prototype.applicability = undefined;
+NotificationIntegration.prototype.applicability = undefined
 
 /**
  * @member {Date} createDate
  */
-NotificationIntegration.prototype.createDate = undefined;
+NotificationIntegration.prototype.createDate = undefined
 
 /**
  * @member {Boolean} createdByOwner
  */
-NotificationIntegration.prototype.createdByOwner = undefined;
+NotificationIntegration.prototype.createdByOwner = undefined
 
 /**
  * @member {Number} creatorId
  */
-NotificationIntegration.prototype.creatorId = undefined;
+NotificationIntegration.prototype.creatorId = undefined
 
 /**
  * @member {Number} id
  */
-NotificationIntegration.prototype.id = undefined;
+NotificationIntegration.prototype.id = undefined
 
 /**
  * Allowed values for the <code>integrationType</code> property.
@@ -118,59 +138,59 @@ NotificationIntegration.IntegrationTypeEnum = {
    * value: "PAGER_DUTY"
    * @const
    */
-  PAGER_DUTY: "PAGER_DUTY",
+  PAGER_DUTY: 'PAGER_DUTY',
 
   /**
    * value: "NAGIOS"
    * @const
    */
-  NAGIOS: "NAGIOS",
+  NAGIOS: 'NAGIOS',
 
   /**
    * value: "WEB_HOOKS"
    * @const
    */
-  WEB_HOOKS: "WEB_HOOKS",
+  WEB_HOOKS: 'WEB_HOOKS',
 
   /**
    * value: "WEB_HOOKS_TEMPLATE"
    * @const
    */
-  WEB_HOOKS_TEMPLATE: "WEB_HOOKS_TEMPLATE",
+  WEB_HOOKS_TEMPLATE: 'WEB_HOOKS_TEMPLATE',
 
   /**
    * value: "HIP_CHAT"
    * @const
    */
-  HIP_CHAT: "HIP_CHAT",
+  HIP_CHAT: 'HIP_CHAT',
 
   /**
    * value: "EMAIL_LIST"
    * @const
    */
-  EMAIL_LIST: "EMAIL_LIST",
+  EMAIL_LIST: 'EMAIL_LIST',
 
   /**
    * value: "TEMPORARY_EMAIL_LIST"
    * @const
    */
-  TEMPORARY_EMAIL_LIST: "TEMPORARY_EMAIL_LIST"
-};
+  TEMPORARY_EMAIL_LIST: 'TEMPORARY_EMAIL_LIST'
+}
 
 /**
  * @member {module:model/NotificationIntegration.IntegrationTypeEnum} integrationType
  */
-NotificationIntegration.prototype.integrationType = undefined;
+NotificationIntegration.prototype.integrationType = undefined
 
 /**
  * @member {String} name
  */
-NotificationIntegration.prototype.name = undefined;
+NotificationIntegration.prototype.name = undefined
 
 /**
  * @member {Object.<String, String>} params
  */
-NotificationIntegration.prototype.params = undefined;
+NotificationIntegration.prototype.params = undefined
 
 /**
  * Allowed values for the <code>state</code> property.
@@ -182,29 +202,27 @@ NotificationIntegration.StateEnum = {
    * value: "ACTIVE"
    * @const
    */
-  ACTIVE: "ACTIVE",
+  ACTIVE: 'ACTIVE',
 
   /**
    * value: "DISABLED"
    * @const
    */
-  DISABLED: "DISABLED",
+  DISABLED: 'DISABLED',
 
   /**
    * value: "DELETED"
    * @const
    */
-  DELETED: "DELETED"
-};
+  DELETED: 'DELETED'
+}
 
 /**
  * @member {module:model/NotificationIntegration.StateEnum} state
  */
-NotificationIntegration.prototype.state = undefined;
+NotificationIntegration.prototype.state = undefined
 
 /**
  * @member {Number} userId
  */
-NotificationIntegration.prototype.userId = undefined;
-
-
+NotificationIntegration.prototype.userId = undefined

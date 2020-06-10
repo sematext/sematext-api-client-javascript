@@ -13,7 +13,7 @@
  *
  */
 
-import {ApiClient} from '../ApiClient';
+import { ApiClient } from '../ApiClient'
 
 /**
  * The Error model module.
@@ -26,8 +26,7 @@ export class Error {
    * @alias module:model/Error
    * @class
    */
-  constructor() {
-  }
+  constructor () {}
 
   /**
    * Constructs a <code>Error</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,26 +35,26 @@ export class Error {
    * @param {module:model/Error} obj Optional instance to populate.
    * @return {module:model/Error} The populated <code>Error</code> instance.
    */
-  static constructFromObject(data, obj) {
+  static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new Error();
+      obj = obj || new Error()
       if (data.hasOwnProperty('code'))
-        obj.code = ApiClient.convertToType(data['code'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.code = ApiClient.convertToType(data['code'], 'String')
       if (data.hasOwnProperty('message'))
-        obj.message = ApiClient.convertToType(data['message'], 'String');
+        // eslint-disable-line no-prototype-builtins
+        obj.message = ApiClient.convertToType(data['message'], 'String')
     }
-    return obj;
+    return obj
   }
 }
 
 /**
  * @member {String} code
  */
-Error.prototype.code = undefined;
+Error.prototype.code = undefined
 
 /**
  * @member {String} message
  */
-Error.prototype.message = undefined;
-
-
+Error.prototype.message = undefined
