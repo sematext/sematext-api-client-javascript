@@ -1,4 +1,4 @@
-# Sematext Cloud - API Client - sematext-api-javascript
+# Sematext Cloud - API Client - sematext-api-client
 
 This client code talks to [Sematext Cloud API](https://sematext.com/cloud/) providing a way to automate setup of solution monitoring.<br>
 It's primary purpose is as a client module supporting [Sematext Terraform Provider](https://github.com/sematext/terraform-provider-sematext)
@@ -22,16 +22,16 @@ please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.co
 Then install it via:
 
 ```shell
-npm install sematext-api-client-javascript --save
+npm install sematext-api-client --save
 ```
 
-#### git
-
-#
+#### Node.js
 
 ```shell
-    npm install sematext/sematext-api-client-javascript --save
+const Stcloud = require("@sematext/sematext-api-client")
 ```
+
+
 
 ### Webpack Configuration
 
