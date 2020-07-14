@@ -45,7 +45,7 @@ export class AlertsApi {
     // verify the required parameter 'dto' is set
     if (dto === undefined || dto === null) {
       throw new Error(
-        'Missing the required parameter \'dto\' when calling createAlertUsingPOST'
+        "Missing the required parameter 'dto' when calling createAlertUsingPOST"
       )
     }
 
@@ -98,7 +98,7 @@ export class AlertsApi {
     // verify the required parameter 'updateableAlertId' is set
     if (updateableAlertId === undefined || updateableAlertId === null) {
       throw new Error(
-        'Missing the required parameter \'updateableAlertId\' when calling deleteAlertRuleUsingDELETE'
+        "Missing the required parameter 'updateableAlertId' when calling deleteAlertRuleUsingDELETE"
       )
     }
 
@@ -153,7 +153,7 @@ export class AlertsApi {
     // verify the required parameter 'updateableAlertId' is set
     if (updateableAlertId === undefined || updateableAlertId === null) {
       throw new Error(
-        'Missing the required parameter \'updateableAlertId\' when calling disableAlertRuleUsingPUT'
+        "Missing the required parameter 'updateableAlertId' when calling disableAlertRuleUsingPUT"
       )
     }
 
@@ -208,7 +208,7 @@ export class AlertsApi {
     // verify the required parameter 'updateableAlertId' is set
     if (updateableAlertId === undefined || updateableAlertId === null) {
       throw new Error(
-        'Missing the required parameter \'updateableAlertId\' when calling enableAlertRuleUsingPUT'
+        "Missing the required parameter 'updateableAlertId' when calling enableAlertRuleUsingPUT"
       )
     }
 
@@ -263,7 +263,7 @@ export class AlertsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling getAlertRulesForAppUsingGET'
+        "Missing the required parameter 'appId' when calling getAlertRulesForAppUsingGET"
       )
     }
 

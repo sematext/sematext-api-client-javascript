@@ -45,7 +45,7 @@ export class LogsAppApi {
     // verify the required parameter 'applicationDetails' is set
     if (applicationDetails === undefined || applicationDetails === null) {
       throw new Error(
-        'Missing the required parameter \'applicationDetails\' when calling createLogseneApplication'
+        "Missing the required parameter 'applicationDetails' when calling createLogseneApplication"
       )
     }
 

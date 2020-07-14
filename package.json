@@ -3,16 +3,32 @@
   "version": "0.1.1",
   "description": "Client library for https://sematext.com/docs/api/",
   "license": "SEE LICENSE IN LICENSE",
-  "repository": "https://github.com/sematext/sematext-api-client-javascript.git",
+  "authors": {
+    "name": "Sematext Packaging",
+    "email": "packages.sematext.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sematext/sematext-api-client-javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sematext/sematext-api-client-javascript/issues"
+  },
+  "keywords": [
+    "sematext",
+    "apm",
+    "cloud",
+    "monitoring",
+    "logging",
+    "alerting"
+  ],
   "main": "stcloud/index.js",
   "type": "module",
   "scripts": {
     "test": "mocha --require babel-core/register --recursive",
-    "standard": "standard lib/**/**/*.js bin/*.js",
-    "format": "prettier-standard --format",
-    "precommit": "npm run standard",
+    "lint": "prettier-standard --format",
     "auto-changelog": "auto-changelog",
-    "release": "release-it"
+    "release": "release-it -VV"
   },
   "browser": {
     "fs": false
@@ -36,7 +52,7 @@
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "prettier-standard": "^16.3.0",
-    "release-it": "^13.6.2",
+    "release-it": "^13.6.5",
     "sinon": "^9.0.2",
     "standard": "^14.3.4",
     "typescript": "^3.9.5"
@@ -47,13 +63,31 @@
   "release-it": {
     "github": {
       "release": true,
+      "tokenRef": "GITHUB_TOKEN",
       "releaseNotes": "npx auto-changelog --stdout --commit-limit false -u --template ./changelog.hbs"
     },
     "hooks": {
-      "after:bump": "npx auto-changelog -p"
+      "before:init": [
+        "npm run lint",
+        "npm test"
+      ],
+      "after:bump": "npx auto-changelog -p",
+      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     },
     "npm": {
       "ignoreVersion": true
+    }
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "changelog.hbs",
+    "commitLimit": false,
+    "package": true,
+    "replaceText": {
+      "FIX: ": "",
+      "NEW: ": "",
+      "IMPROVE: ": "",
+      "DOC: ": ""
     }
   },
   "standard": {

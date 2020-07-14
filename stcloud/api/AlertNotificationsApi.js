@@ -47,14 +47,14 @@ export class AlertNotificationsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling getAlertNotificationsForAppUsingPOST'
+        "Missing the required parameter 'appId' when calling getAlertNotificationsForAppUsingPOST"
       )
     }
 
     // verify the required parameter 'timeInterval' is set
     if (timeInterval === undefined || timeInterval === null) {
       throw new Error(
-        'Missing the required parameter \'timeInterval\' when calling getAlertNotificationsForAppUsingPOST'
+        "Missing the required parameter 'timeInterval' when calling getAlertNotificationsForAppUsingPOST"
       )
     }
 
@@ -113,7 +113,7 @@ export class AlertNotificationsApi {
     // verify the required parameter 'timeInterval' is set
     if (timeInterval === undefined || timeInterval === null) {
       throw new Error(
-        'Missing the required parameter \'timeInterval\' when calling getAlertNotificationsForUserUsingPOST'
+        "Missing the required parameter 'timeInterval' when calling getAlertNotificationsForUserUsingPOST"
       )
     }
 

@@ -47,14 +47,14 @@ export class AwsSettingsControllerApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling updateUsingPUT'
+        "Missing the required parameter 'appId' when calling updateUsingPUT"
       )
     }
 
     // verify the required parameter 'dto' is set
     if (dto === undefined || dto === null) {
       throw new Error(
-        'Missing the required parameter \'dto\' when calling updateUsingPUT'
+        "Missing the required parameter 'dto' when calling updateUsingPUT"
       )
     }
 
