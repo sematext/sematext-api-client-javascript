@@ -45,7 +45,7 @@ export class SubscriptionsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling listUsingGET1'
+        "Missing the required parameter 'appId' when calling listUsingGET1"
       )
     }
 
@@ -101,14 +101,14 @@ export class SubscriptionsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling sendReportUsingPOST'
+        "Missing the required parameter 'appId' when calling sendReportUsingPOST"
       )
     }
 
     // verify the required parameter 'emailDto' is set
     if (emailDto === undefined || emailDto === null) {
       throw new Error(
-        'Missing the required parameter \'emailDto\' when calling sendReportUsingPOST'
+        "Missing the required parameter 'emailDto' when calling sendReportUsingPOST"
       )
     }
 

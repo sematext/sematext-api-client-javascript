@@ -47,14 +47,14 @@ export class MetricsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling listDataSeriesUsingPOST1'
+        "Missing the required parameter 'appId' when calling listDataSeriesUsingPOST1"
       )
     }
 
     // verify the required parameter 'requestBody' is set
     if (requestBody === undefined || requestBody === null) {
       throw new Error(
-        'Missing the required parameter \'requestBody\' when calling listDataSeriesUsingPOST1'
+        "Missing the required parameter 'requestBody' when calling listDataSeriesUsingPOST1"
       )
     }
 
@@ -113,14 +113,14 @@ export class MetricsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling listFiltersUsingPOST'
+        "Missing the required parameter 'appId' when calling listFiltersUsingPOST"
       )
     }
 
     // verify the required parameter 'requestBody' is set
     if (requestBody === undefined || requestBody === null) {
       throw new Error(
-        'Missing the required parameter \'requestBody\' when calling listFiltersUsingPOST'
+        "Missing the required parameter 'requestBody' when calling listFiltersUsingPOST"
       )
     }
 
@@ -177,7 +177,7 @@ export class MetricsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling listMetricsKeysUsingGET1'
+        "Missing the required parameter 'appId' when calling listMetricsKeysUsingGET1"
       )
     }
 
@@ -232,7 +232,7 @@ export class MetricsApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling listMetricsUsingGET1'
+        "Missing the required parameter 'appId' when calling listMetricsUsingGET1"
       )
     }
 

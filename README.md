@@ -31,8 +31,6 @@ npm install sematext-api-client --save
 const Stcloud = require("@sematext/sematext-api-client")
 ```
 
-
-
 ### Webpack Configuration
 
 Using Webpack you may encounter the following error: "Module not found: Error:

@@ -51,7 +51,7 @@ export class TagApiControllerApi {
     // verify the required parameter 'appIds' is set
     if (appIds === undefined || appIds === null) {
       throw new Error(
-        'Missing the required parameter \'appIds\' when calling getTagNamesUsingGET'
+        "Missing the required parameter 'appIds' when calling getTagNamesUsingGET"
       )
     }
 
@@ -129,14 +129,14 @@ export class TagApiControllerApi {
     // verify the required parameter 'appIds' is set
     if (appIds === undefined || appIds === null) {
       throw new Error(
-        'Missing the required parameter \'appIds\' when calling getUsingGET2'
+        "Missing the required parameter 'appIds' when calling getUsingGET2"
       )
     }
 
     // verify the required parameter 'tag' is set
     if (tag === undefined || tag === null) {
       throw new Error(
-        'Missing the required parameter \'tag\' when calling getUsingGET2'
+        "Missing the required parameter 'tag' when calling getUsingGET2"
       )
     }
 
@@ -216,14 +216,14 @@ export class TagApiControllerApi {
     // verify the required parameter 'appIds' is set
     if (appIds === undefined || appIds === null) {
       throw new Error(
-        'Missing the required parameter \'appIds\' when calling getUsingGET3'
+        "Missing the required parameter 'appIds' when calling getUsingGET3"
       )
     }
 
     // verify the required parameter 'tag' is set
     if (tag === undefined || tag === null) {
       throw new Error(
-        'Missing the required parameter \'tag\' when calling getUsingGET3'
+        "Missing the required parameter 'tag' when calling getUsingGET3"
       )
     }
 

@@ -45,7 +45,7 @@ export class ResetPasswordApi {
     // verify the required parameter 'dto' is set
     if (dto === undefined || dto === null) {
       throw new Error(
-        'Missing the required parameter \'dto\' when calling resetPasswordUsingPOST'
+        "Missing the required parameter 'dto' when calling resetPasswordUsingPOST"
       )
     }
 

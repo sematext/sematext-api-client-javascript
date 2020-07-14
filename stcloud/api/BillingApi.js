@@ -47,21 +47,21 @@ export class BillingApi {
     // verify the required parameter 'service' is set
     if (service === undefined || service === null) {
       throw new Error(
-        'Missing the required parameter \'service\' when calling getDetailedInvoiceUsingGET'
+        "Missing the required parameter 'service' when calling getDetailedInvoiceUsingGET"
       )
     }
 
     // verify the required parameter 'year' is set
     if (year === undefined || year === null) {
       throw new Error(
-        'Missing the required parameter \'year\' when calling getDetailedInvoiceUsingGET'
+        "Missing the required parameter 'year' when calling getDetailedInvoiceUsingGET"
       )
     }
 
     // verify the required parameter 'month' is set
     if (month === undefined || month === null) {
       throw new Error(
-        'Missing the required parameter \'month\' when calling getDetailedInvoiceUsingGET'
+        "Missing the required parameter 'month' when calling getDetailedInvoiceUsingGET"
       )
     }
 
@@ -177,14 +177,14 @@ export class BillingApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        'Missing the required parameter \'appId\' when calling updatePlanUsingPUT'
+        "Missing the required parameter 'appId' when calling updatePlanUsingPUT"
       )
     }
 
     // verify the required parameter 'dto' is set
     if (dto === undefined || dto === null) {
       throw new Error(
-        'Missing the required parameter \'dto\' when calling updatePlanUsingPUT'
+        "Missing the required parameter 'dto' when calling updatePlanUsingPUT"
       )
     }
 
