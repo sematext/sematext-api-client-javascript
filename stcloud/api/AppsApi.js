@@ -91,7 +91,7 @@ export class AppsApi {
     // verify the required parameter 'anyStateAppId' is set
     if (anyStateAppId === undefined || anyStateAppId === null) {
       throw new Error(
-        'Missing the required parameter \'anyStateAppId\' when calling getUsingGET'
+        "Missing the required parameter 'anyStateAppId' when calling getUsingGET"
       )
     }
 
@@ -146,7 +146,7 @@ export class AppsApi {
     // verify the required parameter 'invitation' is set
     if (invitation === undefined || invitation === null) {
       throw new Error(
-        'Missing the required parameter \'invitation\' when calling inviteAppGuestsUsingPOST'
+        "Missing the required parameter 'invitation' when calling inviteAppGuestsUsingPOST"
       )
     }
 
@@ -289,7 +289,7 @@ export class AppsApi {
     // verify the required parameter 'anyStateAppId' is set
     if (anyStateAppId === undefined || anyStateAppId === null) {
       throw new Error(
-        'Missing the required parameter \'anyStateAppId\' when calling updateDescriptionUsingPUT'
+        "Missing the required parameter 'anyStateAppId' when calling updateDescriptionUsingPUT"
       )
     }
 
@@ -349,14 +349,14 @@ export class AppsApi {
     // verify the required parameter 'dto' is set
     if (dto === undefined || dto === null) {
       throw new Error(
-        'Missing the required parameter \'dto\' when calling updateUsingPUT1'
+        "Missing the required parameter 'dto' when calling updateUsingPUT1"
       )
     }
 
     // verify the required parameter 'anyStateAppId' is set
     if (anyStateAppId === undefined || anyStateAppId === null) {
       throw new Error(
-        'Missing the required parameter \'anyStateAppId\' when calling updateUsingPUT1'
+        "Missing the required parameter 'anyStateAppId' when calling updateUsingPUT1"
       )
     }
 
