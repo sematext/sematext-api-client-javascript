@@ -1,37 +1,76 @@
-# Sematext Cloud - API Client - sematext-api-client
 
-This client code talks to [Sematext Cloud API](https://sematext.com/cloud/) providing a way to automate setup of solution monitoring.<br>
-It's primary purpose is as a client module supporting [Sematext Terraform Provider](https://github.com/sematext/terraform-provider-sematext)
-<br><br>
+# <img src="./assets/octi-blue.png" valign="bottom" width="60px"/>**&nbsp;&nbsp;sematext-api-client-javascript**
 
-Further information and API browsing refer to the [Sematext Cloud API web page](https://sematext.com/docs/api/)
+<br>
+
+>*A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext Cloud solution monitoring, alerting and log shipping.*
+
+<br>
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+<br>
+One of a family of clients in following flavours:
+<br>
+<br>
+
+* [sematext-api-client-javascript](https://github.com/sematext/sematext-api-client-javascript "Javascript")
+* [sematext-api-client-rust](https://github.com/sematext/sematext-api-client-rust "Rust")
+* [sematext-api-client-ruby](https://github.com/sematext/sematext-api-client-ruby "Ruby")
+* [sematext-api-client-python](https://github.com/sematext/sematext-api-client-python "Python")
+* [sematext-api-client-php](https://github.com/sematext/sematext-api-client-php "PHP")
+* [sematext-api-client-java](https://github.com/sematext/sematext-api-client-java "Java")
+* [sematext-api-client-go](https://github.com/sematext/sematext-api-client-go "Go/Golang")
+
+<br>
+Refer to below link for deeper information on the API itself.
+<br>
+<br>
+
+* [Sematext Cloud API Reference](https://github.com/sematext/sematext-api-client-go "API Reference")
+
+<br>
+
+## Contents
+
+- [&nbsp;&nbsp;sematext-api-client-javascript](#sematext-api-client-javascript)
+  - [Contents](#contents)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+    - [*Node.js*](#nodejs)
+    - [*Webpack Configuration*](#webpack-configuration)
+  - [Authentication](#authentication)
+  - [Testing](#testing)
+  - [Reference](#reference)
+  - [Documentation for Models](#documentation-for-models)
+
+<br>
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Installation
+<br>
 
-### For [Node.js](https://nodejs.org/)
+### Installation
 
-#### npm
 
-To publish the library as a [npm](https://www.npmjs.com/),
-please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.com/getting-started/publishing-npm-packages).
+#### *Node.js*
 
-Then install it via:
+
+Install via:
 
 ```shell
 npm install sematext-api-client --save
 ```
 
-#### Node.js
 
 ```shell
 const Stcloud = require("@sematext/sematext-api-client")
 ```
+<br>
 
-### Webpack Configuration
+#### *Webpack Configuration*
 
 Using Webpack you may encounter the following error: "Module not found: Error:
 Cannot resolve module", most certainly you should disable AMD loader. Add/merge
@@ -48,8 +87,10 @@ module: {
   ]
 }
 ```
+<br>
+<br>
 
-### Authentication
+## Authentication
 
 This client code requires a Sematext API Access token to function. You can find this by logging into your [Sematext Cloud Account](https://apps.sematext.com/ui/account/api)
 
@@ -81,14 +122,17 @@ api.getAlertNotificationsForAppUsingPOST(appId, timeInterval).then(
   }
 )
 ```
+<br><br>
 
-### Testing
-
+## Testing
 Note: Tests are currently inhibited by a Mocha dependancy on Yargs.
 This client is generated code so this should have litle impact.
-Marking as a pre-release until this can be resolved.
+Marking as a pre-release until this is resolved upstream.
 
-## Documentation for API Endpoints
+<br>
+<br>
+
+## Reference
 
 All URIs are relative to _https://localhost_
 
