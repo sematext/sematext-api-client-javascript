@@ -1,10 +1,32 @@
-# Sematext Cloud - API Client - sematext-api-client
+# ![Alt](./assets/sematext-logo.svg "Title")&nbsp;&nbsp;&nbsp;sematext-api-client-javascript
 
-This client code talks to [Sematext Cloud API](https://sematext.com/cloud/) providing a way to automate setup of solution monitoring.<br>
-It's primary purpose is as a client module supporting [Sematext Terraform Provider](https://github.com/sematext/terraform-provider-sematext)
-<br><br>
 
-Further information and API browsing refer to the [Sematext Cloud API web page](https://sematext.com/docs/api/)
+A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext's solution monitoring, alerting and log shipping solutions.<br>
+<br>
+This is one of a family of clients :
+<br>
+
+* [sematext-api-client-javascript](https://github.com/sematext/sematext-api-client-javascript "Javascript")
+* [sematext-api-client-rust](https://github.com/sematext/sematext-api-client-rust "Rust")
+* [sematext-api-client-ruby](https://github.com/sematext/sematext-api-client-ruby "Ruby")
+* [sematext-api-client-python](https://github.com/sematext/sematext-api-client-python "Python")
+* [sematext-api-client-php](https://github.com/sematext/sematext-api-client-php "PHP")
+* [sematext-api-client-java](https://github.com/sematext/sematext-api-client-java "Java")
+* [sematext-api-client-go](https://github.com/sematext/sematext-api-client-go "Go/Golang")
+
+<br>
+Refer to below link for deeper information on the API itself.
+
+* [Sematext Cloud API Reference](https://github.com/sematext/sematext-api-client-go "API Reference")
+<br>
+
+## Contents
+
+1. [Getting Started](#getting-started)
+2. [Installation](#installation)
+3. [Authentication](#authentication)
+4. [Client Reference](#reference)
+
 
 ## Getting Started
 
@@ -81,14 +103,13 @@ api.getAlertNotificationsForAppUsingPOST(appId, timeInterval).then(
   }
 )
 ```
-
+<br><br>
 ### Testing
-
 Note: Tests are currently inhibited by a Mocha dependancy on Yargs.
 This client is generated code so this should have litle impact.
 Marking as a pre-release until this can be resolved.
-
-## Documentation for API Endpoints
+<br><br>
+## Reference
 
 All URIs are relative to _https://localhost_
 
