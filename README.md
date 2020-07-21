@@ -5,6 +5,8 @@
 
 >*A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext Cloud solution monitoring, alerting and log shipping.*
 
+<br>
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <br>
@@ -50,10 +52,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 <br>
 
-## Installation
+### Installation
 
 
-### *Node.js*
+#### *Node.js*
 
 
 Install via:
@@ -68,7 +70,7 @@ const Stcloud = require("@sematext/sematext-api-client")
 ```
 <br>
 
-### *Webpack Configuration*
+#### *Webpack Configuration*
 
 Using Webpack you may encounter the following error: "Module not found: Error:
 Cannot resolve module", most certainly you should disable AMD loader. Add/merge
