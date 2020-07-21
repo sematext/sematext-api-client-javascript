@@ -1,4 +1,4 @@
-<img src="./assets/octi-blue.png" align="left" width="60px"/>
+<img src="./assets/octi-blue.png" align="right" width="60px"/>
 
 # &nbsp;&nbsp;sematext-api-client-javascript
 
