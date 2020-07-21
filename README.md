@@ -1,9 +1,12 @@
-# <div style="vertical-align:middle"><img src="./assets/octi-blue.png" width="50px">&nbsp;&nbsp;sematext-api-client-javascript</div>
+<img src="./assets/octi-blue.png" align="left" width="60px"/>
+
+# &nbsp;&nbsp;sematext-api-client-javascript
 
 
-A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext's Cloud offering for solution monitoring, alerting and log shipping.<br>
+>*A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext's Cloud offering for solution monitoring, alerting and log shipping.*
+
 <br>
-This is one of a family of clients :
+One of a family of clients in various flavours:
 <br>
 
 * [sematext-api-client-javascript](https://github.com/sematext/sematext-api-client-javascript "Javascript")
@@ -23,10 +26,16 @@ Refer to below link for deeper information on the API itself.
 
 ## Contents
 
-1. [Getting Started](#getting-started)
-2. [Installation](#installation)
-3. [Authentication](#authentication)
-4. [Client Reference](#reference)
+- [&nbsp;&nbsp;sematext-api-client-javascript](#sematext-api-client-javascript)
+  - [Contents](#contents)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+    - [*Node.js*](#nodejs)
+    - [*Webpack Configuration*](#webpack-configuration)
+  - [Authentication](#authentication)
+  - [Testing](#testing)
+  - [Reference](#reference)
+  - [Documentation for Models](#documentation-for-models)
 
 <br>
 
