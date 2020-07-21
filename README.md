@@ -1,7 +1,9 @@
-# <img src="./assets/octi-blue.png" width="60px"/>&nbsp;&nbsp;sematext-api-client-javascript
+<img src="./assets/octi-blue.png" align="right" width="60px"/>
+
+# &nbsp;&nbsp;sematext-api-client-javascript
 
 
->*A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext's Cloud offering for solution monitoring, alerting and log shipping.*
+>*A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext Cloud solution monitoring, alerting and log shipping.*
 
 <br>
 One of a family of clients in various flavours:
