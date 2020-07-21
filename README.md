@@ -27,7 +27,7 @@ Refer to below link for deeper information on the API itself.
 <br>
 <br>
 
-* [Sematext Cloud API Reference](https://github.com/sematext/sematext-api-client-go "API Reference")
+* [Sematext Cloud API Reference](https://sematext.com/docs/api/ "API Reference")
 
 <br>
 
