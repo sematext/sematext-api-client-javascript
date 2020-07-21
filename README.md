@@ -1,6 +1,6 @@
-# <table><tr><td vlign="center"><img src="./assets/octi-blue.png" width="50px"></td><td vlign="center">sematext-api-client-javascript </td></tr></table>
+# <table border="0"><tr><td vlign="center"><img src="./assets/octi-blue.png" width="50px"></td><td vlign="center">sematext-api-client-javascript </td></tr></table>
 
-A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext's solution monitoring, alerting and log shipping solutions.<br>
+A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext's Cloud offering for solution monitoring, alerting and log shipping solutions.<br>
 <br>
 This is one of a family of clients :
 <br>
@@ -17,6 +17,7 @@ This is one of a family of clients :
 Refer to below link for deeper information on the API itself.
 
 * [Sematext Cloud API Reference](https://github.com/sematext/sematext-api-client-go "API Reference")
+
 <br>
 
 ## Contents
@@ -26,33 +27,33 @@ Refer to below link for deeper information on the API itself.
 3. [Authentication](#authentication)
 4. [Client Reference](#reference)
 
+<br>
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+<br>
+
 ## Installation
 
-### For [Node.js](https://nodejs.org/)
 
-#### npm
+### *Node.js*
 
-To publish the library as a [npm](https://www.npmjs.com/),
-please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
-Then install it via:
+Install via:
 
 ```shell
 npm install sematext-api-client --save
 ```
 
-#### Node.js
 
 ```shell
 const Stcloud = require("@sematext/sematext-api-client")
 ```
+<br>
 
-### Webpack Configuration
+### *Webpack Configuration*
 
 Using Webpack you may encounter the following error: "Module not found: Error:
 Cannot resolve module", most certainly you should disable AMD loader. Add/merge
@@ -69,8 +70,10 @@ module: {
   ]
 }
 ```
+<br>
+<br>
 
-### Authentication
+## Authentication
 
 This client code requires a Sematext API Access token to function. You can find this by logging into your [Sematext Cloud Account](https://apps.sematext.com/ui/account/api)
 
@@ -103,11 +106,15 @@ api.getAlertNotificationsForAppUsingPOST(appId, timeInterval).then(
 )
 ```
 <br><br>
-### Testing
+
+## Testing
 Note: Tests are currently inhibited by a Mocha dependancy on Yargs.
 This client is generated code so this should have litle impact.
-Marking as a pre-release until this can be resolved.
-<br><br>
+Marking as a pre-release until this is resolved upstream.
+
+<br>
+<br>
+
 ## Reference
 
 All URIs are relative to _https://localhost_
