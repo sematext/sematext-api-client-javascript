@@ -6,7 +6,7 @@
 >*A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext Cloud solution monitoring, alerting and log shipping.*
 
 <br>
-One of a family of clients in various flavours:
+One of a family of clients in following flavours:
 <br>
 
 * [sematext-api-client-javascript](https://github.com/sematext/sematext-api-client-javascript "Javascript")
