@@ -10,6 +10,7 @@
 <br>
 One of a family of clients in following flavours:
 <br>
+<br>
 
 * [sematext-api-client-javascript](https://github.com/sematext/sematext-api-client-javascript "Javascript")
 * [sematext-api-client-rust](https://github.com/sematext/sematext-api-client-rust "Rust")
@@ -21,6 +22,8 @@ One of a family of clients in following flavours:
 
 <br>
 Refer to below link for deeper information on the API itself.
+<br>
+<br>
 
 * [Sematext Cloud API Reference](https://github.com/sematext/sematext-api-client-go "API Reference")
 
