@@ -1,4 +1,4 @@
-# ![Alt](./assets/sematext-logo.svg "Title")&nbsp;&nbsp;&nbsp;sematext-api-client-javascript
+# <img src="./assets/octi-blue.png" width="50px">&nbsp;&nbsp;&nbsp;sematext-api-client-javascript
 
 
 A [Sematext Cloud](https://sematext.com/cloud/) API client, for interaction with Sematext's solution monitoring, alerting and log shipping solutions.<br>
