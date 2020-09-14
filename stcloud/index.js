@@ -83,8 +83,7 @@ import { TagApiControllerApi } from './api/TagApiControllerApi'
  * </pre>
  * </p>
  * @module index
- * @version 0.1.0
- */
+  */
 export {
   /**
    * The ApiClient constructor.

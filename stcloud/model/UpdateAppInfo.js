@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The UpdateAppInfo model module.
  * @module model/UpdateAppInfo
- * @version 0.1.0
- */
+  */
 export class UpdateAppInfo {
   /**
    * Constructs a new <code>UpdateAppInfo</code>.
    * @alias module:model/UpdateAppInfo
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>UpdateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class UpdateAppInfo {
    * @param {module:model/UpdateAppInfo} obj Optional instance to populate.
    * @return {module:model/UpdateAppInfo} The populated <code>UpdateAppInfo</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new UpdateAppInfo()
       if (data.hasOwnProperty('description'))
@@ -76,45 +75,45 @@ export class UpdateAppInfo {
   }
 }
 
-/**
- * @member {String} description
- */
-UpdateAppInfo.prototype.description = undefined
+  /**
+   * @member {String} description
+   */
+  UpdateAppInfo.prototype.description = undefined
 
-/**
- * @member {Number} ignorePercentage
- */
-UpdateAppInfo.prototype.ignorePercentage = undefined
+  /**
+   * @member {Number} ignorePercentage
+   */
+  UpdateAppInfo.prototype.ignorePercentage = undefined
 
-/**
- * @member {Number} maxEvents
- */
-UpdateAppInfo.prototype.maxEvents = undefined
+  /**
+   * @member {Number} maxEvents
+   */
+  UpdateAppInfo.prototype.maxEvents = undefined
 
-/**
- * @member {Number} maxLimitMB
- */
-UpdateAppInfo.prototype.maxLimitMB = undefined
+  /**
+   * @member {Number} maxLimitMB
+   */
+  UpdateAppInfo.prototype.maxLimitMB = undefined
 
-/**
- * @member {String} name
- */
-UpdateAppInfo.prototype.name = undefined
+  /**
+   * @member {String} name
+   */
+  UpdateAppInfo.prototype.name = undefined
 
-/**
- * @member {Boolean} sampling
- */
-UpdateAppInfo.prototype.sampling = undefined
+  /**
+   * @member {Boolean} sampling
+   */
+  UpdateAppInfo.prototype.sampling = undefined
 
-/**
- * @member {Number} samplingPercentage
- */
-UpdateAppInfo.prototype.samplingPercentage = undefined
+  /**
+   * @member {Number} samplingPercentage
+   */
+  UpdateAppInfo.prototype.samplingPercentage = undefined
 
-/**
- * @member {Boolean} staggering
- */
-UpdateAppInfo.prototype.staggering = undefined
+  /**
+   * @member {Boolean} staggering
+   */
+  UpdateAppInfo.prototype.staggering = undefined
 
 /**
  * Allowed values for the <code>status</code> property.

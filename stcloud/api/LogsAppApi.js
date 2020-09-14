@@ -20,8 +20,7 @@ import { GenericApiResponse } from '../model/GenericApiResponse'
 /**
  * LogsApp service.
  * @module api/LogsAppApi
- * @version 0.1.0
- */
+  */
 export class LogsAppApi {
   /**
    * Constructs a new LogsAppApi.
@@ -30,7 +29,7 @@ export class LogsAppApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -39,7 +38,7 @@ export class LogsAppApi {
    * @param {module:model/CreateAppInfo} applicationDetails Details of the application to be created
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  createLogseneApplicationWithHttpInfo (applicationDetails) {
+  createLogseneApplicationWithHttpInfo(applicationDetails) {
     let postBody = applicationDetails
 
     // verify the required parameter 'applicationDetails' is set
@@ -79,7 +78,7 @@ export class LogsAppApi {
    * @param {module:model/CreateAppInfo} applicationDetails Details of the application to be created
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  createLogseneApplication (applicationDetails) {
+  createLogseneApplication(applicationDetails) {
     return this.createLogseneApplicationWithHttpInfo(applicationDetails).then(
       function (response_and_data) {
         return response_and_data.data

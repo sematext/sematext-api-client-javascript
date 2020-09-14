@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The BasicAuthMethodDto model module.
  * @module model/BasicAuthMethodDto
- * @version 0.1.0
- */
+  */
 export class BasicAuthMethodDto {
   /**
    * Constructs a new <code>BasicAuthMethodDto</code>.
    * @alias module:model/BasicAuthMethodDto
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>BasicAuthMethodDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class BasicAuthMethodDto {
    * @param {module:model/BasicAuthMethodDto} obj Optional instance to populate.
    * @return {module:model/BasicAuthMethodDto} The populated <code>BasicAuthMethodDto</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new BasicAuthMethodDto()
       if (data.hasOwnProperty('authType'))

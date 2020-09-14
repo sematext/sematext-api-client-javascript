@@ -19,15 +19,14 @@ import { AppMetadata } from './AppMetadata'
 /**
  * The CreateAppInfo model module.
  * @module model/CreateAppInfo
- * @version 0.1.0
- */
+  */
 export class CreateAppInfo {
   /**
    * Constructs a new <code>CreateAppInfo</code>.
    * @alias module:model/CreateAppInfo
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>CreateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,7 +35,7 @@ export class CreateAppInfo {
    * @param {module:model/CreateAppInfo} obj Optional instance to populate.
    * @return {module:model/CreateAppInfo} The populated <code>CreateAppInfo</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new CreateAppInfo()
       if (data.hasOwnProperty('appType'))
@@ -65,28 +64,28 @@ export class CreateAppInfo {
   }
 }
 
-/**
- * @member {String} appType
- */
-CreateAppInfo.prototype.appType = undefined
+  /**
+   * @member {String} appType
+   */
+  CreateAppInfo.prototype.appType = undefined
 
-/**
- * @member {String} discountCode
- */
-CreateAppInfo.prototype.discountCode = undefined
+  /**
+   * @member {String} discountCode
+   */
+  CreateAppInfo.prototype.discountCode = undefined
 
-/**
- * @member {Number} initialPlanId
- */
-CreateAppInfo.prototype.initialPlanId = undefined
+  /**
+   * @member {Number} initialPlanId
+   */
+  CreateAppInfo.prototype.initialPlanId = undefined
 
-/**
- * AWS app meta data. Applicable only for `aws` appType
- * @member {module:model/AppMetadata} metaData
- */
-CreateAppInfo.prototype.metaData = undefined
+  /**
+   * AWS app meta data. Applicable only for `aws` appType
+   * @member {module:model/AppMetadata} metaData
+   */
+  CreateAppInfo.prototype.metaData = undefined
 
-/**
- * @member {String} name
- */
-CreateAppInfo.prototype.name = undefined
+  /**
+   * @member {String} name
+   */
+  CreateAppInfo.prototype.name = undefined

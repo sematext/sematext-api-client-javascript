@@ -19,15 +19,14 @@ import { AlertRuleScheduleTimeRangeDto } from './AlertRuleScheduleTimeRangeDto'
 /**
  * The AlertRuleScheduleWeekdayDto model module.
  * @module model/AlertRuleScheduleWeekdayDto
- * @version 0.1.0
- */
+  */
 export class AlertRuleScheduleWeekdayDto {
   /**
    * Constructs a new <code>AlertRuleScheduleWeekdayDto</code>.
    * @alias module:model/AlertRuleScheduleWeekdayDto
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>AlertRuleScheduleWeekdayDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,7 +35,7 @@ export class AlertRuleScheduleWeekdayDto {
    * @param {module:model/AlertRuleScheduleWeekdayDto} obj Optional instance to populate.
    * @return {module:model/AlertRuleScheduleWeekdayDto} The populated <code>AlertRuleScheduleWeekdayDto</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new AlertRuleScheduleWeekdayDto()
       if (data.hasOwnProperty('day'))
@@ -61,27 +60,27 @@ export class AlertRuleScheduleWeekdayDto {
   }
 }
 
-/**
- * @member {String} day
- */
-AlertRuleScheduleWeekdayDto.prototype.day = undefined
+  /**
+   * @member {String} day
+   */
+  AlertRuleScheduleWeekdayDto.prototype.day = undefined
 
-/**
- * @member {Number} index
- */
-AlertRuleScheduleWeekdayDto.prototype.index = undefined
+  /**
+   * @member {Number} index
+   */
+  AlertRuleScheduleWeekdayDto.prototype.index = undefined
 
-/**
- * @member {Array.<module:model/AlertRuleScheduleTimeRangeDto>} intervals
- */
-AlertRuleScheduleWeekdayDto.prototype.intervals = undefined
+  /**
+   * @member {Array.<module:model/AlertRuleScheduleTimeRangeDto>} intervals
+   */
+  AlertRuleScheduleWeekdayDto.prototype.intervals = undefined
 
-/**
- * @member {String} label
- */
-AlertRuleScheduleWeekdayDto.prototype.label = undefined
+  /**
+   * @member {String} label
+   */
+  AlertRuleScheduleWeekdayDto.prototype.label = undefined
 
-/**
- * @member {String} type
- */
-AlertRuleScheduleWeekdayDto.prototype.type = undefined
+  /**
+   * @member {String} type
+   */
+  AlertRuleScheduleWeekdayDto.prototype.type = undefined

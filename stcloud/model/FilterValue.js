@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The FilterValue model module.
  * @module model/FilterValue
- * @version 0.1.0
- */
+  */
 export class FilterValue {
   /**
    * Constructs a new <code>FilterValue</code>.
    * @alias module:model/FilterValue
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>FilterValue</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class FilterValue {
    * @param {module:model/FilterValue} obj Optional instance to populate.
    * @return {module:model/FilterValue} The populated <code>FilterValue</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new FilterValue()
       if (data.hasOwnProperty('aggType'))
@@ -61,32 +60,32 @@ export class FilterValue {
   }
 }
 
-/**
- * @member {String} aggType
- */
-FilterValue.prototype.aggType = undefined
+  /**
+   * @member {String} aggType
+   */
+  FilterValue.prototype.aggType = undefined
 
-/**
- * @member {String} filterName
- */
-FilterValue.prototype.filterName = undefined
+  /**
+   * @member {String} filterName
+   */
+  FilterValue.prototype.filterName = undefined
 
-/**
- * @member {String} key
- */
-FilterValue.prototype.key = undefined
+  /**
+   * @member {String} key
+   */
+  FilterValue.prototype.key = undefined
 
-/**
- * @member {String} label
- */
-FilterValue.prototype.label = undefined
+  /**
+   * @member {String} label
+   */
+  FilterValue.prototype.label = undefined
 
-/**
- * @member {String} name
- */
-FilterValue.prototype.name = undefined
+  /**
+   * @member {String} name
+   */
+  FilterValue.prototype.name = undefined
 
-/**
- * @member {Array.<String>} values
- */
-FilterValue.prototype.values = undefined
+  /**
+   * @member {Array.<String>} values
+   */
+  FilterValue.prototype.values = undefined

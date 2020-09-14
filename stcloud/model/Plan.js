@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The Plan model module.
  * @module model/Plan
- * @version 0.1.0
- */
+  */
 export class Plan {
   /**
    * Constructs a new <code>Plan</code>.
    * @alias module:model/Plan
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>Plan</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class Plan {
    * @param {module:model/Plan} obj Optional instance to populate.
    * @return {module:model/Plan} The populated <code>Plan</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new Plan()
       if (data.hasOwnProperty('appType'))
@@ -97,55 +96,55 @@ export class Plan {
   }
 }
 
-/**
- * @member {String} appType
- */
-Plan.prototype.appType = undefined
+  /**
+   * @member {String} appType
+   */
+  Plan.prototype.appType = undefined
 
-/**
- * @member {Boolean} custom
- */
-Plan.prototype.custom = undefined
+  /**
+   * @member {Boolean} custom
+   */
+  Plan.prototype.custom = undefined
 
-/**
- * @member {Number} dataRetentionHours
- */
-Plan.prototype.dataRetentionHours = undefined
+  /**
+   * @member {Number} dataRetentionHours
+   */
+  Plan.prototype.dataRetentionHours = undefined
 
-/**
- * @member {Boolean} defaultTrialPlan
- */
-Plan.prototype.defaultTrialPlan = undefined
+  /**
+   * @member {Boolean} defaultTrialPlan
+   */
+  Plan.prototype.defaultTrialPlan = undefined
 
-/**
- * @member {Boolean} free
- */
-Plan.prototype.free = undefined
+  /**
+   * @member {Boolean} free
+   */
+  Plan.prototype.free = undefined
 
-/**
- * @member {Number} freeTrialDays
- */
-Plan.prototype.freeTrialDays = undefined
+  /**
+   * @member {Number} freeTrialDays
+   */
+  Plan.prototype.freeTrialDays = undefined
 
-/**
- * @member {Number} id
- */
-Plan.prototype.id = undefined
+  /**
+   * @member {Number} id
+   */
+  Plan.prototype.id = undefined
 
-/**
- * @member {Number} maxAlerts
- */
-Plan.prototype.maxAlerts = undefined
+  /**
+   * @member {Number} maxAlerts
+   */
+  Plan.prototype.maxAlerts = undefined
 
-/**
- * @member {Number} maxDailyEvents
- */
-Plan.prototype.maxDailyEvents = undefined
+  /**
+   * @member {Number} maxDailyEvents
+   */
+  Plan.prototype.maxDailyEvents = undefined
 
-/**
- * @member {String} name
- */
-Plan.prototype.name = undefined
+  /**
+   * @member {String} name
+   */
+  Plan.prototype.name = undefined
 
 /**
  * Allowed values for the <code>planScheme</code> property.

@@ -19,8 +19,7 @@ import { Error } from './Error'
 /**
  * The GenericApiResponse model module.
  * @module model/GenericApiResponse
- * @version 0.1.0
- */
+  */
 export class GenericApiResponse {
   /**
    * Constructs a new <code>GenericApiResponse</code>.
@@ -28,7 +27,7 @@ export class GenericApiResponse {
    * @alias module:model/GenericApiResponse
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>GenericApiResponse</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,7 +36,7 @@ export class GenericApiResponse {
    * @param {module:model/GenericApiResponse} obj Optional instance to populate.
    * @return {module:model/GenericApiResponse} The populated <code>GenericApiResponse</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new GenericApiResponse()
       if (data.hasOwnProperty('data'))
@@ -57,23 +56,23 @@ export class GenericApiResponse {
   }
 }
 
-/**
- * Contains actual data when response is successful. Key and Value is specific to each endpoint
- * @member {Object} data
- */
-GenericApiResponse.prototype.data = undefined
+  /**
+   * Contains actual data when response is successful. Key and Value is specific to each endpoint
+   * @member {Object} data
+   */
+  GenericApiResponse.prototype.data = undefined
 
-/**
- * @member {Array.<module:model/Error>} errors
- */
-GenericApiResponse.prototype.errors = undefined
+  /**
+   * @member {Array.<module:model/Error>} errors
+   */
+  GenericApiResponse.prototype.errors = undefined
 
-/**
- * @member {String} message
- */
-GenericApiResponse.prototype.message = undefined
+  /**
+   * @member {String} message
+   */
+  GenericApiResponse.prototype.message = undefined
 
-/**
- * @member {Boolean} success
- */
-GenericApiResponse.prototype.success = undefined
+  /**
+   * @member {Boolean} success
+   */
+  GenericApiResponse.prototype.success = undefined

@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The ServiceIntegration model module.
  * @module model/ServiceIntegration
- * @version 0.1.0
- */
+  */
 export class ServiceIntegration {
   /**
    * Constructs a new <code>ServiceIntegration</code>.
    * @alias module:model/ServiceIntegration
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>ServiceIntegration</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class ServiceIntegration {
    * @param {module:model/ServiceIntegration} obj Optional instance to populate.
    * @return {module:model/ServiceIntegration} The populated <code>ServiceIntegration</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new ServiceIntegration()
       if (data.hasOwnProperty('appTypeId'))
@@ -94,62 +93,62 @@ export class ServiceIntegration {
   }
 }
 
-/**
- * @member {Number} appTypeId
- */
-ServiceIntegration.prototype.appTypeId = undefined
+  /**
+   * @member {Number} appTypeId
+   */
+  ServiceIntegration.prototype.appTypeId = undefined
 
-/**
- * @member {String} appTypeName
- */
-ServiceIntegration.prototype.appTypeName = undefined
+  /**
+   * @member {String} appTypeName
+   */
+  ServiceIntegration.prototype.appTypeName = undefined
 
-/**
- * @member {String} displayName
- */
-ServiceIntegration.prototype.displayName = undefined
+  /**
+   * @member {String} displayName
+   */
+  ServiceIntegration.prototype.displayName = undefined
 
-/**
- * @member {Boolean} enabled
- */
-ServiceIntegration.prototype.enabled = undefined
+  /**
+   * @member {Boolean} enabled
+   */
+  ServiceIntegration.prototype.enabled = undefined
 
-/**
- * @member {Number} externalProductId
- */
-ServiceIntegration.prototype.externalProductId = undefined
+  /**
+   * @member {Number} externalProductId
+   */
+  ServiceIntegration.prototype.externalProductId = undefined
 
-/**
- * @member {String} externalProductName
- */
-ServiceIntegration.prototype.externalProductName = undefined
+  /**
+   * @member {String} externalProductName
+   */
+  ServiceIntegration.prototype.externalProductName = undefined
 
-/**
- * @member {Number} id
- */
-ServiceIntegration.prototype.id = undefined
+  /**
+   * @member {Number} id
+   */
+  ServiceIntegration.prototype.id = undefined
 
-/**
- * @member {String} integrationType
- */
-ServiceIntegration.prototype.integrationType = undefined
+  /**
+   * @member {String} integrationType
+   */
+  ServiceIntegration.prototype.integrationType = undefined
 
-/**
- * @member {Number} ordinal
- */
-ServiceIntegration.prototype.ordinal = undefined
+  /**
+   * @member {Number} ordinal
+   */
+  ServiceIntegration.prototype.ordinal = undefined
 
-/**
- * @member {Number} parentIntegrationId
- */
-ServiceIntegration.prototype.parentIntegrationId = undefined
+  /**
+   * @member {Number} parentIntegrationId
+   */
+  ServiceIntegration.prototype.parentIntegrationId = undefined
 
-/**
- * @member {String} sematextService
- */
-ServiceIntegration.prototype.sematextService = undefined
+  /**
+   * @member {String} sematextService
+   */
+  ServiceIntegration.prototype.sematextService = undefined
 
-/**
- * @member {Boolean} visible
- */
-ServiceIntegration.prototype.visible = undefined
+  /**
+   * @member {Boolean} visible
+   */
+  ServiceIntegration.prototype.visible = undefined
