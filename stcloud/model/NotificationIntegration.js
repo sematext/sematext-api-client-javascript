@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The NotificationIntegration model module.
  * @module model/NotificationIntegration
- * @version 0.1.0
- */
+  */
 export class NotificationIntegration {
   /**
    * Constructs a new <code>NotificationIntegration</code>.
    * @alias module:model/NotificationIntegration
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>NotificationIntegration</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class NotificationIntegration {
    * @param {module:model/NotificationIntegration} obj Optional instance to populate.
    * @return {module:model/NotificationIntegration} The populated <code>NotificationIntegration</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new NotificationIntegration()
       if (data.hasOwnProperty('applicability'))

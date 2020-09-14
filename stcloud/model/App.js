@@ -22,15 +22,14 @@ import { UserRole } from './UserRole'
 /**
  * The App model module.
  * @module model/App
- * @version 0.1.0
- */
+  */
 export class App {
   /**
    * Constructs a new <code>App</code>.
    * @alias module:model/App
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>App</code> from a plain JavaScript object, optionally creating a new instance.
@@ -39,7 +38,7 @@ export class App {
    * @param {module:model/App} obj Optional instance to populate.
    * @return {module:model/App} The populated <code>App</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new App()
       if (data.hasOwnProperty('ajaxThreshold'))
@@ -177,137 +176,137 @@ export class App {
   }
 }
 
-/**
- * @member {Number} ajaxThreshold
- */
-App.prototype.ajaxThreshold = undefined
+  /**
+   * @member {Number} ajaxThreshold
+   */
+  App.prototype.ajaxThreshold = undefined
 
-/**
- * @member {String} appType
- */
-App.prototype.appType = undefined
+  /**
+   * @member {String} appType
+   */
+  App.prototype.appType = undefined
 
-/**
- * @member {Number} appTypeId
- */
-App.prototype.appTypeId = undefined
+  /**
+   * @member {Number} appTypeId
+   */
+  App.prototype.appTypeId = undefined
 
-/**
- * @member {String} creatorEmail
- */
-App.prototype.creatorEmail = undefined
+  /**
+   * @member {String} creatorEmail
+   */
+  App.prototype.creatorEmail = undefined
 
-/**
- * @member {String} creditCardExpiry
- */
-App.prototype.creditCardExpiry = undefined
+  /**
+   * @member {String} creditCardExpiry
+   */
+  App.prototype.creditCardExpiry = undefined
 
-/**
- * @member {String} creditCardNumber
- */
-App.prototype.creditCardNumber = undefined
+  /**
+   * @member {String} creditCardNumber
+   */
+  App.prototype.creditCardNumber = undefined
 
-/**
- * @member {String} description
- */
-App.prototype.description = undefined
+  /**
+   * @member {String} description
+   */
+  App.prototype.description = undefined
 
-/**
- * @member {String} displayStatus
- */
-App.prototype.displayStatus = undefined
+  /**
+   * @member {String} displayStatus
+   */
+  App.prototype.displayStatus = undefined
 
-/**
- * @member {Number} firstDataSavedDate
- */
-App.prototype.firstDataSavedDate = undefined
+  /**
+   * @member {Number} firstDataSavedDate
+   */
+  App.prototype.firstDataSavedDate = undefined
 
-/**
- * @member {Number} id
- */
-App.prototype.id = undefined
+  /**
+   * @member {Number} id
+   */
+  App.prototype.id = undefined
 
-/**
- * @member {module:model/ServiceIntegration} integration
- */
-App.prototype.integration = undefined
+  /**
+   * @member {module:model/ServiceIntegration} integration
+   */
+  App.prototype.integration = undefined
 
-/**
- * @member {Number} lastDataReceivedDate
- */
-App.prototype.lastDataReceivedDate = undefined
+  /**
+   * @member {Number} lastDataReceivedDate
+   */
+  App.prototype.lastDataReceivedDate = undefined
 
-/**
- * @member {Number} lastDataSavedDate
- */
-App.prototype.lastDataSavedDate = undefined
+  /**
+   * @member {Number} lastDataSavedDate
+   */
+  App.prototype.lastDataSavedDate = undefined
 
-/**
- * @member {String} loggedInUserAppRole
- */
-App.prototype.loggedInUserAppRole = undefined
+  /**
+   * @member {String} loggedInUserAppRole
+   */
+  App.prototype.loggedInUserAppRole = undefined
 
-/**
- * @member {Boolean} monthlyInvoiceAccount
- */
-App.prototype.monthlyInvoiceAccount = undefined
+  /**
+   * @member {Boolean} monthlyInvoiceAccount
+   */
+  App.prototype.monthlyInvoiceAccount = undefined
 
-/**
- * @member {String} name
- */
-App.prototype.name = undefined
+  /**
+   * @member {String} name
+   */
+  App.prototype.name = undefined
 
-/**
- * @member {String} ownerEmail
- */
-App.prototype.ownerEmail = undefined
+  /**
+   * @member {String} ownerEmail
+   */
+  App.prototype.ownerEmail = undefined
 
-/**
- * @member {module:model/BasicOrganizationDto} owningOrganization
- */
-App.prototype.owningOrganization = undefined
+  /**
+   * @member {module:model/BasicOrganizationDto} owningOrganization
+   */
+  App.prototype.owningOrganization = undefined
 
-/**
- * @member {Number} pageLoadThreshold
- */
-App.prototype.pageLoadThreshold = undefined
+  /**
+   * @member {Number} pageLoadThreshold
+   */
+  App.prototype.pageLoadThreshold = undefined
 
-/**
- * @member {Number} paymentMethodId
- */
-App.prototype.paymentMethodId = undefined
+  /**
+   * @member {Number} paymentMethodId
+   */
+  App.prototype.paymentMethodId = undefined
 
-/**
- * @member {module:model/Plan} plan
- */
-App.prototype.plan = undefined
+  /**
+   * @member {module:model/Plan} plan
+   */
+  App.prototype.plan = undefined
 
-/**
- * @member {Boolean} prepaidAccount
- */
-App.prototype.prepaidAccount = undefined
+  /**
+   * @member {Boolean} prepaidAccount
+   */
+  App.prototype.prepaidAccount = undefined
 
-/**
- * @member {String} status
- */
-App.prototype.status = undefined
+  /**
+   * @member {String} status
+   */
+  App.prototype.status = undefined
 
-/**
- * @member {String} token
- */
-App.prototype.token = undefined
+  /**
+   * @member {String} token
+   */
+  App.prototype.token = undefined
 
-/**
- * @member {Number} trialEndDate
- */
-App.prototype.trialEndDate = undefined
+  /**
+   * @member {Number} trialEndDate
+   */
+  App.prototype.trialEndDate = undefined
 
-/**
- * @member {Number} urlGroupLimit
- */
-App.prototype.urlGroupLimit = undefined
+  /**
+   * @member {Number} urlGroupLimit
+   */
+  App.prototype.urlGroupLimit = undefined
 
-/**
- * @member {Array.<module:model/UserRole>} userRoles
- */
-App.prototype.userRoles = undefined
+  /**
+   * @member {Array.<module:model/UserRole>} userRoles
+   */
+  App.prototype.userRoles = undefined

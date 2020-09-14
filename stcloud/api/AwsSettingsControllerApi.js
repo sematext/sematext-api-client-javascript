@@ -20,8 +20,7 @@ import { GenericApiResponse } from '../model/GenericApiResponse'
 /**
  * AwsSettingsController service.
  * @module api/AwsSettingsControllerApi
- * @version 0.1.0
- */
+  */
 export class AwsSettingsControllerApi {
   /**
    * Constructs a new AwsSettingsControllerApi.
@@ -30,7 +29,7 @@ export class AwsSettingsControllerApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -41,7 +40,7 @@ export class AwsSettingsControllerApi {
    * @param {module:model/CloudWatchSettings} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  updateUsingPUTWithHttpInfo (appId, dto) {
+  updateUsingPUTWithHttpInfo(appId, dto) {
     let postBody = dto
 
     // verify the required parameter 'appId' is set
@@ -92,7 +91,7 @@ export class AwsSettingsControllerApi {
    * @param {module:model/CloudWatchSettings} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  updateUsingPUT (appId, dto) {
+  updateUsingPUT(appId, dto) {
     return this.updateUsingPUTWithHttpInfo(appId, dto).then(function (
       response_and_data
     ) {

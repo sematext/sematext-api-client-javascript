@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The CloudWatchSettings model module.
  * @module model/CloudWatchSettings
- * @version 0.1.0
- */
+  */
 export class CloudWatchSettings {
   /**
    * Constructs a new <code>CloudWatchSettings</code>.
    * @alias module:model/CloudWatchSettings
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>CloudWatchSettings</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class CloudWatchSettings {
    * @param {module:model/CloudWatchSettings} obj Optional instance to populate.
    * @return {module:model/CloudWatchSettings} The populated <code>CloudWatchSettings</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new CloudWatchSettings()
       if (data.hasOwnProperty('accessKey'))
@@ -58,10 +57,10 @@ export class CloudWatchSettings {
   }
 }
 
-/**
- * @member {String} accessKey
- */
-CloudWatchSettings.prototype.accessKey = undefined
+    /**
+     * @member {String} accessKey
+     */
+    CloudWatchSettings.prototype.accessKey = undefined
 
 /**
  * Allowed values for the <code>fetchFrequency</code> property.

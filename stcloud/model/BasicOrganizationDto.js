@@ -19,15 +19,14 @@ import { BasicAuthMethodDto } from './BasicAuthMethodDto'
 /**
  * The BasicOrganizationDto model module.
  * @module model/BasicOrganizationDto
- * @version 0.1.0
- */
+  */
 export class BasicOrganizationDto {
   /**
    * Constructs a new <code>BasicOrganizationDto</code>.
    * @alias module:model/BasicOrganizationDto
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>BasicOrganizationDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,7 +35,7 @@ export class BasicOrganizationDto {
    * @param {module:model/BasicOrganizationDto} obj Optional instance to populate.
    * @return {module:model/BasicOrganizationDto} The populated <code>BasicOrganizationDto</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new BasicOrganizationDto()
       if (data.hasOwnProperty('authMethods'))
@@ -58,15 +57,15 @@ export class BasicOrganizationDto {
   }
 }
 
-/**
- * @member {Array.<module:model/BasicAuthMethodDto>} authMethods
- */
-BasicOrganizationDto.prototype.authMethods = undefined
+  /**
+   * @member {Array.<module:model/BasicAuthMethodDto>} authMethods
+   */
+  BasicOrganizationDto.prototype.authMethods = undefined
 
-/**
- * @member {String} name
- */
-BasicOrganizationDto.prototype.name = undefined
+  /**
+   * @member {String} name
+   */
+  BasicOrganizationDto.prototype.name = undefined
 
 /**
  * Allowed values for the <code>status</code> property.

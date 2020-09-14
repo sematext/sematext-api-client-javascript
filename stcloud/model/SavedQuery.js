@@ -20,15 +20,14 @@ import { UserPermissions } from './UserPermissions'
 /**
  * The SavedQuery model module.
  * @module model/SavedQuery
- * @version 0.1.0
- */
+  */
 export class SavedQuery {
   /**
    * Constructs a new <code>SavedQuery</code>.
    * @alias module:model/SavedQuery
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>SavedQuery</code> from a plain JavaScript object, optionally creating a new instance.
@@ -37,7 +36,7 @@ export class SavedQuery {
    * @param {module:model/SavedQuery} obj Optional instance to populate.
    * @return {module:model/SavedQuery} The populated <code>SavedQuery</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new SavedQuery()
       if (data.hasOwnProperty('alertRule'))
@@ -104,67 +103,67 @@ export class SavedQuery {
   }
 }
 
-/**
- * @member {module:model/AlertRule} alertRule
- */
-SavedQuery.prototype.alertRule = undefined
+  /**
+   * @member {module:model/AlertRule} alertRule
+   */
+  SavedQuery.prototype.alertRule = undefined
 
-/**
- * @member {Boolean} allowModification
- */
-SavedQuery.prototype.allowModification = undefined
+  /**
+   * @member {Boolean} allowModification
+   */
+  SavedQuery.prototype.allowModification = undefined
 
-/**
- * @member {String} applicationId
- */
-SavedQuery.prototype.applicationId = undefined
+  /**
+   * @member {String} applicationId
+   */
+  SavedQuery.prototype.applicationId = undefined
 
-/**
- * @member {String} applicationName
- */
-SavedQuery.prototype.applicationName = undefined
+  /**
+   * @member {String} applicationName
+   */
+  SavedQuery.prototype.applicationName = undefined
 
-/**
- * @member {String} applicationToken
- */
-SavedQuery.prototype.applicationToken = undefined
+  /**
+   * @member {String} applicationToken
+   */
+  SavedQuery.prototype.applicationToken = undefined
 
-/**
- * @member {String} creatorEmail
- */
-SavedQuery.prototype.creatorEmail = undefined
+  /**
+   * @member {String} creatorEmail
+   */
+  SavedQuery.prototype.creatorEmail = undefined
 
-/**
- * @member {String} id
- */
-SavedQuery.prototype.id = undefined
+  /**
+   * @member {String} id
+   */
+  SavedQuery.prototype.id = undefined
 
-/**
- * @member {String} labelColor
- */
-SavedQuery.prototype.labelColor = undefined
+  /**
+   * @member {String} labelColor
+   */
+  SavedQuery.prototype.labelColor = undefined
 
-/**
- * @member {Object} logseneAlertType
- */
-SavedQuery.prototype.logseneAlertType = undefined
+  /**
+   * @member {Object} logseneAlertType
+   */
+  SavedQuery.prototype.logseneAlertType = undefined
 
-/**
- * @member {String} ownerEmail
- */
-SavedQuery.prototype.ownerEmail = undefined
+  /**
+   * @member {String} ownerEmail
+   */
+  SavedQuery.prototype.ownerEmail = undefined
 
-/**
- * @member {String} queryName
- */
-SavedQuery.prototype.queryName = undefined
+  /**
+   * @member {String} queryName
+   */
+  SavedQuery.prototype.queryName = undefined
 
-/**
- * @member {String} queryString
- */
-SavedQuery.prototype.queryString = undefined
+  /**
+   * @member {String} queryString
+   */
+  SavedQuery.prototype.queryString = undefined
 
-/**
- * @member {module:model/UserPermissions} userPermissions
- */
-SavedQuery.prototype.userPermissions = undefined
+  /**
+   * @member {module:model/UserPermissions} userPermissions
+   */
+  SavedQuery.prototype.userPermissions = undefined

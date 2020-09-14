@@ -20,7 +20,6 @@ import { GenericApiResponse } from '../model/GenericApiResponse'
 /**
  * AlertNotifications service.
  * @module api/AlertNotificationsApi
- * @version 0.1.0
  */
 export class AlertNotificationsApi {
   /**
@@ -30,7 +29,7 @@ export class AlertNotificationsApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -41,7 +40,7 @@ export class AlertNotificationsApi {
    * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  getAlertNotificationsForAppUsingPOSTWithHttpInfo (appId, timeInterval) {
+  getAlertNotificationsForAppUsingPOSTWithHttpInfo(appId, timeInterval) {
     let postBody = timeInterval
 
     // verify the required parameter 'appId' is set
@@ -92,7 +91,7 @@ export class AlertNotificationsApi {
    * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  getAlertNotificationsForAppUsingPOST (appId, timeInterval) {
+  getAlertNotificationsForAppUsingPOST(appId, timeInterval) {
     return this.getAlertNotificationsForAppUsingPOSTWithHttpInfo(
       appId,
       timeInterval
@@ -107,7 +106,7 @@ export class AlertNotificationsApi {
    * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  getAlertNotificationsForUserUsingPOSTWithHttpInfo (timeInterval) {
+  getAlertNotificationsForUserUsingPOSTWithHttpInfo(timeInterval) {
     let postBody = timeInterval
 
     // verify the required parameter 'timeInterval' is set
@@ -148,7 +147,7 @@ export class AlertNotificationsApi {
    * @param {module:model/AlertNotificationRequest} timeInterval Time Interval
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  getAlertNotificationsForUserUsingPOST (timeInterval) {
+  getAlertNotificationsForUserUsingPOST(timeInterval) {
     return this.getAlertNotificationsForUserUsingPOSTWithHttpInfo(
       timeInterval
     ).then(function (response_and_data) {

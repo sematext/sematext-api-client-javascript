@@ -20,8 +20,7 @@ import { GenericApiResponse } from '../model/GenericApiResponse'
 /**
  * Alerts service.
  * @module api/AlertsApi
- * @version 0.1.0
- */
+  */
 export class AlertsApi {
   /**
    * Constructs a new AlertsApi.
@@ -30,7 +29,7 @@ export class AlertsApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -39,7 +38,7 @@ export class AlertsApi {
    * @param {module:model/AlertRule} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  createAlertUsingPOSTWithHttpInfo (dto) {
+  createAlertUsingPOSTWithHttpInfo(dto) {
     let postBody = dto
 
     // verify the required parameter 'dto' is set
@@ -79,7 +78,7 @@ export class AlertsApi {
    * @param {module:model/AlertRule} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  createAlertUsingPOST (dto) {
+  createAlertUsingPOST(dto) {
     return this.createAlertUsingPOSTWithHttpInfo(dto).then(function (
       response_and_data
     ) {
@@ -92,7 +91,7 @@ export class AlertsApi {
    * @param {Number} updateableAlertId updateableAlertId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  deleteAlertRuleUsingDELETEWithHttpInfo (updateableAlertId) {
+  deleteAlertRuleUsingDELETEWithHttpInfo(updateableAlertId) {
     let postBody = null
 
     // verify the required parameter 'updateableAlertId' is set
@@ -134,7 +133,7 @@ export class AlertsApi {
    * @param {Number} updateableAlertId updateableAlertId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  deleteAlertRuleUsingDELETE (updateableAlertId) {
+  deleteAlertRuleUsingDELETE(updateableAlertId) {
     return this.deleteAlertRuleUsingDELETEWithHttpInfo(updateableAlertId).then(
       function (response_and_data) {
         return response_and_data.data
@@ -147,7 +146,7 @@ export class AlertsApi {
    * @param {Number} updateableAlertId updateableAlertId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  disableAlertRuleUsingPUTWithHttpInfo (updateableAlertId) {
+  disableAlertRuleUsingPUTWithHttpInfo(updateableAlertId) {
     let postBody = null
 
     // verify the required parameter 'updateableAlertId' is set
@@ -189,7 +188,7 @@ export class AlertsApi {
    * @param {Number} updateableAlertId updateableAlertId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  disableAlertRuleUsingPUT (updateableAlertId) {
+  disableAlertRuleUsingPUT(updateableAlertId) {
     return this.disableAlertRuleUsingPUTWithHttpInfo(updateableAlertId).then(
       function (response_and_data) {
         return response_and_data.data
@@ -202,7 +201,7 @@ export class AlertsApi {
    * @param {Number} updateableAlertId updateableAlertId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  enableAlertRuleUsingPUTWithHttpInfo (updateableAlertId) {
+  enableAlertRuleUsingPUTWithHttpInfo(updateableAlertId) {
     let postBody = null
 
     // verify the required parameter 'updateableAlertId' is set
@@ -244,7 +243,7 @@ export class AlertsApi {
    * @param {Number} updateableAlertId updateableAlertId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  enableAlertRuleUsingPUT (updateableAlertId) {
+  enableAlertRuleUsingPUT(updateableAlertId) {
     return this.enableAlertRuleUsingPUTWithHttpInfo(updateableAlertId).then(
       function (response_and_data) {
         return response_and_data.data
@@ -257,7 +256,7 @@ export class AlertsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  getAlertRulesForAppUsingGETWithHttpInfo (appId) {
+  getAlertRulesForAppUsingGETWithHttpInfo(appId) {
     let postBody = null
 
     // verify the required parameter 'appId' is set
@@ -299,7 +298,7 @@ export class AlertsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  getAlertRulesForAppUsingGET (appId) {
+  getAlertRulesForAppUsingGET(appId) {
     return this.getAlertRulesForAppUsingGETWithHttpInfo(appId).then(function (
       response_and_data
     ) {

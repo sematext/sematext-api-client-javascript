@@ -18,8 +18,7 @@ import { ApiClient } from '../ApiClient'
 /**
  * TagApiController service.
  * @module api/TagApiControllerApi
- * @version 0.1.0
- */
+  */
 export class TagApiControllerApi {
   /**
    * Constructs a new TagApiControllerApi.
@@ -28,7 +27,7 @@ export class TagApiControllerApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -44,7 +43,7 @@ export class TagApiControllerApi {
    * @param {Boolean} opts.rum rum (default to true)
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
    */
-  getTagNamesUsingGETWithHttpInfo (appIds, opts) {
+  getTagNamesUsingGETWithHttpInfo(appIds, opts) {
     opts = opts || {}
     let postBody = null
 
@@ -101,7 +100,7 @@ export class TagApiControllerApi {
    * @param {Boolean} opts.rum rum (default to true)
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
    */
-  getTagNamesUsingGET (appIds, opts) {
+  getTagNamesUsingGET(appIds, opts) {
     return this.getTagNamesUsingGETWithHttpInfo(appIds, opts).then(function (
       response_and_data
     ) {
@@ -122,7 +121,7 @@ export class TagApiControllerApi {
    * @param {Boolean} opts.rum rum (default to true)
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
    */
-  getUsingGET2WithHttpInfo (appIds, tag, opts) {
+  getUsingGET2WithHttpInfo(appIds, tag, opts) {
     opts = opts || {}
     let postBody = null
 
@@ -188,7 +187,7 @@ export class TagApiControllerApi {
    * @param {Boolean} opts.rum rum (default to true)
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
    */
-  getUsingGET2 (appIds, tag, opts) {
+  getUsingGET2(appIds, tag, opts) {
     return this.getUsingGET2WithHttpInfo(appIds, tag, opts).then(function (
       response_and_data
     ) {
@@ -209,7 +208,7 @@ export class TagApiControllerApi {
    * @param {Boolean} opts.rum rum (default to true)
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
    */
-  getUsingGET3WithHttpInfo (appIds, tag, opts) {
+  getUsingGET3WithHttpInfo(appIds, tag, opts) {
     opts = opts || {}
     let postBody = null
 
@@ -275,7 +274,7 @@ export class TagApiControllerApi {
    * @param {Boolean} opts.rum rum (default to true)
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
    */
-  getUsingGET3 (appIds, tag, opts) {
+  getUsingGET3(appIds, tag, opts) {
     return this.getUsingGET3WithHttpInfo(appIds, tag, opts).then(function (
       response_and_data
     ) {

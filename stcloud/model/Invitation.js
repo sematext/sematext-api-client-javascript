@@ -19,15 +19,14 @@ import { App } from './App'
 /**
  * The Invitation model module.
  * @module model/Invitation
- * @version 0.1.0
- */
+  */
 export class Invitation {
   /**
    * Constructs a new <code>Invitation</code>.
    * @alias module:model/Invitation
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>Invitation</code> from a plain JavaScript object, optionally creating a new instance.
@@ -36,7 +35,7 @@ export class Invitation {
    * @param {module:model/Invitation} obj Optional instance to populate.
    * @return {module:model/Invitation} The populated <code>Invitation</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new Invitation()
       if (data.hasOwnProperty('app'))
@@ -86,27 +85,27 @@ export class Invitation {
   }
 }
 
-/**
- * For invite request, only app.id needs to be set.
- * @member {module:model/App} app
- */
-Invitation.prototype.app = undefined
+  /**
+   * For invite request, only app.id needs to be set.
+   * @member {module:model/App} app
+   */
+  Invitation.prototype.app = undefined
 
-/**
- * For invite request, only apps.id needs to be set.
- * @member {Array.<module:model/App>} apps
- */
-Invitation.prototype.apps = undefined
+  /**
+   * For invite request, only apps.id needs to be set.
+   * @member {Array.<module:model/App>} apps
+   */
+  Invitation.prototype.apps = undefined
 
-/**
- * @member {Number} id
- */
-Invitation.prototype.id = undefined
+  /**
+   * @member {Number} id
+   */
+  Invitation.prototype.id = undefined
 
-/**
- * @member {Date} inviteDate
- */
-Invitation.prototype.inviteDate = undefined
+  /**
+   * @member {Date} inviteDate
+   */
+  Invitation.prototype.inviteDate = undefined
 
 /**
  * Allowed values for the <code>inviteStatus</code> property.

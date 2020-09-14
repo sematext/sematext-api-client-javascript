@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The AlertNotificationRequest model module.
  * @module model/AlertNotificationRequest
- * @version 0.1.0
- */
+  */
 export class AlertNotificationRequest {
   /**
    * Constructs a new <code>AlertNotificationRequest</code>.
    * @alias module:model/AlertNotificationRequest
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>AlertNotificationRequest</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class AlertNotificationRequest {
    * @param {module:model/AlertNotificationRequest} obj Optional instance to populate.
    * @return {module:model/AlertNotificationRequest} The populated <code>AlertNotificationRequest</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new AlertNotificationRequest()
       if (data.hasOwnProperty('defaultInterval'))
@@ -58,24 +57,24 @@ export class AlertNotificationRequest {
   }
 }
 
-/**
- * @member {Number} defaultInterval
- */
-AlertNotificationRequest.prototype.defaultInterval = undefined
+  /**
+   * @member {Number} defaultInterval
+   */
+  AlertNotificationRequest.prototype.defaultInterval = undefined
 
-/**
- * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
- * @member {String} end
- */
-AlertNotificationRequest.prototype.end = undefined
+  /**
+   * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
+   * @member {String} end
+   */
+  AlertNotificationRequest.prototype.end = undefined
 
-/**
- * @member {String} interval
- */
-AlertNotificationRequest.prototype.interval = undefined
+  /**
+   * @member {String} interval
+   */
+  AlertNotificationRequest.prototype.interval = undefined
 
-/**
- * Start time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
- * @member {String} start
- */
-AlertNotificationRequest.prototype.start = undefined
+  /**
+   * Start time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
+   * @member {String} start
+   */
+  AlertNotificationRequest.prototype.start = undefined

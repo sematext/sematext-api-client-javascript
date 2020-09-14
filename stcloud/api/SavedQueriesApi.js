@@ -20,8 +20,7 @@ import { SavedQuery } from '../model/SavedQuery' // eslint-disable-line no-unuse
 /**
  * SavedQueries service.
  * @module api/SavedQueriesApi
- * @version 0.1.0
- */
+  */
 export class SavedQueriesApi {
   /**
    * Constructs a new SavedQueriesApi.
@@ -30,7 +29,7 @@ export class SavedQueriesApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -39,7 +38,7 @@ export class SavedQueriesApi {
    * @param {Number} updateableQueryId updateableQueryId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  deleteSavedQueryUsingDELETEWithHttpInfo (updateableQueryId) {
+  deleteSavedQueryUsingDELETEWithHttpInfo(updateableQueryId) {
     let postBody = null
 
     // verify the required parameter 'updateableQueryId' is set
@@ -81,7 +80,7 @@ export class SavedQueriesApi {
    * @param {Number} updateableQueryId updateableQueryId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  deleteSavedQueryUsingDELETE (updateableQueryId) {
+  deleteSavedQueryUsingDELETE(updateableQueryId) {
     return this.deleteSavedQueryUsingDELETEWithHttpInfo(updateableQueryId).then(
       function (response_and_data) {
         return response_and_data.data
@@ -94,7 +93,7 @@ export class SavedQueriesApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  getSavedQueriesForAppUsingGETWithHttpInfo (appId) {
+  getSavedQueriesForAppUsingGETWithHttpInfo(appId) {
     let postBody = null
 
     // verify the required parameter 'appId' is set
@@ -136,7 +135,7 @@ export class SavedQueriesApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  getSavedQueriesForAppUsingGET (appId) {
+  getSavedQueriesForAppUsingGET(appId) {
     return this.getSavedQueriesForAppUsingGETWithHttpInfo(appId).then(function (
       response_and_data
     ) {
@@ -149,7 +148,7 @@ export class SavedQueriesApi {
    * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  saveQueryUsingPOSTWithHttpInfo (savedQueryDto) {
+  saveQueryUsingPOSTWithHttpInfo(savedQueryDto) {
     let postBody = savedQueryDto
 
     // verify the required parameter 'savedQueryDto' is set
@@ -189,7 +188,7 @@ export class SavedQueriesApi {
    * @param {module:model/SavedQuery} savedQueryDto savedQueryDto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  saveQueryUsingPOST (savedQueryDto) {
+  saveQueryUsingPOST(savedQueryDto) {
     return this.saveQueryUsingPOSTWithHttpInfo(savedQueryDto).then(function (
       response_and_data
     ) {
@@ -203,7 +202,7 @@ export class SavedQueriesApi {
    * @param {Number} updateableQueryId updateableQueryId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  saveQueryUsingPUTWithHttpInfo (savedQueryDto, updateableQueryId) {
+  saveQueryUsingPUTWithHttpInfo(savedQueryDto, updateableQueryId) {
     let postBody = savedQueryDto
 
     // verify the required parameter 'savedQueryDto' is set
@@ -253,7 +252,7 @@ export class SavedQueriesApi {
    * @param {Number} updateableQueryId updateableQueryId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  saveQueryUsingPUT (savedQueryDto, updateableQueryId) {
+  saveQueryUsingPUT(savedQueryDto, updateableQueryId) {
     return this.saveQueryUsingPUTWithHttpInfo(
       savedQueryDto,
       updateableQueryId

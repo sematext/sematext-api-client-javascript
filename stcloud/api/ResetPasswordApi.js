@@ -20,8 +20,7 @@ import { UserInfo } from '../model/UserInfo' // eslint-disable-line no-unused-va
 /**
  * ResetPassword service.
  * @module api/ResetPasswordApi
- * @version 0.1.0
- */
+  */
 export class ResetPasswordApi {
   /**
    * Constructs a new ResetPasswordApi.
@@ -30,7 +29,7 @@ export class ResetPasswordApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -39,7 +38,7 @@ export class ResetPasswordApi {
    * @param {module:model/UserInfo} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  resetPasswordUsingPOSTWithHttpInfo (dto) {
+  resetPasswordUsingPOSTWithHttpInfo(dto) {
     let postBody = dto
 
     // verify the required parameter 'dto' is set
@@ -79,7 +78,7 @@ export class ResetPasswordApi {
    * @param {module:model/UserInfo} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  resetPasswordUsingPOST (dto) {
+  resetPasswordUsingPOST(dto) {
     return this.resetPasswordUsingPOSTWithHttpInfo(dto).then(function (
       response_and_data
     ) {

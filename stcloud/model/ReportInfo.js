@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The ReportInfo model module.
  * @module model/ReportInfo
- * @version 0.1.0
- */
+  */
 export class ReportInfo {
   /**
    * Constructs a new <code>ReportInfo</code>.
    * @alias module:model/ReportInfo
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>ReportInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class ReportInfo {
    * @param {module:model/ReportInfo} obj Optional instance to populate.
    * @return {module:model/ReportInfo} The populated <code>ReportInfo</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new ReportInfo()
       if (data.hasOwnProperty('addresses'))
@@ -67,43 +66,43 @@ export class ReportInfo {
   }
 }
 
-/**
- * Comma separated list of email addresses
- * @member {String} addresses
- */
-ReportInfo.prototype.addresses = undefined
+  /**
+   * Comma separated list of email addresses
+   * @member {String} addresses
+   */
+  ReportInfo.prototype.addresses = undefined
 
-/**
- * @member {Number} appId
- */
-ReportInfo.prototype.appId = undefined
+  /**
+   * @member {Number} appId
+   */
+  ReportInfo.prototype.appId = undefined
 
-/**
- * @member {Date} endDate
- */
-ReportInfo.prototype.endDate = undefined
+  /**
+   * @member {Date} endDate
+   */
+  ReportInfo.prototype.endDate = undefined
 
-/**
- * @member {String} filters
- */
-ReportInfo.prototype.filters = undefined
+  /**
+   * @member {String} filters
+   */
+  ReportInfo.prototype.filters = undefined
 
-/**
- * @member {String} reportName
- */
-ReportInfo.prototype.reportName = undefined
+  /**
+   * @member {String} reportName
+   */
+  ReportInfo.prototype.reportName = undefined
 
-/**
- * @member {Date} startDate
- */
-ReportInfo.prototype.startDate = undefined
+  /**
+   * @member {Date} startDate
+   */
+  ReportInfo.prototype.startDate = undefined
 
-/**
- * @member {String} subject
- */
-ReportInfo.prototype.subject = undefined
+  /**
+   * @member {String} subject
+   */
+  ReportInfo.prototype.subject = undefined
 
-/**
- * @member {String} text
- */
-ReportInfo.prototype.text = undefined
+  /**
+   * @member {String} text
+   */
+  ReportInfo.prototype.text = undefined

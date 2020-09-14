@@ -20,8 +20,7 @@ import { ReportInfo } from '../model/ReportInfo' // eslint-disable-line no-unuse
 /**
  * Subscriptions service.
  * @module api/SubscriptionsApi
- * @version 0.1.0
- */
+  */
 export class SubscriptionsApi {
   /**
    * Constructs a new SubscriptionsApi.
@@ -30,7 +29,7 @@ export class SubscriptionsApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -39,7 +38,7 @@ export class SubscriptionsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  listUsingGET1WithHttpInfo (appId) {
+  listUsingGET1WithHttpInfo(appId) {
     let postBody = null
 
     // verify the required parameter 'appId' is set
@@ -81,7 +80,7 @@ export class SubscriptionsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  listUsingGET1 (appId) {
+  listUsingGET1(appId) {
     return this.listUsingGET1WithHttpInfo(appId).then(function (
       response_and_data
     ) {
@@ -95,7 +94,7 @@ export class SubscriptionsApi {
    * @param {module:model/ReportInfo} emailDto emailDto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  sendReportUsingPOSTWithHttpInfo (appId, emailDto) {
+  sendReportUsingPOSTWithHttpInfo(appId, emailDto) {
     let postBody = emailDto
 
     // verify the required parameter 'appId' is set
@@ -145,7 +144,7 @@ export class SubscriptionsApi {
    * @param {module:model/ReportInfo} emailDto emailDto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  sendReportUsingPOST (appId, emailDto) {
+  sendReportUsingPOST(appId, emailDto) {
     return this.sendReportUsingPOSTWithHttpInfo(appId, emailDto).then(function (
       response_and_data
     ) {
