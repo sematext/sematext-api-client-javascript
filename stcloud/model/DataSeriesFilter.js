@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The DataSeriesFilter model module.
  * @module model/DataSeriesFilter
- * @version 0.1.0
- */
+  */
 export class DataSeriesFilter {
   /**
    * Constructs a new <code>DataSeriesFilter</code>.
    * @alias module:model/DataSeriesFilter
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>DataSeriesFilter</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class DataSeriesFilter {
    * @param {module:model/DataSeriesFilter} obj Optional instance to populate.
    * @return {module:model/DataSeriesFilter} The populated <code>DataSeriesFilter</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new DataSeriesFilter()
       if (data.hasOwnProperty('aggregation'))

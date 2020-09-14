@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The AlertRuleScheduleTimeRangeDto model module.
  * @module model/AlertRuleScheduleTimeRangeDto
- * @version 0.1.0
- */
+  */
 export class AlertRuleScheduleTimeRangeDto {
   /**
    * Constructs a new <code>AlertRuleScheduleTimeRangeDto</code>.
    * @alias module:model/AlertRuleScheduleTimeRangeDto
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>AlertRuleScheduleTimeRangeDto</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class AlertRuleScheduleTimeRangeDto {
    * @param {module:model/AlertRuleScheduleTimeRangeDto} obj Optional instance to populate.
    * @return {module:model/AlertRuleScheduleTimeRangeDto} The populated <code>AlertRuleScheduleTimeRangeDto</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new AlertRuleScheduleTimeRangeDto()
       if (data.hasOwnProperty('end'))
@@ -49,12 +48,12 @@ export class AlertRuleScheduleTimeRangeDto {
   }
 }
 
-/**
- * @member {String} end
- */
-AlertRuleScheduleTimeRangeDto.prototype.end = undefined
+  /**
+   * @member {String} end
+   */
+  AlertRuleScheduleTimeRangeDto.prototype.end = undefined
 
-/**
- * @member {String} start
- */
-AlertRuleScheduleTimeRangeDto.prototype.start = undefined
+  /**
+   * @member {String} start
+   */
+  AlertRuleScheduleTimeRangeDto.prototype.start = undefined

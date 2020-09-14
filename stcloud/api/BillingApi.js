@@ -20,8 +20,7 @@ import { GenericApiResponse } from '../model/GenericApiResponse'
 /**
  * Billing service.
  * @module api/BillingApi
- * @version 0.1.0
- */
+  */
 export class BillingApi {
   /**
    * Constructs a new BillingApi.
@@ -30,7 +29,7 @@ export class BillingApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -41,7 +40,7 @@ export class BillingApi {
    * @param {Number} month month
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  getDetailedInvoiceUsingGETWithHttpInfo (service, year, month) {
+  getDetailedInvoiceUsingGETWithHttpInfo(service, year, month) {
     let postBody = null
 
     // verify the required parameter 'service' is set
@@ -101,7 +100,7 @@ export class BillingApi {
    * @param {Number} month month
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  getDetailedInvoiceUsingGET (service, year, month) {
+  getDetailedInvoiceUsingGET(service, year, month) {
     return this.getDetailedInvoiceUsingGETWithHttpInfo(
       service,
       year,
@@ -118,7 +117,7 @@ export class BillingApi {
    * @param {String} opts.appType appType
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  listAvailablePlansUsingGETWithHttpInfo (opts) {
+  listAvailablePlansUsingGETWithHttpInfo(opts) {
     opts = opts || {}
     let postBody = null
 
@@ -157,7 +156,7 @@ export class BillingApi {
    * @param {String} opts.appType appType
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  listAvailablePlansUsingGET (opts) {
+  listAvailablePlansUsingGET(opts) {
     return this.listAvailablePlansUsingGETWithHttpInfo(opts).then(function (
       response_and_data
     ) {
@@ -171,7 +170,7 @@ export class BillingApi {
    * @param {module:model/BillingInfo} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  updatePlanUsingPUTWithHttpInfo (appId, dto) {
+  updatePlanUsingPUTWithHttpInfo(appId, dto) {
     let postBody = dto
 
     // verify the required parameter 'appId' is set
@@ -221,7 +220,7 @@ export class BillingApi {
    * @param {module:model/BillingInfo} dto dto
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  updatePlanUsingPUT (appId, dto) {
+  updatePlanUsingPUT(appId, dto) {
     return this.updatePlanUsingPUTWithHttpInfo(appId, dto).then(function (
       response_and_data
     ) {

@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The BillingInfo model module.
  * @module model/BillingInfo
- * @version 0.1.0
- */
+  */
 export class BillingInfo {
   /**
    * Constructs a new <code>BillingInfo</code>.
    * @alias module:model/BillingInfo
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>BillingInfo</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class BillingInfo {
    * @param {module:model/BillingInfo} obj Optional instance to populate.
    * @return {module:model/BillingInfo} The populated <code>BillingInfo</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new BillingInfo()
       if (data.hasOwnProperty('creditCardId'))
@@ -58,17 +57,17 @@ export class BillingInfo {
   }
 }
 
-/**
- * @member {Number} creditCardId
- */
-BillingInfo.prototype.creditCardId = undefined
+  /**
+   * @member {Number} creditCardId
+   */
+  BillingInfo.prototype.creditCardId = undefined
 
-/**
- * @member {String} paymentMethod
- */
-BillingInfo.prototype.paymentMethod = undefined
+  /**
+   * @member {String} paymentMethod
+   */
+  BillingInfo.prototype.paymentMethod = undefined
 
-/**
- * @member {Number} planId
- */
-BillingInfo.prototype.planId = undefined
+  /**
+   * @member {Number} planId
+   */
+  BillingInfo.prototype.planId = undefined

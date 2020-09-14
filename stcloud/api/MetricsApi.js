@@ -20,8 +20,7 @@ import { GenericApiResponse } from '../model/GenericApiResponse'
 /**
  * Metrics service.
  * @module api/MetricsApi
- * @version 0.1.0
- */
+  */
 export class MetricsApi {
   /**
    * Constructs a new MetricsApi.
@@ -30,7 +29,7 @@ export class MetricsApi {
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
    */
-  constructor (apiClient) {
+  constructor(apiClient) {
     this.apiClient = apiClient || ApiClient.instance
   }
 
@@ -41,7 +40,7 @@ export class MetricsApi {
    * @param {module:model/DataSeriesRequest} requestBody Metric data points request
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  listDataSeriesUsingPOST1WithHttpInfo (appId, requestBody) {
+  listDataSeriesUsingPOST1WithHttpInfo(appId, requestBody) {
     let postBody = requestBody
 
     // verify the required parameter 'appId' is set
@@ -92,7 +91,7 @@ export class MetricsApi {
    * @param {module:model/DataSeriesRequest} requestBody Metric data points request
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  listDataSeriesUsingPOST1 (appId, requestBody) {
+  listDataSeriesUsingPOST1(appId, requestBody) {
     return this.listDataSeriesUsingPOST1WithHttpInfo(appId, requestBody).then(
       function (response_and_data) {
         return response_and_data.data
@@ -107,7 +106,7 @@ export class MetricsApi {
    * @param {module:model/DataSeriesRequest} requestBody Metric filters request
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  listFiltersUsingPOSTWithHttpInfo (appId, requestBody) {
+  listFiltersUsingPOSTWithHttpInfo(appId, requestBody) {
     let postBody = requestBody
 
     // verify the required parameter 'appId' is set
@@ -158,7 +157,7 @@ export class MetricsApi {
    * @param {module:model/DataSeriesRequest} requestBody Metric filters request
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  listFiltersUsingPOST (appId, requestBody) {
+  listFiltersUsingPOST(appId, requestBody) {
     return this.listFiltersUsingPOSTWithHttpInfo(appId, requestBody).then(
       function (response_and_data) {
         return response_and_data.data
@@ -171,7 +170,7 @@ export class MetricsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  listMetricsKeysUsingGET1WithHttpInfo (appId) {
+  listMetricsKeysUsingGET1WithHttpInfo(appId) {
     let postBody = null
 
     // verify the required parameter 'appId' is set
@@ -213,7 +212,7 @@ export class MetricsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  listMetricsKeysUsingGET1 (appId) {
+  listMetricsKeysUsingGET1(appId) {
     return this.listMetricsKeysUsingGET1WithHttpInfo(appId).then(function (
       response_and_data
     ) {
@@ -226,7 +225,7 @@ export class MetricsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
-  listMetricsUsingGET1WithHttpInfo (appId) {
+  listMetricsUsingGET1WithHttpInfo(appId) {
     let postBody = null
 
     // verify the required parameter 'appId' is set
@@ -268,7 +267,7 @@ export class MetricsApi {
    * @param {Number} appId appId
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
    */
-  listMetricsUsingGET1 (appId) {
+  listMetricsUsingGET1(appId) {
     return this.listMetricsUsingGET1WithHttpInfo(appId).then(function (
       response_and_data
     ) {

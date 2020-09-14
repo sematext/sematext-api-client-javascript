@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The UserRole model module.
  * @module model/UserRole
- * @version 0.1.0
- */
+  */
 export class UserRole {
   /**
    * Constructs a new <code>UserRole</code>.
    * @alias module:model/UserRole
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>UserRole</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class UserRole {
    * @param {module:model/UserRole} obj Optional instance to populate.
    * @return {module:model/UserRole} The populated <code>UserRole</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new UserRole()
       if (data.hasOwnProperty('role'))

@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The AppMetadata model module.
  * @module model/AppMetadata
- * @version 0.1.0
- */
+  */
 export class AppMetadata {
   /**
    * Constructs a new <code>AppMetadata</code>.
    * @alias module:model/AppMetadata
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>AppMetadata</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class AppMetadata {
    * @param {module:model/AppMetadata} obj Optional instance to populate.
    * @return {module:model/AppMetadata} The populated <code>AppMetadata</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new AppMetadata()
       if (data.hasOwnProperty('awsCloudWatchAccessKey'))
@@ -67,15 +66,15 @@ export class AppMetadata {
   }
 }
 
-/**
- * @member {String} awsCloudWatchAccessKey
- */
-AppMetadata.prototype.awsCloudWatchAccessKey = undefined
+  /**
+   * @member {String} awsCloudWatchAccessKey
+   */
+  AppMetadata.prototype.awsCloudWatchAccessKey = undefined
 
-/**
- * @member {String} awsCloudWatchSecretKey
- */
-AppMetadata.prototype.awsCloudWatchSecretKey = undefined
+  /**
+   * @member {String} awsCloudWatchSecretKey
+   */
+  AppMetadata.prototype.awsCloudWatchSecretKey = undefined
 
 /**
  * Allowed values for the <code>awsFetchFrequency</code> property.

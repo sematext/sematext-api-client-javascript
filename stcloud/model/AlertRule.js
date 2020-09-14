@@ -22,15 +22,14 @@ import { UserPermissions } from './UserPermissions'
 /**
  * The AlertRule model module.
  * @module model/AlertRule
- * @version 0.1.0
- */
+  */
 export class AlertRule {
   /**
    * Constructs a new <code>AlertRule</code>.
    * @alias module:model/AlertRule
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>AlertRule</code> from a plain JavaScript object, optionally creating a new instance.
@@ -39,7 +38,7 @@ export class AlertRule {
    * @param {module:model/AlertRule} obj Optional instance to populate.
    * @return {module:model/AlertRule} The populated <code>AlertRule</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new AlertRule()
       if (data.hasOwnProperty('accountEmail'))
@@ -265,90 +264,90 @@ export class AlertRule {
   }
 }
 
-/**
- * @member {String} accountEmail
- */
-AlertRule.prototype.accountEmail = undefined
+  /**
+   * @member {String} accountEmail
+   */
+  AlertRule.prototype.accountEmail = undefined
 
-/**
- * @member {Array.<Number>} allowedAppTypes
- */
-AlertRule.prototype.allowedAppTypes = undefined
+  /**
+   * @member {Array.<Number>} allowedAppTypes
+   */
+  AlertRule.prototype.allowedAppTypes = undefined
 
-/**
- * @member {String} analyzingTime
- */
-AlertRule.prototype.analyzingTime = undefined
+  /**
+   * @member {String} analyzingTime
+   */
+  AlertRule.prototype.analyzingTime = undefined
 
-/**
- * @member {String} appDisplayState
- */
-AlertRule.prototype.appDisplayState = undefined
+  /**
+   * @member {String} appDisplayState
+   */
+  AlertRule.prototype.appDisplayState = undefined
 
-/**
- * @member {Number} appId
- */
-AlertRule.prototype.appId = undefined
+  /**
+   * @member {Number} appId
+   */
+  AlertRule.prototype.appId = undefined
 
-/**
- * @member {String} appName
- */
-AlertRule.prototype.appName = undefined
+  /**
+   * @member {String} appName
+   */
+  AlertRule.prototype.appName = undefined
 
-/**
- * @member {String} appState
- */
-AlertRule.prototype.appState = undefined
+  /**
+   * @member {String} appState
+   */
+  AlertRule.prototype.appState = undefined
 
-/**
- * @member {String} appToken
- */
-AlertRule.prototype.appToken = undefined
+  /**
+   * @member {String} appToken
+   */
+  AlertRule.prototype.appToken = undefined
 
-/**
- * @member {String} appType
- */
-AlertRule.prototype.appType = undefined
+  /**
+   * @member {String} appType
+   */
+  AlertRule.prototype.appType = undefined
 
-/**
- * @member {Boolean} backToNormalNeeded
- */
-AlertRule.prototype.backToNormalNeeded = undefined
+  /**
+   * @member {Boolean} backToNormalNeeded
+   */
+  AlertRule.prototype.backToNormalNeeded = undefined
 
-/**
- * @member {String} chartKey
- */
-AlertRule.prototype.chartKey = undefined
+  /**
+   * @member {String} chartKey
+   */
+  AlertRule.prototype.chartKey = undefined
 
-/**
- * @member {String} color
- */
-AlertRule.prototype.color = undefined
+  /**
+   * @member {String} color
+   */
+  AlertRule.prototype.color = undefined
 
-/**
- * @member {String} creatorEmail
- */
-AlertRule.prototype.creatorEmail = undefined
+  /**
+   * @member {String} creatorEmail
+   */
+  AlertRule.prototype.creatorEmail = undefined
 
-/**
- * @member {String} defaultAggType
- */
-AlertRule.prototype.defaultAggType = undefined
+  /**
+   * @member {String} defaultAggType
+   */
+  AlertRule.prototype.defaultAggType = undefined
 
-/**
- * @member {String} description
- */
-AlertRule.prototype.description = undefined
+  /**
+   * @member {String} description
+   */
+  AlertRule.prototype.description = undefined
 
-/**
- * @member {Array.<Number>} disallowedAppTypes
- */
-AlertRule.prototype.disallowedAppTypes = undefined
+  /**
+   * @member {Array.<Number>} disallowedAppTypes
+   */
+  AlertRule.prototype.disallowedAppTypes = undefined
 
-/**
- * @member {Boolean} enabled
- */
-AlertRule.prototype.enabled = undefined
+  /**
+   * @member {Boolean} enabled
+   */
+  AlertRule.prototype.enabled = undefined
 
 /**
  * Allowed values for the <code>estimateOperation</code> property.

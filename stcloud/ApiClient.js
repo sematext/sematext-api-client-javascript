@@ -18,8 +18,7 @@ import querystring from 'querystring'
 
 /**
  * @module ApiClient
- * @version 0.1.0
- */
+  */
 
 /**
  * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
@@ -29,7 +28,7 @@ import querystring from 'querystring'
  * @class
  */
 export class ApiClient {
-  constructor () {
+  constructor() {
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
@@ -93,7 +92,7 @@ export class ApiClient {
    * @param param The actual parameter.
    * @returns {String} The string representation of <code>param</code>.
    */
-  paramToString (param) {
+  paramToString(param) {
     if (param == undefined || param == null) {
       return ''
     }
@@ -111,7 +110,7 @@ export class ApiClient {
    * @param {Object} pathParams The parameter values to append.
    * @returns {String} The encoded path with parameter values substituted.
    */
-  buildUrl (path, pathParams) {
+  buildUrl(path, pathParams) {
     if (!path.match(/^\//)) {
       path = '/' + path
     }
@@ -143,7 +142,7 @@ export class ApiClient {
    * @param {String} contentType The MIME content type to check.
    * @returns {Boolean} <code>true</code> if <code>contentType</code> represents JSON, otherwise <code>false</code>.
    */
-  isJsonMime (contentType) {
+  isJsonMime(contentType) {
     return Boolean(
       contentType != null && contentType.match(/^application\/json(;.*)?$/i)
     )
@@ -154,7 +153,7 @@ export class ApiClient {
    * @param {Array.<String>} contentTypes
    * @returns {String} The chosen content type, preferring JSON.
    */
-  jsonPreferredMime (contentTypes) {
+  jsonPreferredMime(contentTypes) {
     for (var i = 0; i < contentTypes.length; i++) {
       if (this.isJsonMime(contentTypes[i])) {
         return contentTypes[i]
@@ -169,13 +168,13 @@ export class ApiClient {
    * @param param The parameter to check.
    * @returns {Boolean} <code>true</code> if <code>param</code> represents a file.
    */
-  isFileParam (param) {
+  isFileParam(param) {
     // fs.ReadStream in Node.js and Electron (but not in runtime like browserify)
     if (typeof require === 'function') {
       let fs
       try {
         fs = require('fs')
-      } catch (err) {} // eslint-disable-line no-empty
+      } catch (err) { } // eslint-disable-line no-empty
       if (fs && fs.ReadStream && param instanceof fs.ReadStream) {
         return true
       }
@@ -211,7 +210,7 @@ export class ApiClient {
    * @param {Object.<String, Object>} params The parameters as object properties.
    * @returns {Object.<String, Object>} normalized parameters.
    */
-  normalizeParams (params) {
+  normalizeParams(params) {
     var newParams = {}
     for (var key in params) {
       if (
@@ -277,7 +276,7 @@ export class ApiClient {
    * @returns {String|Array} A string representation of the supplied collection, using the specified delimiter. Returns
    * <code>param</code> as is if <code>collectionFormat</code> is <code>multi</code>.
    */
-  buildCollectionParam (param, collectionFormat) {
+  buildCollectionParam(param, collectionFormat) {
     if (param == null) {
       return null
     }
@@ -303,7 +302,7 @@ export class ApiClient {
    * @param {Object} request The request object created by a <code>superagent()</code> call.
    * @param {Array.<String>} authNames An array of authentication method names.
    */
-  applyAuthToRequest (request, authNames) {
+  applyAuthToRequest(request, authNames) {
     authNames.forEach(authName => {
       var auth = this.authentications[authName]
       switch (auth.type) {
@@ -351,7 +350,7 @@ export class ApiClient {
    * all properties on <code>data<code> will be converted to this type.
    * @returns A value of the specified type.
    */
-  deserialize (response, returnType) {
+  deserialize(response, returnType) {
     if (response == null || returnType == null || response.status == 204) {
       return null
     }
@@ -388,7 +387,7 @@ export class ApiClient {
    * constructor for a complex type.
    * @returns {Promise} A {@link https://www.promisejs.org/|Promise} object.
    */
-  callApi (
+  callApi(
     path,
     httpMethod,
     pathParams,
@@ -498,7 +497,7 @@ export class ApiClient {
    * @param {String} str The date value as a string.
    * @returns {Date} The parsed date object.
    */
-  static parseDate (str) {
+  static parseDate(str) {
     return new Date(str)
   }
 
@@ -511,7 +510,7 @@ export class ApiClient {
    * all properties on <code>data<code> will be converted to this type.
    * @returns An instance of the specified type or null or undefined if data is null or undefined.
    */
-  static convertToType (data, type) {
+  static convertToType(data, type) {
     if (data === null || data === undefined) return data
 
     switch (type) {
@@ -574,7 +573,7 @@ export class ApiClient {
    * @param data {Object|Array} The REST data.
    * @param obj {Object|Array} The target object or array.
    */
-  static constructFromObject (data, obj, itemType) {
+  static constructFromObject(data, obj, itemType) {
     if (Array.isArray(data)) {
       for (var i = 0; i < data.length; i++) {
         if (data.hasOwnProperty(i))

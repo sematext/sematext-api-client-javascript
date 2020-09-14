@@ -19,8 +19,7 @@ import { DataSeriesFilter } from './DataSeriesFilter'
 /**
  * The DataSeriesRequest model module.
  * @module model/DataSeriesRequest
- * @version 0.1.0
- */
+  */
 export class DataSeriesRequest {
   /**
    * Constructs a new <code>DataSeriesRequest</code>.
@@ -28,7 +27,7 @@ export class DataSeriesRequest {
    * @class
    * @param metric {String} Metric name or metric group prefix
    */
-  constructor (metric) {
+  constructor(metric) {
     this.metric = metric
   }
 
@@ -39,7 +38,7 @@ export class DataSeriesRequest {
    * @param {module:model/DataSeriesRequest} obj Optional instance to populate.
    * @return {module:model/DataSeriesRequest} The populated <code>DataSeriesRequest</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new DataSeriesRequest()
       if (data.hasOwnProperty('defaultInterval'))
@@ -73,22 +72,22 @@ export class DataSeriesRequest {
   }
 }
 
-/**
- * @member {Number} defaultInterval
- */
-DataSeriesRequest.prototype.defaultInterval = undefined
+  /**
+   * @member {Number} defaultInterval
+   */
+  DataSeriesRequest.prototype.defaultInterval = undefined
 
-/**
- * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
- * @member {String} end
- */
-DataSeriesRequest.prototype.end = undefined
+  /**
+   * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
+   * @member {String} end
+   */
+  DataSeriesRequest.prototype.end = undefined
 
-/**
- * Map of allowed filter values and aggregation strategy. List of available filter values can be fetched using metric filters endpoint and default aggregation strategy depends on metric
- * @member {Object.<String, module:model/DataSeriesFilter>} filters
- */
-DataSeriesRequest.prototype.filters = undefined
+  /**
+   * Map of allowed filter values and aggregation strategy. List of available filter values can be fetched using metric filters endpoint and default aggregation strategy depends on metric
+   * @member {Object.<String, module:model/DataSeriesFilter>} filters
+   */
+  DataSeriesRequest.prototype.filters = undefined
 
 /**
  * Allowed values for the <code>granularity</code> property.

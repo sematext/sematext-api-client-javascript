@@ -18,15 +18,14 @@ import { ApiClient } from '../ApiClient'
 /**
  * The UserPermissions model module.
  * @module model/UserPermissions
- * @version 0.1.0
- */
+  */
 export class UserPermissions {
   /**
    * Constructs a new <code>UserPermissions</code>.
    * @alias module:model/UserPermissions
    * @class
    */
-  constructor () {}
+  constructor() { }
 
   /**
    * Constructs a <code>UserPermissions</code> from a plain JavaScript object, optionally creating a new instance.
@@ -35,7 +34,7 @@ export class UserPermissions {
    * @param {module:model/UserPermissions} obj Optional instance to populate.
    * @return {module:model/UserPermissions} The populated <code>UserPermissions</code> instance.
    */
-  static constructFromObject (data, obj) {
+  static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new UserPermissions()
       if (data.hasOwnProperty('canDelete'))
@@ -52,17 +51,17 @@ export class UserPermissions {
   }
 }
 
-/**
- * @member {Boolean} canDelete
- */
-UserPermissions.prototype.canDelete = undefined
+  /**
+   * @member {Boolean} canDelete
+   */
+  UserPermissions.prototype.canDelete = undefined
 
-/**
- * @member {Boolean} canEdit
- */
-UserPermissions.prototype.canEdit = undefined
+  /**
+   * @member {Boolean} canEdit
+   */
+  UserPermissions.prototype.canEdit = undefined
 
-/**
- * @member {Boolean} canView
- */
-UserPermissions.prototype.canView = undefined
+  /**
+   * @member {Boolean} canView
+   */
+  UserPermissions.prototype.canView = undefined
