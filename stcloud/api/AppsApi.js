@@ -36,6 +36,56 @@ export class AppsApi {
   }
 
   /**
+   * delete
+   * @param {Number} anyStateAppId anyStateAppId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
+   */
+  deleteUsingDELETEWithHttpInfo(anyStateAppId) {
+    let postBody = null;
+
+    // verify the required parameter 'anyStateAppId' is set
+    if (anyStateAppId === undefined || anyStateAppId === null) {
+      throw new Error("Missing the required parameter 'anyStateAppId' when calling deleteUsingDELETE");
+    }
+
+
+    let pathParams = {
+      'anyStateAppId': anyStateAppId
+    };
+    let queryParams = {
+    };
+    let headerParams = {
+    };
+    let formParams = {
+    };
+
+    let authNames = ['api_key'];
+    let contentTypes = ['application/json'];
+    let accepts = ['application/json'];
+    let returnType = GenericApiResponse;
+
+    return this.apiClient.callApi(
+      '/users-web/api/v3/apps/{anyStateAppId}', 'DELETE',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType
+    );
+  }
+
+  /**
+   * delete
+   * @param {Number} anyStateAppId anyStateAppId
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenericApiResponse}
+   */
+  deleteUsingDELETE(anyStateAppId) {
+    return this.deleteUsingDELETEWithHttpInfo(anyStateAppId)
+      .then(function (response_and_data) {
+        return response_and_data.data;
+      });
+  }
+
+
+
+  /**
    * Get all App types supported for the account identified with apiKey
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericApiResponse} and HTTP response
    */
