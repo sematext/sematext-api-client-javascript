@@ -1,7 +1,6 @@
 # SematextApiClientJavascript.App
 
 ## Properties
-
 | Name                      | Type                                                | Description | Notes      |
 | ------------------------- | --------------------------------------------------- | ----------- | ---------- |
 | **ajaxThreshold**         | **Number**                                          |             | [optional] |
@@ -26,8 +25,12 @@
 | **paymentMethodId**       | **Number**                                          |             | [optional] |
 | **plan**                  | [**Plan**](Plan.md)                                 |             | [optional] |
 | **prepaidAccount**        | **Boolean**                                         |             | [optional] |
+| **readToken**             | **String**                                          |             | [optional] |
+| **readWriteToken**        | **String**                                          |             | [optional] |
+| **registrationDate**      | **Number**                                          |             | [optional] |
 | **status**                | **String**                                          |             | [optional] |
 | **token**                 | **String**                                          |             | [optional] |
 | **trialEndDate**          | **Number**                                          |             | [optional] |
 | **urlGroupLimit**         | **Number**                                          |             | [optional] |
 | **userRoles**             | [**[UserRole]**](UserRole.md)                       |             | [optional] |
+| **writeToken**            | **String**                                          |             | [optional] |

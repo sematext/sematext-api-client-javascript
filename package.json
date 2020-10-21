@@ -1,6 +1,6 @@
 {
   "name": "@sematext/sematext-api-client",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Client library for https://sematext.com/docs/api/",
   "license": "SEE LICENSE IN LICENSE",
   "authors": {
