@@ -39,6 +39,8 @@ export class CreateTokenDto {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new CreateTokenDto();
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('readable'))
         obj.readable = ApiClient.convertToType(data['readable'], 'Boolean');
       if (data.hasOwnProperty('writeable'))
@@ -47,6 +49,11 @@ export class CreateTokenDto {
     return obj;
   }
 }
+
+/**
+ * @member {String} name
+ */
+CreateTokenDto.prototype.name = undefined;
 
 /**
  * @member {Boolean} readable
