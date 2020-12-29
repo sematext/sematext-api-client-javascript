@@ -41,6 +41,8 @@ export class UpdateTokenDto {
       obj = obj || new UpdateTokenDto();
       if (data.hasOwnProperty('enabled'))
         obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
     }
     return obj;
   }
@@ -50,5 +52,10 @@ export class UpdateTokenDto {
  * @member {Boolean} enabled
  */
 UpdateTokenDto.prototype.enabled = undefined;
+
+/**
+ * @member {String} name
+ */
+UpdateTokenDto.prototype.name = undefined;
 
 

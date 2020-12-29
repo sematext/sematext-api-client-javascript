@@ -2,18 +2,18 @@
 
 All URIs are relative to *https://localhost*
 
-| Method                                                                 | HTTP request                                                        | Description                       |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
-| [**createAppToken**](TokensApiControllerApi.md#createAppToken)         | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token              |
-| [**deleteAppToken1**](TokensApiControllerApi.md#deleteAppToken1)       | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                  |
-| [**getAppTokens1**](TokensApiControllerApi.md#getAppTokens1)           | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens          |
-| [**regenerateAppToken**](TokensApiControllerApi.md#regenerateAppToken) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)             |
-| [**updateAppToken1**](TokensApiControllerApi.md#updateAppToken1)       | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable) |
+| Method                                                                 | HTTP request                                                        | Description                               |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- |
+| [**createAppToken1**](TokensApiControllerApi.md#createAppToken1)       | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**deleteAppToken1**](TokensApiControllerApi.md#deleteAppToken1)       | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
+| [**getAppTokens**](TokensApiControllerApi.md#getAppTokens)             | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**regenerateAppToken**](TokensApiControllerApi.md#regenerateAppToken) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
+| [**updateAppToken1**](TokensApiControllerApi.md#updateAppToken1)       | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
 
-<a name="createAppToken"></a>
-# **createAppToken**
-> GenericApiResponse createAppToken(appId, dto)
+<a name="createAppToken1"></a>
+# **createAppToken1**
+> GenericApiResponse createAppToken1(appId, dto)
 
 Create new app token
 
@@ -34,7 +34,7 @@ let appId = 789; // Number | appId
 
 let dto = new SematextApiClientJavascript.CreateTokenDto(); // CreateTokenDto | dto
 
-apiInstance.createAppToken(appId, dto).then((data) => {
+apiInstance.createAppToken1(appId, dto).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -113,9 +113,9 @@ apiInstance.deleteAppToken1(appId, tokenId).then((data) => {
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getAppTokens1"></a>
-# **getAppTokens1**
-> GenericApiResponse getAppTokens1(appId)
+<a name="getAppTokens"></a>
+# **getAppTokens**
+> GenericApiResponse getAppTokens(appId)
 
 Get app available tokens
 
@@ -134,7 +134,7 @@ let apiInstance = new SematextApiClientJavascript.TokensApiControllerApi();
 
 let appId = 789; // Number | appId
 
-apiInstance.getAppTokens1(appId).then((data) => {
+apiInstance.getAppTokens(appId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -216,7 +216,7 @@ apiInstance.regenerateAppToken(appId, tokenId).then((data) => {
 # **updateAppToken1**
 > GenericApiResponse updateAppToken1(appId, tokenId, dto)
 
-Update app token (enable/disable)
+Update app token (enable/disable or name)
 
 ### Example
 ```javascript
