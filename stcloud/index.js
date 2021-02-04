@@ -290,5 +290,10 @@ export {
    * The TagApiControllerApi service constructor.
    * @property {module:api/TagApiControllerApi}
    */
-  TagApiControllerApi
+  TagApiControllerApi,
+  /**
+   * The TokensApiControllerApi service constructor.
+   * @property {module:api/TokensApiControllerApi}
+   */
+  TokensApiControllerApi
 }
