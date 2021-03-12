@@ -103,67 +103,67 @@ export class SavedQuery {
   }
 }
 
-  /**
-   * @member {module:model/AlertRule} alertRule
-   */
-  SavedQuery.prototype.alertRule = undefined
+/**
+ * @member {module:model/AlertRule} alertRule
+ */
+SavedQuery.prototype.alertRule = undefined
 
-  /**
-   * @member {Boolean} allowModification
-   */
-  SavedQuery.prototype.allowModification = undefined
+/**
+ * @member {Boolean} allowModification
+ */
+SavedQuery.prototype.allowModification = undefined
 
-  /**
-   * @member {String} applicationId
-   */
-  SavedQuery.prototype.applicationId = undefined
+/**
+ * @member {String} applicationId
+ */
+SavedQuery.prototype.applicationId = undefined
 
-  /**
-   * @member {String} applicationName
-   */
-  SavedQuery.prototype.applicationName = undefined
+/**
+ * @member {String} applicationName
+ */
+SavedQuery.prototype.applicationName = undefined
 
-  /**
-   * @member {String} applicationToken
-   */
-  SavedQuery.prototype.applicationToken = undefined
+/**
+ * @member {String} applicationToken
+ */
+SavedQuery.prototype.applicationToken = undefined
 
-  /**
-   * @member {String} creatorEmail
-   */
-  SavedQuery.prototype.creatorEmail = undefined
+/**
+ * @member {String} creatorEmail
+ */
+SavedQuery.prototype.creatorEmail = undefined
 
-  /**
-   * @member {String} id
-   */
-  SavedQuery.prototype.id = undefined
+/**
+ * @member {String} id
+ */
+SavedQuery.prototype.id = undefined
 
-  /**
-   * @member {String} labelColor
-   */
-  SavedQuery.prototype.labelColor = undefined
+/**
+ * @member {String} labelColor
+ */
+SavedQuery.prototype.labelColor = undefined
 
-  /**
-   * @member {Object} logseneAlertType
-   */
-  SavedQuery.prototype.logseneAlertType = undefined
+/**
+ * @member {Object} logseneAlertType
+ */
+SavedQuery.prototype.logseneAlertType = undefined
 
-  /**
-   * @member {String} ownerEmail
-   */
-  SavedQuery.prototype.ownerEmail = undefined
+/**
+ * @member {String} ownerEmail
+ */
+SavedQuery.prototype.ownerEmail = undefined
 
-  /**
-   * @member {String} queryName
-   */
-  SavedQuery.prototype.queryName = undefined
+/**
+ * @member {String} queryName
+ */
+SavedQuery.prototype.queryName = undefined
 
-  /**
-   * @member {String} queryString
-   */
-  SavedQuery.prototype.queryString = undefined
+/**
+ * @member {String} queryString
+ */
+SavedQuery.prototype.queryString = undefined
 
-  /**
-   * @member {module:model/UserPermissions} userPermissions
-   */
-  SavedQuery.prototype.userPermissions = undefined
+/**
+ * @member {module:model/UserPermissions} userPermissions
+ */
+SavedQuery.prototype.userPermissions = undefined

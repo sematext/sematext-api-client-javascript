@@ -1,7 +1,6 @@
 # SematextApiClientJavascript.UserPermissions
 
 ## Properties
-
 | Name          | Type        | Description | Notes      |
 | ------------- | ----------- | ----------- | ---------- |
 | **canDelete** | **Boolean** |             | [optional] |

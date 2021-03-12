@@ -1,59 +1,52 @@
 # SematextApiClientJavascript.AwsSettingsControllerApi
 
-All URIs are relative to _https://localhost_
+All URIs are relative to */*
 
-| Method                                                           | HTTP request                               | Description                          |
-| ---------------------------------------------------------------- | ------------------------------------------ | ------------------------------------ |
-| [**updateUsingPUT**](AwsSettingsControllerApi.md#updateUsingPUT) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App's AWS CloudWatch settings |
+| Method                                                             | HTTP request                               | Description                               |
+| ------------------------------------------------------------------ | ------------------------------------------ | ----------------------------------------- |
+| [**updateUsingPUT1**](AwsSettingsControllerApi.md#updateUsingPUT1) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings |
 
-<a name="updateUsingPUT"></a>
+<a name="updateUsingPUT1"></a>
+# **updateUsingPUT1**
+> CloudWatchSettingsResponse updateUsingPUT1(bodyappId)
 
-# **updateUsingPUT**
-
-> GenericApiResponse updateUsingPUT(appId, dto)
-
-Update App's AWS CloudWatch settings
+Update App&#x27;s AWS CloudWatch settings
 
 Applicable only for AWS Apps
 
 ### Example
-
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import SematextApiClientJavascript from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AwsSettingsControllerApi()
+let apiInstance = new SematextApiClientJavascript.AwsSettingsControllerApi();
+let body = new SematextApiClientJavascript.CloudWatchSettings(); // CloudWatchSettings | dto
+let appId = 789; // Number | appId
 
-let appId = 789 // Number | appId
+apiInstance.updateUsingPUT1(bodyappId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-let dto = new SematextApiClientJavascript.CloudWatchSettings() // CloudWatchSettings | dto
-
-apiInstance.updateUsingPUT(appId, dto).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
 ```
 
 ### Parameters
 
 | Name      | Type                                            | Description | Notes |
 | --------- | ----------------------------------------------- | ----------- | ----- |
+| **body**  | [**CloudWatchSettings**](CloudWatchSettings.md) | dto         |
 | **appId** | **Number**                                      | appId       |
-| **dto**   | [**CloudWatchSettings**](CloudWatchSettings.md) | dto         |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**CloudWatchSettingsResponse**](CloudWatchSettingsResponse.md)
 
 ### Authorization
 
@@ -61,5 +54,5 @@ apiInstance.updateUsingPUT(appId, dto).then(
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json

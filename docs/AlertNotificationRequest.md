@@ -1,7 +1,6 @@
 # SematextApiClientJavascript.AlertNotificationRequest
 
 ## Properties
-
 | Name                | Type       | Description                                                                                                     | Notes      |
 | ------------------- | ---------- | --------------------------------------------------------------------------------------------------------------- | ---------- |
 | **defaultInterval** | **Number** |                                                                                                                 | [optional] |

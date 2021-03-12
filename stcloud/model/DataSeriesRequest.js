@@ -72,22 +72,22 @@ export class DataSeriesRequest {
   }
 }
 
-  /**
-   * @member {Number} defaultInterval
-   */
-  DataSeriesRequest.prototype.defaultInterval = undefined
+/**
+ * @member {Number} defaultInterval
+ */
+DataSeriesRequest.prototype.defaultInterval = undefined
 
-  /**
-   * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
-   * @member {String} end
-   */
-  DataSeriesRequest.prototype.end = undefined
+/**
+ * End time of interval. Can be expressed as timestamp in milliseconds or UTC date in yyyy-MM-dd HH:mm:ss format
+ * @member {String} end
+ */
+DataSeriesRequest.prototype.end = undefined
 
-  /**
-   * Map of allowed filter values and aggregation strategy. List of available filter values can be fetched using metric filters endpoint and default aggregation strategy depends on metric
-   * @member {Object.<String, module:model/DataSeriesFilter>} filters
-   */
-  DataSeriesRequest.prototype.filters = undefined
+/**
+ * Map of allowed filter values and aggregation strategy. List of available filter values can be fetched using metric filters endpoint and default aggregation strategy depends on metric
+ * @member {Object.<String, module:model/DataSeriesFilter>} filters
+ */
+DataSeriesRequest.prototype.filters = undefined
 
 /**
  * Allowed values for the <code>granularity</code> property.

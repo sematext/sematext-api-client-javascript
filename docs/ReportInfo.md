@@ -1,7 +1,6 @@
 # SematextApiClientJavascript.ReportInfo
 
 ## Properties
-
 | Name           | Type       | Description                             | Notes      |
 | -------------- | ---------- | --------------------------------------- | ---------- |
 | **addresses**  | **String** | Comma separated list of email addresses | [optional] |
