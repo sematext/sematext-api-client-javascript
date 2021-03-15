@@ -30,6 +30,7 @@
 | **registrationDate**      | **Number**                                          |             | [optional] |
 | **status**                | **String**                                          |             | [optional] |
 | **token**                 | **String**                                          |             | [optional] |
+| **tokens**                | **[String]**                                        |             | [optional] |
 | **trialEndDate**          | **Number**                                          |             | [optional] |
 | **urlGroupLimit**         | **Number**                                          |             | [optional] |
 | **userRoles**             | [**[UserRole]**](UserRole.md)                       |             | [optional] |

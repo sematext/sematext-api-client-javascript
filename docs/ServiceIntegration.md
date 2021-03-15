@@ -1,7 +1,6 @@
 # SematextApiClientJavascript.ServiceIntegration
 
 ## Properties
-
 | Name                    | Type        | Description | Notes      |
 | ----------------------- | ----------- | ----------- | ---------- |
 | **appTypeId**           | **Number**  |             | [optional] |
