@@ -61,7 +61,7 @@ These instructions will get you a copy of the project up and running on your loc
 Install via:
 
 ```shell
-npm install sematext-api-client --save
+npm install @sematext/sematext-api-client --save
 ```
 
 
