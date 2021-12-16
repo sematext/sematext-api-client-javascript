@@ -13,44 +13,36 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  describe('(package)', function () {
-    describe('BasicAuthMethodDto', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.BasicAuthMethodDto()
-      })
+/* eslint-disable no-unused-vars*/
+var instance
 
-      it('should create an instance of BasicAuthMethodDto', function () {
-        // TODO: update the code to test BasicAuthMethodDto
-        expect(instance).to.be.a(SematextApiClientJavascript.BasicAuthMethodDto)
-      })
 
-      it('should have the property authType (base name: "authType")', function () {
-        // TODO: update the code to test the property authType
-        expect(instance).to.have.property('authType')
-        // expect(instance.authType).to.be(expectedValueLiteral);
-      })
+describe('(package)', function () {
+  describe('BasicAuthMethodDto', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should have the property uuid (base name: "uuid")', function () {
-        // TODO: update the code to test the property uuid
-        expect(instance).to.have.property('uuid')
-        // expect(instance.uuid).to.be(expectedValueLiteral);
-      })
+    it('should create an instance of BasicAuthMethodDto', function () {
+      // TODO: update the code to test BasicAuthMethodDto
+      // expect(instance)to.be.a(SematextApiClientJavascript.BasicAuthMethodDto)
+    })
+
+    it('should have the property authType (base name: "authType")', function () {
+      // TODO: update the code to test the property authType
+      // expect(instance)to.have.property('authType')
+      // expect(instance.authType).to.be(expectedValueLiteral);
+    })
+
+    it('should have the property uuid (base name: "uuid")', function () {
+      // TODO: update the code to test the property uuid
+      // expect(instance)to.have.property('uuid')
+      // expect(instance.uuid).to.be(expectedValueLiteral);
     })
   })
 })

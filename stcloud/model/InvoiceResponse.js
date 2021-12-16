@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Error from './Error';
-import InvoiceResponseEntry from './InvoiceResponseEntry';
+import ApiClient from '../api/ApiClient.js'
+import Error from './Error.js'
+import InvoiceResponseEntry from './InvoiceResponseEntry.js'
 
 /**
 * The InvoiceResponse model module.
@@ -21,45 +21,45 @@ import InvoiceResponseEntry from './InvoiceResponseEntry';
 * @version 0.1.0
 */
 export default class InvoiceResponse {
-    /**
+  /**
     * Constructs a new <code>InvoiceResponse</code>.
     * @alias module:model/InvoiceResponse
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>InvoiceResponse</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/InvoiceResponse} obj Optional instance to populate.
     * @return {module:model/InvoiceResponse} The populated <code>InvoiceResponse</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new InvoiceResponse();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new InvoiceResponse()
 
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = InvoiceResponseEntry.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('errors')) {
-                obj['errors'] = ApiClient.convertToType(data['errors'], [Error]);
-            }
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
-            if (data.hasOwnProperty('success')) {
-                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'data')) {
+        obj['data'] = InvoiceResponseEntry.constructFromObject(data['data'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'errors')) {
+        obj['errors'] = ApiClient.convertToType(data['errors'], [Error])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'message')) {
+        obj['message'] = ApiClient.convertToType(data['message'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'success')) {
+        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/InvoiceResponseEntry} data

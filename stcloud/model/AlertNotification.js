@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The AlertNotification model module.
@@ -19,54 +19,54 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class AlertNotification {
-    /**
+  /**
     * Constructs a new <code>AlertNotification</code>.
     * @alias module:model/AlertNotification
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AlertNotification</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AlertNotification} obj Optional instance to populate.
     * @return {module:model/AlertNotification} The populated <code>AlertNotification</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AlertNotification();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AlertNotification()
 
 
-            if (data.hasOwnProperty('appName')) {
-                obj['appName'] = ApiClient.convertToType(data['appName'], 'String');
-            }
-            if (data.hasOwnProperty('appType')) {
-                obj['appType'] = ApiClient.convertToType(data['appType'], 'String');
-            }
-            if (data.hasOwnProperty('backToNormal')) {
-                obj['backToNormal'] = ApiClient.convertToType(data['backToNormal'], 'Boolean');
-            }
-            if (data.hasOwnProperty('createTime')) {
-                obj['createTime'] = ApiClient.convertToType(data['createTime'], 'String');
-            }
-            if (data.hasOwnProperty('sent')) {
-                obj['sent'] = ApiClient.convertToType(data['sent'], 'Boolean');
-            }
-            if (data.hasOwnProperty('text')) {
-                obj['text'] = ApiClient.convertToType(data['text'], 'String');
-            }
-            if (data.hasOwnProperty('when')) {
-                obj['when'] = ApiClient.convertToType(data['when'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data, 'appName')) {
+        obj['appName'] = ApiClient.convertToType(data['appName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appType')) {
+        obj['appType'] = ApiClient.convertToType(data['appType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'backToNormal')) {
+        obj['backToNormal'] = ApiClient.convertToType(data['backToNormal'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'createTime')) {
+        obj['createTime'] = ApiClient.convertToType(data['createTime'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sent')) {
+        obj['sent'] = ApiClient.convertToType(data['sent'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'text')) {
+        obj['text'] = ApiClient.convertToType(data['text'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'when')) {
+        obj['when'] = ApiClient.convertToType(data['when'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} appName

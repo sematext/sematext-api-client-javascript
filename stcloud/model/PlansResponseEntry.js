@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Plan from './Plan';
+import ApiClient from '../api/ApiClient.js'
+import Plan from './Plan.js'
 
 /**
 * The PlansResponseEntry model module.
@@ -20,36 +20,36 @@ import Plan from './Plan';
 * @version 0.1.0
 */
 export default class PlansResponseEntry {
-    /**
+  /**
     * Constructs a new <code>PlansResponseEntry</code>.
     * @alias module:model/PlansResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>PlansResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/PlansResponseEntry} obj Optional instance to populate.
     * @return {module:model/PlansResponseEntry} The populated <code>PlansResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new PlansResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new PlansResponseEntry()
 
 
-            if (data.hasOwnProperty('availablePlans')) {
-                obj['availablePlans'] = ApiClient.convertToType(data['availablePlans'], [Plan]);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'availablePlans')) {
+        obj['availablePlans'] = ApiClient.convertToType(data['availablePlans'], [Plan])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<module:model/Plan>} availablePlans

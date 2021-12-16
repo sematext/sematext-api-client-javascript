@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Subscription from './Subscription';
+import Subscription from './Subscription.js'
 
 /**
 * The SubscriptionResponseEntry model module.
@@ -20,36 +19,36 @@ import Subscription from './Subscription';
 * @version 0.1.0
 */
 export default class SubscriptionResponseEntry {
-    /**
+  /**
     * Constructs a new <code>SubscriptionResponseEntry</code>.
     * @alias module:model/SubscriptionResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>SubscriptionResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/SubscriptionResponseEntry} obj Optional instance to populate.
     * @return {module:model/SubscriptionResponseEntry} The populated <code>SubscriptionResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new SubscriptionResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new SubscriptionResponseEntry()
 
 
-            if (data.hasOwnProperty('subscription')) {
-                obj['subscription'] = Subscription.constructFromObject(data['subscription']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'subscription')) {
+        obj['subscription'] = Subscription.constructFromObject(data['subscription'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/Subscription} subscription

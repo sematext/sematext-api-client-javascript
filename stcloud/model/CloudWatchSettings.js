@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The CloudWatchSettings model module.
@@ -19,45 +19,45 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class CloudWatchSettings {
-    /**
+  /**
     * Constructs a new <code>CloudWatchSettings</code>.
     * @alias module:model/CloudWatchSettings
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>CloudWatchSettings</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/CloudWatchSettings} obj Optional instance to populate.
     * @return {module:model/CloudWatchSettings} The populated <code>CloudWatchSettings</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CloudWatchSettings();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new CloudWatchSettings()
 
 
-            if (data.hasOwnProperty('accessKey')) {
-                obj['accessKey'] = ApiClient.convertToType(data['accessKey'], 'String');
-            }
-            if (data.hasOwnProperty('fetchFrequency')) {
-                obj['fetchFrequency'] = ApiClient.convertToType(data['fetchFrequency'], 'String');
-            }
-            if (data.hasOwnProperty('region')) {
-                obj['region'] = ApiClient.convertToType(data['region'], 'String');
-            }
-            if (data.hasOwnProperty('secretKey')) {
-                obj['secretKey'] = ApiClient.convertToType(data['secretKey'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'accessKey')) {
+        obj['accessKey'] = ApiClient.convertToType(data['accessKey'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'fetchFrequency')) {
+        obj['fetchFrequency'] = ApiClient.convertToType(data['fetchFrequency'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'region')) {
+        obj['region'] = ApiClient.convertToType(data['region'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'secretKey')) {
+        obj['secretKey'] = ApiClient.convertToType(data['secretKey'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} accessKey
@@ -84,21 +84,21 @@ export default class CloudWatchSettings {
     * @readonly
     */
     static FetchFrequencyEnum = {
-        /**
+      /**
          * value: "MINUTE"
          * @const
          */
-        "MINUTE": "MINUTE",
-        /**
+      'MINUTE': 'MINUTE',
+      /**
          * value: "FIVE_MINUTES"
          * @const
          */
-        "FIVE_MINUTES": "FIVE_MINUTES",
-        /**
+      'FIVE_MINUTES': 'FIVE_MINUTES',
+      /**
          * value: "FIFTEEN_MINUTES"
          * @const
          */
-        "FIFTEEN_MINUTES": "FIFTEEN_MINUTES"
+      'FIFTEEN_MINUTES': 'FIFTEEN_MINUTES'
     };
     /**
     * Allowed values for the <code>region</code> property.
@@ -106,86 +106,86 @@ export default class CloudWatchSettings {
     * @readonly
     */
     static RegionEnum = {
-        /**
+      /**
          * value: "US_EAST_1"
          * @const
          */
-        "US_EAST_1": "US_EAST_1",
-        /**
+      'US_EAST_1': 'US_EAST_1',
+      /**
          * value: "US_WEST_1"
          * @const
          */
-        "US_WEST_1": "US_WEST_1",
-        /**
+      'US_WEST_1': 'US_WEST_1',
+      /**
          * value: "EU_WEST_1"
          * @const
          */
-        "EU_WEST_1": "EU_WEST_1",
-        /**
+      'EU_WEST_1': 'EU_WEST_1',
+      /**
          * value: "US_WEST_2"
          * @const
          */
-        "US_WEST_2": "US_WEST_2",
-        /**
+      'US_WEST_2': 'US_WEST_2',
+      /**
          * value: "AP_SOUTHEAST_1"
          * @const
          */
-        "AP_SOUTHEAST_1": "AP_SOUTHEAST_1",
-        /**
+      'AP_SOUTHEAST_1': 'AP_SOUTHEAST_1',
+      /**
          * value: "AP_SOUTHEAST_2"
          * @const
          */
-        "AP_SOUTHEAST_2": "AP_SOUTHEAST_2",
-        /**
+      'AP_SOUTHEAST_2': 'AP_SOUTHEAST_2',
+      /**
          * value: "AP_NORTHEAST_1"
          * @const
          */
-        "AP_NORTHEAST_1": "AP_NORTHEAST_1",
-        /**
+      'AP_NORTHEAST_1': 'AP_NORTHEAST_1',
+      /**
          * value: "SA_EAST_1"
          * @const
          */
-        "SA_EAST_1": "SA_EAST_1",
-        /**
+      'SA_EAST_1': 'SA_EAST_1',
+      /**
          * value: "GovCloud"
          * @const
          */
-        "GovCloud": "GovCloud",
-        /**
+      'GovCloud': 'GovCloud',
+      /**
          * value: "CN_NORTH_1"
          * @const
          */
-        "CN_NORTH_1": "CN_NORTH_1",
-        /**
+      'CN_NORTH_1': 'CN_NORTH_1',
+      /**
          * value: "US_EAST_2"
          * @const
          */
-        "US_EAST_2": "US_EAST_2",
-        /**
+      'US_EAST_2': 'US_EAST_2',
+      /**
          * value: "AP_SOUTH_1"
          * @const
          */
-        "AP_SOUTH_1": "AP_SOUTH_1",
-        /**
+      'AP_SOUTH_1': 'AP_SOUTH_1',
+      /**
          * value: "AP_NORTHEAST_2"
          * @const
          */
-        "AP_NORTHEAST_2": "AP_NORTHEAST_2",
-        /**
+      'AP_NORTHEAST_2': 'AP_NORTHEAST_2',
+      /**
          * value: "CA_CENTRAL_1"
          * @const
          */
-        "CA_CENTRAL_1": "CA_CENTRAL_1",
-        /**
+      'CA_CENTRAL_1': 'CA_CENTRAL_1',
+      /**
          * value: "EU_CENTRAL_1"
          * @const
          */
-        "EU_CENTRAL_1": "EU_CENTRAL_1",
-        /**
+      'EU_CENTRAL_1': 'EU_CENTRAL_1',
+      /**
          * value: "EU_WEST_2"
          * @const
          */
-        "EU_WEST_2": "EU_WEST_2"
+      'EU_WEST_2': 'EU_WEST_2'
     };
 
 }

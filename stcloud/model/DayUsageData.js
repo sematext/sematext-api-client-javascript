@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The DayUsageData model module.
@@ -19,93 +19,93 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class DayUsageData {
-    /**
+  /**
     * Constructs a new <code>DayUsageData</code>.
     * @alias module:model/DayUsageData
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>DayUsageData</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/DayUsageData} obj Optional instance to populate.
     * @return {module:model/DayUsageData} The populated <code>DayUsageData</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new DayUsageData();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new DayUsageData()
 
 
-            if (data.hasOwnProperty('countDailyDataPoints')) {
-                obj['countDailyDataPoints'] = ApiClient.convertToType(data['countDailyDataPoints'], 'Number');
-            }
-            if (data.hasOwnProperty('day')) {
-                obj['day'] = ApiClient.convertToType(data['day'], 'String');
-            }
-            if (data.hasOwnProperty('discount')) {
-                obj['discount'] = ApiClient.convertToType(data['discount'], 'Number');
-            }
-            if (data.hasOwnProperty('dpmPerContainerHostQuota')) {
-                obj['dpmPerContainerHostQuota'] = ApiClient.convertToType(data['dpmPerContainerHostQuota'], 'Number');
-            }
-            if (data.hasOwnProperty('dpmPerHostQuota')) {
-                obj['dpmPerHostQuota'] = ApiClient.convertToType(data['dpmPerHostQuota'], 'Number');
-            }
-            if (data.hasOwnProperty('fixedMonthlyPrice')) {
-                obj['fixedMonthlyPrice'] = ApiClient.convertToType(data['fixedMonthlyPrice'], 'Number');
-            }
-            if (data.hasOwnProperty('fixedMonthlyPricePerHour')) {
-                obj['fixedMonthlyPricePerHour'] = ApiClient.convertToType(data['fixedMonthlyPricePerHour'], 'Number');
-            }
-            if (data.hasOwnProperty('freeContainersPerHost')) {
-                obj['freeContainersPerHost'] = ApiClient.convertToType(data['freeContainersPerHost'], 'Number');
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('kiloDpmOveragePricePerHour')) {
-                obj['kiloDpmOveragePricePerHour'] = ApiClient.convertToType(data['kiloDpmOveragePricePerHour'], 'Number');
-            }
-            if (data.hasOwnProperty('planType')) {
-                obj['planType'] = ApiClient.convertToType(data['planType'], 'String');
-            }
-            if (data.hasOwnProperty('pricePerContainerHostHour')) {
-                obj['pricePerContainerHostHour'] = ApiClient.convertToType(data['pricePerContainerHostHour'], 'Number');
-            }
-            if (data.hasOwnProperty('pricePerContainerHour')) {
-                obj['pricePerContainerHour'] = ApiClient.convertToType(data['pricePerContainerHour'], 'Number');
-            }
-            if (data.hasOwnProperty('pricePerServerHour')) {
-                obj['pricePerServerHour'] = ApiClient.convertToType(data['pricePerServerHour'], 'Number');
-            }
-            if (data.hasOwnProperty('sumNumberOfContainerHosts')) {
-                obj['sumNumberOfContainerHosts'] = ApiClient.convertToType(data['sumNumberOfContainerHosts'], 'Number');
-            }
-            if (data.hasOwnProperty('sumNumberOfContainers')) {
-                obj['sumNumberOfContainers'] = ApiClient.convertToType(data['sumNumberOfContainers'], 'Number');
-            }
-            if (data.hasOwnProperty('sumNumberOfServers')) {
-                obj['sumNumberOfServers'] = ApiClient.convertToType(data['sumNumberOfServers'], 'Number');
-            }
-            if (data.hasOwnProperty('usageAmount')) {
-                obj['usageAmount'] = ApiClient.convertToType(data['usageAmount'], 'Number');
-            }
-            if (data.hasOwnProperty('usedPlan')) {
-                obj['usedPlan'] = ApiClient.convertToType(data['usedPlan'], 'String');
-            }
-            if (data.hasOwnProperty('userDiscount')) {
-                obj['userDiscount'] = ApiClient.convertToType(data['userDiscount'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'countDailyDataPoints')) {
+        obj['countDailyDataPoints'] = ApiClient.convertToType(data['countDailyDataPoints'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'day')) {
+        obj['day'] = ApiClient.convertToType(data['day'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'discount')) {
+        obj['discount'] = ApiClient.convertToType(data['discount'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'dpmPerContainerHostQuota')) {
+        obj['dpmPerContainerHostQuota'] = ApiClient.convertToType(data['dpmPerContainerHostQuota'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'dpmPerHostQuota')) {
+        obj['dpmPerHostQuota'] = ApiClient.convertToType(data['dpmPerHostQuota'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'fixedMonthlyPrice')) {
+        obj['fixedMonthlyPrice'] = ApiClient.convertToType(data['fixedMonthlyPrice'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'fixedMonthlyPricePerHour')) {
+        obj['fixedMonthlyPricePerHour'] = ApiClient.convertToType(data['fixedMonthlyPricePerHour'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'freeContainersPerHost')) {
+        obj['freeContainersPerHost'] = ApiClient.convertToType(data['freeContainersPerHost'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'kiloDpmOveragePricePerHour')) {
+        obj['kiloDpmOveragePricePerHour'] = ApiClient.convertToType(data['kiloDpmOveragePricePerHour'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'planType')) {
+        obj['planType'] = ApiClient.convertToType(data['planType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'pricePerContainerHostHour')) {
+        obj['pricePerContainerHostHour'] = ApiClient.convertToType(data['pricePerContainerHostHour'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'pricePerContainerHour')) {
+        obj['pricePerContainerHour'] = ApiClient.convertToType(data['pricePerContainerHour'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'pricePerServerHour')) {
+        obj['pricePerServerHour'] = ApiClient.convertToType(data['pricePerServerHour'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sumNumberOfContainerHosts')) {
+        obj['sumNumberOfContainerHosts'] = ApiClient.convertToType(data['sumNumberOfContainerHosts'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sumNumberOfContainers')) {
+        obj['sumNumberOfContainers'] = ApiClient.convertToType(data['sumNumberOfContainers'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sumNumberOfServers')) {
+        obj['sumNumberOfServers'] = ApiClient.convertToType(data['sumNumberOfServers'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'usageAmount')) {
+        obj['usageAmount'] = ApiClient.convertToType(data['usageAmount'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'usedPlan')) {
+        obj['usedPlan'] = ApiClient.convertToType(data['usedPlan'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'userDiscount')) {
+        obj['userDiscount'] = ApiClient.convertToType(data['userDiscount'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Number} countDailyDataPoints
@@ -196,26 +196,26 @@ export default class DayUsageData {
     * @readonly
     */
     static PlanTypeEnum = {
-        /**
+      /**
          * value: "INFRA"
          * @const
          */
-        "INFRA": "INFRA",
-        /**
+      'INFRA': 'INFRA',
+      /**
          * value: "PER_AGENT"
          * @const
          */
-        "PER_AGENT": "PER_AGENT",
-        /**
+      'PER_AGENT': 'PER_AGENT',
+      /**
          * value: "FIXED_PRICE"
          * @const
          */
-        "FIXED_PRICE": "FIXED_PRICE",
-        /**
+      'FIXED_PRICE': 'FIXED_PRICE',
+      /**
          * value: "PER_VOLUME"
          * @const
          */
-        "PER_VOLUME": "PER_VOLUME"
+      'PER_VOLUME': 'PER_VOLUME'
     };
 
 }

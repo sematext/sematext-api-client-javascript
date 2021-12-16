@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import UsageDto from './UsageDto';
+import UsageDto from './UsageDto.js'
 
 /**
 * The UsageResponseEntry model module.
@@ -20,36 +19,36 @@ import UsageDto from './UsageDto';
 * @version 0.1.0
 */
 export default class UsageResponseEntry {
-    /**
+  /**
     * Constructs a new <code>UsageResponseEntry</code>.
     * @alias module:model/UsageResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UsageResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UsageResponseEntry} obj Optional instance to populate.
     * @return {module:model/UsageResponseEntry} The populated <code>UsageResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UsageResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UsageResponseEntry()
 
 
-            if (data.hasOwnProperty('usage')) {
-                obj['usage'] = UsageDto.constructFromObject(data['usage']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'usage')) {
+        obj['usage'] = UsageDto.constructFromObject(data['usage'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/UsageDto} usage

@@ -11,9 +11,8 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import AlertNotificationRequest from '../model/AlertNotificationRequest';
-import NotificationsResponse from '../model/NotificationsResponse';
+import ApiClient from './ApiClient.js'
+import NotificationsResponse from '../model/NotificationsResponse.js'
 
 /**
 * AlertNotifications service.
@@ -30,7 +29,7 @@ export default class AlertNotificationsApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -41,28 +40,28 @@ export default class AlertNotificationsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/NotificationsResponse} and HTTP response
    */
   getAlertNotificationsForAppUsingPOSTWithHttpInfo(body, appId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = NotificationsResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = NotificationsResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/notifications/alerts', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -73,8 +72,8 @@ export default class AlertNotificationsApi {
   getAlertNotificationsForAppUsingPOST(body, appId) {
     return this.getAlertNotificationsForAppUsingPOSTWithHttpInfo(body, appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -84,27 +83,27 @@ export default class AlertNotificationsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/NotificationsResponse} and HTTP response
    */
   getAlertNotificationsForUserUsingPOSTWithHttpInfo(body) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = NotificationsResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = NotificationsResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/notifications/alerts', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -115,8 +114,8 @@ export default class AlertNotificationsApi {
   getAlertNotificationsForUserUsingPOST(body) {
     return this.getAlertNotificationsForUserUsingPOSTWithHttpInfo(body)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

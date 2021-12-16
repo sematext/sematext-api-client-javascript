@@ -11,9 +11,8 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import AppsResponse from '../model/AppsResponse';
-import CreateAppInfo from '../model/CreateAppInfo';
+import ApiClient from './ApiClient.js'
+import AppsResponse from '../model/AppsResponse.js'
 
 /**
 * LogsApp service.
@@ -30,7 +29,7 @@ export default class LogsAppApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -40,27 +39,27 @@ export default class LogsAppApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AppsResponse} and HTTP response
    */
   createLogseneApplicationWithHttpInfo(body) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = AppsResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = AppsResponse
 
     return this.apiClient.callApi(
       '/logsene-reports/api/v3/apps', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -70,8 +69,8 @@ export default class LogsAppApi {
   createLogseneApplication(body) {
     return this.createLogseneApplicationWithHttpInfo(body)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

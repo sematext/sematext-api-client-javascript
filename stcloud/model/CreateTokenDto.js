@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The CreateTokenDto model module.
@@ -19,42 +19,42 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class CreateTokenDto {
-    /**
+  /**
     * Constructs a new <code>CreateTokenDto</code>.
     * @alias module:model/CreateTokenDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>CreateTokenDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/CreateTokenDto} obj Optional instance to populate.
     * @return {module:model/CreateTokenDto} The populated <code>CreateTokenDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateTokenDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new CreateTokenDto()
 
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('readable')) {
-                obj['readable'] = ApiClient.convertToType(data['readable'], 'Boolean');
-            }
-            if (data.hasOwnProperty('writeable')) {
-                obj['writeable'] = ApiClient.convertToType(data['writeable'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'readable')) {
+        obj['readable'] = ApiClient.convertToType(data['readable'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'writeable')) {
+        obj['writeable'] = ApiClient.convertToType(data['writeable'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} name

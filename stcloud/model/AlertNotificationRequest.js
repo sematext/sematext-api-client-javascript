@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The AlertNotificationRequest model module.
@@ -19,45 +19,45 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class AlertNotificationRequest {
-    /**
+  /**
     * Constructs a new <code>AlertNotificationRequest</code>.
     * @alias module:model/AlertNotificationRequest
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AlertNotificationRequest</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AlertNotificationRequest} obj Optional instance to populate.
     * @return {module:model/AlertNotificationRequest} The populated <code>AlertNotificationRequest</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AlertNotificationRequest();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AlertNotificationRequest()
 
 
-            if (data.hasOwnProperty('defaultInterval')) {
-                obj['defaultInterval'] = ApiClient.convertToType(data['defaultInterval'], 'Number');
-            }
-            if (data.hasOwnProperty('end')) {
-                obj['end'] = ApiClient.convertToType(data['end'], 'String');
-            }
-            if (data.hasOwnProperty('interval')) {
-                obj['interval'] = ApiClient.convertToType(data['interval'], 'String');
-            }
-            if (data.hasOwnProperty('start')) {
-                obj['start'] = ApiClient.convertToType(data['start'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'defaultInterval')) {
+        obj['defaultInterval'] = ApiClient.convertToType(data['defaultInterval'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'end')) {
+        obj['end'] = ApiClient.convertToType(data['end'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'interval')) {
+        obj['interval'] = ApiClient.convertToType(data['interval'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'start')) {
+        obj['start'] = ApiClient.convertToType(data['start'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Number} defaultInterval

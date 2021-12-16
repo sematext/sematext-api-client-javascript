@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import App from './App';
-import DayUsageData from './DayUsageData';
-import MinPeriodFeePeriod from './MinPeriodFeePeriod';
+import ApiClient from '../api/ApiClient.js'
+import App from './App.js'
+import DayUsageData from './DayUsageData.js'
+import MinPeriodFeePeriod from './MinPeriodFeePeriod.js'
 
 /**
 * The ChargesDetailsResponseDto model module.
@@ -22,54 +22,54 @@ import MinPeriodFeePeriod from './MinPeriodFeePeriod';
 * @version 0.1.0
 */
 export default class ChargesDetailsResponseDto {
-    /**
+  /**
     * Constructs a new <code>ChargesDetailsResponseDto</code>.
     * @alias module:model/ChargesDetailsResponseDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>ChargesDetailsResponseDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/ChargesDetailsResponseDto} obj Optional instance to populate.
     * @return {module:model/ChargesDetailsResponseDto} The populated <code>ChargesDetailsResponseDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ChargesDetailsResponseDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new ChargesDetailsResponseDto()
 
 
-            if (data.hasOwnProperty('app')) {
-                obj['app'] = App.constructFromObject(data['app']);
-            }
-            if (data.hasOwnProperty('chargeBase')) {
-                obj['chargeBase'] = ApiClient.convertToType(data['chargeBase'], 'String');
-            }
-            if (data.hasOwnProperty('dayUsageData')) {
-                obj['dayUsageData'] = ApiClient.convertToType(data['dayUsageData'], [DayUsageData]);
-            }
-            if (data.hasOwnProperty('monthlyFeeAmount')) {
-                obj['monthlyFeeAmount'] = ApiClient.convertToType(data['monthlyFeeAmount'], 'Number');
-            }
-            if (data.hasOwnProperty('periodFeePeriods')) {
-                obj['periodFeePeriods'] = ApiClient.convertToType(data['periodFeePeriods'], [MinPeriodFeePeriod]);
-            }
-            if (data.hasOwnProperty('totalAmount')) {
-                obj['totalAmount'] = ApiClient.convertToType(data['totalAmount'], 'Number');
-            }
-            if (data.hasOwnProperty('usageAmount')) {
-                obj['usageAmount'] = ApiClient.convertToType(data['usageAmount'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'app')) {
+        obj['app'] = App.constructFromObject(data['app'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'chargeBase')) {
+        obj['chargeBase'] = ApiClient.convertToType(data['chargeBase'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'dayUsageData')) {
+        obj['dayUsageData'] = ApiClient.convertToType(data['dayUsageData'], [DayUsageData])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'monthlyFeeAmount')) {
+        obj['monthlyFeeAmount'] = ApiClient.convertToType(data['monthlyFeeAmount'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'periodFeePeriods')) {
+        obj['periodFeePeriods'] = ApiClient.convertToType(data['periodFeePeriods'], [MinPeriodFeePeriod])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'totalAmount')) {
+        obj['totalAmount'] = ApiClient.convertToType(data['totalAmount'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'usageAmount')) {
+        obj['usageAmount'] = ApiClient.convertToType(data['usageAmount'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/App} app
@@ -108,26 +108,26 @@ export default class ChargesDetailsResponseDto {
     * @readonly
     */
     static ChargeBaseEnum = {
-        /**
+      /**
          * value: "SUMMARIZED_USAGE"
          * @const
          */
-        "SUMMARIZED_USAGE": "SUMMARIZED_USAGE",
-        /**
+      'SUMMARIZED_USAGE': 'SUMMARIZED_USAGE',
+      /**
          * value: "MIN_MONTHLY_FEE"
          * @const
          */
-        "MIN_MONTHLY_FEE": "MIN_MONTHLY_FEE",
-        /**
+      'MIN_MONTHLY_FEE': 'MIN_MONTHLY_FEE',
+      /**
          * value: "SUM_OF_DAILY_FEES"
          * @const
          */
-        "SUM_OF_DAILY_FEES": "SUM_OF_DAILY_FEES",
-        /**
+      'SUM_OF_DAILY_FEES': 'SUM_OF_DAILY_FEES',
+      /**
          * value: "TOTAL_MONTHLY_FEE"
          * @const
          */
-        "TOTAL_MONTHLY_FEE": "TOTAL_MONTHLY_FEE"
+      'TOTAL_MONTHLY_FEE': 'TOTAL_MONTHLY_FEE'
     };
 
 }

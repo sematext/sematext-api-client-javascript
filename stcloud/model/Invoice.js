@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ChargesDetailsResponseDto from './ChargesDetailsResponseDto';
+import ApiClient from '../api/ApiClient.js'
+import ChargesDetailsResponseDto from './ChargesDetailsResponseDto.js'
 
 /**
 * The Invoice model module.
@@ -20,51 +20,51 @@ import ChargesDetailsResponseDto from './ChargesDetailsResponseDto';
 * @version 0.1.0
 */
 export default class Invoice {
-    /**
+  /**
     * Constructs a new <code>Invoice</code>.
     * @alias module:model/Invoice
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>Invoice</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/Invoice} obj Optional instance to populate.
     * @return {module:model/Invoice} The populated <code>Invoice</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new Invoice();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new Invoice()
 
 
-            if (data.hasOwnProperty('allCharges')) {
-                obj['allCharges'] = ApiClient.convertToType(data['allCharges'], [ChargesDetailsResponseDto]);
-            }
-            if (data.hasOwnProperty('invoiceDate')) {
-                obj['invoiceDate'] = ApiClient.convertToType(data['invoiceDate'], 'String');
-            }
-            if (data.hasOwnProperty('invoiceId')) {
-                obj['invoiceId'] = ApiClient.convertToType(data['invoiceId'], 'String');
-            }
-            if (data.hasOwnProperty('period')) {
-                obj['period'] = ApiClient.convertToType(data['period'], 'String');
-            }
-            if (data.hasOwnProperty('service')) {
-                obj['service'] = ApiClient.convertToType(data['service'], 'String');
-            }
-            if (data.hasOwnProperty('totalAmount')) {
-                obj['totalAmount'] = ApiClient.convertToType(data['totalAmount'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'allCharges')) {
+        obj['allCharges'] = ApiClient.convertToType(data['allCharges'], [ChargesDetailsResponseDto])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'invoiceDate')) {
+        obj['invoiceDate'] = ApiClient.convertToType(data['invoiceDate'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'invoiceId')) {
+        obj['invoiceId'] = ApiClient.convertToType(data['invoiceId'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'period')) {
+        obj['period'] = ApiClient.convertToType(data['period'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'service')) {
+        obj['service'] = ApiClient.convertToType(data['service'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'totalAmount')) {
+        obj['totalAmount'] = ApiClient.convertToType(data['totalAmount'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<module:model/ChargesDetailsResponseDto>} allCharges

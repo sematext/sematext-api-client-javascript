@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The NotificationIntegration model module.
@@ -19,63 +19,63 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class NotificationIntegration {
-    /**
+  /**
     * Constructs a new <code>NotificationIntegration</code>.
     * @alias module:model/NotificationIntegration
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>NotificationIntegration</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/NotificationIntegration} obj Optional instance to populate.
     * @return {module:model/NotificationIntegration} The populated <code>NotificationIntegration</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new NotificationIntegration();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new NotificationIntegration()
 
 
-            if (data.hasOwnProperty('applicability')) {
-                obj['applicability'] = ApiClient.convertToType(data['applicability'], 'String');
-            }
-            if (data.hasOwnProperty('createDate')) {
-                obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date');
-            }
-            if (data.hasOwnProperty('createdByOwner')) {
-                obj['createdByOwner'] = ApiClient.convertToType(data['createdByOwner'], 'Boolean');
-            }
-            if (data.hasOwnProperty('creatorId')) {
-                obj['creatorId'] = ApiClient.convertToType(data['creatorId'], 'Number');
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('integrationType')) {
-                obj['integrationType'] = ApiClient.convertToType(data['integrationType'], 'String');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('params')) {
-                obj['params'] = ApiClient.convertToType(data['params'], { 'String': 'String' });
-            }
-            if (data.hasOwnProperty('state')) {
-                obj['state'] = ApiClient.convertToType(data['state'], 'String');
-            }
-            if (data.hasOwnProperty('userId')) {
-                obj['userId'] = ApiClient.convertToType(data['userId'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'applicability')) {
+        obj['applicability'] = ApiClient.convertToType(data['applicability'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'createDate')) {
+        obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'createdByOwner')) {
+        obj['createdByOwner'] = ApiClient.convertToType(data['createdByOwner'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'creatorId')) {
+        obj['creatorId'] = ApiClient.convertToType(data['creatorId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'integrationType')) {
+        obj['integrationType'] = ApiClient.convertToType(data['integrationType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'params')) {
+        obj['params'] = ApiClient.convertToType(data['params'], { 'String': 'String' })
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'state')) {
+        obj['state'] = ApiClient.convertToType(data['state'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'userId')) {
+        obj['userId'] = ApiClient.convertToType(data['userId'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/NotificationIntegration.ApplicabilityEnum} applicability
@@ -126,16 +126,16 @@ export default class NotificationIntegration {
     * @readonly
     */
     static ApplicabilityEnum = {
-        /**
+      /**
          * value: "NONE"
          * @const
          */
-        "NONE": "NONE",
-        /**
+      'NONE': 'NONE',
+      /**
          * value: "USE_ALWAYS"
          * @const
          */
-        "USE_ALWAYS": "USE_ALWAYS"
+      'USE_ALWAYS': 'USE_ALWAYS'
     };
     /**
     * Allowed values for the <code>integrationType</code> property.
@@ -143,41 +143,41 @@ export default class NotificationIntegration {
     * @readonly
     */
     static IntegrationTypeEnum = {
-        /**
+      /**
          * value: "PAGER_DUTY"
          * @const
          */
-        "PAGER_DUTY": "PAGER_DUTY",
-        /**
+      'PAGER_DUTY': 'PAGER_DUTY',
+      /**
          * value: "NAGIOS"
          * @const
          */
-        "NAGIOS": "NAGIOS",
-        /**
+      'NAGIOS': 'NAGIOS',
+      /**
          * value: "WEB_HOOKS"
          * @const
          */
-        "WEB_HOOKS": "WEB_HOOKS",
-        /**
+      'WEB_HOOKS': 'WEB_HOOKS',
+      /**
          * value: "WEB_HOOKS_TEMPLATE"
          * @const
          */
-        "WEB_HOOKS_TEMPLATE": "WEB_HOOKS_TEMPLATE",
-        /**
+      'WEB_HOOKS_TEMPLATE': 'WEB_HOOKS_TEMPLATE',
+      /**
          * value: "HIP_CHAT"
          * @const
          */
-        "HIP_CHAT": "HIP_CHAT",
-        /**
+      'HIP_CHAT': 'HIP_CHAT',
+      /**
          * value: "EMAIL_LIST"
          * @const
          */
-        "EMAIL_LIST": "EMAIL_LIST",
-        /**
+      'EMAIL_LIST': 'EMAIL_LIST',
+      /**
          * value: "TEMPORARY_EMAIL_LIST"
          * @const
          */
-        "TEMPORARY_EMAIL_LIST": "TEMPORARY_EMAIL_LIST"
+      'TEMPORARY_EMAIL_LIST': 'TEMPORARY_EMAIL_LIST'
     };
     /**
     * Allowed values for the <code>state</code> property.
@@ -185,21 +185,21 @@ export default class NotificationIntegration {
     * @readonly
     */
     static StateEnum = {
-        /**
+      /**
          * value: "ACTIVE"
          * @const
          */
-        "ACTIVE": "ACTIVE",
-        /**
+      'ACTIVE': 'ACTIVE',
+      /**
          * value: "DISABLED"
          * @const
          */
-        "DISABLED": "DISABLED",
-        /**
+      'DISABLED': 'DISABLED',
+      /**
          * value: "DELETED"
          * @const
          */
-        "DELETED": "DELETED"
+      'DELETED': 'DELETED'
     };
 
 }

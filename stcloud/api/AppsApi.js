@@ -11,14 +11,11 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import AppDescription from '../model/AppDescription';
-import AppResponse from '../model/AppResponse';
-import AppTypesResponse from '../model/AppTypesResponse';
-import AppsResponse from '../model/AppsResponse';
-import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse';
-import Invitation from '../model/Invitation';
-import UpdateAppInfo from '../model/UpdateAppInfo';
+import ApiClient from './ApiClient.js'
+import AppResponse from '../model/AppResponse.js'
+import AppTypesResponse from '../model/AppTypesResponse.js'
+import AppsResponse from '../model/AppsResponse.js'
+import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse.js'
 
 /**
 * Apps service.
@@ -35,7 +32,7 @@ export default class AppsApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -45,28 +42,28 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   deleteUsingDELETE1WithHttpInfo(anyStateAppId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'anyStateAppId': anyStateAppId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{anyStateAppId}', 'DELETE',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -76,8 +73,8 @@ export default class AppsApi {
   deleteUsingDELETE1(anyStateAppId) {
     return this.deleteUsingDELETE1WithHttpInfo(anyStateAppId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -86,27 +83,27 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AppTypesResponse} and HTTP response
    */
   getAppTypesUsingGET1WithHttpInfo() {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = AppTypesResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = AppTypesResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/types', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -116,8 +113,8 @@ export default class AppsApi {
   getAppTypesUsingGET1() {
     return this.getAppTypesUsingGET1WithHttpInfo()
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -126,28 +123,28 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AppResponse} and HTTP response
    */
   getUsingGET1WithHttpInfo(anyStateAppId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'anyStateAppId': anyStateAppId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = AppResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = AppResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{anyStateAppId}', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -157,8 +154,8 @@ export default class AppsApi {
   getUsingGET1(anyStateAppId) {
     return this.getUsingGET1WithHttpInfo(anyStateAppId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -167,27 +164,27 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   inviteAppGuestsUsingPOST1WithHttpInfo(body) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/guests', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -197,8 +194,8 @@ export default class AppsApi {
   inviteAppGuestsUsingPOST1(body) {
     return this.inviteAppGuestsUsingPOST1WithHttpInfo(body)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -207,27 +204,27 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AppsResponse} and HTTP response
    */
   listAppsUsersUsingGET1WithHttpInfo() {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = AppsResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = AppsResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/users', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -237,8 +234,8 @@ export default class AppsApi {
   listAppsUsersUsingGET1() {
     return this.listAppsUsersUsingGET1WithHttpInfo()
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -247,27 +244,27 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AppsResponse} and HTTP response
    */
   listUsingGETWithHttpInfo() {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = AppsResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = AppsResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -277,8 +274,8 @@ export default class AppsApi {
   listUsingGET() {
     return this.listUsingGETWithHttpInfo()
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -289,29 +286,29 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AppResponse} and HTTP response
    */
   updateDescriptionUsingPUT1WithHttpInfo(anyStateAppId, opts) {
-    opts = opts || {};
-    let postBody = opts['body'];
+    opts = opts || {}
+    let postBody = opts['body']
 
     let pathParams = {
       'anyStateAppId': anyStateAppId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = AppResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = AppResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{anyStateAppId}/description', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -323,8 +320,8 @@ export default class AppsApi {
   updateDescriptionUsingPUT1(anyStateAppId, opts) {
     return this.updateDescriptionUsingPUT1WithHttpInfo(anyStateAppId, opts)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -334,28 +331,28 @@ export default class AppsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AppResponse} and HTTP response
    */
   updateUsingPUT3WithHttpInfo(body, anyStateAppId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'anyStateAppId': anyStateAppId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = AppResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = AppResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{anyStateAppId}', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -366,8 +363,8 @@ export default class AppsApi {
   updateUsingPUT3(body, anyStateAppId) {
     return this.updateUsingPUT3WithHttpInfo(body, anyStateAppId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

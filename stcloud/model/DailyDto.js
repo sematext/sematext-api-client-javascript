@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The DailyDto model module.
@@ -19,45 +19,45 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class DailyDto {
-    /**
+  /**
     * Constructs a new <code>DailyDto</code>.
     * @alias module:model/DailyDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>DailyDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/DailyDto} obj Optional instance to populate.
     * @return {module:model/DailyDto} The populated <code>DailyDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new DailyDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new DailyDto()
 
 
-            if (data.hasOwnProperty('day')) {
-                obj['day'] = ApiClient.convertToType(data['day'], 'Number');
-            }
-            if (data.hasOwnProperty('failed')) {
-                obj['failed'] = ApiClient.convertToType(data['failed'], 'Number');
-            }
-            if (data.hasOwnProperty('indexed')) {
-                obj['indexed'] = ApiClient.convertToType(data['indexed'], 'Number');
-            }
-            if (data.hasOwnProperty('volume')) {
-                obj['volume'] = ApiClient.convertToType(data['volume'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'day')) {
+        obj['day'] = ApiClient.convertToType(data['day'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'failed')) {
+        obj['failed'] = ApiClient.convertToType(data['failed'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'indexed')) {
+        obj['indexed'] = ApiClient.convertToType(data['indexed'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'volume')) {
+        obj['volume'] = ApiClient.convertToType(data['volume'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Number} day

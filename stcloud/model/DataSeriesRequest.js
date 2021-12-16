@@ -13,8 +13,8 @@
  *
  */
 
-import { ApiClient } from '../ApiClient'
-import { DataSeriesFilter } from './DataSeriesFilter'
+import ApiClient from '../api/ApiClient.js'
+import { DataSeriesFilter } from './DataSeriesFilter.js'
 
 /**
  * The DataSeriesRequest model module.
@@ -41,30 +41,30 @@ export class DataSeriesRequest {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new DataSeriesRequest()
-      if (data.hasOwnProperty('defaultInterval'))
+      if (Object.prototype.hasOwnProperty.call(data,'defaultInterval'))
         // eslint-disable-line no-prototype-builtins
         obj.defaultInterval = ApiClient.convertToType(
           data['defaultInterval'],
           'Number'
         )
-      if (data.hasOwnProperty('end'))
+      if (Object.prototype.hasOwnProperty.call(data,'end'))
         // eslint-disable-line no-prototype-builtins
         obj.end = ApiClient.convertToType(data['end'], 'String')
-      if (data.hasOwnProperty('filters'))
+      if (Object.prototype.hasOwnProperty.call(data,'filters'))
         // eslint-disable-line no-prototype-builtins
         obj.filters = ApiClient.convertToType(data['filters'], {
           String: DataSeriesFilter
         })
-      if (data.hasOwnProperty('granularity'))
+      if (Object.prototype.hasOwnProperty.call(data,'granularity'))
         // eslint-disable-line no-prototype-builtins
         obj.granularity = ApiClient.convertToType(data['granularity'], 'String')
-      if (data.hasOwnProperty('interval'))
+      if (Object.prototype.hasOwnProperty.call(data,'interval'))
         // eslint-disable-line no-prototype-builtins
         obj.interval = ApiClient.convertToType(data['interval'], 'String')
-      if (data.hasOwnProperty('metric'))
+      if (Object.prototype.hasOwnProperty.call(data,'metric'))
         // eslint-disable-line no-prototype-builtins
         obj.metric = ApiClient.convertToType(data['metric'], 'String')
-      if (data.hasOwnProperty('start'))
+      if (Object.prototype.hasOwnProperty.call(data,'start'))
         // eslint-disable-line no-prototype-builtins
         obj.start = ApiClient.convertToType(data['start'], 'String')
     }

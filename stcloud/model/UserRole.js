@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The UserRole model module.
@@ -19,42 +19,42 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class UserRole {
-    /**
+  /**
     * Constructs a new <code>UserRole</code>.
     * @alias module:model/UserRole
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UserRole</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UserRole} obj Optional instance to populate.
     * @return {module:model/UserRole} The populated <code>UserRole</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UserRole();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UserRole()
 
 
-            if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
-            }
-            if (data.hasOwnProperty('roleStatus')) {
-                obj['roleStatus'] = ApiClient.convertToType(data['roleStatus'], 'String');
-            }
-            if (data.hasOwnProperty('userEmail')) {
-                obj['userEmail'] = ApiClient.convertToType(data['userEmail'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'role')) {
+        obj['role'] = ApiClient.convertToType(data['role'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'roleStatus')) {
+        obj['roleStatus'] = ApiClient.convertToType(data['roleStatus'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'userEmail')) {
+        obj['userEmail'] = ApiClient.convertToType(data['userEmail'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/UserRole.RoleEnum} role
@@ -77,36 +77,36 @@ export default class UserRole {
     * @readonly
     */
     static RoleEnum = {
-        /**
+      /**
          * value: "SUPER_USER"
          * @const
          */
-        "SUPER_USER": "SUPER_USER",
-        /**
+      'SUPER_USER': 'SUPER_USER',
+      /**
          * value: "OWNER"
          * @const
          */
-        "OWNER": "OWNER",
-        /**
+      'OWNER': 'OWNER',
+      /**
          * value: "ADMIN"
          * @const
          */
-        "ADMIN": "ADMIN",
-        /**
+      'ADMIN': 'ADMIN',
+      /**
          * value: "USER"
          * @const
          */
-        "USER": "USER",
-        /**
+      'USER': 'USER',
+      /**
          * value: "DEMO"
          * @const
          */
-        "DEMO": "DEMO",
-        /**
+      'DEMO': 'DEMO',
+      /**
          * value: "ANONYMOUS"
          * @const
          */
-        "ANONYMOUS": "ANONYMOUS"
+      'ANONYMOUS': 'ANONYMOUS'
     };
     /**
     * Allowed values for the <code>roleStatus</code> property.
@@ -114,16 +114,16 @@ export default class UserRole {
     * @readonly
     */
     static RoleStatusEnum = {
-        /**
+      /**
          * value: "INACTIVE"
          * @const
          */
-        "INACTIVE": "INACTIVE",
-        /**
+      'INACTIVE': 'INACTIVE',
+      /**
          * value: "ACTIVE"
          * @const
          */
-        "ACTIVE": "ACTIVE"
+      'ACTIVE': 'ACTIVE'
     };
 
 }

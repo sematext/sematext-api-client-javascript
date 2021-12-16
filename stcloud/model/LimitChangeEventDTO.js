@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The LimitChangeEventDTO model module.
@@ -19,42 +19,42 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class LimitChangeEventDTO {
-    /**
+  /**
     * Constructs a new <code>LimitChangeEventDTO</code>.
     * @alias module:model/LimitChangeEventDTO
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>LimitChangeEventDTO</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/LimitChangeEventDTO} obj Optional instance to populate.
     * @return {module:model/LimitChangeEventDTO} The populated <code>LimitChangeEventDTO</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new LimitChangeEventDTO();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new LimitChangeEventDTO()
 
 
-            if (data.hasOwnProperty('eventTime')) {
-                obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date');
-            }
-            if (data.hasOwnProperty('newLimit')) {
-                obj['newLimit'] = ApiClient.convertToType(data['newLimit'], 'Number');
-            }
-            if (data.hasOwnProperty('oldLimit')) {
-                obj['oldLimit'] = ApiClient.convertToType(data['oldLimit'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'eventTime')) {
+        obj['eventTime'] = ApiClient.convertToType(data['eventTime'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'newLimit')) {
+        obj['newLimit'] = ApiClient.convertToType(data['newLimit'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'oldLimit')) {
+        obj['oldLimit'] = ApiClient.convertToType(data['oldLimit'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Date} eventTime

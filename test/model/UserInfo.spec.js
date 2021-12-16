@@ -12,39 +12,29 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  describe('(package)', function () {
-    describe('UserInfo', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.UserInfo()
-      })
+describe('(package)', function () {
+  describe('UserInfo', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should create an instance of UserInfo', function () {
-        // TODO: update the code to test UserInfo
-        expect(instance).to.be.a(SematextApiClientJavascript.UserInfo)
-      })
+    it('should create an instance of UserInfo', function () {
+      // TODO: update the code to test UserInfo
+      // expect(instance)to.be.a(SematextApiClientJavascript.UserInfo)
+    })
 
-      it('should have the property loginName (base name: "loginName")', function () {
-        // TODO: update the code to test the property loginName
-        expect(instance).to.have.property('loginName')
-        // expect(instance.loginName).to.be(expectedValueLiteral);
-      })
+    it('should have the property loginName (base name: "loginName")', function () {
+      // TODO: update the code to test the property loginName
+      // expect(instance)to.have.property('loginName')
+      // expect(instance.loginName).to.be(expectedValueLiteral);
     })
   })
 })

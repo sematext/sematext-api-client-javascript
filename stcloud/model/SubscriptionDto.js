@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import UserPermissions from './UserPermissions';
+import ApiClient from '../api/ApiClient.js'
+import UserPermissions from './UserPermissions.js'
 
 /**
 * The SubscriptionDto model module.
@@ -20,69 +20,69 @@ import UserPermissions from './UserPermissions';
 * @version 0.1.0
 */
 export default class SubscriptionDto {
-    /**
+  /**
     * Constructs a new <code>SubscriptionDto</code>.
     * @alias module:model/SubscriptionDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>SubscriptionDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/SubscriptionDto} obj Optional instance to populate.
     * @return {module:model/SubscriptionDto} The populated <code>SubscriptionDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new SubscriptionDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new SubscriptionDto()
 
 
-            if (data.hasOwnProperty('addresses')) {
-                obj['addresses'] = ApiClient.convertToType(data['addresses'], 'String');
-            }
-            if (data.hasOwnProperty('enable')) {
-                obj['enable'] = ApiClient.convertToType(data['enable'], 'Boolean');
-            }
-            if (data.hasOwnProperty('filters')) {
-                obj['filters'] = ApiClient.convertToType(data['filters'], 'String');
-            }
-            if (data.hasOwnProperty('frequency')) {
-                obj['frequency'] = ApiClient.convertToType(data['frequency'], 'String');
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('reportName')) {
-                obj['reportName'] = ApiClient.convertToType(data['reportName'], 'String');
-            }
-            if (data.hasOwnProperty('sendTime')) {
-                obj['sendTime'] = ApiClient.convertToType(data['sendTime'], 'Date');
-            }
-            if (data.hasOwnProperty('subject')) {
-                obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
-            }
-            if (data.hasOwnProperty('systemId')) {
-                obj['systemId'] = ApiClient.convertToType(data['systemId'], 'Number');
-            }
-            if (data.hasOwnProperty('text')) {
-                obj['text'] = ApiClient.convertToType(data['text'], 'String');
-            }
-            if (data.hasOwnProperty('timeRange')) {
-                obj['timeRange'] = ApiClient.convertToType(data['timeRange'], 'String');
-            }
-            if (data.hasOwnProperty('userPermissions')) {
-                obj['userPermissions'] = UserPermissions.constructFromObject(data['userPermissions']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'addresses')) {
+        obj['addresses'] = ApiClient.convertToType(data['addresses'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'enable')) {
+        obj['enable'] = ApiClient.convertToType(data['enable'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'filters')) {
+        obj['filters'] = ApiClient.convertToType(data['filters'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'frequency')) {
+        obj['frequency'] = ApiClient.convertToType(data['frequency'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'reportName')) {
+        obj['reportName'] = ApiClient.convertToType(data['reportName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sendTime')) {
+        obj['sendTime'] = ApiClient.convertToType(data['sendTime'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'subject')) {
+        obj['subject'] = ApiClient.convertToType(data['subject'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'systemId')) {
+        obj['systemId'] = ApiClient.convertToType(data['systemId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'text')) {
+        obj['text'] = ApiClient.convertToType(data['text'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'timeRange')) {
+        obj['timeRange'] = ApiClient.convertToType(data['timeRange'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'userPermissions')) {
+        obj['userPermissions'] = UserPermissions.constructFromObject(data['userPermissions'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} addresses
@@ -141,31 +141,31 @@ export default class SubscriptionDto {
     * @readonly
     */
     static FrequencyEnum = {
-        /**
+      /**
          * value: "EVERY_FIVE_MINUTES"
          * @const
          */
-        "EVERY_FIVE_MINUTES": "EVERY_FIVE_MINUTES",
-        /**
+      'EVERY_FIVE_MINUTES': 'EVERY_FIVE_MINUTES',
+      /**
          * value: "DAILY"
          * @const
          */
-        "DAILY": "DAILY",
-        /**
+      'DAILY': 'DAILY',
+      /**
          * value: "WEEKLY"
          * @const
          */
-        "WEEKLY": "WEEKLY",
-        /**
+      'WEEKLY': 'WEEKLY',
+      /**
          * value: "MONTHLY"
          * @const
          */
-        "MONTHLY": "MONTHLY",
-        /**
+      'MONTHLY': 'MONTHLY',
+      /**
          * value: "QUARTERLY"
          * @const
          */
-        "QUARTERLY": "QUARTERLY"
+      'QUARTERLY': 'QUARTERLY'
     };
     /**
     * Allowed values for the <code>timeRange</code> property.
@@ -173,36 +173,36 @@ export default class SubscriptionDto {
     * @readonly
     */
     static TimeRangeEnum = {
-        /**
+      /**
          * value: "ONE_DAY"
          * @const
          */
-        "ONE_DAY": "ONE_DAY",
-        /**
+      'ONE_DAY': 'ONE_DAY',
+      /**
          * value: "ONE_WEEK"
          * @const
          */
-        "ONE_WEEK": "ONE_WEEK",
-        /**
+      'ONE_WEEK': 'ONE_WEEK',
+      /**
          * value: "ONE_MONTH"
          * @const
          */
-        "ONE_MONTH": "ONE_MONTH",
-        /**
+      'ONE_MONTH': 'ONE_MONTH',
+      /**
          * value: "TWO_MONTH"
          * @const
          */
-        "TWO_MONTH": "TWO_MONTH",
-        /**
+      'TWO_MONTH': 'TWO_MONTH',
+      /**
          * value: "SIX_MONTH"
          * @const
          */
-        "SIX_MONTH": "SIX_MONTH",
-        /**
+      'SIX_MONTH': 'SIX_MONTH',
+      /**
          * value: "ONE_YEAR"
          * @const
          */
-        "ONE_YEAR": "ONE_YEAR"
+      'ONE_YEAR': 'ONE_YEAR'
     };
 
 }

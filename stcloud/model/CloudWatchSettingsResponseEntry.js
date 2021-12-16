@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CloudWatchSettings from './CloudWatchSettings';
+import ApiClient from '../api/ApiClient.js'
+import CloudWatchSettings from './CloudWatchSettings.js'
 
 /**
 * The CloudWatchSettingsResponseEntry model module.
@@ -20,36 +20,36 @@ import CloudWatchSettings from './CloudWatchSettings';
 * @version 0.1.0
 */
 export default class CloudWatchSettingsResponseEntry {
-    /**
+  /**
     * Constructs a new <code>CloudWatchSettingsResponseEntry</code>.
     * @alias module:model/CloudWatchSettingsResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>CloudWatchSettingsResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/CloudWatchSettingsResponseEntry} obj Optional instance to populate.
     * @return {module:model/CloudWatchSettingsResponseEntry} The populated <code>CloudWatchSettingsResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CloudWatchSettingsResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new CloudWatchSettingsResponseEntry()
 
 
-            if (data.hasOwnProperty('aws')) {
-                obj['aws'] = CloudWatchSettings.constructFromObject(data['aws']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'aws')) {
+        obj['aws'] = CloudWatchSettings.constructFromObject(data['aws'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/CloudWatchSettings} aws

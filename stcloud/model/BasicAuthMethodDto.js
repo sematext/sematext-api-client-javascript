@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The BasicAuthMethodDto model module.
@@ -19,39 +19,39 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class BasicAuthMethodDto {
-    /**
+  /**
     * Constructs a new <code>BasicAuthMethodDto</code>.
     * @alias module:model/BasicAuthMethodDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>BasicAuthMethodDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/BasicAuthMethodDto} obj Optional instance to populate.
     * @return {module:model/BasicAuthMethodDto} The populated <code>BasicAuthMethodDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new BasicAuthMethodDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new BasicAuthMethodDto()
 
 
-            if (data.hasOwnProperty('authType')) {
-                obj['authType'] = ApiClient.convertToType(data['authType'], 'String');
-            }
-            if (data.hasOwnProperty('uuid')) {
-                obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'authType')) {
+        obj['authType'] = ApiClient.convertToType(data['authType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'uuid')) {
+        obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/BasicAuthMethodDto.AuthTypeEnum} authType
@@ -70,16 +70,16 @@ export default class BasicAuthMethodDto {
     * @readonly
     */
     static AuthTypeEnum = {
-        /**
+      /**
          * value: "SEMATEXT_ACCOUNT"
          * @const
          */
-        "SEMATEXT_ACCOUNT": "SEMATEXT_ACCOUNT",
-        /**
+      'SEMATEXT_ACCOUNT': 'SEMATEXT_ACCOUNT',
+      /**
          * value: "LDAP"
          * @const
          */
-        "LDAP": "LDAP"
+      'LDAP': 'LDAP'
     };
 
 }

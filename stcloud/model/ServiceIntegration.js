@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The ServiceIntegration model module.
@@ -19,69 +19,69 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class ServiceIntegration {
-    /**
+  /**
     * Constructs a new <code>ServiceIntegration</code>.
     * @alias module:model/ServiceIntegration
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>ServiceIntegration</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/ServiceIntegration} obj Optional instance to populate.
     * @return {module:model/ServiceIntegration} The populated <code>ServiceIntegration</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ServiceIntegration();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new ServiceIntegration()
 
 
-            if (data.hasOwnProperty('appTypeId')) {
-                obj['appTypeId'] = ApiClient.convertToType(data['appTypeId'], 'Number');
-            }
-            if (data.hasOwnProperty('appTypeName')) {
-                obj['appTypeName'] = ApiClient.convertToType(data['appTypeName'], 'String');
-            }
-            if (data.hasOwnProperty('displayName')) {
-                obj['displayName'] = ApiClient.convertToType(data['displayName'], 'String');
-            }
-            if (data.hasOwnProperty('enabled')) {
-                obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('externalProductId')) {
-                obj['externalProductId'] = ApiClient.convertToType(data['externalProductId'], 'Number');
-            }
-            if (data.hasOwnProperty('externalProductName')) {
-                obj['externalProductName'] = ApiClient.convertToType(data['externalProductName'], 'String');
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('integrationType')) {
-                obj['integrationType'] = ApiClient.convertToType(data['integrationType'], 'String');
-            }
-            if (data.hasOwnProperty('ordinal')) {
-                obj['ordinal'] = ApiClient.convertToType(data['ordinal'], 'Number');
-            }
-            if (data.hasOwnProperty('parentIntegrationId')) {
-                obj['parentIntegrationId'] = ApiClient.convertToType(data['parentIntegrationId'], 'Number');
-            }
-            if (data.hasOwnProperty('sematextService')) {
-                obj['sematextService'] = ApiClient.convertToType(data['sematextService'], 'String');
-            }
-            if (data.hasOwnProperty('visible')) {
-                obj['visible'] = ApiClient.convertToType(data['visible'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'appTypeId')) {
+        obj['appTypeId'] = ApiClient.convertToType(data['appTypeId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appTypeName')) {
+        obj['appTypeName'] = ApiClient.convertToType(data['appTypeName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'displayName')) {
+        obj['displayName'] = ApiClient.convertToType(data['displayName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'enabled')) {
+        obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'externalProductId')) {
+        obj['externalProductId'] = ApiClient.convertToType(data['externalProductId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'externalProductName')) {
+        obj['externalProductName'] = ApiClient.convertToType(data['externalProductName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'integrationType')) {
+        obj['integrationType'] = ApiClient.convertToType(data['integrationType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'ordinal')) {
+        obj['ordinal'] = ApiClient.convertToType(data['ordinal'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'parentIntegrationId')) {
+        obj['parentIntegrationId'] = ApiClient.convertToType(data['parentIntegrationId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sematextService')) {
+        obj['sematextService'] = ApiClient.convertToType(data['sematextService'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'visible')) {
+        obj['visible'] = ApiClient.convertToType(data['visible'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Number} appTypeId

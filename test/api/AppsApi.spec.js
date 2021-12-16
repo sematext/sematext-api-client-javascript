@@ -12,33 +12,23 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.AppsApi()
-  })
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.AppsApi()
+})
 
-  describe('(package)', function () {
-    describe('AppsApi', function () {
-      describe('getAppTypesUsingGET', function () {
-        it('should call getAppTypesUsingGET successfully', function (done) {
-          // TODO: uncomment getAppTypesUsingGET call and complete the assertions
-          /*
+describe('(package)', function () {
+  describe('AppsApi', function () {
+    describe('getAppTypesUsingGET', function () {
+      it('should call getAppTypesUsingGET successfully', function (done) {
+        // TODO: uncomment getAppTypesUsingGET call and complete the assertions
+        /*
 
           instance.getAppTypesUsingGET().then(function(data) {
             // TODO: update response assertions
@@ -68,14 +58,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('getUsingGET', function () {
-        it('should call getUsingGET successfully', function (done) {
-          // TODO: uncomment, update parameter values for getUsingGET call and complete the assertions
-          /*
+    })
+    describe('getUsingGET', function () {
+      it('should call getUsingGET successfully', function (done) {
+        // TODO: uncomment, update parameter values for getUsingGET call and complete the assertions
+        /*
           var anyStateAppId = 789;
 
           instance.getUsingGET(anyStateAppId).then(function(data) {
@@ -106,14 +96,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('inviteAppGuestsUsingPOST', function () {
-        it('should call inviteAppGuestsUsingPOST successfully', function (done) {
-          // TODO: uncomment, update parameter values for inviteAppGuestsUsingPOST call and complete the assertions
-          /*
+    })
+    describe('inviteAppGuestsUsingPOST', function () {
+      it('should call inviteAppGuestsUsingPOST successfully', function (done) {
+        // TODO: uncomment, update parameter values for inviteAppGuestsUsingPOST call and complete the assertions
+        /*
           var invitation = new SematextApiClientJavascript.Invitation();
           invitation.app = new SematextApiClientJavascript.App();
           invitation.app.ajaxThreshold = "0";
@@ -270,14 +260,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('listAppsUsersUsingGET', function () {
-        it('should call listAppsUsersUsingGET successfully', function (done) {
-          // TODO: uncomment listAppsUsersUsingGET call and complete the assertions
-          /*
+    })
+    describe('listAppsUsersUsingGET', function () {
+      it('should call listAppsUsersUsingGET successfully', function (done) {
+        // TODO: uncomment listAppsUsersUsingGET call and complete the assertions
+        /*
 
           instance.listAppsUsersUsingGET().then(function(data) {
             // TODO: update response assertions
@@ -307,14 +297,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('listUsingGET', function () {
-        it('should call listUsingGET successfully', function (done) {
-          // TODO: uncomment listUsingGET call and complete the assertions
-          /*
+    })
+    describe('listUsingGET', function () {
+      it('should call listUsingGET successfully', function (done) {
+        // TODO: uncomment listUsingGET call and complete the assertions
+        /*
 
           instance.listUsingGET().then(function(data) {
             // TODO: update response assertions
@@ -344,14 +334,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('updateDescriptionUsingPUT', function () {
-        it('should call updateDescriptionUsingPUT successfully', function (done) {
-          // TODO: uncomment, update parameter values for updateDescriptionUsingPUT call and complete the assertions
-          /*
+    })
+    describe('updateDescriptionUsingPUT', function () {
+      it('should call updateDescriptionUsingPUT successfully', function (done) {
+        // TODO: uncomment, update parameter values for updateDescriptionUsingPUT call and complete the assertions
+        /*
           var anyStateAppId = 789;
           var opts = {};
           opts.updateDetails = new SematextApiClientJavascript.AppDescription();
@@ -385,14 +375,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('updateUsingPUT1', function () {
-        it('should call updateUsingPUT1 successfully', function (done) {
-          // TODO: uncomment, update parameter values for updateUsingPUT1 call and complete the assertions
-          /*
+    })
+    describe('updateUsingPUT1', function () {
+      it('should call updateUsingPUT1 successfully', function (done) {
+        // TODO: uncomment, update parameter values for updateUsingPUT1 call and complete the assertions
+        /*
           var dto = new SematextApiClientJavascript.UpdateAppInfo();
           dto.description = "New Description of App";
           dto.ignorePercentage = 1;
@@ -433,9 +423,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })

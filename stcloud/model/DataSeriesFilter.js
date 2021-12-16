@@ -13,7 +13,7 @@
  *
  */
 
-import { ApiClient } from '../ApiClient'
+import ApiClient from '../api/ApiClient.js'
 
 /**
  * The DataSeriesFilter model module.
@@ -37,13 +37,13 @@ export class DataSeriesFilter {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new DataSeriesFilter()
-      if (data.hasOwnProperty('aggregation'))
+      if (Object.prototype.hasOwnProperty.call(data,'aggregation'))
         // eslint-disable-line no-prototype-builtins
         obj.aggregation = ApiClient.convertToType(data['aggregation'], 'String')
-      if (data.hasOwnProperty('multiValue'))
+      if (Object.prototype.hasOwnProperty.call(data,'multiValue'))
         // eslint-disable-line no-prototype-builtins
         obj.multiValue = ApiClient.convertToType(data['multiValue'], 'Boolean')
-      if (data.hasOwnProperty('values'))
+      if (Object.prototype.hasOwnProperty.call(data,'values'))
         // eslint-disable-line no-prototype-builtins
         obj.values = ApiClient.convertToType(data['values'], ['String'])
     }

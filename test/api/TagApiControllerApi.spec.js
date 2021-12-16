@@ -12,33 +12,23 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.TagApiControllerApi()
-  })
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.TagApiControllerApi()
+})
 
-  describe('(package)', function () {
-    describe('TagApiControllerApi', function () {
-      describe('getTagNamesUsingGET', function () {
-        it('should call getTagNamesUsingGET successfully', function (done) {
-          // TODO: uncomment, update parameter values for getTagNamesUsingGET call and complete the assertions
-          /*
+describe('(package)', function () {
+  describe('TagApiControllerApi', function () {
+    describe('getTagNamesUsingGET', function () {
+      it('should call getTagNamesUsingGET successfully', function (done) {
+        // TODO: uncomment, update parameter values for getTagNamesUsingGET call and complete the assertions
+        /*
           var appIds = "appIds_example";
           var opts = {};
           opts.from = 789;
@@ -58,14 +48,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('getUsingGET2', function () {
-        it('should call getUsingGET2 successfully', function (done) {
-          // TODO: uncomment, update parameter values for getUsingGET2 call and complete the assertions
-          /*
+    })
+    describe('getUsingGET2', function () {
+      it('should call getUsingGET2 successfully', function (done) {
+        // TODO: uncomment, update parameter values for getUsingGET2 call and complete the assertions
+        /*
           var appIds = "appIds_example";
           var tag = ["tag_example"];
           var opts = {};
@@ -86,14 +76,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('getUsingGET3', function () {
-        it('should call getUsingGET3 successfully', function (done) {
-          // TODO: uncomment, update parameter values for getUsingGET3 call and complete the assertions
-          /*
+    })
+    describe('getUsingGET3', function () {
+      it('should call getUsingGET3 successfully', function (done) {
+        // TODO: uncomment, update parameter values for getUsingGET3 call and complete the assertions
+        /*
           var appIds = "appIds_example";
           var tag = ["tag_example"];
           var opts = {};
@@ -114,9 +104,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })

@@ -13,50 +13,41 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  describe('(package)', function () {
-    describe('UserRole', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.UserRole()
-      })
+/* eslint-disable no-unused-vars*/
+var instance
 
-      it('should create an instance of UserRole', function () {
-        // TODO: update the code to test UserRole
-        expect(instance).to.be.a(SematextApiClientJavascript.UserRole)
-      })
+describe('(package)', function () {
+  describe('UserRole', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should have the property role (base name: "role")', function () {
-        // TODO: update the code to test the property role
-        expect(instance).to.have.property('role')
-        // expect(instance.role).to.be(expectedValueLiteral);
-      })
+    it('should create an instance of UserRole', function () {
+      // TODO: update the code to test UserRole
+      // expect(instance)to.be.a(SematextApiClientJavascript.UserRole)
+    })
 
-      it('should have the property roleStatus (base name: "roleStatus")', function () {
-        // TODO: update the code to test the property roleStatus
-        expect(instance).to.have.property('roleStatus')
-        // expect(instance.roleStatus).to.be(expectedValueLiteral);
-      })
+    it('should have the property role (base name: "role")', function () {
+      // TODO: update the code to test the property role
+      // expect(instance)to.have.property('role')
+      // expect(instance.role).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property userEmail (base name: "userEmail")', function () {
-        // TODO: update the code to test the property userEmail
-        expect(instance).to.have.property('userEmail')
-        // expect(instance.userEmail).to.be(expectedValueLiteral);
-      })
+    it('should have the property roleStatus (base name: "roleStatus")', function () {
+      // TODO: update the code to test the property roleStatus
+      // expect(instance)to.have.property('roleStatus')
+      // expect(instance.roleStatus).to.be(expectedValueLiteral);
+    })
+
+    it('should have the property userEmail (base name: "userEmail")', function () {
+      // TODO: update the code to test the property userEmail
+      // expect(instance)to.have.property('userEmail')
+      // expect(instance.userEmail).to.be(expectedValueLiteral);
     })
   })
 })

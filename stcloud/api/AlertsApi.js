@@ -11,11 +11,10 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import AlertRule from '../model/AlertRule';
-import AlertRuleResponse from '../model/AlertRuleResponse';
-import AlertRulesResponse from '../model/AlertRulesResponse';
-import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse';
+import ApiClient from './ApiClient.js'
+import AlertRuleResponse from '../model/AlertRuleResponse.js'
+import AlertRulesResponse from '../model/AlertRulesResponse.js'
+import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse.js'
 
 /**
 * Alerts service.
@@ -32,7 +31,7 @@ export default class AlertsApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -42,27 +41,27 @@ export default class AlertsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AlertRuleResponse} and HTTP response
    */
   createAlertUsingPOST1WithHttpInfo(body) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = AlertRuleResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = AlertRuleResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/alerts', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -72,8 +71,8 @@ export default class AlertsApi {
   createAlertUsingPOST1(body) {
     return this.createAlertUsingPOST1WithHttpInfo(body)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -82,28 +81,28 @@ export default class AlertsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   deleteAlertRuleUsingDELETE1WithHttpInfo(updateableAlertId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'updateableAlertId': updateableAlertId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/alerts/{updateableAlertId}', 'DELETE',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -113,8 +112,8 @@ export default class AlertsApi {
   deleteAlertRuleUsingDELETE1(updateableAlertId) {
     return this.deleteAlertRuleUsingDELETE1WithHttpInfo(updateableAlertId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -123,28 +122,28 @@ export default class AlertsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   disableAlertRuleUsingPUT1WithHttpInfo(updateableAlertId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'updateableAlertId': updateableAlertId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/alerts/{updateableAlertId}/disable', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -154,8 +153,8 @@ export default class AlertsApi {
   disableAlertRuleUsingPUT1(updateableAlertId) {
     return this.disableAlertRuleUsingPUT1WithHttpInfo(updateableAlertId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -164,28 +163,28 @@ export default class AlertsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   enableAlertRuleUsingPUT1WithHttpInfo(updateableAlertId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'updateableAlertId': updateableAlertId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/alerts/{updateableAlertId}/enable', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -195,8 +194,8 @@ export default class AlertsApi {
   enableAlertRuleUsingPUT1(updateableAlertId) {
     return this.enableAlertRuleUsingPUT1WithHttpInfo(updateableAlertId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -205,28 +204,28 @@ export default class AlertsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AlertRulesResponse} and HTTP response
    */
   getAlertRulesForAppUsingGETWithHttpInfo(appId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = AlertRulesResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = AlertRulesResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/alerts', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -236,8 +235,8 @@ export default class AlertsApi {
   getAlertRulesForAppUsingGET(appId) {
     return this.getAlertRulesForAppUsingGETWithHttpInfo(appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

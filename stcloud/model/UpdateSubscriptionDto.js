@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The UpdateSubscriptionDto model module.
@@ -19,36 +19,36 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class UpdateSubscriptionDto {
-    /**
+  /**
     * Constructs a new <code>UpdateSubscriptionDto</code>.
     * @alias module:model/UpdateSubscriptionDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UpdateSubscriptionDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UpdateSubscriptionDto} obj Optional instance to populate.
     * @return {module:model/UpdateSubscriptionDto} The populated <code>UpdateSubscriptionDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UpdateSubscriptionDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UpdateSubscriptionDto()
 
 
-            if (data.hasOwnProperty('enabled')) {
-                obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'enabled')) {
+        obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Boolean} enabled

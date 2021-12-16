@@ -13,9 +13,8 @@
  *
  */
 
-import { ApiClient } from '../ApiClient'
-import { GenericApiResponse } from '../model/GenericApiResponse'
-import { SavedQuery } from '../model/SavedQuery' // eslint-disable-line no-unused-vars
+import ApiClient from './ApiClient.js'
+import { GenericApiResponse } from '../model/GenericApiResponse.js'
 
 /**
  * SavedQueries service.
@@ -44,7 +43,7 @@ export class SavedQueriesApi {
     // verify the required parameter 'updateableQueryId' is set
     if (updateableQueryId === undefined || updateableQueryId === null) {
       throw new Error(
-        "Missing the required parameter 'updateableQueryId' when calling deleteSavedQueryUsingDELETE"
+        'Missing the required parameter \'updateableQueryId\' when calling deleteSavedQueryUsingDELETE'
       )
     }
 
@@ -99,7 +98,7 @@ export class SavedQueriesApi {
     // verify the required parameter 'appId' is set
     if (appId === undefined || appId === null) {
       throw new Error(
-        "Missing the required parameter 'appId' when calling getSavedQueriesForAppUsingGET"
+        'Missing the required parameter \'appId\' when calling getSavedQueriesForAppUsingGET'
       )
     }
 
@@ -154,7 +153,7 @@ export class SavedQueriesApi {
     // verify the required parameter 'savedQueryDto' is set
     if (savedQueryDto === undefined || savedQueryDto === null) {
       throw new Error(
-        "Missing the required parameter 'savedQueryDto' when calling saveQueryUsingPOST"
+        'Missing the required parameter \'savedQueryDto\' when calling saveQueryUsingPOST'
       )
     }
 
@@ -208,14 +207,14 @@ export class SavedQueriesApi {
     // verify the required parameter 'savedQueryDto' is set
     if (savedQueryDto === undefined || savedQueryDto === null) {
       throw new Error(
-        "Missing the required parameter 'savedQueryDto' when calling saveQueryUsingPUT"
+        'Missing the required parameter \'savedQueryDto\' when calling saveQueryUsingPUT'
       )
     }
 
     // verify the required parameter 'updateableQueryId' is set
     if (updateableQueryId === undefined || updateableQueryId === null) {
       throw new Error(
-        "Missing the required parameter 'updateableQueryId' when calling saveQueryUsingPUT"
+        'Missing the required parameter \'updateableQueryId\' when calling saveQueryUsingPUT'
       )
     }
 

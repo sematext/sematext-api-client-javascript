@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import UpdatePlanResponseDto from './UpdatePlanResponseDto';
+import UpdatePlanResponseDto from './UpdatePlanResponseDto.js'
 
 /**
 * The UpdatePlanResponseEntry model module.
@@ -20,36 +19,36 @@ import UpdatePlanResponseDto from './UpdatePlanResponseDto';
 * @version 0.1.0
 */
 export default class UpdatePlanResponseEntry {
-    /**
+  /**
     * Constructs a new <code>UpdatePlanResponseEntry</code>.
     * @alias module:model/UpdatePlanResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UpdatePlanResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UpdatePlanResponseEntry} obj Optional instance to populate.
     * @return {module:model/UpdatePlanResponseEntry} The populated <code>UpdatePlanResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UpdatePlanResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UpdatePlanResponseEntry()
 
 
-            if (data.hasOwnProperty('billing')) {
-                obj['billing'] = UpdatePlanResponseDto.constructFromObject(data['billing']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'billing')) {
+        obj['billing'] = UpdatePlanResponseDto.constructFromObject(data['billing'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/UpdatePlanResponseDto} billing

@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The FilterValue model module.
@@ -19,51 +19,51 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class FilterValue {
-    /**
+  /**
     * Constructs a new <code>FilterValue</code>.
     * @alias module:model/FilterValue
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>FilterValue</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/FilterValue} obj Optional instance to populate.
     * @return {module:model/FilterValue} The populated <code>FilterValue</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new FilterValue();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new FilterValue()
 
 
-            if (data.hasOwnProperty('aggType')) {
-                obj['aggType'] = ApiClient.convertToType(data['aggType'], 'String');
-            }
-            if (data.hasOwnProperty('filterName')) {
-                obj['filterName'] = ApiClient.convertToType(data['filterName'], 'String');
-            }
-            if (data.hasOwnProperty('key')) {
-                obj['key'] = ApiClient.convertToType(data['key'], 'String');
-            }
-            if (data.hasOwnProperty('label')) {
-                obj['label'] = ApiClient.convertToType(data['label'], 'String');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('values')) {
-                obj['values'] = ApiClient.convertToType(data['values'], ['String']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'aggType')) {
+        obj['aggType'] = ApiClient.convertToType(data['aggType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'filterName')) {
+        obj['filterName'] = ApiClient.convertToType(data['filterName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'key')) {
+        obj['key'] = ApiClient.convertToType(data['key'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'label')) {
+        obj['label'] = ApiClient.convertToType(data['label'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'values')) {
+        obj['values'] = ApiClient.convertToType(data['values'], ['String'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} aggType

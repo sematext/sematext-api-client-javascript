@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Error from './Error';
-import UsageResponseEntry from './UsageResponseEntry';
+import ApiClient from '../api/ApiClient.js'
+import Error from './Error.js'
+import UsageResponseEntry from './UsageResponseEntry.js'
 
 /**
 * The UsageResponse model module.
@@ -21,45 +21,45 @@ import UsageResponseEntry from './UsageResponseEntry';
 * @version 0.1.0
 */
 export default class UsageResponse {
-    /**
+  /**
     * Constructs a new <code>UsageResponse</code>.
     * @alias module:model/UsageResponse
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UsageResponse</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UsageResponse} obj Optional instance to populate.
     * @return {module:model/UsageResponse} The populated <code>UsageResponse</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UsageResponse();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UsageResponse()
 
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = UsageResponseEntry.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('errors')) {
-                obj['errors'] = ApiClient.convertToType(data['errors'], [Error]);
-            }
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
-            if (data.hasOwnProperty('success')) {
-                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'data')) {
+        obj['data'] = UsageResponseEntry.constructFromObject(data['data'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'errors')) {
+        obj['errors'] = ApiClient.convertToType(data['errors'], [Error])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'message')) {
+        obj['message'] = ApiClient.convertToType(data['message'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'success')) {
+        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/UsageResponseEntry} data

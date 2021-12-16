@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import App from './App';
+import ApiClient from '../api/ApiClient.js'
+import App from './App.js'
 
 /**
 * The Invitation model module.
@@ -20,63 +20,63 @@ import App from './App';
 * @version 0.1.0
 */
 export default class Invitation {
-    /**
+  /**
     * Constructs a new <code>Invitation</code>.
     * @alias module:model/Invitation
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>Invitation</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/Invitation} obj Optional instance to populate.
     * @return {module:model/Invitation} The populated <code>Invitation</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new Invitation();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new Invitation()
 
 
-            if (data.hasOwnProperty('app')) {
-                obj['app'] = App.constructFromObject(data['app']);
-            }
-            if (data.hasOwnProperty('apps')) {
-                obj['apps'] = ApiClient.convertToType(data['apps'], [App]);
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('inviteDate')) {
-                obj['inviteDate'] = ApiClient.convertToType(data['inviteDate'], 'Date');
-            }
-            if (data.hasOwnProperty('inviteStatus')) {
-                obj['inviteStatus'] = ApiClient.convertToType(data['inviteStatus'], 'String');
-            }
-            if (data.hasOwnProperty('inviteeEmail')) {
-                obj['inviteeEmail'] = ApiClient.convertToType(data['inviteeEmail'], 'String');
-            }
-            if (data.hasOwnProperty('inviteeRole')) {
-                obj['inviteeRole'] = ApiClient.convertToType(data['inviteeRole'], 'String');
-            }
-            if (data.hasOwnProperty('inviteeStatus')) {
-                obj['inviteeStatus'] = ApiClient.convertToType(data['inviteeStatus'], 'String');
-            }
-            if (data.hasOwnProperty('inviterEmail')) {
-                obj['inviterEmail'] = ApiClient.convertToType(data['inviterEmail'], 'String');
-            }
-            if (data.hasOwnProperty('uuid')) {
-                obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'app')) {
+        obj['app'] = App.constructFromObject(data['app'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'apps')) {
+        obj['apps'] = ApiClient.convertToType(data['apps'], [App])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'inviteDate')) {
+        obj['inviteDate'] = ApiClient.convertToType(data['inviteDate'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'inviteStatus')) {
+        obj['inviteStatus'] = ApiClient.convertToType(data['inviteStatus'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'inviteeEmail')) {
+        obj['inviteeEmail'] = ApiClient.convertToType(data['inviteeEmail'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'inviteeRole')) {
+        obj['inviteeRole'] = ApiClient.convertToType(data['inviteeRole'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'inviteeStatus')) {
+        obj['inviteeStatus'] = ApiClient.convertToType(data['inviteeStatus'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'inviterEmail')) {
+        obj['inviterEmail'] = ApiClient.convertToType(data['inviterEmail'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'uuid')) {
+        obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/App} app
@@ -128,26 +128,26 @@ export default class Invitation {
     * @readonly
     */
     static InviteStatusEnum = {
-        /**
+      /**
          * value: "PENDING"
          * @const
          */
-        "PENDING": "PENDING",
-        /**
+      'PENDING': 'PENDING',
+      /**
          * value: "ACCEPTED"
          * @const
          */
-        "ACCEPTED": "ACCEPTED",
-        /**
+      'ACCEPTED': 'ACCEPTED',
+      /**
          * value: "CANCELLED"
          * @const
          */
-        "CANCELLED": "CANCELLED",
-        /**
+      'CANCELLED': 'CANCELLED',
+      /**
          * value: "DECLINED"
          * @const
          */
-        "DECLINED": "DECLINED"
+      'DECLINED': 'DECLINED'
     };
     /**
     * Allowed values for the <code>inviteeRole</code> property.
@@ -155,36 +155,36 @@ export default class Invitation {
     * @readonly
     */
     static InviteeRoleEnum = {
-        /**
+      /**
          * value: "SUPER_USER"
          * @const
          */
-        "SUPER_USER": "SUPER_USER",
-        /**
+      'SUPER_USER': 'SUPER_USER',
+      /**
          * value: "OWNER"
          * @const
          */
-        "OWNER": "OWNER",
-        /**
+      'OWNER': 'OWNER',
+      /**
          * value: "ADMIN"
          * @const
          */
-        "ADMIN": "ADMIN",
-        /**
+      'ADMIN': 'ADMIN',
+      /**
          * value: "USER"
          * @const
          */
-        "USER": "USER",
-        /**
+      'USER': 'USER',
+      /**
          * value: "DEMO"
          * @const
          */
-        "DEMO": "DEMO",
-        /**
+      'DEMO': 'DEMO',
+      /**
          * value: "ANONYMOUS"
          * @const
          */
-        "ANONYMOUS": "ANONYMOUS"
+      'ANONYMOUS': 'ANONYMOUS'
     };
     /**
     * Allowed values for the <code>inviteeStatus</code> property.
@@ -192,16 +192,16 @@ export default class Invitation {
     * @readonly
     */
     static InviteeStatusEnum = {
-        /**
+      /**
          * value: "INACTIVE"
          * @const
          */
-        "INACTIVE": "INACTIVE",
-        /**
+      'INACTIVE': 'INACTIVE',
+      /**
          * value: "ACTIVE"
          * @const
          */
-        "ACTIVE": "ACTIVE"
+      'ACTIVE': 'ACTIVE'
     };
 
 }

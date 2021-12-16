@@ -12,33 +12,23 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.SubscriptionsApi()
-  })
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.SubscriptionsApi()
+})
 
-  describe('(package)', function () {
-    describe('SubscriptionsApi', function () {
-      describe('listUsingGET1', function () {
-        it('should call listUsingGET1 successfully', function (done) {
-          // TODO: uncomment, update parameter values for listUsingGET1 call and complete the assertions
-          /*
+describe('(package)', function () {
+  describe('SubscriptionsApi', function () {
+    describe('listUsingGET1', function () {
+      it('should call listUsingGET1 successfully', function (done) {
+        // TODO: uncomment, update parameter values for listUsingGET1 call and complete the assertions
+        /*
           var appId = 789;
 
           instance.listUsingGET1(appId).then(function(data) {
@@ -69,14 +59,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('sendReportUsingPOST', function () {
-        it('should call sendReportUsingPOST successfully', function (done) {
-          // TODO: uncomment, update parameter values for sendReportUsingPOST call and complete the assertions
-          /*
+    })
+    describe('sendReportUsingPOST', function () {
+      it('should call sendReportUsingPOST successfully', function (done) {
+        // TODO: uncomment, update parameter values for sendReportUsingPOST call and complete the assertions
+        /*
           var appId = 789;
           var emailDto = new SematextApiClientJavascript.ReportInfo();
           emailDto.addresses = "";
@@ -116,9 +106,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })

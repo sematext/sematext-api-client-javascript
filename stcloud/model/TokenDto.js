@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The TokenDto model module.
@@ -19,54 +19,54 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class TokenDto {
-    /**
+  /**
     * Constructs a new <code>TokenDto</code>.
     * @alias module:model/TokenDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>TokenDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/TokenDto} obj Optional instance to populate.
     * @return {module:model/TokenDto} The populated <code>TokenDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new TokenDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new TokenDto()
 
 
-            if (data.hasOwnProperty('createdAt')) {
-                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
-            }
-            if (data.hasOwnProperty('enabled')) {
-                obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('readable')) {
-                obj['readable'] = ApiClient.convertToType(data['readable'], 'Boolean');
-            }
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
-            if (data.hasOwnProperty('writeable')) {
-                obj['writeable'] = ApiClient.convertToType(data['writeable'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'createdAt')) {
+        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'enabled')) {
+        obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'readable')) {
+        obj['readable'] = ApiClient.convertToType(data['readable'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'token')) {
+        obj['token'] = ApiClient.convertToType(data['token'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'writeable')) {
+        obj['writeable'] = ApiClient.convertToType(data['writeable'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Date} createdAt

@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The UserPermissions model module.
@@ -19,42 +19,42 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class UserPermissions {
-    /**
+  /**
     * Constructs a new <code>UserPermissions</code>.
     * @alias module:model/UserPermissions
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UserPermissions</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UserPermissions} obj Optional instance to populate.
     * @return {module:model/UserPermissions} The populated <code>UserPermissions</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UserPermissions();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UserPermissions()
 
 
-            if (data.hasOwnProperty('canDelete')) {
-                obj['canDelete'] = ApiClient.convertToType(data['canDelete'], 'Boolean');
-            }
-            if (data.hasOwnProperty('canEdit')) {
-                obj['canEdit'] = ApiClient.convertToType(data['canEdit'], 'Boolean');
-            }
-            if (data.hasOwnProperty('canView')) {
-                obj['canView'] = ApiClient.convertToType(data['canView'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'canDelete')) {
+        obj['canDelete'] = ApiClient.convertToType(data['canDelete'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'canEdit')) {
+        obj['canEdit'] = ApiClient.convertToType(data['canEdit'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'canView')) {
+        obj['canView'] = ApiClient.convertToType(data['canView'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Boolean} canDelete

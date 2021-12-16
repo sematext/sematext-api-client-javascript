@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Error from './Error';
-import NotificationsResponseEntry from './NotificationsResponseEntry';
+import ApiClient from '../api/ApiClient.js'
+import Error from './Error.js'
+import NotificationsResponseEntry from './NotificationsResponseEntry.js'
 
 /**
 * The NotificationsResponse model module.
@@ -21,45 +21,45 @@ import NotificationsResponseEntry from './NotificationsResponseEntry';
 * @version 0.1.0
 */
 export default class NotificationsResponse {
-    /**
+  /**
     * Constructs a new <code>NotificationsResponse</code>.
     * @alias module:model/NotificationsResponse
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>NotificationsResponse</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/NotificationsResponse} obj Optional instance to populate.
     * @return {module:model/NotificationsResponse} The populated <code>NotificationsResponse</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new NotificationsResponse();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new NotificationsResponse()
 
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = NotificationsResponseEntry.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('errors')) {
-                obj['errors'] = ApiClient.convertToType(data['errors'], [Error]);
-            }
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
-            if (data.hasOwnProperty('success')) {
-                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'data')) {
+        obj['data'] = NotificationsResponseEntry.constructFromObject(data['data'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'errors')) {
+        obj['errors'] = ApiClient.convertToType(data['errors'], [Error])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'message')) {
+        obj['message'] = ApiClient.convertToType(data['message'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'success')) {
+        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/NotificationsResponseEntry} data

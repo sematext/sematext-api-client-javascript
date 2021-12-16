@@ -13,32 +13,23 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.SavedQueriesApi()
-  })
+/* eslint-disable no-unused-vars*/
+var instance
 
-  describe('(package)', function () {
-    describe('SavedQueriesApi', function () {
-      describe('deleteSavedQueryUsingDELETE', function () {
-        it('should call deleteSavedQueryUsingDELETE successfully', function (done) {
-          // TODO: uncomment, update parameter values for deleteSavedQueryUsingDELETE call and complete the assertions
-          /*
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.SavedQueriesApi()
+})
+
+describe('(package)', function () {
+  describe('SavedQueriesApi', function () {
+    describe('deleteSavedQueryUsingDELETE', function () {
+      it('should call deleteSavedQueryUsingDELETE successfully', function (done) {
+        // TODO: uncomment, update parameter values for deleteSavedQueryUsingDELETE call and complete the assertions
+        /*
           var updateableQueryId = 789;
 
           instance.deleteSavedQueryUsingDELETE(updateableQueryId).then(function(data) {
@@ -69,14 +60,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('getSavedQueriesForAppUsingGET', function () {
-        it('should call getSavedQueriesForAppUsingGET successfully', function (done) {
-          // TODO: uncomment, update parameter values for getSavedQueriesForAppUsingGET call and complete the assertions
-          /*
+    })
+    describe('getSavedQueriesForAppUsingGET', function () {
+      it('should call getSavedQueriesForAppUsingGET successfully', function (done) {
+        // TODO: uncomment, update parameter values for getSavedQueriesForAppUsingGET call and complete the assertions
+        /*
           var appId = 789;
 
           instance.getSavedQueriesForAppUsingGET(appId).then(function(data) {
@@ -107,14 +98,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('saveQueryUsingPOST', function () {
-        it('should call saveQueryUsingPOST successfully', function (done) {
-          // TODO: uncomment, update parameter values for saveQueryUsingPOST call and complete the assertions
-          /*
+    })
+    describe('saveQueryUsingPOST', function () {
+      it('should call saveQueryUsingPOST successfully', function (done) {
+        // TODO: uncomment, update parameter values for saveQueryUsingPOST call and complete the assertions
+        /*
           var savedQueryDto = new SematextApiClientJavascript.SavedQuery();
           savedQueryDto.alertRule = new SematextApiClientJavascript.AlertRule();
           savedQueryDto.alertRule.allowedAppTypes = ["0"];
@@ -211,14 +202,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('saveQueryUsingPUT', function () {
-        it('should call saveQueryUsingPUT successfully', function (done) {
-          // TODO: uncomment, update parameter values for saveQueryUsingPUT call and complete the assertions
-          /*
+    })
+    describe('saveQueryUsingPUT', function () {
+      it('should call saveQueryUsingPUT successfully', function (done) {
+        // TODO: uncomment, update parameter values for saveQueryUsingPUT call and complete the assertions
+        /*
           var savedQueryDto = new SematextApiClientJavascript.SavedQuery();
           savedQueryDto.alertRule = new SematextApiClientJavascript.AlertRule();
           savedQueryDto.alertRule.allowedAppTypes = ["0"];
@@ -316,9 +307,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })

@@ -11,11 +11,10 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import BillingInfo from '../model/BillingInfo';
-import InvoiceResponse from '../model/InvoiceResponse';
-import PlansResponse from '../model/PlansResponse';
-import UpdatePlanResponse from '../model/UpdatePlanResponse';
+import ApiClient from './ApiClient.js'
+import InvoiceResponse from '../model/InvoiceResponse.js'
+import PlansResponse from '../model/PlansResponse.js'
+import UpdatePlanResponse from '../model/UpdatePlanResponse.js'
 
 /**
 * Billing service.
@@ -32,7 +31,7 @@ export default class BillingApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -42,30 +41,30 @@ export default class BillingApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceResponse} and HTTP response
    */
   getDetailedInvoiceUsingGETWithHttpInfo(service, year, month) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'service': service,
       'year': year,
       'month': month
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = InvoiceResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = InvoiceResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/billing/invoice/{service}/{year}/{month}', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -75,8 +74,8 @@ export default class BillingApi {
   getDetailedInvoiceUsingGET(service, year, month) {
     return this.getDetailedInvoiceUsingGETWithHttpInfo(service, year, month)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -86,30 +85,30 @@ export default class BillingApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PlansResponse} and HTTP response
    */
   listAvailablePlansUsingGETWithHttpInfo(opts) {
-    opts = opts || {};
-    let postBody = null;
+    opts = opts || {}
+    let postBody = null
 
     let pathParams = {
-    };
+    }
     let queryParams = {
       'integrationId': opts['integrationId'],
       'appType': opts['appType']
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = PlansResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = PlansResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/billing/availablePlans', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -120,8 +119,8 @@ export default class BillingApi {
   listAvailablePlansUsingGET(opts) {
     return this.listAvailablePlansUsingGETWithHttpInfo(opts)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -130,28 +129,28 @@ export default class BillingApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatePlanResponse} and HTTP response
    */
   updatePlanUsingPUTWithHttpInfo(body, appId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = UpdatePlanResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = UpdatePlanResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/billing/info/{appId}', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -161,8 +160,8 @@ export default class BillingApi {
   updatePlanUsingPUT(body, appId) {
     return this.updatePlanUsingPUTWithHttpInfo(body, appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

@@ -12,33 +12,23 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.MetricsApi()
-  })
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.MetricsApi()
+})
 
-  describe('(package)', function () {
-    describe('MetricsApi', function () {
-      describe('listDataSeriesUsingPOST1', function () {
-        it('should call listDataSeriesUsingPOST1 successfully', function (done) {
-          // TODO: uncomment, update parameter values for listDataSeriesUsingPOST1 call and complete the assertions
-          /*
+describe('(package)', function () {
+  describe('MetricsApi', function () {
+    describe('listDataSeriesUsingPOST1', function () {
+      it('should call listDataSeriesUsingPOST1 successfully', function (done) {
+        // TODO: uncomment, update parameter values for listDataSeriesUsingPOST1 call and complete the assertions
+        /*
           var appId = 789;
           var requestBody = new SematextApiClientJavascript.DataSeriesRequest();
           requestBody.defaultInterval = "0";
@@ -80,14 +70,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('listFiltersUsingPOST', function () {
-        it('should call listFiltersUsingPOST successfully', function (done) {
-          // TODO: uncomment, update parameter values for listFiltersUsingPOST call and complete the assertions
-          /*
+    })
+    describe('listFiltersUsingPOST', function () {
+      it('should call listFiltersUsingPOST successfully', function (done) {
+        // TODO: uncomment, update parameter values for listFiltersUsingPOST call and complete the assertions
+        /*
           var appId = 789;
           var requestBody = new SematextApiClientJavascript.DataSeriesRequest();
           requestBody.defaultInterval = "0";
@@ -129,14 +119,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('listMetricsKeysUsingGET1', function () {
-        it('should call listMetricsKeysUsingGET1 successfully', function (done) {
-          // TODO: uncomment, update parameter values for listMetricsKeysUsingGET1 call and complete the assertions
-          /*
+    })
+    describe('listMetricsKeysUsingGET1', function () {
+      it('should call listMetricsKeysUsingGET1 successfully', function (done) {
+        // TODO: uncomment, update parameter values for listMetricsKeysUsingGET1 call and complete the assertions
+        /*
           var appId = 789;
 
           instance.listMetricsKeysUsingGET1(appId).then(function(data) {
@@ -167,14 +157,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('listMetricsUsingGET1', function () {
-        it('should call listMetricsUsingGET1 successfully', function (done) {
-          // TODO: uncomment, update parameter values for listMetricsUsingGET1 call and complete the assertions
-          /*
+    })
+    describe('listMetricsUsingGET1', function () {
+      it('should call listMetricsUsingGET1 successfully', function (done) {
+        // TODO: uncomment, update parameter values for listMetricsUsingGET1 call and complete the assertions
+        /*
           var appId = 789;
 
           instance.listMetricsUsingGET1(appId).then(function(data) {
@@ -205,9 +195,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })

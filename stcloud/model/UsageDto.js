@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DailyDto from './DailyDto';
-import LimitChangeEventDTO from './LimitChangeEventDTO';
+import ApiClient from '../api/ApiClient.js'
+import DailyDto from './DailyDto.js'
+import LimitChangeEventDTO from './LimitChangeEventDTO.js'
 
 /**
 * The UsageDto model module.
@@ -21,66 +21,66 @@ import LimitChangeEventDTO from './LimitChangeEventDTO';
 * @version 0.1.0
 */
 export default class UsageDto {
-    /**
+  /**
     * Constructs a new <code>UsageDto</code>.
     * @alias module:model/UsageDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UsageDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UsageDto} obj Optional instance to populate.
     * @return {module:model/UsageDto} The populated <code>UsageDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UsageDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UsageDto()
 
 
-            if (data.hasOwnProperty('count')) {
-                obj['count'] = ApiClient.convertToType(data['count'], 'Number');
-            }
-            if (data.hasOwnProperty('dailyUsage')) {
-                obj['dailyUsage'] = ApiClient.convertToType(data['dailyUsage'], [DailyDto]);
-            }
-            if (data.hasOwnProperty('dailyVolumeMB')) {
-                obj['dailyVolumeMB'] = ApiClient.convertToType(data['dailyVolumeMB'], 'Number');
-            }
-            if (data.hasOwnProperty('end')) {
-                obj['end'] = ApiClient.convertToType(data['end'], 'Date');
-            }
-            if (data.hasOwnProperty('failedCount')) {
-                obj['failedCount'] = ApiClient.convertToType(data['failedCount'], 'Number');
-            }
-            if (data.hasOwnProperty('limitChangeEvents')) {
-                obj['limitChangeEvents'] = ApiClient.convertToType(data['limitChangeEvents'], [LimitChangeEventDTO]);
-            }
-            if (data.hasOwnProperty('maxAllowedMB')) {
-                obj['maxAllowedMB'] = ApiClient.convertToType(data['maxAllowedMB'], 'Number');
-            }
-            if (data.hasOwnProperty('maxLimitMB')) {
-                obj['maxLimitMB'] = ApiClient.convertToType(data['maxLimitMB'], 'Number');
-            }
-            if (data.hasOwnProperty('start')) {
-                obj['start'] = ApiClient.convertToType(data['start'], 'Date');
-            }
-            if (data.hasOwnProperty('volume')) {
-                obj['volume'] = ApiClient.convertToType(data['volume'], 'Number');
-            }
-            if (data.hasOwnProperty('volumeChangeEvents')) {
-                obj['volumeChangeEvents'] = ApiClient.convertToType(data['volumeChangeEvents'], [LimitChangeEventDTO]);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'count')) {
+        obj['count'] = ApiClient.convertToType(data['count'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'dailyUsage')) {
+        obj['dailyUsage'] = ApiClient.convertToType(data['dailyUsage'], [DailyDto])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'dailyVolumeMB')) {
+        obj['dailyVolumeMB'] = ApiClient.convertToType(data['dailyVolumeMB'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'end')) {
+        obj['end'] = ApiClient.convertToType(data['end'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'failedCount')) {
+        obj['failedCount'] = ApiClient.convertToType(data['failedCount'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'limitChangeEvents')) {
+        obj['limitChangeEvents'] = ApiClient.convertToType(data['limitChangeEvents'], [LimitChangeEventDTO])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'maxAllowedMB')) {
+        obj['maxAllowedMB'] = ApiClient.convertToType(data['maxAllowedMB'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'maxLimitMB')) {
+        obj['maxLimitMB'] = ApiClient.convertToType(data['maxLimitMB'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'start')) {
+        obj['start'] = ApiClient.convertToType(data['start'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'volume')) {
+        obj['volume'] = ApiClient.convertToType(data['volume'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'volumeChangeEvents')) {
+        obj['volumeChangeEvents'] = ApiClient.convertToType(data['volumeChangeEvents'], [LimitChangeEventDTO])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Number} count

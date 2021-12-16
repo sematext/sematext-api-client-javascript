@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The UpdateTokenDto model module.
@@ -19,39 +19,39 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class UpdateTokenDto {
-    /**
+  /**
     * Constructs a new <code>UpdateTokenDto</code>.
     * @alias module:model/UpdateTokenDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UpdateTokenDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UpdateTokenDto} obj Optional instance to populate.
     * @return {module:model/UpdateTokenDto} The populated <code>UpdateTokenDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UpdateTokenDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UpdateTokenDto()
 
 
-            if (data.hasOwnProperty('enabled')) {
-                obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'enabled')) {
+        obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Boolean} enabled

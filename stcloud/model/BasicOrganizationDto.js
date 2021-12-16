@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import BasicAuthMethodDto from './BasicAuthMethodDto';
+import ApiClient from '../api/ApiClient.js'
+import BasicAuthMethodDto from './BasicAuthMethodDto.js'
 
 /**
 * The BasicOrganizationDto model module.
@@ -20,45 +20,45 @@ import BasicAuthMethodDto from './BasicAuthMethodDto';
 * @version 0.1.0
 */
 export default class BasicOrganizationDto {
-    /**
+  /**
     * Constructs a new <code>BasicOrganizationDto</code>.
     * @alias module:model/BasicOrganizationDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>BasicOrganizationDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/BasicOrganizationDto} obj Optional instance to populate.
     * @return {module:model/BasicOrganizationDto} The populated <code>BasicOrganizationDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new BasicOrganizationDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new BasicOrganizationDto()
 
 
-            if (data.hasOwnProperty('authMethods')) {
-                obj['authMethods'] = ApiClient.convertToType(data['authMethods'], [BasicAuthMethodDto]);
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('uuid')) {
-                obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'authMethods')) {
+        obj['authMethods'] = ApiClient.convertToType(data['authMethods'], [BasicAuthMethodDto])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'uuid')) {
+        obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<module:model/BasicAuthMethodDto>} authMethods
@@ -85,36 +85,36 @@ export default class BasicOrganizationDto {
     * @readonly
     */
     static StatusEnum = {
-        /**
+      /**
          * value: "ACTIVE"
          * @const
          */
-        "ACTIVE": "ACTIVE",
-        /**
+      'ACTIVE': 'ACTIVE',
+      /**
          * value: "IN_REGISTRATION"
          * @const
          */
-        "IN_REGISTRATION": "IN_REGISTRATION",
-        /**
+      'IN_REGISTRATION': 'IN_REGISTRATION',
+      /**
          * value: "DISABLED"
          * @const
          */
-        "DISABLED": "DISABLED",
-        /**
+      'DISABLED': 'DISABLED',
+      /**
          * value: "EXPIRED"
          * @const
          */
-        "EXPIRED": "EXPIRED",
-        /**
+      'EXPIRED': 'EXPIRED',
+      /**
          * value: "INVITED"
          * @const
          */
-        "INVITED": "INVITED",
-        /**
+      'INVITED': 'INVITED',
+      /**
          * value: "DEMO"
          * @const
          */
-        "DEMO": "DEMO"
+      'DEMO': 'DEMO'
     };
 
 }

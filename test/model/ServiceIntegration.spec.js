@@ -13,104 +13,95 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  describe('(package)', function () {
-    describe('ServiceIntegration', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.ServiceIntegration()
-      })
+/* eslint-disable no-unused-vars*/
+var instance
 
-      it('should create an instance of ServiceIntegration', function () {
-        // TODO: update the code to test ServiceIntegration
-        expect(instance).to.be.a(SematextApiClientJavascript.ServiceIntegration)
-      })
+describe('(package)', function () {
+  describe('ServiceIntegration', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should have the property appTypeId (base name: "appTypeId")', function () {
-        // TODO: update the code to test the property appTypeId
-        expect(instance).to.have.property('appTypeId')
-        // expect(instance.appTypeId).to.be(expectedValueLiteral);
-      })
+    it('should create an instance of ServiceIntegration', function () {
+      // TODO: update the code to test ServiceIntegration
+      // expect(instance)to.be.a(SematextApiClientJavascript.ServiceIntegration)
+    })
 
-      it('should have the property appTypeName (base name: "appTypeName")', function () {
-        // TODO: update the code to test the property appTypeName
-        expect(instance).to.have.property('appTypeName')
-        // expect(instance.appTypeName).to.be(expectedValueLiteral);
-      })
+    it('should have the property appTypeId (base name: "appTypeId")', function () {
+      // TODO: update the code to test the property appTypeId
+      // expect(instance)to.have.property('appTypeId')
+      // expect(instance.appTypeId).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property displayName (base name: "displayName")', function () {
-        // TODO: update the code to test the property displayName
-        expect(instance).to.have.property('displayName')
-        // expect(instance.displayName).to.be(expectedValueLiteral);
-      })
+    it('should have the property appTypeName (base name: "appTypeName")', function () {
+      // TODO: update the code to test the property appTypeName
+      // expect(instance)to.have.property('appTypeName')
+      // expect(instance.appTypeName).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property enabled (base name: "enabled")', function () {
-        // TODO: update the code to test the property enabled
-        expect(instance).to.have.property('enabled')
-        // expect(instance.enabled).to.be(expectedValueLiteral);
-      })
+    it('should have the property displayName (base name: "displayName")', function () {
+      // TODO: update the code to test the property displayName
+      // expect(instance)to.have.property('displayName')
+      // expect(instance.displayName).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property externalProductId (base name: "externalProductId")', function () {
-        // TODO: update the code to test the property externalProductId
-        expect(instance).to.have.property('externalProductId')
-        // expect(instance.externalProductId).to.be(expectedValueLiteral);
-      })
+    it('should have the property enabled (base name: "enabled")', function () {
+      // TODO: update the code to test the property enabled
+      // expect(instance)to.have.property('enabled')
+      // expect(instance.enabled).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property externalProductName (base name: "externalProductName")', function () {
-        // TODO: update the code to test the property externalProductName
-        expect(instance).to.have.property('externalProductName')
-        // expect(instance.externalProductName).to.be(expectedValueLiteral);
-      })
+    it('should have the property externalProductId (base name: "externalProductId")', function () {
+      // TODO: update the code to test the property externalProductId
+      // expect(instance)to.have.property('externalProductId')
+      // expect(instance.externalProductId).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property id (base name: "id")', function () {
-        // TODO: update the code to test the property id
-        expect(instance).to.have.property('id')
-        // expect(instance.id).to.be(expectedValueLiteral);
-      })
+    it('should have the property externalProductName (base name: "externalProductName")', function () {
+      // TODO: update the code to test the property externalProductName
+      // expect(instance)to.have.property('externalProductName')
+      // expect(instance.externalProductName).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property integrationType (base name: "integrationType")', function () {
-        // TODO: update the code to test the property integrationType
-        expect(instance).to.have.property('integrationType')
-        // expect(instance.integrationType).to.be(expectedValueLiteral);
-      })
+    it('should have the property id (base name: "id")', function () {
+      // TODO: update the code to test the property id
+      // expect(instance)to.have.property('id')
+      // expect(instance.id).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property ordinal (base name: "ordinal")', function () {
-        // TODO: update the code to test the property ordinal
-        expect(instance).to.have.property('ordinal')
-        // expect(instance.ordinal).to.be(expectedValueLiteral);
-      })
+    it('should have the property integrationType (base name: "integrationType")', function () {
+      // TODO: update the code to test the property integrationType
+      // expect(instance)to.have.property('integrationType')
+      // expect(instance.integrationType).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property parentIntegrationId (base name: "parentIntegrationId")', function () {
-        // TODO: update the code to test the property parentIntegrationId
-        expect(instance).to.have.property('parentIntegrationId')
-        // expect(instance.parentIntegrationId).to.be(expectedValueLiteral);
-      })
+    it('should have the property ordinal (base name: "ordinal")', function () {
+      // TODO: update the code to test the property ordinal
+      // expect(instance)to.have.property('ordinal')
+      // expect(instance.ordinal).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property sematextService (base name: "sematextService")', function () {
-        // TODO: update the code to test the property sematextService
-        expect(instance).to.have.property('sematextService')
-        // expect(instance.sematextService).to.be(expectedValueLiteral);
-      })
+    it('should have the property parentIntegrationId (base name: "parentIntegrationId")', function () {
+      // TODO: update the code to test the property parentIntegrationId
+      // expect(instance)to.have.property('parentIntegrationId')
+      // expect(instance.parentIntegrationId).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property visible (base name: "visible")', function () {
-        // TODO: update the code to test the property visible
-        expect(instance).to.have.property('visible')
-        // expect(instance.visible).to.be(expectedValueLiteral);
-      })
+    it('should have the property sematextService (base name: "sematextService")', function () {
+      // TODO: update the code to test the property sematextService
+      // expect(instance)to.have.property('sematextService')
+      // expect(instance.sematextService).to.be(expectedValueLiteral);
+    })
+
+    it('should have the property visible (base name: "visible")', function () {
+      // TODO: update the code to test the property visible
+      // expect(instance)to.have.property('visible')
+      // expect(instance.visible).to.be(expectedValueLiteral);
     })
   })
 })

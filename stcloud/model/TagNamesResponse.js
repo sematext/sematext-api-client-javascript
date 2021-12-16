@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The TagNamesResponse model module.
@@ -19,38 +19,38 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class TagNamesResponse {
-    /**
+  /**
     * Constructs a new <code>TagNamesResponse</code>.
     * @alias module:model/TagNamesResponse
     * @class
     * @param names {Array.<String>}
     */
 
-    constructor(names) {
+  constructor(names) {
 
 
-        this['names'] = names;
+    this['names'] = names
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>TagNamesResponse</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/TagNamesResponse} obj Optional instance to populate.
     * @return {module:model/TagNamesResponse} The populated <code>TagNamesResponse</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new TagNamesResponse();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new TagNamesResponse()
 
 
-            if (data.hasOwnProperty('names')) {
-                obj['names'] = ApiClient.convertToType(data['names'], ['String']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'names')) {
+        obj['names'] = ApiClient.convertToType(data['names'], ['String'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<String>} names

@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import TokenDto from './TokenDto';
+import ApiClient from '../api/ApiClient.js'
+import TokenDto from './TokenDto.js'
 
 /**
 * The TokensResponseEntry model module.
@@ -20,36 +20,36 @@ import TokenDto from './TokenDto';
 * @version 0.1.0
 */
 export default class TokensResponseEntry {
-    /**
+  /**
     * Constructs a new <code>TokensResponseEntry</code>.
     * @alias module:model/TokensResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>TokensResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/TokensResponseEntry} obj Optional instance to populate.
     * @return {module:model/TokensResponseEntry} The populated <code>TokensResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new TokensResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new TokensResponseEntry()
 
 
-            if (data.hasOwnProperty('tokens')) {
-                obj['tokens'] = ApiClient.convertToType(data['tokens'], [TokenDto]);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'tokens')) {
+        obj['tokens'] = ApiClient.convertToType(data['tokens'], [TokenDto])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<module:model/TokenDto>} tokens

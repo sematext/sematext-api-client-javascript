@@ -11,15 +11,11 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse';
-import MailReportResponse from '../model/MailReportResponse';
-import ReportInfo from '../model/ReportInfo';
-import SubscriptionDashboardDto from '../model/SubscriptionDashboardDto';
-import SubscriptionDto from '../model/SubscriptionDto';
-import SubscriptionResponse from '../model/SubscriptionResponse';
-import SubscriptionsResponse from '../model/SubscriptionsResponse';
-import UpdateSubscriptionDto from '../model/UpdateSubscriptionDto';
+import ApiClient from './ApiClient.js'
+import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse.js'
+import MailReportResponse from '../model/MailReportResponse.js'
+import SubscriptionResponse from '../model/SubscriptionResponse.js'
+import SubscriptionsResponse from '../model/SubscriptionsResponse.js'
 
 /**
 * Subscriptions service.
@@ -36,7 +32,7 @@ export default class SubscriptionsApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -46,28 +42,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionResponse} and HTTP response
    */
   createForAppUsingPOST1WithHttpInfo(body, appId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = SubscriptionResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = SubscriptionResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/subscription', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -77,8 +73,8 @@ export default class SubscriptionsApi {
   createForAppUsingPOST1(body, appId) {
     return this.createForAppUsingPOST1WithHttpInfo(body, appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -87,28 +83,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionResponse} and HTTP response
    */
   createForDashUsingPOSTWithHttpInfo(body, dashId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'dashId': dashId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = SubscriptionResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = SubscriptionResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/dashboards/{dashId}/subscription', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -118,8 +114,8 @@ export default class SubscriptionsApi {
   createForDashUsingPOST(body, dashId) {
     return this.createForDashUsingPOSTWithHttpInfo(body, dashId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -128,28 +124,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   deleteUsingDELETE2WithHttpInfo(updateableSubscriptionId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'updateableSubscriptionId': updateableSubscriptionId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/subscriptions/{updateableSubscriptionId}', 'DELETE',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -159,8 +155,8 @@ export default class SubscriptionsApi {
   deleteUsingDELETE2(updateableSubscriptionId) {
     return this.deleteUsingDELETE2WithHttpInfo(updateableSubscriptionId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -169,28 +165,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionsResponse} and HTTP response
    */
   listUsingGET2WithHttpInfo(appId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = SubscriptionsResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = SubscriptionsResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/subscriptions', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -200,8 +196,8 @@ export default class SubscriptionsApi {
   listUsingGET2(appId) {
     return this.listUsingGET2WithHttpInfo(appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -210,27 +206,27 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionsResponse} and HTTP response
    */
   listUsingGET5WithHttpInfo() {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = SubscriptionsResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = SubscriptionsResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/subscriptions', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -240,8 +236,8 @@ export default class SubscriptionsApi {
   listUsingGET5() {
     return this.listUsingGET5WithHttpInfo()
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -250,28 +246,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MailReportResponse} and HTTP response
    */
   sendAppReportUsingPOST1WithHttpInfo(body, appId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = MailReportResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = MailReportResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/report/send', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -281,8 +277,8 @@ export default class SubscriptionsApi {
   sendAppReportUsingPOST1(body, appId) {
     return this.sendAppReportUsingPOST1WithHttpInfo(body, appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -291,28 +287,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MailReportResponse} and HTTP response
    */
   sendDashReportUsingPOSTWithHttpInfo(body, dashId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'dashId': dashId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = MailReportResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = MailReportResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/dashboards/{dashId}/report/send', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -322,8 +318,8 @@ export default class SubscriptionsApi {
   sendDashReportUsingPOST(body, dashId) {
     return this.sendDashReportUsingPOSTWithHttpInfo(body, dashId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -332,28 +328,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionResponse} and HTTP response
    */
   toggleEnabledUsingPUT1WithHttpInfo(body, updateableSubscriptionId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'updateableSubscriptionId': updateableSubscriptionId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = SubscriptionResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = SubscriptionResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/subscriptions/{updateableSubscriptionId}', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -363,8 +359,8 @@ export default class SubscriptionsApi {
   toggleEnabledUsingPUT1(body, updateableSubscriptionId) {
     return this.toggleEnabledUsingPUT1WithHttpInfo(body, updateableSubscriptionId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -373,28 +369,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionResponse} and HTTP response
    */
   updateForAppUsingPUTWithHttpInfo(body, appId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = SubscriptionResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = SubscriptionResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/subscription', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -404,8 +400,8 @@ export default class SubscriptionsApi {
   updateForAppUsingPUT(body, appId) {
     return this.updateForAppUsingPUTWithHttpInfo(body, appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -414,28 +410,28 @@ export default class SubscriptionsApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionResponse} and HTTP response
    */
   updateForDashUsingPUT1WithHttpInfo(body, dashId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'dashId': dashId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = SubscriptionResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = SubscriptionResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/dashboards/{dashId}/subscription', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -445,8 +441,8 @@ export default class SubscriptionsApi {
   updateForDashUsingPUT1(body, dashId) {
     return this.updateForDashUsingPUT1WithHttpInfo(body, dashId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

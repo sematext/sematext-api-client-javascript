@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AppMetadata from './AppMetadata';
+import ApiClient from '../api/ApiClient.js'
+import AppMetadata from './AppMetadata.js'
 
 /**
 * The CreateAppInfo model module.
@@ -20,48 +20,48 @@ import AppMetadata from './AppMetadata';
 * @version 0.1.0
 */
 export default class CreateAppInfo {
-    /**
+  /**
     * Constructs a new <code>CreateAppInfo</code>.
     * @alias module:model/CreateAppInfo
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>CreateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/CreateAppInfo} obj Optional instance to populate.
     * @return {module:model/CreateAppInfo} The populated <code>CreateAppInfo</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateAppInfo();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new CreateAppInfo()
 
 
-            if (data.hasOwnProperty('appType')) {
-                obj['appType'] = ApiClient.convertToType(data['appType'], 'String');
-            }
-            if (data.hasOwnProperty('discountCode')) {
-                obj['discountCode'] = ApiClient.convertToType(data['discountCode'], 'String');
-            }
-            if (data.hasOwnProperty('initialPlanId')) {
-                obj['initialPlanId'] = ApiClient.convertToType(data['initialPlanId'], 'Number');
-            }
-            if (data.hasOwnProperty('metaData')) {
-                obj['metaData'] = AppMetadata.constructFromObject(data['metaData']);
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'appType')) {
+        obj['appType'] = ApiClient.convertToType(data['appType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'discountCode')) {
+        obj['discountCode'] = ApiClient.convertToType(data['discountCode'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'initialPlanId')) {
+        obj['initialPlanId'] = ApiClient.convertToType(data['initialPlanId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'metaData')) {
+        obj['metaData'] = AppMetadata.constructFromObject(data['metaData'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} appType

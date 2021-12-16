@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import Dimension from '../model/Dimension';
-import TagNamesResponse from '../model/TagNamesResponse';
+import ApiClient from './ApiClient.js'
+import Dimension from '../model/Dimension.js'
+import TagNamesResponse from '../model/TagNamesResponse.js'
 
 /**
 * TagApiController service.
@@ -30,7 +30,7 @@ export default class TagApiControllerApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -41,12 +41,12 @@ export default class TagApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TagNamesResponse} and HTTP response
    */
   getTagNamesUsingGETWithHttpInfo(appIds, opts) {
-    opts = opts || {};
-    let postBody = null;
+    opts = opts || {}
+    let postBody = null
 
     let pathParams = {
       'appIds': appIds
-    };
+    }
     let queryParams = {
       'from': opts['from'],
       'to': opts['to'],
@@ -54,22 +54,22 @@ export default class TagApiControllerApi {
       'logs': opts['logs'],
       'events': opts['events'],
       'rum': opts['rum']
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = TagNamesResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = TagNamesResponse
 
     return this.apiClient.callApi(
       '/spm-reports/api/v3/apps/{appIds}/tagNames', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -80,8 +80,8 @@ export default class TagApiControllerApi {
   getTagNamesUsingGET(appIds, opts) {
     return this.getTagNamesUsingGETWithHttpInfo(appIds, opts)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -91,12 +91,12 @@ export default class TagApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{'String': Dimension}>} and HTTP response
    */
   getUsingGET2WithHttpInfo(appIds, tag, opts) {
-    opts = opts || {};
-    let postBody = null;
+    opts = opts || {}
+    let postBody = null
 
     let pathParams = {
       'appIds': appIds
-    };
+    }
     let queryParams = {
       'from': opts['from'],
       'to': opts['to'],
@@ -105,22 +105,22 @@ export default class TagApiControllerApi {
       'logs': opts['logs'],
       'events': opts['events'],
       'rum': opts['rum']
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = { 'String': Dimension };
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = { 'String': Dimension }
 
     return this.apiClient.callApi(
       '/spm-reports/api/v3/apps/{appIds}/metrics/filters', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -131,8 +131,8 @@ export default class TagApiControllerApi {
   getUsingGET2(appIds, tag, opts) {
     return this.getUsingGET2WithHttpInfo(appIds, tag, opts)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -142,12 +142,12 @@ export default class TagApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object.<String, module:model/{'String': Dimension}>} and HTTP response
    */
   getUsingGET3WithHttpInfo(appIds, tag, opts) {
-    opts = opts || {};
-    let postBody = null;
+    opts = opts || {}
+    let postBody = null
 
     let pathParams = {
       'appIds': appIds
-    };
+    }
     let queryParams = {
       'from': opts['from'],
       'to': opts['to'],
@@ -156,22 +156,22 @@ export default class TagApiControllerApi {
       'logs': opts['logs'],
       'events': opts['events'],
       'rum': opts['rum']
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = { 'String': Dimension };
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = { 'String': Dimension }
 
     return this.apiClient.callApi(
       '/spm-reports/api/v3/apps/{appIds}/tags', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -182,8 +182,8 @@ export default class TagApiControllerApi {
   getUsingGET3(appIds, tag, opts) {
     return this.getUsingGET3WithHttpInfo(appIds, tag, opts)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

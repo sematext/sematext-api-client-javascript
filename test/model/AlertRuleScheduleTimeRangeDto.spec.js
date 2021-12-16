@@ -13,46 +13,35 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  describe('(package)', function () {
-    describe('AlertRuleScheduleTimeRangeDto', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto()
-      })
+/* eslint-disable no-unused-vars*/
+var instance
 
-      it('should create an instance of AlertRuleScheduleTimeRangeDto', function () {
-        // TODO: update the code to test AlertRuleScheduleTimeRangeDto
-        expect(instance).to.be.a(
-          SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto
-        )
-      })
+describe('(package)', function () {
+  describe('AlertRuleScheduleTimeRangeDto', function () {
+    beforeEach(function () {
+      //instance = new SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto()
+    })
 
-      it('should have the property end (base name: "end")', function () {
-        // TODO: update the code to test the property end
-        expect(instance).to.have.property('end')
-        // expect(instance.end).to.be(expectedValueLiteral);
-      })
+    it('should create an instance of AlertRuleScheduleTimeRangeDto', function () {
+      // TODO: update the code to test AlertRuleScheduleTimeRangeDto
+      // expect(instance)to.be.a(SematextApiClientJavascript.AlertRuleScheduleTimeRangeDto)
+    })
 
-      it('should have the property start (base name: "start")', function () {
-        // TODO: update the code to test the property start
-        expect(instance).to.have.property('start')
-        // expect(instance.start).to.be(expectedValueLiteral);
-      })
+    it('should have the property end (base name: "end")', function () {
+      // TODO: update the code to test the property end
+      // expect(instance)to.have.property('end')
+      // expect(instance.end).to.be(expectedValueLiteral);
+    })
+
+    it('should have the property start (base name: "start")', function () {
+      // TODO: update the code to test the property start
+      // expect(instance)to.have.property('start')
+      // expect(instance.start).to.be(expectedValueLiteral);
     })
   })
 })

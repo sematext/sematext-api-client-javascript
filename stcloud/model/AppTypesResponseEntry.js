@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The AppTypesResponseEntry model module.
@@ -19,36 +19,36 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class AppTypesResponseEntry {
-    /**
+  /**
     * Constructs a new <code>AppTypesResponseEntry</code>.
     * @alias module:model/AppTypesResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AppTypesResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AppTypesResponseEntry} obj Optional instance to populate.
     * @return {module:model/AppTypesResponseEntry} The populated <code>AppTypesResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AppTypesResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AppTypesResponseEntry()
 
 
-            if (data.hasOwnProperty('appTypes')) {
-                obj['appTypes'] = ApiClient.convertToType(data['appTypes'], ['String']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'appTypes')) {
+        obj['appTypes'] = ApiClient.convertToType(data['appTypes'], ['String'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<String>} appTypes

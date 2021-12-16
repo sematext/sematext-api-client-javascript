@@ -11,97 +11,97 @@
  *
  */
 
-import ApiClient from './ApiClient';
-import AlertNotification from './model/AlertNotification';
-import AlertNotificationRequest from './model/AlertNotificationRequest';
-import AlertRule from './model/AlertRule';
-import AlertRuleResponse from './model/AlertRuleResponse';
-import AlertRuleResponseEntry from './model/AlertRuleResponseEntry';
-import AlertRuleScheduleTimeRangeDto from './model/AlertRuleScheduleTimeRangeDto';
-import AlertRuleScheduleWeekdayDto from './model/AlertRuleScheduleWeekdayDto';
-import AlertRulesResponse from './model/AlertRulesResponse';
-import AlertRulesResponseEntry from './model/AlertRulesResponseEntry';
-import App from './model/App';
-import AppDescription from './model/AppDescription';
-import AppMetadata from './model/AppMetadata';
-import AppResponse from './model/AppResponse';
-import AppResponseEntry from './model/AppResponseEntry';
-import AppTypesResponse from './model/AppTypesResponse';
-import AppTypesResponseEntry from './model/AppTypesResponseEntry';
-import AppsResponse from './model/AppsResponse';
-import AppsResponseEntry from './model/AppsResponseEntry';
-import BasicAuthMethodDto from './model/BasicAuthMethodDto';
-import BasicOrganizationDto from './model/BasicOrganizationDto';
-import BillingInfo from './model/BillingInfo';
-import ChargesDetailsResponseDto from './model/ChargesDetailsResponseDto';
-import CloudWatchSettings from './model/CloudWatchSettings';
-import CloudWatchSettingsResponse from './model/CloudWatchSettingsResponse';
-import CloudWatchSettingsResponseEntry from './model/CloudWatchSettingsResponseEntry';
-import CreateAppInfo from './model/CreateAppInfo';
-import CreateTokenDto from './model/CreateTokenDto';
-import DailyDto from './model/DailyDto';
-import DayUsageData from './model/DayUsageData';
-import Dimension from './model/Dimension';
-import Error from './model/Error';
-import EventDto from './model/EventDto';
-import FilterValue from './model/FilterValue';
-import GenericApiResponse from './model/GenericApiResponse';
-import GenericMapBasedApiResponse from './model/GenericMapBasedApiResponse';
-import Invitation from './model/Invitation';
-import Invoice from './model/Invoice';
-import InvoiceResponse from './model/InvoiceResponse';
-import InvoiceResponseEntry from './model/InvoiceResponseEntry';
-import LimitChangeEventDTO from './model/LimitChangeEventDTO';
-import MailReportResponse from './model/MailReportResponse';
-import MailReportResponseResponseEntry from './model/MailReportResponseResponseEntry';
-import MinPeriodFeePeriod from './model/MinPeriodFeePeriod';
-import NotificationIntegration from './model/NotificationIntegration';
-import NotificationsResponse from './model/NotificationsResponse';
-import NotificationsResponseEntry from './model/NotificationsResponseEntry';
-import Plan from './model/Plan';
-import PlansResponse from './model/PlansResponse';
-import PlansResponseEntry from './model/PlansResponseEntry';
-import ReportInfo from './model/ReportInfo';
-import ServiceIntegration from './model/ServiceIntegration';
-import Subscription from './model/Subscription';
-import SubscriptionDashboardDto from './model/SubscriptionDashboardDto';
-import SubscriptionDto from './model/SubscriptionDto';
-import SubscriptionResponse from './model/SubscriptionResponse';
-import SubscriptionResponseEntry from './model/SubscriptionResponseEntry';
-import SubscriptionsResponse from './model/SubscriptionsResponse';
-import SubscriptionsResponseEntry from './model/SubscriptionsResponseEntry';
-import TagNamesResponse from './model/TagNamesResponse';
-import TokenDto from './model/TokenDto';
-import TokenResponse from './model/TokenResponse';
-import TokenResponseEntry from './model/TokenResponseEntry';
-import TokensResponse from './model/TokensResponse';
-import TokensResponseEntry from './model/TokensResponseEntry';
-import UpdateAppInfo from './model/UpdateAppInfo';
-import UpdatePlanResponse from './model/UpdatePlanResponse';
-import UpdatePlanResponseDto from './model/UpdatePlanResponseDto';
-import UpdatePlanResponseEntry from './model/UpdatePlanResponseEntry';
-import UpdateSubscriptionDto from './model/UpdateSubscriptionDto';
-import UpdateTokenDto from './model/UpdateTokenDto';
-import UsageDto from './model/UsageDto';
-import UsageMultiResponse from './model/UsageMultiResponse';
-import UsageMultiResponseEntry from './model/UsageMultiResponseEntry';
-import UsageResponse from './model/UsageResponse';
-import UsageResponseEntry from './model/UsageResponseEntry';
-import UserInfo from './model/UserInfo';
-import UserPermissions from './model/UserPermissions';
-import UserRole from './model/UserRole';
-import AlertNotificationsApi from './api/AlertNotificationsApi';
-import AlertsApi from './api/AlertsApi';
-import AppsApi from './api/AppsApi';
-import AwsSettingsControllerApi from './api/AwsSettingsControllerApi';
-import BillingApi from './api/BillingApi';
-import LogsAppApi from './api/LogsAppApi';
-import LogsUsageApiControllerApi from './api/LogsUsageApiControllerApi';
-import MonitoringAppApi from './api/MonitoringAppApi';
-import ResetPasswordApi from './api/ResetPasswordApi';
-import SubscriptionsApi from './api/SubscriptionsApi';
-import TagApiControllerApi from './api/TagApiControllerApi';
-import TokensApiControllerApi from './api/TokensApiControllerApi';
+import ApiClient from './api/ApiClient.js'
+import AlertNotification from './model/AlertNotification.js'
+import AlertNotificationRequest from './model/AlertNotificationRequest.js'
+import AlertRule from './model/AlertRule.js'
+import AlertRuleResponse from './model/AlertRuleResponse.js'
+import AlertRuleResponseEntry from './model/AlertRuleResponseEntry.js'
+import AlertRuleScheduleTimeRangeDto from './model/AlertRuleScheduleTimeRangeDto.js'
+import AlertRuleScheduleWeekdayDto from './model/AlertRuleScheduleWeekdayDto.js'
+import AlertRulesResponse from './model/AlertRulesResponse.js'
+import AlertRulesResponseEntry from './model/AlertRulesResponseEntry.js'
+import App from './model/App.js'
+import AppDescription from './model/AppDescription.js'
+import AppMetadata from './model/AppMetadata.js'
+import AppResponse from './model/AppResponse.js'
+import AppResponseEntry from './model/AppResponseEntry.js'
+import AppTypesResponse from './model/AppTypesResponse.js'
+import AppTypesResponseEntry from './model/AppTypesResponseEntry.js'
+import AppsResponse from './model/AppsResponse.js'
+import AppsResponseEntry from './model/AppsResponseEntry.js'
+import BasicAuthMethodDto from './model/BasicAuthMethodDto.js'
+import BasicOrganizationDto from './model/BasicOrganizationDto.js'
+import BillingInfo from './model/BillingInfo.js'
+import ChargesDetailsResponseDto from './model/ChargesDetailsResponseDto.js'
+import CloudWatchSettings from './model/CloudWatchSettings.js'
+import CloudWatchSettingsResponse from './model/CloudWatchSettingsResponse.js'
+import CloudWatchSettingsResponseEntry from './model/CloudWatchSettingsResponseEntry.js'
+import CreateAppInfo from './model/CreateAppInfo.js'
+import CreateTokenDto from './model/CreateTokenDto.js'
+import DailyDto from './model/DailyDto.js'
+import DayUsageData from './model/DayUsageData.js'
+import Dimension from './model/Dimension.js'
+import Error from './model/Error.js'
+import EventDto from './model/EventDto.js'
+import FilterValue from './model/FilterValue.js'
+import GenericApiResponse from './model/GenericApiResponse.js'
+import GenericMapBasedApiResponse from './model/GenericMapBasedApiResponse.js'
+import Invitation from './model/Invitation.js'
+import Invoice from './model/Invoice.js'
+import InvoiceResponse from './model/InvoiceResponse.js'
+import InvoiceResponseEntry from './model/InvoiceResponseEntry.js'
+import LimitChangeEventDTO from './model/LimitChangeEventDTO.js'
+import MailReportResponse from './model/MailReportResponse.js'
+import MailReportResponseResponseEntry from './model/MailReportResponseResponseEntry.js'
+import MinPeriodFeePeriod from './model/MinPeriodFeePeriod.js'
+import NotificationIntegration from './model/NotificationIntegration.js'
+import NotificationsResponse from './model/NotificationsResponse.js'
+import NotificationsResponseEntry from './model/NotificationsResponseEntry.js'
+import Plan from './model/Plan.js'
+import PlansResponse from './model/PlansResponse.js'
+import PlansResponseEntry from './model/PlansResponseEntry.js'
+import ReportInfo from './model/ReportInfo.js'
+import ServiceIntegration from './model/ServiceIntegration.js'
+import Subscription from './model/Subscription.js'
+import SubscriptionDashboardDto from './model/SubscriptionDashboardDto.js'
+import SubscriptionDto from './model/SubscriptionDto.js'
+import SubscriptionResponse from './model/SubscriptionResponse.js'
+import SubscriptionResponseEntry from './model/SubscriptionResponseEntry.js'
+import SubscriptionsResponse from './model/SubscriptionsResponse.js'
+import SubscriptionsResponseEntry from './model/SubscriptionsResponseEntry.js'
+import TagNamesResponse from './model/TagNamesResponse.js'
+import TokenDto from './model/TokenDto.js'
+import TokenResponse from './model/TokenResponse.js'
+import TokenResponseEntry from './model/TokenResponseEntry.js'
+import TokensResponse from './model/TokensResponse.js'
+import TokensResponseEntry from './model/TokensResponseEntry.js'
+import UpdateAppInfo from './model/UpdateAppInfo.js'
+import UpdatePlanResponse from './model/UpdatePlanResponse.js'
+import UpdatePlanResponseDto from './model/UpdatePlanResponseDto.js'
+import UpdatePlanResponseEntry from './model/UpdatePlanResponseEntry.js'
+import UpdateSubscriptionDto from './model/UpdateSubscriptionDto.js'
+import UpdateTokenDto from './model/UpdateTokenDto.js'
+import UsageDto from './model/UsageDto.js'
+import UsageMultiResponse from './model/UsageMultiResponse.js'
+import UsageMultiResponseEntry from './model/UsageMultiResponseEntry.js'
+import UsageResponse from './model/UsageResponse.js'
+import UsageResponseEntry from './model/UsageResponseEntry.js'
+import UserInfo from './model/UserInfo.js'
+import UserPermissions from './model/UserPermissions.js'
+import UserRole from './model/UserRole.js'
+import AlertNotificationsApi from './api/AlertNotificationsApi.js'
+import AlertsApi from './api/AlertsApi.js'
+import AppsApi from './api/AppsApi.js'
+import AwsSettingsControllerApi from './api/AwsSettingsControllerApi.js'
+import BillingApi from './api/BillingApi.js'
+import LogsAppApi from './api/LogsAppApi.js'
+import LogsUsageApiControllerApi from './api/LogsUsageApiControllerApi.js'
+import MonitoringAppApi from './api/MonitoringAppApi.js'
+import ResetPasswordApi from './api/ResetPasswordApi.js'
+import SubscriptionsApi from './api/SubscriptionsApi.js'
+import TagApiControllerApi from './api/TagApiControllerApi.js'
+import TokensApiControllerApi from './api/TokensApiControllerApi.js'
 
 /**
 * Client library for https://sematext.com/docs/api/.<br>
@@ -135,549 +135,549 @@ import TokensApiControllerApi from './api/TokensApiControllerApi';
 * @version 0.1.0
 */
 export {
-    /**
+  /**
      * The ApiClient constructor.
      * @property {module:ApiClient}
      */
-    ApiClient,
+  ApiClient,
 
-    /**
+  /**
      * The AlertNotification model constructor.
      * @property {module:model/AlertNotification}
      */
-    AlertNotification,
+  AlertNotification,
 
-    /**
+  /**
      * The AlertNotificationRequest model constructor.
      * @property {module:model/AlertNotificationRequest}
      */
-    AlertNotificationRequest,
+  AlertNotificationRequest,
 
-    /**
+  /**
      * The AlertRule model constructor.
      * @property {module:model/AlertRule}
      */
-    AlertRule,
+  AlertRule,
 
-    /**
+  /**
      * The AlertRuleResponse model constructor.
      * @property {module:model/AlertRuleResponse}
      */
-    AlertRuleResponse,
+  AlertRuleResponse,
 
-    /**
+  /**
      * The AlertRuleResponseEntry model constructor.
      * @property {module:model/AlertRuleResponseEntry}
      */
-    AlertRuleResponseEntry,
+  AlertRuleResponseEntry,
 
-    /**
+  /**
      * The AlertRuleScheduleTimeRangeDto model constructor.
      * @property {module:model/AlertRuleScheduleTimeRangeDto}
      */
-    AlertRuleScheduleTimeRangeDto,
+  AlertRuleScheduleTimeRangeDto,
 
-    /**
+  /**
      * The AlertRuleScheduleWeekdayDto model constructor.
      * @property {module:model/AlertRuleScheduleWeekdayDto}
      */
-    AlertRuleScheduleWeekdayDto,
+  AlertRuleScheduleWeekdayDto,
 
-    /**
+  /**
      * The AlertRulesResponse model constructor.
      * @property {module:model/AlertRulesResponse}
      */
-    AlertRulesResponse,
+  AlertRulesResponse,
 
-    /**
+  /**
      * The AlertRulesResponseEntry model constructor.
      * @property {module:model/AlertRulesResponseEntry}
      */
-    AlertRulesResponseEntry,
+  AlertRulesResponseEntry,
 
-    /**
+  /**
      * The App model constructor.
      * @property {module:model/App}
      */
-    App,
+  App,
 
-    /**
+  /**
      * The AppDescription model constructor.
      * @property {module:model/AppDescription}
      */
-    AppDescription,
+  AppDescription,
 
-    /**
+  /**
      * The AppMetadata model constructor.
      * @property {module:model/AppMetadata}
      */
-    AppMetadata,
+  AppMetadata,
 
-    /**
+  /**
      * The AppResponse model constructor.
      * @property {module:model/AppResponse}
      */
-    AppResponse,
+  AppResponse,
 
-    /**
+  /**
      * The AppResponseEntry model constructor.
      * @property {module:model/AppResponseEntry}
      */
-    AppResponseEntry,
+  AppResponseEntry,
 
-    /**
+  /**
      * The AppTypesResponse model constructor.
      * @property {module:model/AppTypesResponse}
      */
-    AppTypesResponse,
+  AppTypesResponse,
 
-    /**
+  /**
      * The AppTypesResponseEntry model constructor.
      * @property {module:model/AppTypesResponseEntry}
      */
-    AppTypesResponseEntry,
+  AppTypesResponseEntry,
 
-    /**
+  /**
      * The AppsResponse model constructor.
      * @property {module:model/AppsResponse}
      */
-    AppsResponse,
+  AppsResponse,
 
-    /**
+  /**
      * The AppsResponseEntry model constructor.
      * @property {module:model/AppsResponseEntry}
      */
-    AppsResponseEntry,
+  AppsResponseEntry,
 
-    /**
+  /**
      * The BasicAuthMethodDto model constructor.
      * @property {module:model/BasicAuthMethodDto}
      */
-    BasicAuthMethodDto,
+  BasicAuthMethodDto,
 
-    /**
+  /**
      * The BasicOrganizationDto model constructor.
      * @property {module:model/BasicOrganizationDto}
      */
-    BasicOrganizationDto,
+  BasicOrganizationDto,
 
-    /**
+  /**
      * The BillingInfo model constructor.
      * @property {module:model/BillingInfo}
      */
-    BillingInfo,
+  BillingInfo,
 
-    /**
+  /**
      * The ChargesDetailsResponseDto model constructor.
      * @property {module:model/ChargesDetailsResponseDto}
      */
-    ChargesDetailsResponseDto,
+  ChargesDetailsResponseDto,
 
-    /**
+  /**
      * The CloudWatchSettings model constructor.
      * @property {module:model/CloudWatchSettings}
      */
-    CloudWatchSettings,
+  CloudWatchSettings,
 
-    /**
+  /**
      * The CloudWatchSettingsResponse model constructor.
      * @property {module:model/CloudWatchSettingsResponse}
      */
-    CloudWatchSettingsResponse,
+  CloudWatchSettingsResponse,
 
-    /**
+  /**
      * The CloudWatchSettingsResponseEntry model constructor.
      * @property {module:model/CloudWatchSettingsResponseEntry}
      */
-    CloudWatchSettingsResponseEntry,
+  CloudWatchSettingsResponseEntry,
 
-    /**
+  /**
      * The CreateAppInfo model constructor.
      * @property {module:model/CreateAppInfo}
      */
-    CreateAppInfo,
+  CreateAppInfo,
 
-    /**
+  /**
      * The CreateTokenDto model constructor.
      * @property {module:model/CreateTokenDto}
      */
-    CreateTokenDto,
+  CreateTokenDto,
 
-    /**
+  /**
      * The DailyDto model constructor.
      * @property {module:model/DailyDto}
      */
-    DailyDto,
+  DailyDto,
 
-    /**
+  /**
      * The DayUsageData model constructor.
      * @property {module:model/DayUsageData}
      */
-    DayUsageData,
+  DayUsageData,
 
-    /**
+  /**
      * The Dimension model constructor.
      * @property {module:model/Dimension}
      */
-    Dimension,
+  Dimension,
 
-    /**
+  /**
      * The Error model constructor.
      * @property {module:model/Error}
      */
-    Error,
+  Error,
 
-    /**
+  /**
      * The EventDto model constructor.
      * @property {module:model/EventDto}
      */
-    EventDto,
+  EventDto,
 
-    /**
+  /**
      * The FilterValue model constructor.
      * @property {module:model/FilterValue}
      */
-    FilterValue,
+  FilterValue,
 
-    /**
+  /**
      * The GenericApiResponse model constructor.
      * @property {module:model/GenericApiResponse}
      */
-    GenericApiResponse,
+  GenericApiResponse,
 
-    /**
+  /**
      * The GenericMapBasedApiResponse model constructor.
      * @property {module:model/GenericMapBasedApiResponse}
      */
-    GenericMapBasedApiResponse,
+  GenericMapBasedApiResponse,
 
-    /**
+  /**
      * The Invitation model constructor.
      * @property {module:model/Invitation}
      */
-    Invitation,
+  Invitation,
 
-    /**
+  /**
      * The Invoice model constructor.
      * @property {module:model/Invoice}
      */
-    Invoice,
+  Invoice,
 
-    /**
+  /**
      * The InvoiceResponse model constructor.
      * @property {module:model/InvoiceResponse}
      */
-    InvoiceResponse,
+  InvoiceResponse,
 
-    /**
+  /**
      * The InvoiceResponseEntry model constructor.
      * @property {module:model/InvoiceResponseEntry}
      */
-    InvoiceResponseEntry,
+  InvoiceResponseEntry,
 
-    /**
+  /**
      * The LimitChangeEventDTO model constructor.
      * @property {module:model/LimitChangeEventDTO}
      */
-    LimitChangeEventDTO,
+  LimitChangeEventDTO,
 
-    /**
+  /**
      * The MailReportResponse model constructor.
      * @property {module:model/MailReportResponse}
      */
-    MailReportResponse,
+  MailReportResponse,
 
-    /**
+  /**
      * The MailReportResponseResponseEntry model constructor.
      * @property {module:model/MailReportResponseResponseEntry}
      */
-    MailReportResponseResponseEntry,
+  MailReportResponseResponseEntry,
 
-    /**
+  /**
      * The MinPeriodFeePeriod model constructor.
      * @property {module:model/MinPeriodFeePeriod}
      */
-    MinPeriodFeePeriod,
+  MinPeriodFeePeriod,
 
-    /**
+  /**
      * The NotificationIntegration model constructor.
      * @property {module:model/NotificationIntegration}
      */
-    NotificationIntegration,
+  NotificationIntegration,
 
-    /**
+  /**
      * The NotificationsResponse model constructor.
      * @property {module:model/NotificationsResponse}
      */
-    NotificationsResponse,
+  NotificationsResponse,
 
-    /**
+  /**
      * The NotificationsResponseEntry model constructor.
      * @property {module:model/NotificationsResponseEntry}
      */
-    NotificationsResponseEntry,
+  NotificationsResponseEntry,
 
-    /**
+  /**
      * The Plan model constructor.
      * @property {module:model/Plan}
      */
-    Plan,
+  Plan,
 
-    /**
+  /**
      * The PlansResponse model constructor.
      * @property {module:model/PlansResponse}
      */
-    PlansResponse,
+  PlansResponse,
 
-    /**
+  /**
      * The PlansResponseEntry model constructor.
      * @property {module:model/PlansResponseEntry}
      */
-    PlansResponseEntry,
+  PlansResponseEntry,
 
-    /**
+  /**
      * The ReportInfo model constructor.
      * @property {module:model/ReportInfo}
      */
-    ReportInfo,
+  ReportInfo,
 
-    /**
+  /**
      * The ServiceIntegration model constructor.
      * @property {module:model/ServiceIntegration}
      */
-    ServiceIntegration,
+  ServiceIntegration,
 
-    /**
+  /**
      * The Subscription model constructor.
      * @property {module:model/Subscription}
      */
-    Subscription,
+  Subscription,
 
-    /**
+  /**
      * The SubscriptionDashboardDto model constructor.
      * @property {module:model/SubscriptionDashboardDto}
      */
-    SubscriptionDashboardDto,
+  SubscriptionDashboardDto,
 
-    /**
+  /**
      * The SubscriptionDto model constructor.
      * @property {module:model/SubscriptionDto}
      */
-    SubscriptionDto,
+  SubscriptionDto,
 
-    /**
+  /**
      * The SubscriptionResponse model constructor.
      * @property {module:model/SubscriptionResponse}
      */
-    SubscriptionResponse,
+  SubscriptionResponse,
 
-    /**
+  /**
      * The SubscriptionResponseEntry model constructor.
      * @property {module:model/SubscriptionResponseEntry}
      */
-    SubscriptionResponseEntry,
+  SubscriptionResponseEntry,
 
-    /**
+  /**
      * The SubscriptionsResponse model constructor.
      * @property {module:model/SubscriptionsResponse}
      */
-    SubscriptionsResponse,
+  SubscriptionsResponse,
 
-    /**
+  /**
      * The SubscriptionsResponseEntry model constructor.
      * @property {module:model/SubscriptionsResponseEntry}
      */
-    SubscriptionsResponseEntry,
+  SubscriptionsResponseEntry,
 
-    /**
+  /**
      * The TagNamesResponse model constructor.
      * @property {module:model/TagNamesResponse}
      */
-    TagNamesResponse,
+  TagNamesResponse,
 
-    /**
+  /**
      * The TokenDto model constructor.
      * @property {module:model/TokenDto}
      */
-    TokenDto,
+  TokenDto,
 
-    /**
+  /**
      * The TokenResponse model constructor.
      * @property {module:model/TokenResponse}
      */
-    TokenResponse,
+  TokenResponse,
 
-    /**
+  /**
      * The TokenResponseEntry model constructor.
      * @property {module:model/TokenResponseEntry}
      */
-    TokenResponseEntry,
+  TokenResponseEntry,
 
-    /**
+  /**
      * The TokensResponse model constructor.
      * @property {module:model/TokensResponse}
      */
-    TokensResponse,
+  TokensResponse,
 
-    /**
+  /**
      * The TokensResponseEntry model constructor.
      * @property {module:model/TokensResponseEntry}
      */
-    TokensResponseEntry,
+  TokensResponseEntry,
 
-    /**
+  /**
      * The UpdateAppInfo model constructor.
      * @property {module:model/UpdateAppInfo}
      */
-    UpdateAppInfo,
+  UpdateAppInfo,
 
-    /**
+  /**
      * The UpdatePlanResponse model constructor.
      * @property {module:model/UpdatePlanResponse}
      */
-    UpdatePlanResponse,
+  UpdatePlanResponse,
 
-    /**
+  /**
      * The UpdatePlanResponseDto model constructor.
      * @property {module:model/UpdatePlanResponseDto}
      */
-    UpdatePlanResponseDto,
+  UpdatePlanResponseDto,
 
-    /**
+  /**
      * The UpdatePlanResponseEntry model constructor.
      * @property {module:model/UpdatePlanResponseEntry}
      */
-    UpdatePlanResponseEntry,
+  UpdatePlanResponseEntry,
 
-    /**
+  /**
      * The UpdateSubscriptionDto model constructor.
      * @property {module:model/UpdateSubscriptionDto}
      */
-    UpdateSubscriptionDto,
+  UpdateSubscriptionDto,
 
-    /**
+  /**
      * The UpdateTokenDto model constructor.
      * @property {module:model/UpdateTokenDto}
      */
-    UpdateTokenDto,
+  UpdateTokenDto,
 
-    /**
+  /**
      * The UsageDto model constructor.
      * @property {module:model/UsageDto}
      */
-    UsageDto,
+  UsageDto,
 
-    /**
+  /**
      * The UsageMultiResponse model constructor.
      * @property {module:model/UsageMultiResponse}
      */
-    UsageMultiResponse,
+  UsageMultiResponse,
 
-    /**
+  /**
      * The UsageMultiResponseEntry model constructor.
      * @property {module:model/UsageMultiResponseEntry}
      */
-    UsageMultiResponseEntry,
+  UsageMultiResponseEntry,
 
-    /**
+  /**
      * The UsageResponse model constructor.
      * @property {module:model/UsageResponse}
      */
-    UsageResponse,
+  UsageResponse,
 
-    /**
+  /**
      * The UsageResponseEntry model constructor.
      * @property {module:model/UsageResponseEntry}
      */
-    UsageResponseEntry,
+  UsageResponseEntry,
 
-    /**
+  /**
      * The UserInfo model constructor.
      * @property {module:model/UserInfo}
      */
-    UserInfo,
+  UserInfo,
 
-    /**
+  /**
      * The UserPermissions model constructor.
      * @property {module:model/UserPermissions}
      */
-    UserPermissions,
+  UserPermissions,
 
-    /**
+  /**
      * The UserRole model constructor.
      * @property {module:model/UserRole}
      */
-    UserRole,
+  UserRole,
 
-    /**
+  /**
     * The AlertNotificationsApi service constructor.
     * @property {module:api/AlertNotificationsApi}
     */
-    AlertNotificationsApi,
+  AlertNotificationsApi,
 
-    /**
+  /**
     * The AlertsApi service constructor.
     * @property {module:api/AlertsApi}
     */
-    AlertsApi,
+  AlertsApi,
 
-    /**
+  /**
     * The AppsApi service constructor.
     * @property {module:api/AppsApi}
     */
-    AppsApi,
+  AppsApi,
 
-    /**
+  /**
     * The AwsSettingsControllerApi service constructor.
     * @property {module:api/AwsSettingsControllerApi}
     */
-    AwsSettingsControllerApi,
+  AwsSettingsControllerApi,
 
-    /**
+  /**
     * The BillingApi service constructor.
     * @property {module:api/BillingApi}
     */
-    BillingApi,
+  BillingApi,
 
-    /**
+  /**
     * The LogsAppApi service constructor.
     * @property {module:api/LogsAppApi}
     */
-    LogsAppApi,
+  LogsAppApi,
 
-    /**
+  /**
     * The LogsUsageApiControllerApi service constructor.
     * @property {module:api/LogsUsageApiControllerApi}
     */
-    LogsUsageApiControllerApi,
+  LogsUsageApiControllerApi,
 
-    /**
+  /**
     * The MonitoringAppApi service constructor.
     * @property {module:api/MonitoringAppApi}
     */
-    MonitoringAppApi,
+  MonitoringAppApi,
 
-    /**
+  /**
     * The ResetPasswordApi service constructor.
     * @property {module:api/ResetPasswordApi}
     */
-    ResetPasswordApi,
+  ResetPasswordApi,
 
-    /**
+  /**
     * The SubscriptionsApi service constructor.
     * @property {module:api/SubscriptionsApi}
     */
-    SubscriptionsApi,
+  SubscriptionsApi,
 
-    /**
+  /**
     * The TagApiControllerApi service constructor.
     * @property {module:api/TagApiControllerApi}
     */
-    TagApiControllerApi,
+  TagApiControllerApi,
 
-    /**
+  /**
     * The TokensApiControllerApi service constructor.
     * @property {module:api/TokensApiControllerApi}
     */
-    TokensApiControllerApi
-};
+  TokensApiControllerApi
+}

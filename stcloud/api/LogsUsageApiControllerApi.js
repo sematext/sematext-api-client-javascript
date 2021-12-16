@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import UsageResponse from '../model/UsageResponse';
+import ApiClient from './ApiClient.js'
+import UsageResponse from '../model/UsageResponse.js'
 
 /**
 * LogsUsageApiController service.
@@ -29,7 +29,7 @@ export default class LogsUsageApiControllerApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -39,30 +39,30 @@ export default class LogsUsageApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UsageResponse} and HTTP response
    */
   getForRangeUsingGETWithHttpInfo(appId, from, to) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'appId': appId,
       'from': from,
       'to': to
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = UsageResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = UsageResponse
 
     return this.apiClient.callApi(
       '/logsene-reports/api/v3/apps/{appId}/usage/{from}/{to}', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -72,8 +72,8 @@ export default class LogsUsageApiControllerApi {
   getForRangeUsingGET(appId, from, to) {
     return this.getForRangeUsingGETWithHttpInfo(appId, from, to)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "globals": {
     "describe": true,
     "it": true
@@ -35,6 +35,5 @@
         "args": "none"
       }
     ]
-  },
-  "plugins": ["class-property"]
+  }
 }

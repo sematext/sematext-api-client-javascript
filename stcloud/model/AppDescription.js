@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The AppDescription model module.
@@ -19,36 +19,36 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class AppDescription {
-    /**
+  /**
     * Constructs a new <code>AppDescription</code>.
     * @alias module:model/AppDescription
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AppDescription</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AppDescription} obj Optional instance to populate.
     * @return {module:model/AppDescription} The populated <code>AppDescription</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AppDescription();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AppDescription()
 
 
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'description')) {
+        obj['description'] = ApiClient.convertToType(data['description'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} description

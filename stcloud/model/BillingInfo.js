@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The BillingInfo model module.
@@ -19,42 +19,42 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class BillingInfo {
-    /**
+  /**
     * Constructs a new <code>BillingInfo</code>.
     * @alias module:model/BillingInfo
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>BillingInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/BillingInfo} obj Optional instance to populate.
     * @return {module:model/BillingInfo} The populated <code>BillingInfo</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new BillingInfo();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new BillingInfo()
 
 
-            if (data.hasOwnProperty('creditCardId')) {
-                obj['creditCardId'] = ApiClient.convertToType(data['creditCardId'], 'Number');
-            }
-            if (data.hasOwnProperty('paymentMethod')) {
-                obj['paymentMethod'] = ApiClient.convertToType(data['paymentMethod'], 'String');
-            }
-            if (data.hasOwnProperty('planId')) {
-                obj['planId'] = ApiClient.convertToType(data['planId'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'creditCardId')) {
+        obj['creditCardId'] = ApiClient.convertToType(data['creditCardId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'paymentMethod')) {
+        obj['paymentMethod'] = ApiClient.convertToType(data['paymentMethod'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'planId')) {
+        obj['planId'] = ApiClient.convertToType(data['planId'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Number} creditCardId

@@ -12,57 +12,47 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  describe('(package)', function () {
-    describe('GenericApiResponse', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.GenericApiResponse()
-      })
+describe('(package)', function () {
+  describe('GenericApiResponse', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should create an instance of GenericApiResponse', function () {
-        // TODO: update the code to test GenericApiResponse
-        expect(instance).to.be.a(SematextApiClientJavascript.GenericApiResponse)
-      })
+    it('should create an instance of GenericApiResponse', function () {
+      // TODO: update the code to test GenericApiResponse
+      // expect(instance)to.be.a(SematextApiClientJavascript.GenericApiResponse)
+    })
 
-      it('should have the property data (base name: "data")', function () {
-        // TODO: update the code to test the property data
-        expect(instance).to.have.property('data')
-        // expect(instance.data).to.be(expectedValueLiteral);
-      })
+    it('should have the property data (base name: "data")', function () {
+      // TODO: update the code to test the property data
+      // expect(instance)to.have.property('data')
+      // expect(instance.data).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property errors (base name: "errors")', function () {
-        // TODO: update the code to test the property errors
-        expect(instance).to.have.property('errors')
-        // expect(instance.errors).to.be(expectedValueLiteral);
-      })
+    it('should have the property errors (base name: "errors")', function () {
+      // TODO: update the code to test the property errors
+      // expect(instance)to.have.property('errors')
+      // expect(instance.errors).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property message (base name: "message")', function () {
-        // TODO: update the code to test the property message
-        expect(instance).to.have.property('message')
-        // expect(instance.message).to.be(expectedValueLiteral);
-      })
+    it('should have the property message (base name: "message")', function () {
+      // TODO: update the code to test the property message
+      // expect(instance)to.have.property('message')
+      // expect(instance.message).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property success (base name: "success")', function () {
-        // TODO: update the code to test the property success
-        expect(instance).to.have.property('success')
-        // expect(instance.success).to.be(expectedValueLiteral);
-      })
+    it('should have the property success (base name: "success")', function () {
+      // TODO: update the code to test the property success
+      // expect(instance)to.have.property('success')
+      // expect(instance.success).to.be(expectedValueLiteral);
     })
   })
 })

@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AlertRuleScheduleTimeRangeDto from './AlertRuleScheduleTimeRangeDto';
+import ApiClient from '../api/ApiClient.js'
+import AlertRuleScheduleTimeRangeDto from './AlertRuleScheduleTimeRangeDto.js'
 
 /**
 * The AlertRuleScheduleWeekdayDto model module.
@@ -20,48 +20,48 @@ import AlertRuleScheduleTimeRangeDto from './AlertRuleScheduleTimeRangeDto';
 * @version 0.1.0
 */
 export default class AlertRuleScheduleWeekdayDto {
-    /**
+  /**
     * Constructs a new <code>AlertRuleScheduleWeekdayDto</code>.
     * @alias module:model/AlertRuleScheduleWeekdayDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AlertRuleScheduleWeekdayDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AlertRuleScheduleWeekdayDto} obj Optional instance to populate.
     * @return {module:model/AlertRuleScheduleWeekdayDto} The populated <code>AlertRuleScheduleWeekdayDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AlertRuleScheduleWeekdayDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AlertRuleScheduleWeekdayDto()
 
 
-            if (data.hasOwnProperty('day')) {
-                obj['day'] = ApiClient.convertToType(data['day'], 'String');
-            }
-            if (data.hasOwnProperty('index')) {
-                obj['index'] = ApiClient.convertToType(data['index'], 'Number');
-            }
-            if (data.hasOwnProperty('intervals')) {
-                obj['intervals'] = ApiClient.convertToType(data['intervals'], [AlertRuleScheduleTimeRangeDto]);
-            }
-            if (data.hasOwnProperty('label')) {
-                obj['label'] = ApiClient.convertToType(data['label'], 'String');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'day')) {
+        obj['day'] = ApiClient.convertToType(data['day'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'index')) {
+        obj['index'] = ApiClient.convertToType(data['index'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'intervals')) {
+        obj['intervals'] = ApiClient.convertToType(data['intervals'], [AlertRuleScheduleTimeRangeDto])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'label')) {
+        obj['label'] = ApiClient.convertToType(data['label'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} day

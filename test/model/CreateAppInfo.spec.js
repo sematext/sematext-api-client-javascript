@@ -12,63 +12,53 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  describe('(package)', function () {
-    describe('CreateAppInfo', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.CreateAppInfo()
-      })
+describe('(package)', function () {
+  describe('CreateAppInfo', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should create an instance of CreateAppInfo', function () {
-        // TODO: update the code to test CreateAppInfo
-        expect(instance).to.be.a(SematextApiClientJavascript.CreateAppInfo)
-      })
+    it('should create an instance of CreateAppInfo', function () {
+      // TODO: update the code to test CreateAppInfo
+      // expect(instance)to.be.a(SematextApiClientJavascript.CreateAppInfo)
+    })
 
-      it('should have the property appType (base name: "appType")', function () {
-        // TODO: update the code to test the property appType
-        expect(instance).to.have.property('appType')
-        // expect(instance.appType).to.be(expectedValueLiteral);
-      })
+    it('should have the property appType (base name: "appType")', function () {
+      // TODO: update the code to test the property appType
+      // expect(instance)to.have.property('appType')
+      // expect(instance.appType).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property discountCode (base name: "discountCode")', function () {
-        // TODO: update the code to test the property discountCode
-        expect(instance).to.have.property('discountCode')
-        // expect(instance.discountCode).to.be(expectedValueLiteral);
-      })
+    it('should have the property discountCode (base name: "discountCode")', function () {
+      // TODO: update the code to test the property discountCode
+      // expect(instance)to.have.property('discountCode')
+      // expect(instance.discountCode).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property initialPlanId (base name: "initialPlanId")', function () {
-        // TODO: update the code to test the property initialPlanId
-        expect(instance).to.have.property('initialPlanId')
-        // expect(instance.initialPlanId).to.be(expectedValueLiteral);
-      })
+    it('should have the property initialPlanId (base name: "initialPlanId")', function () {
+      // TODO: update the code to test the property initialPlanId
+      // expect(instance)to.have.property('initialPlanId')
+      // expect(instance.initialPlanId).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property metaData (base name: "metaData")', function () {
-        // TODO: update the code to test the property metaData
-        expect(instance).to.have.property('metaData')
-        // expect(instance.metaData).to.be(expectedValueLiteral);
-      })
+    it('should have the property metaData (base name: "metaData")', function () {
+      // TODO: update the code to test the property metaData
+      // expect(instance)to.have.property('metaData')
+      // expect(instance.metaData).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property name (base name: "name")', function () {
-        // TODO: update the code to test the property name
-        expect(instance).to.have.property('name')
-        // expect(instance.name).to.be(expectedValueLiteral);
-      })
+    it('should have the property name (base name: "name")', function () {
+      // TODO: update the code to test the property name
+      // expect(instance)to.have.property('name')
+      // expect(instance.name).to.be(expectedValueLiteral);
     })
   })
 })

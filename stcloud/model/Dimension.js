@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The Dimension model module.
@@ -19,7 +19,7 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class Dimension {
-    /**
+  /**
     * Constructs a new <code>Dimension</code>.
     * @alias module:model/Dimension
     * @class
@@ -27,35 +27,35 @@ export default class Dimension {
     * @param values {Array.<String>}
     */
 
-    constructor(name, values) {
+  constructor(name, values) {
 
 
-        this['name'] = name;
-        this['values'] = values;
+    this['name'] = name
+    this['values'] = values
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>Dimension</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/Dimension} obj Optional instance to populate.
     * @return {module:model/Dimension} The populated <code>Dimension</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new Dimension();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new Dimension()
 
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('values')) {
-                obj['values'] = ApiClient.convertToType(data['values'], ['String']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'values')) {
+        obj['values'] = ApiClient.convertToType(data['values'], ['String'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} name

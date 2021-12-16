@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import EventDto from './EventDto';
+import ApiClient from '../api/ApiClient.js'
+import EventDto from './EventDto.js'
 
 /**
 * The UpdatePlanResponseDto model module.
@@ -20,39 +20,39 @@ import EventDto from './EventDto';
 * @version 0.1.0
 */
 export default class UpdatePlanResponseDto {
-    /**
+  /**
     * Constructs a new <code>UpdatePlanResponseDto</code>.
     * @alias module:model/UpdatePlanResponseDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UpdatePlanResponseDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UpdatePlanResponseDto} obj Optional instance to populate.
     * @return {module:model/UpdatePlanResponseDto} The populated <code>UpdatePlanResponseDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UpdatePlanResponseDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UpdatePlanResponseDto()
 
 
-            if (data.hasOwnProperty('events')) {
-                obj['events'] = ApiClient.convertToType(data['events'], [EventDto]);
-            }
-            if (data.hasOwnProperty('planId')) {
-                obj['planId'] = ApiClient.convertToType(data['planId'], 'Number');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'events')) {
+        obj['events'] = ApiClient.convertToType(data['events'], [EventDto])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'planId')) {
+        obj['planId'] = ApiClient.convertToType(data['planId'], 'Number')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<module:model/EventDto>} events

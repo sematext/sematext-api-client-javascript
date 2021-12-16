@@ -13,80 +13,71 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  describe('(package)', function () {
-    describe('ReportInfo', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.ReportInfo()
-      })
+/* eslint-disable no-unused-vars*/
+var instance
 
-      it('should create an instance of ReportInfo', function () {
-        // TODO: update the code to test ReportInfo
-        expect(instance).to.be.a(SematextApiClientJavascript.ReportInfo)
-      })
+describe('(package)', function () {
+  describe('ReportInfo', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should have the property addresses (base name: "addresses")', function () {
-        // TODO: update the code to test the property addresses
-        expect(instance).to.have.property('addresses')
-        // expect(instance.addresses).to.be(expectedValueLiteral);
-      })
+    it('should create an instance of ReportInfo', function () {
+      // TODO: update the code to test ReportInfo
+      // expect(instance)to.be.a(SematextApiClientJavascript.ReportInfo)
+    })
 
-      it('should have the property appId (base name: "appId")', function () {
-        // TODO: update the code to test the property appId
-        expect(instance).to.have.property('appId')
-        // expect(instance.appId).to.be(expectedValueLiteral);
-      })
+    it('should have the property addresses (base name: "addresses")', function () {
+      // TODO: update the code to test the property addresses
+      // expect(instance)to.have.property('addresses')
+      // expect(instance.addresses).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property endDate (base name: "endDate")', function () {
-        // TODO: update the code to test the property endDate
-        expect(instance).to.have.property('endDate')
-        // expect(instance.endDate).to.be(expectedValueLiteral);
-      })
+    it('should have the property appId (base name: "appId")', function () {
+      // TODO: update the code to test the property appId
+      // expect(instance)to.have.property('appId')
+      // expect(instance.appId).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property filters (base name: "filters")', function () {
-        // TODO: update the code to test the property filters
-        expect(instance).to.have.property('filters')
-        // expect(instance.filters).to.be(expectedValueLiteral);
-      })
+    it('should have the property endDate (base name: "endDate")', function () {
+      // TODO: update the code to test the property endDate
+      // expect(instance)to.have.property('endDate')
+      // expect(instance.endDate).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property reportName (base name: "reportName")', function () {
-        // TODO: update the code to test the property reportName
-        expect(instance).to.have.property('reportName')
-        // expect(instance.reportName).to.be(expectedValueLiteral);
-      })
+    it('should have the property filters (base name: "filters")', function () {
+      // TODO: update the code to test the property filters
+      // expect(instance)to.have.property('filters')
+      // expect(instance.filters).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property startDate (base name: "startDate")', function () {
-        // TODO: update the code to test the property startDate
-        expect(instance).to.have.property('startDate')
-        // expect(instance.startDate).to.be(expectedValueLiteral);
-      })
+    it('should have the property reportName (base name: "reportName")', function () {
+      // TODO: update the code to test the property reportName
+      // expect(instance)to.have.property('reportName')
+      // expect(instance.reportName).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property subject (base name: "subject")', function () {
-        // TODO: update the code to test the property subject
-        expect(instance).to.have.property('subject')
-        // expect(instance.subject).to.be(expectedValueLiteral);
-      })
+    it('should have the property startDate (base name: "startDate")', function () {
+      // TODO: update the code to test the property startDate
+      // expect(instance)to.have.property('startDate')
+      // expect(instance.startDate).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property text (base name: "text")', function () {
-        // TODO: update the code to test the property text
-        expect(instance).to.have.property('text')
-        // expect(instance.text).to.be(expectedValueLiteral);
-      })
+    it('should have the property subject (base name: "subject")', function () {
+      // TODO: update the code to test the property subject
+      // expect(instance)to.have.property('subject')
+      // expect(instance.subject).to.be(expectedValueLiteral);
+    })
+
+    it('should have the property text (base name: "text")', function () {
+      // TODO: update the code to test the property text
+      // expect(instance)to.have.property('text')
+      // expect(instance.text).to.be(expectedValueLiteral);
     })
   })
 })

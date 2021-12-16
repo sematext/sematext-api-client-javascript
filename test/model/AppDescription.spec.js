@@ -13,38 +13,29 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  describe('(package)', function () {
-    describe('AppDescription', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.AppDescription()
-      })
+/* eslint-disable no-unused-vars*/
+var instance
 
-      it('should create an instance of AppDescription', function () {
-        // TODO: update the code to test AppDescription
-        expect(instance).to.be.a(SematextApiClientJavascript.AppDescription)
-      })
+describe('(package)', function () {
+  describe('AppDescription', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should have the property description (base name: "description")', function () {
-        // TODO: update the code to test the property description
-        expect(instance).to.have.property('description')
-        // expect(instance.description).to.be(expectedValueLiteral);
-      })
+    it('should create an instance of AppDescription', function () {
+      // TODO: update the code to test AppDescription
+      // expect(instance)to.be.a(SematextApiClientJavascript.AppDescription)
+    })
+
+    it('should have the property description (base name: "description")', function () {
+      // TODO: update the code to test the property description
+      // expect(instance)to.have.property('description')
+      // expect(instance.description).to.be(expectedValueLiteral);
     })
   })
 })

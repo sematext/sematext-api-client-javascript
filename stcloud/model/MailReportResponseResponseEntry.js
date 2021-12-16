@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ReportInfo from './ReportInfo';
+import ApiClient from '../api/ApiClient.js'
+import ReportInfo from './ReportInfo.js'
 
 /**
 * The MailReportResponseResponseEntry model module.
@@ -20,36 +20,36 @@ import ReportInfo from './ReportInfo';
 * @version 0.1.0
 */
 export default class MailReportResponseResponseEntry {
-    /**
+  /**
     * Constructs a new <code>MailReportResponseResponseEntry</code>.
     * @alias module:model/MailReportResponseResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>MailReportResponseResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/MailReportResponseResponseEntry} obj Optional instance to populate.
     * @return {module:model/MailReportResponseResponseEntry} The populated <code>MailReportResponseResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new MailReportResponseResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new MailReportResponseResponseEntry()
 
 
-            if (data.hasOwnProperty('subscription')) {
-                obj['subscription'] = ReportInfo.constructFromObject(data['subscription']);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'subscription')) {
+        obj['subscription'] = ReportInfo.constructFromObject(data['subscription'])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/ReportInfo} subscription

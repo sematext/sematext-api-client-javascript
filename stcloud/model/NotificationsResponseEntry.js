@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AlertNotification from './AlertNotification';
+import ApiClient from '../api/ApiClient.js'
+import AlertNotification from './AlertNotification.js'
 
 /**
 * The NotificationsResponseEntry model module.
@@ -20,42 +20,42 @@ import AlertNotification from './AlertNotification';
 * @version 0.1.0
 */
 export default class NotificationsResponseEntry {
-    /**
+  /**
     * Constructs a new <code>NotificationsResponseEntry</code>.
     * @alias module:model/NotificationsResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>NotificationsResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/NotificationsResponseEntry} obj Optional instance to populate.
     * @return {module:model/NotificationsResponseEntry} The populated <code>NotificationsResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new NotificationsResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new NotificationsResponseEntry()
 
 
-            if (data.hasOwnProperty('end')) {
-                obj['end'] = ApiClient.convertToType(data['end'], 'String');
-            }
-            if (data.hasOwnProperty('notifications')) {
-                obj['notifications'] = ApiClient.convertToType(data['notifications'], [AlertNotification]);
-            }
-            if (data.hasOwnProperty('start')) {
-                obj['start'] = ApiClient.convertToType(data['start'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'end')) {
+        obj['end'] = ApiClient.convertToType(data['end'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'notifications')) {
+        obj['notifications'] = ApiClient.convertToType(data['notifications'], [AlertNotification])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'start')) {
+        obj['start'] = ApiClient.convertToType(data['start'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} end

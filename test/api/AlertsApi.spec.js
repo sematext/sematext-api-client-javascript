@@ -12,33 +12,23 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.AlertsApi()
-  })
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.AlertsApi()
+})
 
-  describe('(package)', function () {
-    describe('AlertsApi', function () {
-      describe('createAlertUsingPOST', function () {
-        it('should call createAlertUsingPOST successfully', function (done) {
-          // TODO: uncomment, update parameter values for createAlertUsingPOST call and complete the assertions
-          /*
+describe('(package)', function () {
+  describe('AlertsApi', function () {
+    describe('createAlertUsingPOST', function () {
+      it('should call createAlertUsingPOST successfully', function (done) {
+        // TODO: uncomment, update parameter values for createAlertUsingPOST call and complete the assertions
+        /*
           var dto = new SematextApiClientJavascript.AlertRule();
           dto.allowedAppTypes = ["0"];
           dto.analyzingTime = "";
@@ -125,14 +115,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('deleteAlertRuleUsingDELETE', function () {
-        it('should call deleteAlertRuleUsingDELETE successfully', function (done) {
-          // TODO: uncomment, update parameter values for deleteAlertRuleUsingDELETE call and complete the assertions
-          /*
+    })
+    describe('deleteAlertRuleUsingDELETE', function () {
+      it('should call deleteAlertRuleUsingDELETE successfully', function (done) {
+        // TODO: uncomment, update parameter values for deleteAlertRuleUsingDELETE call and complete the assertions
+        /*
           var updateableAlertId = 789;
 
           instance.deleteAlertRuleUsingDELETE(updateableAlertId).then(function(data) {
@@ -163,14 +153,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('disableAlertRuleUsingPUT', function () {
-        it('should call disableAlertRuleUsingPUT successfully', function (done) {
-          // TODO: uncomment, update parameter values for disableAlertRuleUsingPUT call and complete the assertions
-          /*
+    })
+    describe('disableAlertRuleUsingPUT', function () {
+      it('should call disableAlertRuleUsingPUT successfully', function (done) {
+        // TODO: uncomment, update parameter values for disableAlertRuleUsingPUT call and complete the assertions
+        /*
           var updateableAlertId = 789;
 
           instance.disableAlertRuleUsingPUT(updateableAlertId).then(function(data) {
@@ -201,14 +191,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('enableAlertRuleUsingPUT', function () {
-        it('should call enableAlertRuleUsingPUT successfully', function (done) {
-          // TODO: uncomment, update parameter values for enableAlertRuleUsingPUT call and complete the assertions
-          /*
+    })
+    describe('enableAlertRuleUsingPUT', function () {
+      it('should call enableAlertRuleUsingPUT successfully', function (done) {
+        // TODO: uncomment, update parameter values for enableAlertRuleUsingPUT call and complete the assertions
+        /*
           var updateableAlertId = 789;
 
           instance.enableAlertRuleUsingPUT(updateableAlertId).then(function(data) {
@@ -239,14 +229,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('getAlertRulesForAppUsingGET', function () {
-        it('should call getAlertRulesForAppUsingGET successfully', function (done) {
-          // TODO: uncomment, update parameter values for getAlertRulesForAppUsingGET call and complete the assertions
-          /*
+    })
+    describe('getAlertRulesForAppUsingGET', function () {
+      it('should call getAlertRulesForAppUsingGET successfully', function (done) {
+        // TODO: uncomment, update parameter values for getAlertRulesForAppUsingGET call and complete the assertions
+        /*
           var appId = 789;
 
           instance.getAlertRulesForAppUsingGET(appId).then(function(data) {
@@ -277,9 +267,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })

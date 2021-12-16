@@ -13,7 +13,7 @@
  *
  */
 
-import { ApiClient } from '../ApiClient'
+import ApiClient from '../api/ApiClient.js'
 import { AlertRule } from './AlertRule'
 import { UserPermissions } from './UserPermissions'
 
@@ -39,61 +39,61 @@ export class SavedQuery {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new SavedQuery()
-      if (data.hasOwnProperty('alertRule'))
+      if (Object.prototype.hasOwnProperty.call(data,'alertRule'))
         // eslint-disable-line no-prototype-builtins
         obj.alertRule = AlertRule.constructFromObject(data['alertRule'])
-      if (data.hasOwnProperty('allowModification'))
+      if (Object.prototype.hasOwnProperty.call(data,'allowModification'))
         // eslint-disable-line no-prototype-builtins
         obj.allowModification = ApiClient.convertToType(
           data['allowModification'],
           'Boolean'
         )
-      if (data.hasOwnProperty('applicationId'))
+      if (Object.prototype.hasOwnProperty.call(data,'applicationId'))
         // eslint-disable-line no-prototype-builtins
         obj.applicationId = ApiClient.convertToType(
           data['applicationId'],
           'String'
         )
-      if (data.hasOwnProperty('applicationName'))
+      if (Object.prototype.hasOwnProperty.call(data,'applicationName'))
         // eslint-disable-line no-prototype-builtins
         obj.applicationName = ApiClient.convertToType(
           data['applicationName'],
           'String'
         )
-      if (data.hasOwnProperty('applicationToken'))
+      if (Object.prototype.hasOwnProperty.call(data,'applicationToken'))
         // eslint-disable-line no-prototype-builtins
         obj.applicationToken = ApiClient.convertToType(
           data['applicationToken'],
           'String'
         )
-      if (data.hasOwnProperty('creatorEmail'))
+      if (Object.prototype.hasOwnProperty.call(data,'creatorEmail'))
         // eslint-disable-line no-prototype-builtins
         obj.creatorEmail = ApiClient.convertToType(
           data['creatorEmail'],
           'String'
         )
-      if (data.hasOwnProperty('id'))
+      if (Object.prototype.hasOwnProperty.call(data,'id'))
         // eslint-disable-line no-prototype-builtins
         obj.id = ApiClient.convertToType(data['id'], 'String')
-      if (data.hasOwnProperty('labelColor'))
+      if (Object.prototype.hasOwnProperty.call(data,'labelColor'))
         // eslint-disable-line no-prototype-builtins
         obj.labelColor = ApiClient.convertToType(data['labelColor'], 'String')
-      if (data.hasOwnProperty('logseneAlertType'))
+      if (Object.prototype.hasOwnProperty.call(data,'logseneAlertType'))
         // eslint-disable-line no-prototype-builtins
         obj.logseneAlertType = ApiClient.convertToType(
           data['logseneAlertType'],
           Object
         )
-      if (data.hasOwnProperty('ownerEmail'))
+      if (Object.prototype.hasOwnProperty.call(data,'ownerEmail'))
         // eslint-disable-line no-prototype-builtins
         obj.ownerEmail = ApiClient.convertToType(data['ownerEmail'], 'String')
-      if (data.hasOwnProperty('queryName'))
+      if (Object.prototype.hasOwnProperty.call(data,'queryName'))
         // eslint-disable-line no-prototype-builtins
         obj.queryName = ApiClient.convertToType(data['queryName'], 'String')
-      if (data.hasOwnProperty('queryString'))
+      if (Object.prototype.hasOwnProperty.call(data,'queryString'))
         // eslint-disable-line no-prototype-builtins
         obj.queryString = ApiClient.convertToType(data['queryString'], 'String')
-      if (data.hasOwnProperty('userPermissions'))
+      if (Object.prototype.hasOwnProperty.call(data,'userPermissions'))
         // eslint-disable-line no-prototype-builtins
         obj.userPermissions = UserPermissions.constructFromObject(
           data['userPermissions']

@@ -12,33 +12,23 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.LogsAppApi()
-  })
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.LogsAppApi()
+})
 
-  describe('(package)', function () {
-    describe('LogsAppApi', function () {
-      describe('createLogseneApplication', function () {
-        it('should call createLogseneApplication successfully', function (done) {
-          // TODO: uncomment, update parameter values for createLogseneApplication call and complete the assertions
-          /*
+describe('(package)', function () {
+  describe('LogsAppApi', function () {
+    describe('createLogseneApplication', function () {
+      it('should call createLogseneApplication successfully', function (done) {
+        // TODO: uncomment, update parameter values for createLogseneApplication call and complete the assertions
+        /*
           var applicationDetails = new SematextApiClientJavascript.CreateAppInfo();
           applicationDetails.appType = "aws";
           applicationDetails.discountCode = "";
@@ -79,9 +69,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })

@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Error from './Error';
-import UsageMultiResponseEntry from './UsageMultiResponseEntry';
+import ApiClient from '../api/ApiClient.js'
+import Error from './Error.js'
+import UsageMultiResponseEntry from './UsageMultiResponseEntry.js'
 
 /**
 * The UsageMultiResponse model module.
@@ -21,45 +21,45 @@ import UsageMultiResponseEntry from './UsageMultiResponseEntry';
 * @version 0.1.0
 */
 export default class UsageMultiResponse {
-    /**
+  /**
     * Constructs a new <code>UsageMultiResponse</code>.
     * @alias module:model/UsageMultiResponse
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UsageMultiResponse</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UsageMultiResponse} obj Optional instance to populate.
     * @return {module:model/UsageMultiResponse} The populated <code>UsageMultiResponse</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UsageMultiResponse();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UsageMultiResponse()
 
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = UsageMultiResponseEntry.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('errors')) {
-                obj['errors'] = ApiClient.convertToType(data['errors'], [Error]);
-            }
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
-            if (data.hasOwnProperty('success')) {
-                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'data')) {
+        obj['data'] = UsageMultiResponseEntry.constructFromObject(data['data'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'errors')) {
+        obj['errors'] = ApiClient.convertToType(data['errors'], [Error])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'message')) {
+        obj['message'] = ApiClient.convertToType(data['message'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'success')) {
+        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {module:model/UsageMultiResponseEntry} data

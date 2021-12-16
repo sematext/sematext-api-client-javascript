@@ -11,9 +11,8 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import CloudWatchSettings from '../model/CloudWatchSettings';
-import CloudWatchSettingsResponse from '../model/CloudWatchSettingsResponse';
+import ApiClient from './ApiClient.js'
+import CloudWatchSettingsResponse from '../model/CloudWatchSettingsResponse.js'
 
 /**
 * AwsSettingsController service.
@@ -30,7 +29,7 @@ export default class AwsSettingsControllerApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -41,28 +40,28 @@ export default class AwsSettingsControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CloudWatchSettingsResponse} and HTTP response
    */
   updateUsingPUT1WithHttpInfo(body, appId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = CloudWatchSettingsResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = CloudWatchSettingsResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/aws', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -73,8 +72,8 @@ export default class AwsSettingsControllerApi {
   updateUsingPUT1(body, appId) {
     return this.updateUsingPUT1WithHttpInfo(body, appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

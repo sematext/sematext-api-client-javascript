@@ -13,50 +13,41 @@
  *
  */
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+'use strict'
 
-  var instance
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
+//import {expect} from 'chai'
 
-  describe('(package)', function () {
-    describe('DataSeriesFilter', function () {
-      beforeEach(function () {
-        instance = new SematextApiClientJavascript.DataSeriesFilter()
-      })
+/* eslint-disable no-unused-vars*/
+var instance
 
-      it('should create an instance of DataSeriesFilter', function () {
-        // TODO: update the code to test DataSeriesFilter
-        expect(instance).to.be.a(SematextApiClientJavascript.DataSeriesFilter)
-      })
+describe('(package)', function () {
+  describe('DataSeriesFilter', function () {
+    beforeEach(function () {
+      //instance = (new SematextApiClientJavascript).AlertNotificationsApi()
+    })
 
-      it('should have the property aggregation (base name: "aggregation")', function () {
-        // TODO: update the code to test the property aggregation
-        expect(instance).to.have.property('aggregation')
-        // expect(instance.aggregation).to.be(expectedValueLiteral);
-      })
+    it('should create an instance of DataSeriesFilter', function () {
+      // TODO: update the code to test DataSeriesFilter
+      // expect(instance)to.be.a(SematextApiClientJavascript.DataSeriesFilter)
+    })
 
-      it('should have the property multiValue (base name: "multiValue")', function () {
-        // TODO: update the code to test the property multiValue
-        expect(instance).to.have.property('multiValue')
-        // expect(instance.multiValue).to.be(expectedValueLiteral);
-      })
+    it('should have the property aggregation (base name: "aggregation")', function () {
+      // TODO: update the code to test the property aggregation
+      // expect(instance)to.have.property('aggregation')
+      // expect(instance.aggregation).to.be(expectedValueLiteral);
+    })
 
-      it('should have the property values (base name: "values")', function () {
-        // TODO: update the code to test the property values
-        expect(instance).to.have.property('values')
-        // expect(instance.values).to.be(expectedValueLiteral);
-      })
+    it('should have the property multiValue (base name: "multiValue")', function () {
+      // TODO: update the code to test the property multiValue
+      // expect(instance)to.have.property('multiValue')
+      // expect(instance.multiValue).to.be(expectedValueLiteral);
+    })
+
+    it('should have the property values (base name: "values")', function () {
+      // TODO: update the code to test the property values
+      // expect(instance)to.have.property('values')
+      // expect(instance.values).to.be(expectedValueLiteral);
     })
   })
 })

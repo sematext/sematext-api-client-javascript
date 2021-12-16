@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse';
-import UserInfo from '../model/UserInfo';
+import ApiClient from './ApiClient.js'
+import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse.js'
+
 
 /**
 * ResetPassword service.
@@ -30,7 +30,7 @@ export default class ResetPasswordApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -40,27 +40,27 @@ export default class ResetPasswordApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   resetPasswordUsingPOSTWithHttpInfo(body) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/account/password/reset', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -70,8 +70,8 @@ export default class ResetPasswordApi {
   resetPasswordUsingPOST(body) {
     return this.resetPasswordUsingPOSTWithHttpInfo(body)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

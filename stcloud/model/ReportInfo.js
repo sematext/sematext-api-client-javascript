@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The ReportInfo model module.
@@ -19,57 +19,57 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class ReportInfo {
-    /**
+  /**
     * Constructs a new <code>ReportInfo</code>.
     * @alias module:model/ReportInfo
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>ReportInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/ReportInfo} obj Optional instance to populate.
     * @return {module:model/ReportInfo} The populated <code>ReportInfo</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ReportInfo();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new ReportInfo()
 
 
-            if (data.hasOwnProperty('addresses')) {
-                obj['addresses'] = ApiClient.convertToType(data['addresses'], 'String');
-            }
-            if (data.hasOwnProperty('appId')) {
-                obj['appId'] = ApiClient.convertToType(data['appId'], 'Number');
-            }
-            if (data.hasOwnProperty('endDate')) {
-                obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
-            }
-            if (data.hasOwnProperty('filters')) {
-                obj['filters'] = ApiClient.convertToType(data['filters'], 'String');
-            }
-            if (data.hasOwnProperty('reportName')) {
-                obj['reportName'] = ApiClient.convertToType(data['reportName'], 'String');
-            }
-            if (data.hasOwnProperty('startDate')) {
-                obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date');
-            }
-            if (data.hasOwnProperty('subject')) {
-                obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
-            }
-            if (data.hasOwnProperty('text')) {
-                obj['text'] = ApiClient.convertToType(data['text'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'addresses')) {
+        obj['addresses'] = ApiClient.convertToType(data['addresses'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appId')) {
+        obj['appId'] = ApiClient.convertToType(data['appId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'endDate')) {
+        obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'filters')) {
+        obj['filters'] = ApiClient.convertToType(data['filters'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'reportName')) {
+        obj['reportName'] = ApiClient.convertToType(data['reportName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'startDate')) {
+        obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'subject')) {
+        obj['subject'] = ApiClient.convertToType(data['subject'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'text')) {
+        obj['text'] = ApiClient.convertToType(data['text'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * Comma separated list of email addresses

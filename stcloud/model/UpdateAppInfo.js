@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The UpdateAppInfo model module.
@@ -19,60 +19,60 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class UpdateAppInfo {
-    /**
+  /**
     * Constructs a new <code>UpdateAppInfo</code>.
     * @alias module:model/UpdateAppInfo
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>UpdateAppInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/UpdateAppInfo} obj Optional instance to populate.
     * @return {module:model/UpdateAppInfo} The populated <code>UpdateAppInfo</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UpdateAppInfo();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new UpdateAppInfo()
 
 
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('ignorePercentage')) {
-                obj['ignorePercentage'] = ApiClient.convertToType(data['ignorePercentage'], 'Number');
-            }
-            if (data.hasOwnProperty('maxEvents')) {
-                obj['maxEvents'] = ApiClient.convertToType(data['maxEvents'], 'Number');
-            }
-            if (data.hasOwnProperty('maxLimitMB')) {
-                obj['maxLimitMB'] = ApiClient.convertToType(data['maxLimitMB'], 'Number');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('sampling')) {
-                obj['sampling'] = ApiClient.convertToType(data['sampling'], 'Boolean');
-            }
-            if (data.hasOwnProperty('samplingPercentage')) {
-                obj['samplingPercentage'] = ApiClient.convertToType(data['samplingPercentage'], 'Number');
-            }
-            if (data.hasOwnProperty('staggering')) {
-                obj['staggering'] = ApiClient.convertToType(data['staggering'], 'Boolean');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'description')) {
+        obj['description'] = ApiClient.convertToType(data['description'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'ignorePercentage')) {
+        obj['ignorePercentage'] = ApiClient.convertToType(data['ignorePercentage'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'maxEvents')) {
+        obj['maxEvents'] = ApiClient.convertToType(data['maxEvents'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'maxLimitMB')) {
+        obj['maxLimitMB'] = ApiClient.convertToType(data['maxLimitMB'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sampling')) {
+        obj['sampling'] = ApiClient.convertToType(data['sampling'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'samplingPercentage')) {
+        obj['samplingPercentage'] = ApiClient.convertToType(data['samplingPercentage'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'staggering')) {
+        obj['staggering'] = ApiClient.convertToType(data['staggering'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} description
@@ -119,16 +119,16 @@ export default class UpdateAppInfo {
     * @readonly
     */
     static StatusEnum = {
-        /**
+      /**
          * value: "ACTIVE"
          * @const
          */
-        "ACTIVE": "ACTIVE",
-        /**
+      'ACTIVE': 'ACTIVE',
+      /**
          * value: "DISABLED"
          * @const
          */
-        "DISABLED": "DISABLED"
+      'DISABLED': 'DISABLED'
     };
 
 }

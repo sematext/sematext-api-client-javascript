@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The EventDto model module.
@@ -19,42 +19,42 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class EventDto {
-    /**
+  /**
     * Constructs a new <code>EventDto</code>.
     * @alias module:model/EventDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>EventDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/EventDto} obj Optional instance to populate.
     * @return {module:model/EventDto} The populated <code>EventDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new EventDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new EventDto()
 
 
-            if (data.hasOwnProperty('from')) {
-                obj['from'] = ApiClient.convertToType(data['from'], Object);
-            }
-            if (data.hasOwnProperty('to')) {
-                obj['to'] = ApiClient.convertToType(data['to'], Object);
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'from')) {
+        obj['from'] = ApiClient.convertToType(data['from'], Object)
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'to')) {
+        obj['to'] = ApiClient.convertToType(data['to'], Object)
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Object} from
@@ -77,61 +77,61 @@ export default class EventDto {
     * @readonly
     */
     static TypeEnum = {
-        /**
+      /**
          * value: "CREATED"
          * @const
          */
-        "CREATED": "CREATED",
-        /**
+      'CREATED': 'CREATED',
+      /**
          * value: "DISABLED"
          * @const
          */
-        "DISABLED": "DISABLED",
-        /**
+      'DISABLED': 'DISABLED',
+      /**
          * value: "DELETED"
          * @const
          */
-        "DELETED": "DELETED",
-        /**
+      'DELETED': 'DELETED',
+      /**
          * value: "REACTIVATED"
          * @const
          */
-        "REACTIVATED": "REACTIVATED",
-        /**
+      'REACTIVATED': 'REACTIVATED',
+      /**
          * value: "PLAN_UPDATE"
          * @const
          */
-        "PLAN_UPDATE": "PLAN_UPDATE",
-        /**
+      'PLAN_UPDATE': 'PLAN_UPDATE',
+      /**
          * value: "PAYMENT_METHOD_UPDATE"
          * @const
          */
-        "PAYMENT_METHOD_UPDATE": "PAYMENT_METHOD_UPDATE",
-        /**
+      'PAYMENT_METHOD_UPDATE': 'PAYMENT_METHOD_UPDATE',
+      /**
          * value: "SEND_EMAIL_CHANGE"
          * @const
          */
-        "SEND_EMAIL_CHANGE": "SEND_EMAIL_CHANGE",
-        /**
+      'SEND_EMAIL_CHANGE': 'SEND_EMAIL_CHANGE',
+      /**
          * value: "AUTOMATIC_PLAN_UPGRADE_CHANGE"
          * @const
          */
-        "AUTOMATIC_PLAN_UPGRADE_CHANGE": "AUTOMATIC_PLAN_UPGRADE_CHANGE",
-        /**
+      'AUTOMATIC_PLAN_UPGRADE_CHANGE': 'AUTOMATIC_PLAN_UPGRADE_CHANGE',
+      /**
          * value: "MAX_LIMIT_CHANGE"
          * @const
          */
-        "MAX_LIMIT_CHANGE": "MAX_LIMIT_CHANGE",
-        /**
+      'MAX_LIMIT_CHANGE': 'MAX_LIMIT_CHANGE',
+      /**
          * value: "SAMPLING_CHANGE"
          * @const
          */
-        "SAMPLING_CHANGE": "SAMPLING_CHANGE",
-        /**
+      'SAMPLING_CHANGE': 'SAMPLING_CHANGE',
+      /**
          * value: "OWNERSHIP_CHANGE"
          * @const
          */
-        "OWNERSHIP_CHANGE": "OWNERSHIP_CHANGE"
+      'OWNERSHIP_CHANGE': 'OWNERSHIP_CHANGE'
     };
 
 }

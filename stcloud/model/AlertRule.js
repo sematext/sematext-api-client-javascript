@@ -11,11 +11,11 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AlertRuleScheduleWeekdayDto from './AlertRuleScheduleWeekdayDto';
-import FilterValue from './FilterValue';
-import NotificationIntegration from './NotificationIntegration';
-import UserPermissions from './UserPermissions';
+import ApiClient from '../api/ApiClient.js'
+import AlertRuleScheduleWeekdayDto from './AlertRuleScheduleWeekdayDto.js'
+import FilterValue from './FilterValue.js'
+import NotificationIntegration from './NotificationIntegration.js'
+import UserPermissions from './UserPermissions.js'
 
 /**
 * The AlertRule model module.
@@ -23,177 +23,177 @@ import UserPermissions from './UserPermissions';
 * @version 0.1.0
 */
 export default class AlertRule {
-    /**
+  /**
     * Constructs a new <code>AlertRule</code>.
     * @alias module:model/AlertRule
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AlertRule</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AlertRule} obj Optional instance to populate.
     * @return {module:model/AlertRule} The populated <code>AlertRule</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AlertRule();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AlertRule()
 
 
-            if (data.hasOwnProperty('accountEmail')) {
-                obj['accountEmail'] = ApiClient.convertToType(data['accountEmail'], 'String');
-            }
-            if (data.hasOwnProperty('allowedAppTypes')) {
-                obj['allowedAppTypes'] = ApiClient.convertToType(data['allowedAppTypes'], ['Number']);
-            }
-            if (data.hasOwnProperty('analyzingTime')) {
-                obj['analyzingTime'] = ApiClient.convertToType(data['analyzingTime'], 'String');
-            }
-            if (data.hasOwnProperty('appDisplayState')) {
-                obj['appDisplayState'] = ApiClient.convertToType(data['appDisplayState'], 'String');
-            }
-            if (data.hasOwnProperty('appId')) {
-                obj['appId'] = ApiClient.convertToType(data['appId'], 'Number');
-            }
-            if (data.hasOwnProperty('appName')) {
-                obj['appName'] = ApiClient.convertToType(data['appName'], 'String');
-            }
-            if (data.hasOwnProperty('appState')) {
-                obj['appState'] = ApiClient.convertToType(data['appState'], 'String');
-            }
-            if (data.hasOwnProperty('appToken')) {
-                obj['appToken'] = ApiClient.convertToType(data['appToken'], 'String');
-            }
-            if (data.hasOwnProperty('appType')) {
-                obj['appType'] = ApiClient.convertToType(data['appType'], 'String');
-            }
-            if (data.hasOwnProperty('backToNormalNeeded')) {
-                obj['backToNormalNeeded'] = ApiClient.convertToType(data['backToNormalNeeded'], 'Boolean');
-            }
-            if (data.hasOwnProperty('chartKey')) {
-                obj['chartKey'] = ApiClient.convertToType(data['chartKey'], 'String');
-            }
-            if (data.hasOwnProperty('color')) {
-                obj['color'] = ApiClient.convertToType(data['color'], 'String');
-            }
-            if (data.hasOwnProperty('creatorEmail')) {
-                obj['creatorEmail'] = ApiClient.convertToType(data['creatorEmail'], 'String');
-            }
-            if (data.hasOwnProperty('defaultAggType')) {
-                obj['defaultAggType'] = ApiClient.convertToType(data['defaultAggType'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('disallowedAppTypes')) {
-                obj['disallowedAppTypes'] = ApiClient.convertToType(data['disallowedAppTypes'], ['Number']);
-            }
-            if (data.hasOwnProperty('enabled')) {
-                obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('estimateOperation')) {
-                obj['estimateOperation'] = ApiClient.convertToType(data['estimateOperation'], 'String');
-            }
-            if (data.hasOwnProperty('estimateValue')) {
-                obj['estimateValue'] = ApiClient.convertToType(data['estimateValue'], 'Number');
-            }
-            if (data.hasOwnProperty('filterValues')) {
-                obj['filterValues'] = ApiClient.convertToType(data['filterValues'], 'String');
-            }
-            if (data.hasOwnProperty('filterValuesObj')) {
-                obj['filterValuesObj'] = ApiClient.convertToType(data['filterValuesObj'], [FilterValue]);
-            }
-            if (data.hasOwnProperty('ignoreRegularEventsEnabled')) {
-                obj['ignoreRegularEventsEnabled'] = ApiClient.convertToType(data['ignoreRegularEventsEnabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('integrations')) {
-                obj['integrations'] = ApiClient.convertToType(data['integrations'], 'String');
-            }
-            if (data.hasOwnProperty('lastDataReceivedDate')) {
-                obj['lastDataReceivedDate'] = ApiClient.convertToType(data['lastDataReceivedDate'], 'Number');
-            }
-            if (data.hasOwnProperty('lastSent')) {
-                obj['lastSent'] = ApiClient.convertToType(data['lastSent'], 'Number');
-            }
-            if (data.hasOwnProperty('lastTriggered')) {
-                obj['lastTriggered'] = ApiClient.convertToType(data['lastTriggered'], 'Number');
-            }
-            if (data.hasOwnProperty('metadata')) {
-                obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
-            }
-            if (data.hasOwnProperty('metricKey')) {
-                obj['metricKey'] = ApiClient.convertToType(data['metricKey'], 'String');
-            }
-            if (data.hasOwnProperty('metricLabel')) {
-                obj['metricLabel'] = ApiClient.convertToType(data['metricLabel'], 'String');
-            }
-            if (data.hasOwnProperty('minDelayBetweenNotificationsInMinutes')) {
-                obj['minDelayBetweenNotificationsInMinutes'] = ApiClient.convertToType(data['minDelayBetweenNotificationsInMinutes'], 'String');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('notificationEmails')) {
-                obj['notificationEmails'] = ApiClient.convertToType(data['notificationEmails'], ['String']);
-            }
-            if (data.hasOwnProperty('notificationIntegrations')) {
-                obj['notificationIntegrations'] = ApiClient.convertToType(data['notificationIntegrations'], [NotificationIntegration]);
-            }
-            if (data.hasOwnProperty('notificationsEnabled')) {
-                obj['notificationsEnabled'] = ApiClient.convertToType(data['notificationsEnabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('query')) {
-                obj['query'] = ApiClient.convertToType(data['query'], 'String');
-            }
-            if (data.hasOwnProperty('reportName')) {
-                obj['reportName'] = ApiClient.convertToType(data['reportName'], 'String');
-            }
-            if (data.hasOwnProperty('ruleKey')) {
-                obj['ruleKey'] = ApiClient.convertToType(data['ruleKey'], 'Number');
-            }
-            if (data.hasOwnProperty('ruleType')) {
-                obj['ruleType'] = ApiClient.convertToType(data['ruleType'], 'String');
-            }
-            if (data.hasOwnProperty('runbook')) {
-                obj['runbook'] = ApiClient.convertToType(data['runbook'], 'String');
-            }
-            if (data.hasOwnProperty('savedQueryId')) {
-                obj['savedQueryId'] = ApiClient.convertToType(data['savedQueryId'], 'Number');
-            }
-            if (data.hasOwnProperty('schedule')) {
-                obj['schedule'] = ApiClient.convertToType(data['schedule'], [AlertRuleScheduleWeekdayDto]);
-            }
-            if (data.hasOwnProperty('sematextService')) {
-                obj['sematextService'] = ApiClient.convertToType(data['sematextService'], 'String');
-            }
-            if (data.hasOwnProperty('sendToEmail')) {
-                obj['sendToEmail'] = ApiClient.convertToType(data['sendToEmail'], 'String');
-            }
-            if (data.hasOwnProperty('timezone')) {
-                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
-            }
-            if (data.hasOwnProperty('useOnlyAlertRuleIntegrations')) {
-                obj['useOnlyAlertRuleIntegrations'] = ApiClient.convertToType(data['useOnlyAlertRuleIntegrations'], 'Boolean');
-            }
-            if (data.hasOwnProperty('userPermissions')) {
-                obj['userPermissions'] = UserPermissions.constructFromObject(data['userPermissions']);
-            }
-            if (data.hasOwnProperty('valueColumnName')) {
-                obj['valueColumnName'] = ApiClient.convertToType(data['valueColumnName'], 'String');
-            }
-            if (data.hasOwnProperty('valueName')) {
-                obj['valueName'] = ApiClient.convertToType(data['valueName'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'accountEmail')) {
+        obj['accountEmail'] = ApiClient.convertToType(data['accountEmail'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'allowedAppTypes')) {
+        obj['allowedAppTypes'] = ApiClient.convertToType(data['allowedAppTypes'], ['Number'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'analyzingTime')) {
+        obj['analyzingTime'] = ApiClient.convertToType(data['analyzingTime'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appDisplayState')) {
+        obj['appDisplayState'] = ApiClient.convertToType(data['appDisplayState'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appId')) {
+        obj['appId'] = ApiClient.convertToType(data['appId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appName')) {
+        obj['appName'] = ApiClient.convertToType(data['appName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appState')) {
+        obj['appState'] = ApiClient.convertToType(data['appState'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appToken')) {
+        obj['appToken'] = ApiClient.convertToType(data['appToken'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'appType')) {
+        obj['appType'] = ApiClient.convertToType(data['appType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'backToNormalNeeded')) {
+        obj['backToNormalNeeded'] = ApiClient.convertToType(data['backToNormalNeeded'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'chartKey')) {
+        obj['chartKey'] = ApiClient.convertToType(data['chartKey'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'color')) {
+        obj['color'] = ApiClient.convertToType(data['color'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'creatorEmail')) {
+        obj['creatorEmail'] = ApiClient.convertToType(data['creatorEmail'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'defaultAggType')) {
+        obj['defaultAggType'] = ApiClient.convertToType(data['defaultAggType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'description')) {
+        obj['description'] = ApiClient.convertToType(data['description'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'disallowedAppTypes')) {
+        obj['disallowedAppTypes'] = ApiClient.convertToType(data['disallowedAppTypes'], ['Number'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'enabled')) {
+        obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'estimateOperation')) {
+        obj['estimateOperation'] = ApiClient.convertToType(data['estimateOperation'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'estimateValue')) {
+        obj['estimateValue'] = ApiClient.convertToType(data['estimateValue'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'filterValues')) {
+        obj['filterValues'] = ApiClient.convertToType(data['filterValues'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'filterValuesObj')) {
+        obj['filterValuesObj'] = ApiClient.convertToType(data['filterValuesObj'], [FilterValue])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'ignoreRegularEventsEnabled')) {
+        obj['ignoreRegularEventsEnabled'] = ApiClient.convertToType(data['ignoreRegularEventsEnabled'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'integrations')) {
+        obj['integrations'] = ApiClient.convertToType(data['integrations'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'lastDataReceivedDate')) {
+        obj['lastDataReceivedDate'] = ApiClient.convertToType(data['lastDataReceivedDate'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'lastSent')) {
+        obj['lastSent'] = ApiClient.convertToType(data['lastSent'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'lastTriggered')) {
+        obj['lastTriggered'] = ApiClient.convertToType(data['lastTriggered'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'metadata')) {
+        obj['metadata'] = ApiClient.convertToType(data['metadata'], Object)
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'metricKey')) {
+        obj['metricKey'] = ApiClient.convertToType(data['metricKey'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'metricLabel')) {
+        obj['metricLabel'] = ApiClient.convertToType(data['metricLabel'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'minDelayBetweenNotificationsInMinutes')) {
+        obj['minDelayBetweenNotificationsInMinutes'] = ApiClient.convertToType(data['minDelayBetweenNotificationsInMinutes'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'notificationEmails')) {
+        obj['notificationEmails'] = ApiClient.convertToType(data['notificationEmails'], ['String'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'notificationIntegrations')) {
+        obj['notificationIntegrations'] = ApiClient.convertToType(data['notificationIntegrations'], [NotificationIntegration])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'notificationsEnabled')) {
+        obj['notificationsEnabled'] = ApiClient.convertToType(data['notificationsEnabled'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'query')) {
+        obj['query'] = ApiClient.convertToType(data['query'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'reportName')) {
+        obj['reportName'] = ApiClient.convertToType(data['reportName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'ruleKey')) {
+        obj['ruleKey'] = ApiClient.convertToType(data['ruleKey'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'ruleType')) {
+        obj['ruleType'] = ApiClient.convertToType(data['ruleType'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'runbook')) {
+        obj['runbook'] = ApiClient.convertToType(data['runbook'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'savedQueryId')) {
+        obj['savedQueryId'] = ApiClient.convertToType(data['savedQueryId'], 'Number')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'schedule')) {
+        obj['schedule'] = ApiClient.convertToType(data['schedule'], [AlertRuleScheduleWeekdayDto])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sematextService')) {
+        obj['sematextService'] = ApiClient.convertToType(data['sematextService'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'sendToEmail')) {
+        obj['sendToEmail'] = ApiClient.convertToType(data['sendToEmail'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'timezone')) {
+        obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'useOnlyAlertRuleIntegrations')) {
+        obj['useOnlyAlertRuleIntegrations'] = ApiClient.convertToType(data['useOnlyAlertRuleIntegrations'], 'Boolean')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'userPermissions')) {
+        obj['userPermissions'] = UserPermissions.constructFromObject(data['userPermissions'])
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'valueColumnName')) {
+        obj['valueColumnName'] = ApiClient.convertToType(data['valueColumnName'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'valueName')) {
+        obj['valueName'] = ApiClient.convertToType(data['valueName'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} accountEmail
@@ -396,36 +396,36 @@ export default class AlertRule {
     * @readonly
     */
     static EstimateOperationEnum = {
-        /**
+      /**
          * value: "LESS"
          * @const
          */
-        "LESS": "LESS",
-        /**
+      'LESS': 'LESS',
+      /**
          * value: "MORE"
          * @const
          */
-        "MORE": "MORE",
-        /**
+      'MORE': 'MORE',
+      /**
          * value: "EQUAL"
          * @const
          */
-        "EQUAL": "EQUAL",
-        /**
+      'EQUAL': 'EQUAL',
+      /**
          * value: "UN_EQUAL"
          * @const
          */
-        "UN_EQUAL": "UN_EQUAL",
-        /**
+      'UN_EQUAL': 'UN_EQUAL',
+      /**
          * value: "LESS_OR_EQUAL"
          * @const
          */
-        "LESS_OR_EQUAL": "LESS_OR_EQUAL",
-        /**
+      'LESS_OR_EQUAL': 'LESS_OR_EQUAL',
+      /**
          * value: "MORE_OR_EQUAL"
          * @const
          */
-        "MORE_OR_EQUAL": "MORE_OR_EQUAL"
+      'MORE_OR_EQUAL': 'MORE_OR_EQUAL'
     };
 
 }

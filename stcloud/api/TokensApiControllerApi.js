@@ -11,12 +11,11 @@
  *
  */
 
-import ApiClient from "../ApiClient";
-import CreateTokenDto from '../model/CreateTokenDto';
-import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse';
-import TokenResponse from '../model/TokenResponse';
-import TokensResponse from '../model/TokensResponse';
-import UpdateTokenDto from '../model/UpdateTokenDto';
+import ApiClient from './ApiClient.js'
+import GenericMapBasedApiResponse from '../model/GenericMapBasedApiResponse.js'
+import TokenResponse from '../model/TokenResponse.js'
+import TokensResponse from '../model/TokensResponse.js'
+
 
 /**
 * TokensApiController service.
@@ -33,7 +32,7 @@ export default class TokensApiControllerApi {
   * default to {@link module:ApiClient#instance} if unspecified.
   */
   constructor(apiClient) {
-    this.apiClient = apiClient || ApiClient.instance;
+    this.apiClient = apiClient || ApiClient.instance
   }
 
 
@@ -43,28 +42,28 @@ export default class TokensApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TokenResponse} and HTTP response
    */
   createAppTokenWithHttpInfo(body, appId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = TokenResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = TokenResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/tokens', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -74,8 +73,8 @@ export default class TokensApiControllerApi {
   createAppToken(body, appId) {
     return this.createAppTokenWithHttpInfo(body, appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -84,29 +83,29 @@ export default class TokensApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenericMapBasedApiResponse} and HTTP response
    */
   deleteAppToken1WithHttpInfo(appId, tokenId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'appId': appId,
       'tokenId': tokenId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = GenericMapBasedApiResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = GenericMapBasedApiResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/tokens/{tokenId}', 'DELETE',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -116,8 +115,8 @@ export default class TokensApiControllerApi {
   deleteAppToken1(appId, tokenId) {
     return this.deleteAppToken1WithHttpInfo(appId, tokenId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -126,28 +125,28 @@ export default class TokensApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TokensResponse} and HTTP response
    */
   getAppTokens1WithHttpInfo(appId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'appId': appId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = TokensResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = TokensResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/tokens', 'GET',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -157,8 +156,8 @@ export default class TokensApiControllerApi {
   getAppTokens1(appId) {
     return this.getAppTokens1WithHttpInfo(appId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -167,29 +166,29 @@ export default class TokensApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TokenResponse} and HTTP response
    */
   regenerateAppToken1WithHttpInfo(appId, tokenId) {
-    let postBody = null;
+    let postBody = null
 
     let pathParams = {
       'appId': appId,
       'tokenId': tokenId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = [];
-    let accepts = ['application/json'];
-    let returnType = TokenResponse;
+    let authNames = ['api_key']
+    let contentTypes = []
+    let accepts = ['application/json']
+    let returnType = TokenResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate', 'POST',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -199,8 +198,8 @@ export default class TokensApiControllerApi {
   regenerateAppToken1(appId, tokenId) {
     return this.regenerateAppToken1WithHttpInfo(appId, tokenId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 
@@ -209,29 +208,29 @@ export default class TokensApiControllerApi {
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TokenResponse} and HTTP response
    */
   updateAppTokenWithHttpInfo(body, appId, tokenId) {
-    let postBody = body;
+    let postBody = body
 
     let pathParams = {
       'appId': appId,
       'tokenId': tokenId
-    };
+    }
     let queryParams = {
-    };
+    }
     let headerParams = {
-    };
+    }
     let formParams = {
-    };
+    }
 
-    let authNames = ['api_key'];
-    let contentTypes = ['application/json'];
-    let accepts = ['application/json'];
-    let returnType = TokenResponse;
+    let authNames = ['api_key']
+    let contentTypes = ['application/json']
+    let accepts = ['application/json']
+    let returnType = TokenResponse
 
     return this.apiClient.callApi(
       '/users-web/api/v3/apps/{appId}/tokens/{tokenId}', 'PUT',
       pathParams, queryParams, headerParams, formParams, postBody,
       authNames, contentTypes, accepts, returnType
-    );
+    )
   }
 
   /**
@@ -241,8 +240,8 @@ export default class TokensApiControllerApi {
   updateAppToken(body, appId, tokenId) {
     return this.updateAppTokenWithHttpInfo(body, appId, tokenId)
       .then(function (response_and_data) {
-        return response_and_data.data;
-      });
+        return response_and_data.data
+      })
   }
 
 }

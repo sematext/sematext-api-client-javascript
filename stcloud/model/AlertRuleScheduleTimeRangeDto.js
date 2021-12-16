@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../api/ApiClient.js'
 
 /**
 * The AlertRuleScheduleTimeRangeDto model module.
@@ -19,39 +19,39 @@ import ApiClient from '../ApiClient';
 * @version 0.1.0
 */
 export default class AlertRuleScheduleTimeRangeDto {
-    /**
+  /**
     * Constructs a new <code>AlertRuleScheduleTimeRangeDto</code>.
     * @alias module:model/AlertRuleScheduleTimeRangeDto
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AlertRuleScheduleTimeRangeDto</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AlertRuleScheduleTimeRangeDto} obj Optional instance to populate.
     * @return {module:model/AlertRuleScheduleTimeRangeDto} The populated <code>AlertRuleScheduleTimeRangeDto</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AlertRuleScheduleTimeRangeDto();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AlertRuleScheduleTimeRangeDto()
 
 
-            if (data.hasOwnProperty('end')) {
-                obj['end'] = ApiClient.convertToType(data['end'], 'String');
-            }
-            if (data.hasOwnProperty('start')) {
-                obj['start'] = ApiClient.convertToType(data['start'], 'String');
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'end')) {
+        obj['end'] = ApiClient.convertToType(data['end'], 'String')
+      }
+      if (Object.prototype.hasOwnProperty.call(data,'start')) {
+        obj['start'] = ApiClient.convertToType(data['start'], 'String')
+      }
     }
+    return obj
+  }
 
     /**
     * @member {String} end

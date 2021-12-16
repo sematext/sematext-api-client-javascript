@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AlertRule from './AlertRule';
+import ApiClient from '../api/ApiClient.js'
+import AlertRule from './AlertRule.js'
 
 /**
 * The AlertRulesResponseEntry model module.
@@ -20,36 +20,36 @@ import AlertRule from './AlertRule';
 * @version 0.1.0
 */
 export default class AlertRulesResponseEntry {
-    /**
+  /**
     * Constructs a new <code>AlertRulesResponseEntry</code>.
     * @alias module:model/AlertRulesResponseEntry
     * @class
     */
 
-    constructor() {
+  constructor() {
 
 
 
-    }
+  }
 
-    /**
+  /**
     * Constructs a <code>AlertRulesResponseEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
     * @param {module:model/AlertRulesResponseEntry} obj Optional instance to populate.
     * @return {module:model/AlertRulesResponseEntry} The populated <code>AlertRulesResponseEntry</code> instance.
     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AlertRulesResponseEntry();
+  static constructFromObject(data, obj) {
+    if (data) {
+      obj = obj || new AlertRulesResponseEntry()
 
 
-            if (data.hasOwnProperty('alertRules')) {
-                obj['alertRules'] = ApiClient.convertToType(data['alertRules'], [AlertRule]);
-            }
-        }
-        return obj;
+      if (Object.prototype.hasOwnProperty.call(data,'alertRules')) {
+        obj['alertRules'] = ApiClient.convertToType(data['alertRules'], [AlertRule])
+      }
     }
+    return obj
+  }
 
     /**
     * @member {Array.<module:model/AlertRule>} alertRules

@@ -12,33 +12,23 @@
  * Do not edit the class manually.
  *
  */
+'use strict'
 
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', '../../stcloud/index'], factory)
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../stcloud/index'))
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SematextApiClientJavascript)
-  }
-})(this, function (expect, SematextApiClientJavascript) {
-  'use strict'
+//const SematextApiClientJavascript = import ('../../stcloud/index.js')
 
-  var instance
+/* eslint-disable no-unused-vars*/
+var instance
 
-  beforeEach(function () {
-    instance = new SematextApiClientJavascript.BillingApi()
-  })
+beforeEach(function () {
+  //instance = new SematextApiClientJavascript.BillingApi()
+})
 
-  describe('(package)', function () {
-    describe('BillingApi', function () {
-      describe('getDetailedInvoiceUsingGET', function () {
-        it('should call getDetailedInvoiceUsingGET successfully', function (done) {
-          // TODO: uncomment, update parameter values for getDetailedInvoiceUsingGET call and complete the assertions
-          /*
+describe('(package)', function () {
+  describe('BillingApi', function () {
+    describe('getDetailedInvoiceUsingGET', function () {
+      it('should call getDetailedInvoiceUsingGET successfully', function (done) {
+        // TODO: uncomment, update parameter values for getDetailedInvoiceUsingGET call and complete the assertions
+        /*
           var service = "service_example";
           var year = 56;
           var month = 56;
@@ -71,14 +61,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('listAvailablePlansUsingGET', function () {
-        it('should call listAvailablePlansUsingGET successfully', function (done) {
-          // TODO: uncomment, update parameter values for listAvailablePlansUsingGET call and complete the assertions
-          /*
+    })
+    describe('listAvailablePlansUsingGET', function () {
+      it('should call listAvailablePlansUsingGET successfully', function (done) {
+        // TODO: uncomment, update parameter values for listAvailablePlansUsingGET call and complete the assertions
+        /*
           var opts = {};
           opts.integrationId = 789;
           opts.appType = "appType_example";
@@ -111,14 +101,14 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
-      describe('updatePlanUsingPUT', function () {
-        it('should call updatePlanUsingPUT successfully', function (done) {
-          // TODO: uncomment, update parameter values for updatePlanUsingPUT call and complete the assertions
-          /*
+    })
+    describe('updatePlanUsingPUT', function () {
+      it('should call updatePlanUsingPUT successfully', function (done) {
+        // TODO: uncomment, update parameter values for updatePlanUsingPUT call and complete the assertions
+        /*
           var appId = 789;
           var dto = new SematextApiClientJavascript.BillingInfo();
           dto.creditCardId = "0";
@@ -153,9 +143,8 @@
             done(error);
           });
           */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done()
-        })
+        // TODO: uncomment and complete method invocation above, then delete this line and the next:
+        done()
       })
     })
   })
