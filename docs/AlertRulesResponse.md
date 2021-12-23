@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.AlertRulesResponse
 
 ## Properties
+
 | Name        | Type                                                      | Description | Notes      |
 | ----------- | --------------------------------------------------------- | ----------- | ---------- |
 | **data**    | [**AlertRulesResponseEntry**](AlertRulesResponseEntry.md) |             | [optional] |

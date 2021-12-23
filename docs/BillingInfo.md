@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.BillingInfo
 
 ## Properties
+
 | Name              | Type       | Description | Notes      |
 | ----------------- | ---------- | ----------- | ---------- |
 | **creditCardId**  | **Number** |             | [optional] |

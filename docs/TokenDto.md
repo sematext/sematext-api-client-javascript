@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.TokenDto
 
 ## Properties
+
 | Name          | Type        | Description | Notes      |
 | ------------- | ----------- | ----------- | ---------- |
 | **createdAt** | **Date**    |             | [optional] |

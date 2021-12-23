@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.UpdateAppInfo
 
 ## Properties
+
 | Name                   | Type        | Description | Notes      |
 | ---------------------- | ----------- | ----------- | ---------- |
 | **description**        | **String**  |             | [optional] |
@@ -14,7 +15,8 @@
 | **status**             | **String**  |             | [optional] |
 
 <a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
-* `ACTIVE` (value: `"ACTIVE"`)
-* `DISABLED` (value: `"DISABLED"`)
+- `ACTIVE` (value: `"ACTIVE"`)
+- `DISABLED` (value: `"DISABLED"`)

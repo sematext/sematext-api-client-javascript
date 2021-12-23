@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.FilterValue
 
 ## Properties
+
 | Name           | Type         | Description | Notes      |
 | -------------- | ------------ | ----------- | ---------- |
 | **aggType**    | **String**   |             | [optional] |
