@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.LimitChangeEventDTO
 
 ## Properties
+
 | Name          | Type       | Description | Notes      |
 | ------------- | ---------- | ----------- | ---------- |
 | **eventTime** | **Date**   |             | [optional] |

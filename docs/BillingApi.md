@@ -1,41 +1,46 @@
 # SematextApiClientJavascript.BillingApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-| Method                                                                     | HTTP request                                                       | Description            |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
-| [**getDetailedInvoiceUsingGET**](BillingApi.md#getDetailedInvoiceUsingGET) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
-| [**listAvailablePlansUsingGET**](BillingApi.md#listAvailablePlansUsingGET) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
-| [**updatePlanUsingPUT**](BillingApi.md#updatePlanUsingPUT)                 | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
+| Method                                                                       | HTTP request                                                       | Description            |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
+| [**getDetailedInvoiceUsingGET**](BillingApi.md#getDetailedInvoiceUsingGET)   | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
+| [**listAvailablePlansUsingGET1**](BillingApi.md#listAvailablePlansUsingGET1) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
+| [**updatePlanUsingPUT**](BillingApi.md#updatePlanUsingPUT)                   | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
 <a name="getDetailedInvoiceUsingGET"></a>
+
 # **getDetailedInvoiceUsingGET**
+
 > InvoiceResponse getDetailedInvoiceUsingGET(service, year, month)
 
 Get invoice details
 
 ### Example
+
 ```javascript
-import SematextApiClientJavascript from 'sematext-api-client-javascript';
-let defaultClient = SematextApiClientJavascript.ApiClient.instance;
+import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
+let defaultClient = SematextApiClientJavascript.ApiClient.instance
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key'];
-api_key.apiKey = 'YOUR API KEY';
+let api_key = defaultClient.authentications['api_key']
+api_key.apiKey = 'YOUR API KEY'
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.BillingApi();
-let service = "service_example"; // String | service
-let year = 56; // Number | year
-let month = 56; // Number | month
+let apiInstance = new SematextApiClientJavascript.BillingApi()
+let service = 'service_example' // String | service
+let year = 56 // Number | year
+let month = 56 // Number | month
 
-apiInstance.getDetailedInvoiceUsingGET(service, year, month).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
+apiInstance.getDetailedInvoiceUsingGET(service, year, month).then(
+  data => {
+    console.log('API called successfully. Returned data: ' + data)
+  },
+  error => {
+    console.error(error)
+  }
+)
 ```
 
 ### Parameters
@@ -56,37 +61,42 @@ apiInstance.getDetailedInvoiceUsingGET(service, year, month).then((data) => {
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="listAvailablePlansUsingGET"></a>
-# **listAvailablePlansUsingGET**
-> PlansResponse listAvailablePlansUsingGET(opts)
+<a name="listAvailablePlansUsingGET1"></a>
+
+# **listAvailablePlansUsingGET1**
+
+> PlansResponse listAvailablePlansUsingGET1(opts)
 
 Get available plans
 
 ### Example
+
 ```javascript
-import SematextApiClientJavascript from 'sematext-api-client-javascript';
-let defaultClient = SematextApiClientJavascript.ApiClient.instance;
+import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
+let defaultClient = SematextApiClientJavascript.ApiClient.instance
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key'];
-api_key.apiKey = 'YOUR API KEY';
+let api_key = defaultClient.authentications['api_key']
+api_key.apiKey = 'YOUR API KEY'
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.BillingApi();
+let apiInstance = new SematextApiClientJavascript.BillingApi()
 let opts = {
-  'integrationId': 789, // Number | integrationId
-  'appType': "appType_example" // String | appType
-};
-apiInstance.listAvailablePlansUsingGET(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
+  integrationId: 789, // Number | integrationId
+  appType: 'appType_example' // String | appType
+}
+apiInstance.listAvailablePlansUsingGET1(opts).then(
+  data => {
+    console.log('API called successfully. Returned data: ' + data)
+  },
+  error => {
+    console.error(error)
+  }
+)
 ```
 
 ### Parameters
@@ -106,36 +116,41 @@ apiInstance.listAvailablePlansUsingGET(opts).then((data) => {
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 <a name="updatePlanUsingPUT"></a>
+
 # **updatePlanUsingPUT**
-> UpdatePlanResponse updatePlanUsingPUT(bodyappId)
+
+> UpdatePlanResponse updatePlanUsingPUT(body, appId)
 
 Update plan for an app
 
 ### Example
+
 ```javascript
-import SematextApiClientJavascript from 'sematext-api-client-javascript';
-let defaultClient = SematextApiClientJavascript.ApiClient.instance;
+import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
+let defaultClient = SematextApiClientJavascript.ApiClient.instance
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key'];
-api_key.apiKey = 'YOUR API KEY';
+let api_key = defaultClient.authentications['api_key']
+api_key.apiKey = 'YOUR API KEY'
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.BillingApi();
-let body = new SematextApiClientJavascript.BillingInfo(); // BillingInfo | dto
-let appId = 789; // Number | appId
+let apiInstance = new SematextApiClientJavascript.BillingApi()
+let body = new SematextApiClientJavascript.BillingInfo() // BillingInfo | dto
+let appId = 789 // Number | appId
 
-apiInstance.updatePlanUsingPUT(bodyappId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
+apiInstance.updatePlanUsingPUT(body, appId).then(
+  data => {
+    console.log('API called successfully. Returned data: ' + data)
+  },
+  error => {
+    console.error(error)
+  }
+)
 ```
 
 ### Parameters
@@ -155,5 +170,5 @@ apiInstance.updatePlanUsingPUT(bodyappId).then((data) => {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json

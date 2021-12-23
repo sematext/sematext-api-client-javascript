@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.NotificationsResponse
 
 ## Properties
+
 | Name        | Type                                                            | Description | Notes      |
 | ----------- | --------------------------------------------------------------- | ----------- | ---------- |
 | **data**    | [**NotificationsResponseEntry**](NotificationsResponseEntry.md) |             | [optional] |

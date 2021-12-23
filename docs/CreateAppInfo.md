@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.CreateAppInfo
 
 ## Properties
+
 | Name              | Type                              | Description | Notes      |
 | ----------------- | --------------------------------- | ----------- | ---------- |
 | **appType**       | **String**                        |             | [optional] |

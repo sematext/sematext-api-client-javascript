@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.DayUsageData
 
 ## Properties
+
 | Name                           | Type       | Description | Notes      |
 | ------------------------------ | ---------- | ----------- | ---------- |
 | **countDailyDataPoints**       | **Number** |             | [optional] |
@@ -25,9 +26,10 @@
 | **userDiscount**               | **Number** |             | [optional] |
 
 <a name="PlanTypeEnum"></a>
+
 ## Enum: PlanTypeEnum
 
-* `INFRA` (value: `"INFRA"`)
-* `PER_AGENT` (value: `"PER_AGENT"`)
-* `FIXED_PRICE` (value: `"FIXED_PRICE"`)
-* `PER_VOLUME` (value: `"PER_VOLUME"`)
+- `INFRA` (value: `"INFRA"`)
+- `PER_AGENT` (value: `"PER_AGENT"`)
+- `FIXED_PRICE` (value: `"FIXED_PRICE"`)
+- `PER_VOLUME` (value: `"PER_VOLUME"`)

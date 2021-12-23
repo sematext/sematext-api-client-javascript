@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.AlertRule
 
 ## Properties
+
 | Name                                      | Type                                                                | Description | Notes      |
 | ----------------------------------------- | ------------------------------------------------------------------- | ----------- | ---------- |
 | **accountEmail**                          | **String**                                                          |             | [optional] |
@@ -53,11 +54,12 @@
 | **valueName**                             | **String**                                                          |             | [optional] |
 
 <a name="EstimateOperationEnum"></a>
+
 ## Enum: EstimateOperationEnum
 
-* `LESS` (value: `"LESS"`)
-* `MORE` (value: `"MORE"`)
-* `EQUAL` (value: `"EQUAL"`)
-* `UN_EQUAL` (value: `"UN_EQUAL"`)
-* `LESS_OR_EQUAL` (value: `"LESS_OR_EQUAL"`)
-* `MORE_OR_EQUAL` (value: `"MORE_OR_EQUAL"`)
+- `LESS` (value: `"LESS"`)
+- `MORE` (value: `"MORE"`)
+- `EQUAL` (value: `"EQUAL"`)
+- `UN_EQUAL` (value: `"UN_EQUAL"`)
+- `LESS_OR_EQUAL` (value: `"LESS_OR_EQUAL"`)
+- `MORE_OR_EQUAL` (value: `"MORE_OR_EQUAL"`)

@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.Invoice
 
 ## Properties
+
 | Name            | Type                                                            | Description | Notes      |
 | --------------- | --------------------------------------------------------------- | ----------- | ---------- |
 | **allCharges**  | [**[ChargesDetailsResponseDto]**](ChargesDetailsResponseDto.md) |             | [optional] |

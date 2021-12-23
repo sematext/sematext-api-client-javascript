@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.MailReportResponse
 
 ## Properties
+
 | Name        | Type                                                                      | Description | Notes      |
 | ----------- | ------------------------------------------------------------------------- | ----------- | ---------- |
 | **data**    | [**MailReportResponseResponseEntry**](MailReportResponseResponseEntry.md) |             | [optional] |

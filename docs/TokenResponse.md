@@ -1,6 +1,7 @@
 # SematextApiClientJavascript.TokenResponse
 
 ## Properties
+
 | Name        | Type                                            | Description | Notes      |
 | ----------- | ----------------------------------------------- | ----------- | ---------- |
 | **data**    | [**TokenResponseEntry**](TokenResponseEntry.md) |             | [optional] |
