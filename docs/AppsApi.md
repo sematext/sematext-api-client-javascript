@@ -1,17 +1,17 @@
 # SematextApiClientJavascript.AppsApi
 
-All URIs are relative to _/_
+All URIs are relative to */*
 
 | Method                                                                  | HTTP request                                               | Description                                                        |
 | ----------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ |
 | [**deleteUsingDELETE**](AppsApi.md#deleteUsingDELETE)                   | **DELETE** /users-web/api/v3/apps/{anyStateAppId}          | delete                                                             |
 | [**getAppTypesUsingGET**](AppsApi.md#getAppTypesUsingGET)               | **GET** /users-web/api/v3/apps/types                       | Get all App types supported for the account identified with apiKey |
 | [**getUsingGET**](AppsApi.md#getUsingGET)                               | **GET** /users-web/api/v3/apps/{anyStateAppId}             | Gets defails for one particular App                                |
-| [**inviteAppGuestsUsingPOST**](AppsApi.md#inviteAppGuestsUsingPOST)     | **POST** /users-web/api/v3/apps/guests                     | Invite guests to an app                                            |
-| [**listAppsUsersUsingGET**](AppsApi.md#listAppsUsersUsingGET)           | **GET** /users-web/api/v3/apps/users                       | Get all users of apps accessible to this account                   |
+| [**inviteAppGuestsUsingPOST1**](AppsApi.md#inviteAppGuestsUsingPOST1)   | **POST** /users-web/api/v3/apps/guests                     | Invite guests to an app                                            |
+| [**listAppsUsersUsingGET1**](AppsApi.md#listAppsUsersUsingGET1)         | **GET** /users-web/api/v3/apps/users                       | Get all users of apps accessible to this account                   |
 | [**listUsingGET**](AppsApi.md#listUsingGET)                             | **GET** /users-web/api/v3/apps                             | Get all apps accessible by account identified with apiKey          |
 | [**updateDescriptionUsingPUT1**](AppsApi.md#updateDescriptionUsingPUT1) | **PUT** /users-web/api/v3/apps/{anyStateAppId}/description | Update description of the app                                      |
-| [**updateUsingPUT2**](AppsApi.md#updateUsingPUT2)                       | **PUT** /users-web/api/v3/apps/{anyStateAppId}             | Update app                                                         |
+| [**updateUsingPUT3**](AppsApi.md#updateUsingPUT3)                       | **PUT** /users-web/api/v3/apps/{anyStateAppId}             | Update app                                                         |
 
 <a name="deleteUsingDELETE"></a>
 
@@ -24,26 +24,24 @@ delete
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-let anyStateAppId = 789 // Number | anyStateAppId
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+let anyStateAppId = 789; // Number | anyStateAppId
 
-apiInstance.deleteUsingDELETE(anyStateAppId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.deleteUsingDELETE(anyStateAppId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -76,24 +74,22 @@ Get all App types supported for the account identified with apiKey
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-apiInstance.getAppTypesUsingGET().then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+apiInstance.getAppTypesUsingGET().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -124,26 +120,24 @@ Gets defails for one particular App
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-let anyStateAppId = 789 // Number | anyStateAppId
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+let anyStateAppId = 789; // Number | anyStateAppId
 
-apiInstance.getUsingGET(anyStateAppId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.getUsingGET(anyStateAppId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -165,37 +159,35 @@ apiInstance.getUsingGET(anyStateAppId).then(
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="inviteAppGuestsUsingPOST"></a>
+<a name="inviteAppGuestsUsingPOST1"></a>
 
-# **inviteAppGuestsUsingPOST**
+# **inviteAppGuestsUsingPOST1**
 
-> GenericMapBasedApiResponse inviteAppGuestsUsingPOST(body)
+> GenericMapBasedApiResponse inviteAppGuestsUsingPOST1(body)
 
 Invite guests to an app
 
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-let body = new SematextApiClientJavascript.Invitation() // Invitation | For `app` and `apps` fields only `id` needs to be populated.Other fields can be left empty or with default values
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+let body = new SematextApiClientJavascript.Invitation(); // Invitation | For `app` and `apps` fields only `id` needs to be populated.Other fields can be left empty or with default values
 
-apiInstance.inviteAppGuestsUsingPOST(body).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.inviteAppGuestsUsingPOST1(body).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -217,35 +209,33 @@ apiInstance.inviteAppGuestsUsingPOST(body).then(
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="listAppsUsersUsingGET"></a>
+<a name="listAppsUsersUsingGET1"></a>
 
-# **listAppsUsersUsingGET**
+# **listAppsUsersUsingGET1**
 
-> AppsResponse listAppsUsersUsingGET()
+> AppsResponse listAppsUsersUsingGET1()
 
 Get all users of apps accessible to this account
 
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-apiInstance.listAppsUsersUsingGET().then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+apiInstance.listAppsUsersUsingGET1().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -276,24 +266,22 @@ Get all apps accessible by account identified with apiKey
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-apiInstance.listUsingGET().then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+apiInstance.listUsingGET().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -326,28 +314,26 @@ App can be in any state
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-let anyStateAppId = 789 // Number | App Id
-let opts = {
-  body: new SematextApiClientJavascript.AppDescription() // AppDescription | Update Details
-}
-apiInstance.updateDescriptionUsingPUT1(anyStateAppId, opts).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+let anyStateAppId = 789; // Number | App Id
+let opts = { 
+  'body': new SematextApiClientJavascript.AppDescription() // AppDescription | Update Details
+};
+apiInstance.updateDescriptionUsingPUT1(anyStateAppId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -370,11 +356,11 @@ apiInstance.updateDescriptionUsingPUT1(anyStateAppId, opts).then(
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="updateUsingPUT2"></a>
+<a name="updateUsingPUT3"></a>
 
-# **updateUsingPUT2**
+# **updateUsingPUT3**
 
-> AppResponse updateUsingPUT2(body, anyStateAppId)
+> AppResponse updateUsingPUT3(body, anyStateAppId)
 
 Update app
 
@@ -383,27 +369,25 @@ App can be in any state
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AppsApi()
-let body = new SematextApiClientJavascript.UpdateAppInfo() // UpdateAppInfo | dto
-let anyStateAppId = 789 // Number | App Id
+let apiInstance = new SematextApiClientJavascript.AppsApi();
+let body = new SematextApiClientJavascript.UpdateAppInfo(); // UpdateAppInfo | dto
+let anyStateAppId = 789; // Number | App Id
 
-apiInstance.updateUsingPUT2(body, anyStateAppId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.updateUsingPUT3(body, anyStateAppId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters

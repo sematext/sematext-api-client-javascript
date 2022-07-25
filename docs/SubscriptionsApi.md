@@ -1,17 +1,17 @@
 # SematextApiClientJavascript.SubscriptionsApi
 
-All URIs are relative to _/_
+All URIs are relative to */*
 
 | Method                                                                     | HTTP request                                                          | Description                              |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------- |
 | [**createForAppUsingPOST**](SubscriptionsApi.md#createForAppUsingPOST)     | **POST** /users-web/api/v3/apps/{appId}/subscription                  | Create App subscription                  |
-| [**createForDashUsingPOST1**](SubscriptionsApi.md#createForDashUsingPOST1) | **POST** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription            |
-| [**deleteUsingDELETE2**](SubscriptionsApi.md#deleteUsingDELETE2)           | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                      |
+| [**createForDashUsingPOST**](SubscriptionsApi.md#createForDashUsingPOST)   | **POST** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription            |
+| [**deleteUsingDELETE3**](SubscriptionsApi.md#deleteUsingDELETE3)           | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                      |
 | [**listUsingGET3**](SubscriptionsApi.md#listUsingGET3)                     | **GET** /users-web/api/v3/apps/{appId}/subscriptions                  | Get subscriptions for an App             |
 | [**listUsingGET5**](SubscriptionsApi.md#listUsingGET5)                     | **GET** /users-web/api/v3/subscriptions                               | Get current account&#x27;s subscriptions |
-| [**sendAppReportUsingPOST**](SubscriptionsApi.md#sendAppReportUsingPOST)   | **POST** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                      |
+| [**sendAppReportUsingPOST1**](SubscriptionsApi.md#sendAppReportUsingPOST1) | **POST** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                      |
 | [**sendDashReportUsingPOST**](SubscriptionsApi.md#sendDashReportUsingPOST) | **POST** /users-web/api/v3/dashboards/{dashId}/report/send            | Email a dashboard report                 |
-| [**toggleEnabledUsingPUT1**](SubscriptionsApi.md#toggleEnabledUsingPUT1)   | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status               |
+| [**toggleEnabledUsingPUT**](SubscriptionsApi.md#toggleEnabledUsingPUT)     | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status               |
 | [**updateForAppUsingPUT**](SubscriptionsApi.md#updateForAppUsingPUT)       | **PUT** /users-web/api/v3/apps/{appId}/subscription                   | Update App subscription                  |
 | [**updateForDashUsingPUT1**](SubscriptionsApi.md#updateForDashUsingPUT1)   | **PUT** /users-web/api/v3/dashboards/{dashId}/subscription            | Update dashboard subscription            |
 
@@ -26,27 +26,25 @@ Create App subscription
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let body = new SematextApiClientJavascript.SubscriptionDto() // SubscriptionDto | subscription
-let appId = 789 // Number | appId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let body = new SematextApiClientJavascript.SubscriptionDto(); // SubscriptionDto | subscription
+let appId = 789; // Number | appId
 
-apiInstance.createForAppUsingPOST(body, appId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.createForAppUsingPOST(body, appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -69,38 +67,36 @@ apiInstance.createForAppUsingPOST(body, appId).then(
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="createForDashUsingPOST1"></a>
+<a name="createForDashUsingPOST"></a>
 
-# **createForDashUsingPOST1**
+# **createForDashUsingPOST**
 
-> SubscriptionResponse createForDashUsingPOST1(body, dashId)
+> SubscriptionResponse createForDashUsingPOST(body, dashId)
 
 Create dashboard subscription
 
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let body = new SematextApiClientJavascript.SubscriptionDashboardDto() // SubscriptionDashboardDto | subscription
-let dashId = 789 // Number | dashId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let body = new SematextApiClientJavascript.SubscriptionDashboardDto(); // SubscriptionDashboardDto | subscription
+let dashId = 789; // Number | dashId
 
-apiInstance.createForDashUsingPOST1(body, dashId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.createForDashUsingPOST(body, dashId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -123,37 +119,35 @@ apiInstance.createForDashUsingPOST1(body, dashId).then(
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="deleteUsingDELETE2"></a>
+<a name="deleteUsingDELETE3"></a>
 
-# **deleteUsingDELETE2**
+# **deleteUsingDELETE3**
 
-> GenericMapBasedApiResponse deleteUsingDELETE2(updateableSubscriptionId)
+> GenericMapBasedApiResponse deleteUsingDELETE3(updateableSubscriptionId)
 
 Delete subscription
 
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let updateableSubscriptionId = 789 // Number | updateableSubscriptionId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let updateableSubscriptionId = 789; // Number | updateableSubscriptionId
 
-apiInstance.deleteUsingDELETE2(updateableSubscriptionId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.deleteUsingDELETE3(updateableSubscriptionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -186,26 +180,24 @@ Get subscriptions for an App
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let appId = 789 // Number | appId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let appId = 789; // Number | appId
 
-apiInstance.listUsingGET3(appId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.listUsingGET3(appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -238,24 +230,22 @@ Get current account&#x27;s subscriptions
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-apiInstance.listUsingGET5().then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+apiInstance.listUsingGET5().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -275,38 +265,36 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="sendAppReportUsingPOST"></a>
+<a name="sendAppReportUsingPOST1"></a>
 
-# **sendAppReportUsingPOST**
+# **sendAppReportUsingPOST1**
 
-> MailReportResponse sendAppReportUsingPOST(body, appId)
+> MailReportResponse sendAppReportUsingPOST1(body, appId)
 
 Email an App report
 
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let body = new SematextApiClientJavascript.ReportInfo() // ReportInfo | emailDto
-let appId = 789 // Number | appId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let body = new SematextApiClientJavascript.ReportInfo(); // ReportInfo | emailDto
+let appId = 789; // Number | appId
 
-apiInstance.sendAppReportUsingPOST(body, appId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.sendAppReportUsingPOST1(body, appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -340,27 +328,25 @@ Email a dashboard report
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let body = new SematextApiClientJavascript.ReportInfo() // ReportInfo | emailDto
-let dashId = 789 // Number | dashId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let body = new SematextApiClientJavascript.ReportInfo(); // ReportInfo | emailDto
+let dashId = 789; // Number | dashId
 
-apiInstance.sendDashReportUsingPOST(body, dashId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.sendDashReportUsingPOST(body, dashId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -383,38 +369,36 @@ apiInstance.sendDashReportUsingPOST(body, dashId).then(
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="toggleEnabledUsingPUT1"></a>
+<a name="toggleEnabledUsingPUT"></a>
 
-# **toggleEnabledUsingPUT1**
+# **toggleEnabledUsingPUT**
 
-> SubscriptionResponse toggleEnabledUsingPUT1(body, updateableSubscriptionId)
+> SubscriptionResponse toggleEnabledUsingPUT(body, updateableSubscriptionId)
 
 Toggle subscription status
 
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let body = new SematextApiClientJavascript.UpdateSubscriptionDto() // UpdateSubscriptionDto | dto
-let updateableSubscriptionId = 789 // Number | updateableSubscriptionId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let body = new SematextApiClientJavascript.UpdateSubscriptionDto(); // UpdateSubscriptionDto | dto
+let updateableSubscriptionId = 789; // Number | updateableSubscriptionId
 
-apiInstance.toggleEnabledUsingPUT1(body, updateableSubscriptionId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.toggleEnabledUsingPUT(body, updateableSubscriptionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -448,27 +432,25 @@ Update App subscription
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let body = new SematextApiClientJavascript.SubscriptionDto() // SubscriptionDto | subscription
-let appId = 789 // Number | appId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let body = new SematextApiClientJavascript.SubscriptionDto(); // SubscriptionDto | subscription
+let appId = 789; // Number | appId
 
-apiInstance.updateForAppUsingPUT(body, appId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.updateForAppUsingPUT(body, appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -502,27 +484,25 @@ Update dashboard subscription
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.SubscriptionsApi()
-let body = new SematextApiClientJavascript.SubscriptionDashboardDto() // SubscriptionDashboardDto | subscription
-let dashId = 789 // Number | dashId
+let apiInstance = new SematextApiClientJavascript.SubscriptionsApi();
+let body = new SematextApiClientJavascript.SubscriptionDashboardDto(); // SubscriptionDashboardDto | subscription
+let dashId = 789; // Number | dashId
 
-apiInstance.updateForDashUsingPUT1(body, dashId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.updateForDashUsingPUT1(body, dashId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters

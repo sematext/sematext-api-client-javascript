@@ -19,25 +19,25 @@
 
 ## Enum: InviteStatusEnum
 
-- `PENDING` (value: `"PENDING"`)
-- `ACCEPTED` (value: `"ACCEPTED"`)
-- `CANCELLED` (value: `"CANCELLED"`)
-- `DECLINED` (value: `"DECLINED"`)
+* `PENDING` (value: `"PENDING"`)
+* `ACCEPTED` (value: `"ACCEPTED"`)
+* `CANCELLED` (value: `"CANCELLED"`)
+* `DECLINED` (value: `"DECLINED"`)
 
 <a name="InviteeRoleEnum"></a>
 
 ## Enum: InviteeRoleEnum
 
-- `SUPER_USER` (value: `"SUPER_USER"`)
-- `OWNER` (value: `"OWNER"`)
-- `ADMIN` (value: `"ADMIN"`)
-- `USER` (value: `"USER"`)
-- `DEMO` (value: `"DEMO"`)
-- `ANONYMOUS` (value: `"ANONYMOUS"`)
+* `SUPER_USER` (value: `"SUPER_USER"`)
+* `OWNER` (value: `"OWNER"`)
+* `ADMIN` (value: `"ADMIN"`)
+* `USER` (value: `"USER"`)
+* `DEMO` (value: `"DEMO"`)
+* `ANONYMOUS` (value: `"ANONYMOUS"`)
 
 <a name="InviteeStatusEnum"></a>
 
 ## Enum: InviteeStatusEnum
 
-- `INACTIVE` (value: `"INACTIVE"`)
-- `ACTIVE` (value: `"ACTIVE"`)
+* `INACTIVE` (value: `"INACTIVE"`)
+* `ACTIVE` (value: `"ACTIVE"`)

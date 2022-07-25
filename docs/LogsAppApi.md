@@ -1,6 +1,6 @@
 # SematextApiClientJavascript.LogsAppApi
 
-All URIs are relative to _/_
+All URIs are relative to */*
 
 | Method                                                                 | HTTP request                          | Description     |
 | ---------------------------------------------------------------------- | ------------------------------------- | --------------- |
@@ -17,26 +17,24 @@ Create Logs App
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.LogsAppApi()
-let body = new SematextApiClientJavascript.CreateAppInfo() // CreateAppInfo | Details of the application to be created
+let apiInstance = new SematextApiClientJavascript.LogsAppApi();
+let body = new SematextApiClientJavascript.CreateAppInfo(); // CreateAppInfo | Details of the application to be created
 
-apiInstance.createLogseneApplication(body).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.createLogseneApplication(body).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters

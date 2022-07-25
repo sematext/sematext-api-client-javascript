@@ -1,42 +1,40 @@
 # SematextApiClientJavascript.ResetPasswordApi
 
-All URIs are relative to _/_
+All URIs are relative to */*
 
-| Method                                                                   | HTTP request                                      | Description    |
-| ------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
-| [**resetPasswordUsingPOST**](ResetPasswordApi.md#resetPasswordUsingPOST) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
+| Method                                                                     | HTTP request                                      | Description    |
+| -------------------------------------------------------------------------- | ------------------------------------------------- | -------------- |
+| [**resetPasswordUsingPOST1**](ResetPasswordApi.md#resetPasswordUsingPOST1) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
-<a name="resetPasswordUsingPOST"></a>
+<a name="resetPasswordUsingPOST1"></a>
 
-# **resetPasswordUsingPOST**
+# **resetPasswordUsingPOST1**
 
-> GenericMapBasedApiResponse resetPasswordUsingPOST(body)
+> GenericMapBasedApiResponse resetPasswordUsingPOST1(body)
 
 Reset Password
 
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.ResetPasswordApi()
-let body = new SematextApiClientJavascript.UserInfo() // UserInfo | dto
+let apiInstance = new SematextApiClientJavascript.ResetPasswordApi();
+let body = new SematextApiClientJavascript.UserInfo(); // UserInfo | dto
 
-apiInstance.resetPasswordUsingPOST(body).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.resetPasswordUsingPOST1(body).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters

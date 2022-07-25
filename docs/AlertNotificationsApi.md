@@ -1,6 +1,6 @@
 # SematextApiClientJavascript.AlertNotificationsApi
 
-All URIs are relative to _/_
+All URIs are relative to */*
 
 | Method                                                                                                      | HTTP request                                                 | Description                        |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
@@ -20,27 +20,25 @@ Default value of interval is 1d
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AlertNotificationsApi()
-let body = new SematextApiClientJavascript.AlertNotificationRequest() // AlertNotificationRequest | Time Interval
-let appId = 789 // Number | appId
+let apiInstance = new SematextApiClientJavascript.AlertNotificationsApi();
+let body = new SematextApiClientJavascript.AlertNotificationRequest(); // AlertNotificationRequest | Time Interval
+let appId = 789; // Number | appId
 
-apiInstance.getAlertNotificationsForAppUsingPOST(body, appId).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.getAlertNotificationsForAppUsingPOST(body, appId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -76,26 +74,24 @@ Default value of interval is 1d
 ### Example
 
 ```javascript
-import { SematextApiClientJavascript } from 'sematext-api-client-javascript'
-let defaultClient = SematextApiClientJavascript.ApiClient.instance
+import {SematextApiClientJavascript} from 'sematext-api-client-javascript';
+let defaultClient = SematextApiClientJavascript.ApiClient.instance;
 
 // Configure API key authorization: api_key
-let api_key = defaultClient.authentications['api_key']
-api_key.apiKey = 'YOUR API KEY'
+let api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix = 'Token';
 
-let apiInstance = new SematextApiClientJavascript.AlertNotificationsApi()
-let body = new SematextApiClientJavascript.AlertNotificationRequest() // AlertNotificationRequest | Time Interval
+let apiInstance = new SematextApiClientJavascript.AlertNotificationsApi();
+let body = new SematextApiClientJavascript.AlertNotificationRequest(); // AlertNotificationRequest | Time Interval
 
-apiInstance.getAlertNotificationsForUserUsingPOST(body).then(
-  data => {
-    console.log('API called successfully. Returned data: ' + data)
-  },
-  error => {
-    console.error(error)
-  }
-)
+apiInstance.getAlertNotificationsForUserUsingPOST(body).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
