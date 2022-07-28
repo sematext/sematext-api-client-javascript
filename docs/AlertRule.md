@@ -38,6 +38,7 @@
 | **notificationEmails**                    | **[String]**                                                        |             | [optional] |
 | **notificationIntegrations**              | [**[NotificationIntegration]**](NotificationIntegration.md)         |             | [optional] |
 | **notificationsEnabled**                  | **Boolean**                                                         |             | [optional] |
+| **priority**                              | **String**                                                          |             | [optional] |
 | **query**                                 | **String**                                                          |             | [optional] |
 | **reportName**                            | **String**                                                          |             | [optional] |
 | **ruleKey**                               | **Number**                                                          |             | [optional] |
@@ -57,9 +58,18 @@
 
 ## Enum: EstimateOperationEnum
 
-- `LESS` (value: `"LESS"`)
-- `MORE` (value: `"MORE"`)
-- `EQUAL` (value: `"EQUAL"`)
-- `UN_EQUAL` (value: `"UN_EQUAL"`)
-- `LESS_OR_EQUAL` (value: `"LESS_OR_EQUAL"`)
-- `MORE_OR_EQUAL` (value: `"MORE_OR_EQUAL"`)
+* `LESS` (value: `"LESS"`)
+* `MORE` (value: `"MORE"`)
+* `EQUAL` (value: `"EQUAL"`)
+* `UN_EQUAL` (value: `"UN_EQUAL"`)
+* `LESS_OR_EQUAL` (value: `"LESS_OR_EQUAL"`)
+* `MORE_OR_EQUAL` (value: `"MORE_OR_EQUAL"`)
+
+<a name="PriorityEnum"></a>
+
+## Enum: PriorityEnum
+
+* `INFO` (value: `"INFO"`)
+* `ERROR` (value: `"ERROR"`)
+* `WARN` (value: `"WARN"`)
+* `CRITICAL` (value: `"CRITICAL"`)

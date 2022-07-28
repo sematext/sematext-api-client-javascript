@@ -11,5 +11,5 @@
 
 ## Enum: AuthTypeEnum
 
-- `SEMATEXT_ACCOUNT` (value: `"SEMATEXT_ACCOUNT"`)
-- `LDAP` (value: `"LDAP"`)
+* `SEMATEXT_ACCOUNT` (value: `"SEMATEXT_ACCOUNT"`)
+* `LDAP` (value: `"LDAP"`)

@@ -18,5 +18,5 @@
 
 ## Enum: StatusEnum
 
-- `ACTIVE` (value: `"ACTIVE"`)
-- `DISABLED` (value: `"DISABLED"`)
+* `ACTIVE` (value: `"ACTIVE"`)
+* `DISABLED` (value: `"DISABLED"`)
